@@ -1,0 +1,836 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.BufferedInputStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:40:03 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.BufferedInputStream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.BufferedInputStream">
+  <meta property="og:description" content="Reference for Gio.BufferedInputStream">
+  <meta name="twitter:title" content="Gio.BufferedInputStream">
+  <meta name="twitter:description" content="Reference for Gio.BufferedInputStream">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>BufferedInputStream</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gbufferedinputstream.c#L36">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.BufferedInputStream : Gio.FilterInputStream
+  implements Gio.Seekable {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p>Buffered input stream implements <a href="class.FilterInputStream.html"><code>GFilterInputStream</code></a> and provides
+for buffered&nbsp;reads.</p>
+<p>By default, <code>GBufferedInputStream</code><span class="quo">‘</span>s buffer size is set at 4&nbsp;kilobytes.</p>
+<p>To create a buffered input stream, use <a href="ctor.BufferedInputStream.new.html"><code>g_buffered_input_stream_new()</code></a>,
+or <a href="ctor.BufferedInputStream.new_sized.html"><code>g_buffered_input_stream_new_sized()</code></a> to specify the buffer’s size at&nbsp;construction.</p>
+<p>To get the size of a buffer within a buffered input stream, use
+<a href="method.BufferedInputStream.get_buffer_size.html"><code>g_buffered_input_stream_get_buffer_size()</code></a>. To change the size of a
+buffered input stream’s buffer, use <a href="method.BufferedInputStream.set_buffer_size.html"><code>g_buffered_input_stream_set_buffer_size()</code></a>.
+Note that the buffer’s size cannot be reduced below the size of the data within the&nbsp;buffer.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a href="class.FilterInputStream.html" title="FilterInputStream">GFilterInputStream</a></li>
+          
+        
+          
+          <li class="class"><a href="class.InputStream.html" title="InputStream">GInputStream</a></li>
+          
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="descendants toggle-wrapper default-hide">
+      <h4 id="descendants">Descendants <a href="#descendants" class="anchor"></a></h4>
+      <div class="docblock">
+        <ul>
+          <li class="class"><a href="class.DataInputStream.html" title="DataInputStream">GDataInputStream</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.Seekable.html" title="Seekable">GSeekable</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.BufferedInputStream.new.html">g_buffered_input_stream_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GInputStream</code> from the given <code>base_stream</code>, with
+a buffer set to the default size (4&nbsp;kilobytes).</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.BufferedInputStream.new_sized.html">g_buffered_input_stream_new_sized</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GBufferedInputStream</code> from the given <code>base_stream</code>,
+with a buffer set to <code>size</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.BufferedInputStream.fill.html">g_buffered_input_stream_fill</a></h6>
+          <div class="docblock">
+            <p>Tries to read <code>count</code> bytes from the stream into the buffer.
+Will block during this&nbsp;read.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.BufferedInputStream.fill_async.html">g_buffered_input_stream_fill_async</a></h6>
+          <div class="docblock">
+            <p>Reads data into <code>stream</code><span class="quo">‘</span>s buffer asynchronously, up to <code>count</code> size.
+<code>io_priority</code> can be used to prioritize reads. For the synchronous
+version of this function, see <code>g_buffered_input_stream_fill()</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.BufferedInputStream.fill_finish.html">g_buffered_input_stream_fill_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an asynchronous&nbsp;read.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.BufferedInputStream.get_available.html">g_buffered_input_stream_get_available</a></h6>
+          <div class="docblock">
+            <p>Gets the size of the available data within the&nbsp;stream.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.BufferedInputStream.get_buffer_size.html">g_buffered_input_stream_get_buffer_size</a></h6>
+          <div class="docblock">
+            <p>Gets the size of the input&nbsp;buffer.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.BufferedInputStream.peek.html">g_buffered_input_stream_peek</a></h6>
+          <div class="docblock">
+            <p>Peeks in the buffer, copying data of size <code>count</code> into <code>buffer</code>,
+offset <code>offset</code> bytes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.BufferedInputStream.peek_buffer.html">g_buffered_input_stream_peek_buffer</a></h6>
+          <div class="docblock">
+            <p>Returns the buffer with the currently available bytes. The returned
+buffer must not be modified and will become invalid when reading from
+the stream or filling the&nbsp;buffer.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.BufferedInputStream.read_byte.html">g_buffered_input_stream_read_byte</a></h6>
+          <div class="docblock">
+            <p>Tries to read a single byte from the stream or the buffer. Will block
+during this&nbsp;read.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.BufferedInputStream.set_buffer_size.html">g_buffered_input_stream_set_buffer_size</a></h6>
+          <div class="docblock">
+            <p>Sets the size of the internal buffer of <code>stream</code> to <code>size</code>, or to the
+size of the contents of the buffer. The buffer can never be resized
+smaller than its current&nbsp;contents.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="class.FilterInputStream.html">GFilterInputStream</a> (3)</h5><div class="docblock">
+          
+            <h6><a href="method.FilterInputStream.get_base_stream.html">g_filter_input_stream_get_base_stream</a></h6><div class="docblock">
+              <p>Gets the base stream for the filter&nbsp;stream.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.FilterInputStream.get_close_base_stream.html">g_filter_input_stream_get_close_base_stream</a></h6><div class="docblock">
+              <p>Returns whether the base stream will be closed when <code>stream</code> is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.FilterInputStream.set_close_base_stream.html">g_filter_input_stream_set_close_base_stream</a></h6><div class="docblock">
+              <p>Sets whether the base stream will be closed when <code>stream</code> is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="class.InputStream.html">GInputStream</a> (19)</h5><div class="docblock">
+          
+            <h6><a href="method.InputStream.clear_pending.html">g_input_stream_clear_pending</a></h6><div class="docblock">
+              <p>Clears the pending flag on <code>stream</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.close.html">g_input_stream_close</a></h6><div class="docblock">
+              <p>Closes the stream, releasing resources related to&nbsp;it.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.close_async.html">g_input_stream_close_async</a></h6><div class="docblock">
+              <p>Requests an asynchronous closes of the stream, releasing resources related to it.
+When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_input_stream_close_finish()</code> to get the result of the&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.close_finish.html">g_input_stream_close_finish</a></h6><div class="docblock">
+              <p>Finishes closing a stream asynchronously, started from&nbsp;g_input_stream_close_async().</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.has_pending.html">g_input_stream_has_pending</a></h6><div class="docblock">
+              <p>Checks if an input stream has pending&nbsp;actions.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.is_closed.html">g_input_stream_is_closed</a></h6><div class="docblock">
+              <p>Checks if an input stream is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read.html">g_input_stream_read</a></h6><div class="docblock">
+              <p>Tries to read <code>count</code> bytes from the stream into the buffer starting at
+<code>buffer</code>. Will block during this&nbsp;read.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_all.html">g_input_stream_read_all</a></h6><div class="docblock">
+              <p>Tries to read <code>count</code> bytes from the stream into the buffer starting at
+<code>buffer</code>. Will block during this&nbsp;read.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_all_async.html">g_input_stream_read_all_async</a></h6><div class="docblock">
+              <p>Request an asynchronous read of <code>count</code> bytes from the stream into the
+buffer starting at <code>buffer</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.44</span></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_all_finish.html">g_input_stream_read_all_finish</a></h6><div class="docblock">
+              <p>Finishes an asynchronous stream read operation started with
+<code>g_input_stream_read_all_async()</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.44</span></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_async.html">g_input_stream_read_async</a></h6><div class="docblock">
+              <p>Request an asynchronous read of <code>count</code> bytes from the stream into the buffer
+starting at <code>buffer</code>. When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_input_stream_read_finish()</code> to get the result of the&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_bytes.html">g_input_stream_read_bytes</a></h6><div class="docblock">
+              <p>Like g_input_stream_read(), this tries to read <code>count</code> bytes from
+the stream in a blocking fashion. However, rather than reading into
+a user-supplied buffer, this will create a new <code>GBytes</code> containing
+the data that was read. This may be easier to use from language&nbsp;bindings.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.34</span></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_bytes_async.html">g_input_stream_read_bytes_async</a></h6><div class="docblock">
+              <p>Request an asynchronous read of <code>count</code> bytes from the stream into a
+new <code>GBytes</code>. When the operation is finished <code>callback</code> will be
+called. You can then call <code>g_input_stream_read_bytes_finish()</code> to get the
+result of the&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.34</span></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_bytes_finish.html">g_input_stream_read_bytes_finish</a></h6><div class="docblock">
+              <p>Finishes an asynchronous stream read-into-<code>GBytes</code> operation.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.34</span></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_finish.html">g_input_stream_read_finish</a></h6><div class="docblock">
+              <p>Finishes an asynchronous stream read&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.set_pending.html">g_input_stream_set_pending</a></h6><div class="docblock">
+              <p>Sets <code>stream</code> to have actions pending. If the pending flag is
+already set or <code>stream</code> is closed, it will return <code>FALSE</code> and set
+<code>error</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.skip.html">g_input_stream_skip</a></h6><div class="docblock">
+              <p>Tries to skip <code>count</code> bytes from the stream. Will block during the&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.skip_async.html">g_input_stream_skip_async</a></h6><div class="docblock">
+              <p>Request an asynchronous skip of <code>count</code> bytes from the stream.
+When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_input_stream_skip_finish()</code> to get the result
+of the&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.skip_finish.html">g_input_stream_skip_finish</a></h6><div class="docblock">
+              <p>Finishes a stream skip&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.Seekable.html">GSeekable</a> (5)</h5><div class="docblock">
+          
+            <h6><a href="method.Seekable.can_seek.html">g_seekable_can_seek</a></h6><div class="docblock">
+              <p>Tests if the stream supports the <code>GSeekableIface</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.can_truncate.html">g_seekable_can_truncate</a></h6><div class="docblock">
+              <p>Tests if the length of the stream can be adjusted with&nbsp;g_seekable_truncate().</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.seek.html">g_seekable_seek</a></h6><div class="docblock">
+              <p>Seeks in the stream by the given <code>offset</code>, modified by <code>type</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.tell.html">g_seekable_tell</a></h6><div class="docblock">
+              <p>Tells the current position within the&nbsp;stream.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.truncate.html">g_seekable_truncate</a></h6><div class="docblock">
+              <p>Sets the length of the stream to <code>offset</code>. If the stream was previously
+larger than <code>offset</code>, the extra data is discarded. If the stream was
+previously shorter than <code>offset</code>, it is extended with <span class="caps">NUL</span> (‘\0’)&nbsp;bytes.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.BufferedInputStream.buffer-size.html">Gio.BufferedInputStream:buffer-size</a></h6>
+          <div class="docblock">
+            <p>The size of the backend buffer, in&nbsp;bytes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-properties">
+          <h5 style="display:block;">Properties inherited from <a href="class.FilterInputStream.html">GFilterInputStream</a> (2)</h5><div class="docblock">
+          
+            <h6><a href="property.FilterInputStream.base-stream.html">Gio.FilterInputStream:base-stream</a></h6><div class="docblock">
+              <p>The underlying base stream on which the I/O ops will be&nbsp;done.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.FilterInputStream.close-base-stream.html">Gio.FilterInputStream:close-base-stream</a></h6><div class="docblock">
+              <p>Whether the base stream should be closed when the filter stream is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+      
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+      
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioBufferedInputStreamClass {
+  GFilterInputStreamClass parent_class;
+  gssize (* fill) (
+    GBufferedInputStream* stream,
+    gssize count,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* fill_async) (
+    GBufferedInputStream* stream,
+    gssize count,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gssize (* fill_finish) (
+    GBufferedInputStream* stream,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* _g_reserved1) (
+void
+  );
+  void (* _g_reserved2) (
+void
+  );
+  void (* _g_reserved3) (
+void
+  );
+  void (* _g_reserved4) (
+void
+  );
+  void (* _g_reserved5) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GFilterInputStreamClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>fill: gssize (* fill) (
+    GBufferedInputStream* stream,
+    gssize count,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>fill_async: void (* fill_async) (
+    GBufferedInputStream* stream,
+    gssize count,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>fill_finish: gssize (* fill_finish) (
+    GBufferedInputStream* stream,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved1: void (* _g_reserved1) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved2: void (* _g_reserved2) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved3: void (* _g_reserved3) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved4: void (* _g_reserved4) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved5: void (* _g_reserved5) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-fill"><a href="vfunc.BufferedInputStream.fill.html">Gio.BufferedInputStreamClass.fill</a></h6>
+        <div class="docblock">
+          <p>Tries to read <code>count</code> bytes from the stream into the buffer.
+Will block during this&nbsp;read.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-fill_async"><a href="vfunc.BufferedInputStream.fill_async.html">Gio.BufferedInputStreamClass.fill_async</a></h6>
+        <div class="docblock">
+          <p>Reads data into <code>stream</code><span class="quo">‘</span>s buffer asynchronously, up to <code>count</code> size.
+<code>io_priority</code> can be used to prioritize reads. For the synchronous
+version of this function, see <code>g_buffered_input_stream_fill()</code>.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-fill_finish"><a href="vfunc.BufferedInputStream.fill_finish.html">Gio.BufferedInputStreamClass.fill_finish</a></h6>
+        <div class="docblock">
+          <p>Finishes an asynchronous&nbsp;read.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.BufferedInputStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:40:32 GMT --></html>

@@ -1,0 +1,393 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.FileIcon.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:45:31 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.FileIcon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.FileIcon">
+  <meta property="og:description" content="Reference for Gio.FileIcon">
+  <meta name="twitter:title" content="Gio.FileIcon">
+  <meta name="twitter:description" content="Reference for Gio.FileIcon">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>FileIcon</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gfileicon.c#L35">[src]</a>
+          
+        </h4>
+
+        <pre><code>final class Gio.FileIcon : GObject.Object
+  implements Gio.Icon, Gio.LoadableIcon {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GFileIcon</code> specifies an icon by pointing to an image file
+to be used as&nbsp;icon.</p>
+<p>It implements <a href="iface.LoadableIcon.html"><code>GLoadableIcon</code></a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.Icon.html" title="Icon">GIcon</a></li>
+          
+        
+          
+          <li class="interface"><a href="iface.LoadableIcon.html" title="LoadableIcon">GLoadableIcon</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.FileIcon.new.html">g_file_icon_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new icon for a&nbsp;file.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.FileIcon.get_file.html">g_file_icon_get_file</a></h6>
+          <div class="docblock">
+            <p>Gets the <code>GFile</code> associated with the given <code>icon</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.Icon.html">GIcon</a> (4)</h5><div class="docblock">
+          
+            <h6><a href="method.Icon.equal.html">g_icon_equal</a></h6><div class="docblock">
+              <p>Checks if two icons are&nbsp;equal.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Icon.hash.html">g_icon_hash</a></h6><div class="docblock">
+              <p>Gets a hash for an&nbsp;icon.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Icon.serialize.html">g_icon_serialize</a></h6><div class="docblock">
+              <p>Serializes a <code>GIcon</code> into a <code>GVariant</code>. An equivalent <code>GIcon</code> can be retrieved
+back by calling <code>g_icon_deserialize()</code> on the returned value.
+As serialization will avoid using raw icon data when possible, it only
+makes sense to transfer the <code>GVariant</code> between processes on the same machine,
+(as opposed to over the network), and within the same file system&nbsp;namespace.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.38</span></p>
+            </div>
+            
+            <h6><a href="method.Icon.to_string.html">g_icon_to_string</a></h6><div class="docblock">
+              <p>Generates a textual representation of <code>icon</code> that can be used for
+serialization such as when passing <code>icon</code> to a different process or
+saving it to persistent storage. Use <code>g_icon_new_for_string()</code> to
+get <code>icon</code> back from the returned&nbsp;string.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.20</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.LoadableIcon.html">GLoadableIcon</a> (3)</h5><div class="docblock">
+          
+            <h6><a href="method.LoadableIcon.load.html">g_loadable_icon_load</a></h6><div class="docblock">
+              <p>Loads a loadable icon. For the asynchronous version of this function,
+see&nbsp;g_loadable_icon_load_async().</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.LoadableIcon.load_async.html">g_loadable_icon_load_async</a></h6><div class="docblock">
+              <p>Loads an icon asynchronously. To finish this function, see
+g_loadable_icon_load_finish(). For the synchronous, blocking
+version of this function, see&nbsp;g_loadable_icon_load().</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.LoadableIcon.load_finish.html">g_loadable_icon_load_finish</a></h6><div class="docblock">
+              <p>Finishes an asynchronous icon load started in&nbsp;g_loadable_icon_load_async().</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.FileIcon.file.html">Gio.FileIcon:file</a></h6>
+          <div class="docblock">
+            <p>The file containing the&nbsp;icon.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioFileIconClass {
+  /* no available fields */
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.FileIcon.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:45:33 GMT --></html>

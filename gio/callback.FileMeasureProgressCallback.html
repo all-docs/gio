@@ -1,0 +1,251 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/callback.FileMeasureProgressCallback.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:08 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.FileMeasureProgressCallback</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.FileMeasureProgressCallback">
+  <meta property="og:description" content="Reference for Gio.FileMeasureProgressCallback">
+  <meta name="twitter:title" content="Gio.FileMeasureProgressCallback">
+  <meta name="twitter:description" content="Reference for Gio.FileMeasureProgressCallback">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Function </h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span>FileMeasureProgressCallback</h1>
+  </header>
+
+  <section>
+    <div class="docblock">
+      <p><span class="emblem available">since: 2.38</span></p>
+    </div>
+    <div class="declaration toggle-wrapper">
+      <h4 id="declaration" style="display:flex;">
+        Declaration
+        <a href="#declaration" class="anchor"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">GFileMeasureProgressCallback</span><span class="p">)</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">gboolean</span><span class="w"> </span><span class="n">reporting</span><span class="p">,</span>
+<span class="w">  </span><span class="n">guint64</span><span class="w"> </span><span class="n">current_size</span><span class="p">,</span>
+<span class="w">  </span><span class="n">guint64</span><span class="w"> </span><span class="n">num_dirs</span><span class="p">,</span>
+<span class="w">  </span><span class="n">guint64</span><span class="w"> </span><span class="n">num_files</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">data</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 id="description" style="display:flex;">
+        Description
+        <a href="#description" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/giotypes.h#L225">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>This callback type is used by <code>g_file_measure_disk_usage()</code> to make
+periodic progress reports when measuring the amount of disk spaced
+used by a&nbsp;directory.</p>
+<p>These calls are made on a best-effort basis and not all types of
+<code>GFile</code> will support them.  At the minimum, however, one call will
+always be made&nbsp;immediately.</p>
+<p>In the case that there is no support, <code>reporting</code> will be set to
+<code>FALSE</code> (and the other values undefined) and no further calls will be
+made.  Otherwise, the <code>reporting</code> will be <code>TRUE</code> and the other values
+all-zeros during the first (immediate) call.  In this way, you can
+know which type of progress <span class="caps">UI</span> to show without a&nbsp;delay.</p>
+<p>For <code>g_file_measure_disk_usage()</code> the callback is made directly.  For
+<code>g_file_measure_disk_usage_async()</code> the callback is made via the
+default main context of the calling thread (ie: the same way that the
+final async result would be&nbsp;reported).</p>
+<p><code>current_size</code> is in the same units as requested by the operation (see
+<code>G_FILE_MEASURE_APPARENT_SIZE</code>).</p>
+<p>The frequency of the updates is implementation defined, but is
+ideally about once every&nbsp;200ms.</p>
+<p>The last progress callback may or may not be equal to the final
+result.  Always check the async result to get the final&nbsp;value.</p>
+      </div>
+
+      <div class="docblock">
+        
+        <p>Available since: 2.38</p>
+        
+        
+        
+        
+        
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>reporting</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>gboolean</code></p>
+            <p><code>TRUE</code> if more reports will&nbsp;come.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>current_size</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>guint64</code></p>
+            <p>The current cumulative size&nbsp;measurement.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>num_dirs</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>guint64</code></p>
+            <p>The number of directories visited so&nbsp;far.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>num_files</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>guint64</code></p>
+            <p>The number of non-directory files&nbsp;encountered.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>data</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>gpointer</code></p>
+            <p>The data passed to the original request for this&nbsp;callback.</p>
+            <table>
+            
+            <tbody><tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+
+          
+        </dl>
+      </div>
+    </div>
+    
+
+    
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/callback.FileMeasureProgressCallback.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:08 GMT --></html>

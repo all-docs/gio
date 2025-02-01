@@ -1,0 +1,506 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.Cancellable.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:40:47 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.Cancellable</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.Cancellable">
+  <meta property="og:description" content="Reference for Gio.Cancellable">
+  <meta name="twitter:title" content="Gio.Cancellable">
+  <meta name="twitter:description" content="Reference for Gio.Cancellable">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>Cancellable</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gcancellable.c#L33">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.Cancellable : GObject.Object
+{
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GCancellable</code> allows operations to be&nbsp;cancelled.</p>
+<p><code>GCancellable</code> is a thread-safe operation cancellation stack used
+throughout <span class="caps">GIO</span> to allow for cancellation of synchronous and
+asynchronous&nbsp;operations.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.Cancellable.new.html">g_cancellable_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GCancellable</code> object.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.Cancellable.get_current.html">g_cancellable_get_current</a></h6>
+        <div class="docblock">
+          <p>Gets the top cancellable from the&nbsp;stack.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.Cancellable.cancel.html">g_cancellable_cancel</a></h6>
+          <div class="docblock">
+            <p>Will set <code>cancellable</code> to cancelled, and will emit the
+<code>GCancellable::cancelled</code> signal. (However, see the warning about
+race conditions in the documentation for that signal if you are
+planning to connect to&nbsp;it.).</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Cancellable.connect.html">g_cancellable_connect</a></h6>
+          <div class="docblock">
+            <p>Convenience function to connect to the <code>GCancellable::cancelled</code>
+signal. Also handles the race condition that may happen
+if the cancellable is cancelled right before&nbsp;connecting.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Cancellable.disconnect.html">g_cancellable_disconnect</a></h6>
+          <div class="docblock">
+            <p>Disconnects a handler from a cancellable instance similar to
+g_signal_handler_disconnect().  Additionally, in the event that a
+signal handler is currently running, this call will block until the
+handler has finished.  Calling this function from a
+<code>GCancellable::cancelled</code> signal handler will therefore result in a&nbsp;deadlock.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Cancellable.get_fd.html">g_cancellable_get_fd</a></h6>
+          <div class="docblock">
+            <p>Gets the file descriptor for a cancellable job. This can be used to
+implement cancellable operations on Unix systems. The returned fd will
+turn readable when <code>cancellable</code> is&nbsp;cancelled.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Cancellable.is_cancelled.html">g_cancellable_is_cancelled</a></h6>
+          <div class="docblock">
+            <p>Checks if a cancellable job has been&nbsp;cancelled.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Cancellable.make_pollfd.html">g_cancellable_make_pollfd</a></h6>
+          <div class="docblock">
+            <p>Creates a <code>GPollFD</code> corresponding to <code>cancellable</code>; this can be passed
+to <code>g_poll()</code> and used to poll for cancellation. This is useful both
+for unix systems without a native poll and for portability to&nbsp;windows.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Cancellable.pop_current.html">g_cancellable_pop_current</a></h6>
+          <div class="docblock">
+            <p>Pops <code>cancellable</code> off the cancellable stack (verifying that <code>cancellable</code>
+is on the top of the&nbsp;stack).</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Cancellable.push_current.html">g_cancellable_push_current</a></h6>
+          <div class="docblock">
+            <p>Pushes <code>cancellable</code> onto the cancellable stack. The current
+cancellable can then be received using&nbsp;g_cancellable_get_current().</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Cancellable.release_fd.html">g_cancellable_release_fd</a></h6>
+          <div class="docblock">
+            <p>Releases a resources previously allocated by <code>g_cancellable_get_fd()</code>
+or&nbsp;g_cancellable_make_pollfd().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Cancellable.reset.html">g_cancellable_reset</a></h6>
+          <div class="docblock">
+            <p>Resets <code>cancellable</code> to its uncancelled&nbsp;state.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Cancellable.set_error_if_cancelled.html">g_cancellable_set_error_if_cancelled</a></h6>
+          <div class="docblock">
+            <p>If the <code>cancellable</code> is cancelled, sets the error to notify
+that the operation was&nbsp;cancelled.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Cancellable.source_new.html">g_cancellable_source_new</a></h6>
+          <div class="docblock">
+            <p>Creates a source that triggers if <code>cancellable</code> is cancelled and
+calls its callback of type <code>GCancellableSourceFunc</code>. This is
+primarily useful for attaching to another (non-cancellable) source
+with <code>g_source_add_child_source()</code> to add cancellability to&nbsp;it.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.Cancellable.cancelled.html">Gio.Cancellable::cancelled</a></h6>
+          <div class="docblock">
+            <p>Emitted when the operation has been&nbsp;cancelled.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioCancellableClass {
+  GObjectClass parent_class;
+  void (* cancelled) (
+    GCancellable* cancellable
+  );
+  void (* _g_reserved1) (
+void
+  );
+  void (* _g_reserved2) (
+void
+  );
+  void (* _g_reserved3) (
+void
+  );
+  void (* _g_reserved4) (
+void
+  );
+  void (* _g_reserved5) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>cancelled: void (* cancelled) (
+    GCancellable* cancellable
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved1: void (* _g_reserved1) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved2: void (* _g_reserved2) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved3: void (* _g_reserved3) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved4: void (* _g_reserved4) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved5: void (* _g_reserved5) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-cancelled"><a href="vfunc.Cancellable.cancelled.html">Gio.CancellableClass.cancelled</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.Cancellable.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:40:57 GMT --></html>

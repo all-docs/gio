@@ -1,0 +1,1494 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/class.Task.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:55:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.Task</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.Task"/>
+  <meta property="og:description" content="Reference for Gio.Task"/>
+  <meta name="twitter:title" content="Gio.Task"/>
+  <meta name="twitter:description" content="Reference for Gio.Task"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="class.Task.html#description">Task</a>
+  </div>
+</div>
+
+
+  
+<div class="section">
+  <h5>Constructors</h5>
+  <div class="links">
+  
+    <a class="ctor" href="ctor.Task.new.html">new</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Functions</h5>
+  <div class="links">
+  
+    <a class="func" href="type_func.Task.is_valid.html">is_valid</a>
+  
+    <a class="func" href="type_func.Task.report_error.html">report_error</a>
+  
+    <a class="func" href="type_func.Task.report_new_error.html">report_new_error</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.Task.attach_source.html">attach_source</a>
+  
+    <a class="method" href="method.Task.get_cancellable.html">get_cancellable</a>
+  
+    <a class="method" href="method.Task.get_check_cancellable.html">get_check_cancellable</a>
+  
+    <a class="method" href="method.Task.get_completed.html">get_completed</a>
+  
+    <a class="method" href="method.Task.get_context.html">get_context</a>
+  
+    <a class="method" href="method.Task.get_name.html">get_name</a>
+  
+    <a class="method" href="method.Task.get_priority.html">get_priority</a>
+  
+    <a class="method" href="method.Task.get_return_on_cancel.html">get_return_on_cancel</a>
+  
+    <a class="method" href="method.Task.get_source_object.html">get_source_object</a>
+  
+    <a class="method" href="method.Task.get_source_tag.html">get_source_tag</a>
+  
+    <a class="method" href="method.Task.get_task_data.html">get_task_data</a>
+  
+    <a class="method" href="method.Task.had_error.html">had_error</a>
+  
+    <a class="method" href="method.Task.propagate_boolean.html">propagate_boolean</a>
+  
+    <a class="method" href="method.Task.propagate_int.html">propagate_int</a>
+  
+    <a class="method" href="method.Task.propagate_pointer.html">propagate_pointer</a>
+  
+    <a class="method" href="method.Task.propagate_value.html">propagate_value</a>
+  
+    <a class="method" href="method.Task.return_boolean.html">return_boolean</a>
+  
+    <a class="method" href="method.Task.return_error.html">return_error</a>
+  
+    <a class="method" href="method.Task.return_error_if_cancelled.html">return_error_if_cancelled</a>
+  
+    <a class="method" href="method.Task.return_int.html">return_int</a>
+  
+    <a class="method" href="method.Task.return_new_error.html">return_new_error</a>
+  
+    <a class="method" href="method.Task.return_new_error_literal.html">return_new_error_literal</a>
+  
+    <a class="method" href="method.Task.return_pointer.html">return_pointer</a>
+  
+    <a class="method" href="method.Task.return_prefixed_error.html">return_prefixed_error</a>
+  
+    <a class="method" href="method.Task.return_value.html">return_value</a>
+  
+    <a class="method" href="method.Task.run_in_thread.html">run_in_thread</a>
+  
+    <a class="method" href="method.Task.run_in_thread_sync.html">run_in_thread_sync</a>
+  
+    <a class="method" href="method.Task.set_check_cancellable.html">set_check_cancellable</a>
+  
+    <a class="method" href="method.Task.set_name.html">set_name</a>
+  
+    <a class="method" href="method.Task.set_priority.html">set_priority</a>
+  
+    <a class="method" href="method.Task.set_return_on_cancel.html">set_return_on_cancel</a>
+  
+    <a class="method" href="method.Task.set_source_tag.html">set_source_tag</a>
+  
+    <a class="method" href="method.Task.set_static_name.html">set_static_name</a>
+  
+    <a class="method" href="method.Task.set_task_data.html">set_task_data</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Properties</h5>
+  <div class="links">
+  
+    <a class="property" href="property.Task.completed.html">completed</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>Task</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gtask.c#L35">[src]</a>
+          
+        </h4>
+
+        <pre><code>final class Gio.Task : GObject.Object
+  implements Gio.AsyncResult {
+  /* No available fields */
+}</pre></code>
+
+        <div class="docblock">
+          <p>A <code>GTask</code> represents and manages a cancellable&nbsp;‘task’.</p>
+<h2 id="asynchronous-operations">Asynchronous operations<a class="md-anchor" href="#asynchronous-operations" title="Permanent link"></a></h2>
+<p>The most common usage of <code>GTask</code> is as a <a href="iface.AsyncResult.html"><code>GAsyncResult</code></a>, to
+manage data during an asynchronous operation. You call
+<a href="ctor.Task.new.html"><code>g_task_new()</code></a> in the ‘start’ method, followed by
+<a href="method.Task.set_task_data.html"><code>g_task_set_task_data()</code></a> and the like if you need to keep some
+additional data associated with the task, and then pass the
+task object around through your asynchronous operation.
+Eventually, you will call a method such as
+<a href="method.Task.return_pointer.html"><code>g_task_return_pointer()</code></a> or <a href="method.Task.return_error.html"><code>g_task_return_error()</code></a>, which
+will save the value you give it and then invoke the task’s callback
+function in the thread-default main context (see
+<a href="javascript:void(0)" data-namespace="GLib" data-link="method.MainContext.push_thread_default.html" class="external"><code>g_main_context_push_thread_default()</code></a>)
+where it was created (waiting until the next iteration of the main
+loop first, if necessary). The caller will pass the <code>GTask</code> back to
+the operation’s finish function (as a <a href="iface.AsyncResult.html"><code>GAsyncResult</code></a>), and you can
+use <a href="method.Task.propagate_pointer.html"><code>g_task_propagate_pointer()</code></a> or the like to extract the
+return&nbsp;value.</p>
+<p>Using <code>GTask</code> requires the thread-default <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.MainContext.html" class="external"><code>GMainContext</code></a> from when
+the <code>GTask</code> was constructed to be running at least until the task has
+completed and its data has been&nbsp;freed.</p>
+<p>If a <code>GTask</code> has been constructed and its callback set, it is an error to
+not call <code>g_task_return_*()</code> on it. GLib will warn at runtime if this happens
+(since&nbsp;2.76).</p>
+<p>Here is an example for using <code>GTask</code> as a <a href="iface.AsyncResult.html"><code>GAsyncResult</code></a>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">CakeFrostingType</span><span class="w"> </span><span class="n">frosting</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">message</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="n">DecorationData</span><span class="p">;</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span>
+<span class="nf">decoration_data_free</span><span class="w"> </span><span class="p">(</span><span class="n">DecorationData</span><span class="w"> </span><span class="o">*</span><span class="n">decoration</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">g_free</span><span class="w"> </span><span class="p">(</span><span class="n">decoration</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_slice_free</span><span class="w"> </span><span class="p">(</span><span class="n">DecorationData</span><span class="p">,</span><span class="w"> </span><span class="n">decoration</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span>
+<span class="nf">baked_cb</span><span class="w"> </span><span class="p">(</span><span class="n">Cake</span><span class="w">     </span><span class="o">*</span><span class="n">cake</span><span class="p">,</span>
+<span class="w">          </span><span class="n">gpointer</span><span class="w">  </span><span class="n">user_data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">GTask</span><span class="w"> </span><span class="o">*</span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">user_data</span><span class="p">;</span>
+<span class="w">  </span><span class="n">DecorationData</span><span class="w"> </span><span class="o">*</span><span class="n">decoration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_task_get_task_data</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="w">  </span><span class="n">GError</span><span class="w"> </span><span class="o">*</span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cake</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">g_task_return_new_error</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">BAKER_ERROR</span><span class="p">,</span><span class="w"> </span><span class="n">BAKER_ERROR_NO_FLOUR</span><span class="p">,</span>
+<span class="w">                               </span><span class="s">&quot;Go to the supermarket&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">cake_decorate</span><span class="w"> </span><span class="p">(</span><span class="n">cake</span><span class="p">,</span><span class="w"> </span><span class="n">decoration</span><span class="o">-&gt;</span><span class="n">frosting</span><span class="p">,</span><span class="w"> </span><span class="n">decoration</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">cake</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// g_task_return_error() takes ownership of error</span>
+<span class="w">      </span><span class="n">g_task_return_error</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+<span class="w">      </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">g_task_return_pointer</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">cake</span><span class="p">,</span><span class="w"> </span><span class="n">g_object_unref</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span>
+<span class="nf">baker_bake_cake_async</span><span class="w"> </span><span class="p">(</span><span class="n">Baker</span><span class="w">               </span><span class="o">*</span><span class="n">self</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">guint</span><span class="w">                </span><span class="n">radius</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">CakeFlavor</span><span class="w">           </span><span class="n">flavor</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">CakeFrostingType</span><span class="w">     </span><span class="n">frosting</span><span class="p">,</span>
+<span class="w">                       </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w">          </span><span class="o">*</span><span class="n">message</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">GCancellable</span><span class="w">        </span><span class="o">*</span><span class="n">cancellable</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">GAsyncReadyCallback</span><span class="w">  </span><span class="n">callback</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">gpointer</span><span class="w">             </span><span class="n">user_data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">GTask</span><span class="w"> </span><span class="o">*</span><span class="n">task</span><span class="p">;</span>
+<span class="w">  </span><span class="n">DecorationData</span><span class="w"> </span><span class="o">*</span><span class="n">decoration</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Cake</span><span class="w">  </span><span class="o">*</span><span class="n">cake</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_task_new</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">cancellable</span><span class="p">,</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span><span class="w"> </span><span class="n">user_data</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">radius</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">g_task_return_new_error</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">BAKER_ERROR</span><span class="p">,</span><span class="w"> </span><span class="n">BAKER_ERROR_TOO_SMALL</span><span class="p">,</span>
+<span class="w">                               </span><span class="s">&quot;%ucm radius cakes are silly&quot;</span><span class="p">,</span>
+<span class="w">                               </span><span class="n">radius</span><span class="p">);</span>
+<span class="w">      </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">cake</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_baker_get_cached_cake</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">radius</span><span class="p">,</span><span class="w"> </span><span class="n">flavor</span><span class="p">,</span><span class="w"> </span><span class="n">frosting</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cake</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// _baker_get_cached_cake() returns a reffed cake</span>
+<span class="w">      </span><span class="n">g_task_return_pointer</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">cake</span><span class="p">,</span><span class="w"> </span><span class="n">g_object_unref</span><span class="p">);</span>
+<span class="w">      </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">decoration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_slice_new</span><span class="w"> </span><span class="p">(</span><span class="n">DecorationData</span><span class="p">);</span>
+<span class="w">  </span><span class="n">decoration</span><span class="o">-&gt;</span><span class="n">frosting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frosting</span><span class="p">;</span>
+<span class="w">  </span><span class="n">decoration</span><span class="o">-&gt;</span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_strdup</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_task_set_task_data</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">decoration</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">GDestroyNotify</span><span class="p">)</span><span class="w"> </span><span class="n">decoration_data_free</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">_baker_begin_cake</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">radius</span><span class="p">,</span><span class="w"> </span><span class="n">flavor</span><span class="p">,</span><span class="w"> </span><span class="n">cancellable</span><span class="p">,</span><span class="w"> </span><span class="n">baked_cb</span><span class="p">,</span><span class="w"> </span><span class="n">task</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">Cake</span><span class="w"> </span><span class="o">*</span>
+<span class="nf">baker_bake_cake_finish</span><span class="w"> </span><span class="p">(</span><span class="n">Baker</span><span class="w">         </span><span class="o">*</span><span class="n">self</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">GAsyncResult</span><span class="w">  </span><span class="o">*</span><span class="n">result</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">GError</span><span class="w">       </span><span class="o">**</span><span class="n">error</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">g_return_val_if_fail</span><span class="w"> </span><span class="p">(</span><span class="n">g_task_is_valid</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">),</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">g_task_propagate_pointer</span><span class="w"> </span><span class="p">(</span><span class="n">G_TASK</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">),</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="chained-asynchronous-operations">Chained asynchronous operations<a class="md-anchor" href="#chained-asynchronous-operations" title="Permanent link"></a></h2>
+<p><code>GTask</code> also tries to simplify asynchronous operations that
+internally chain together several smaller asynchronous
+operations. <a href="method.Task.get_cancellable.html"><code>g_task_get_cancellable()</code></a>, <a href="method.Task.get_context.html"><code>g_task_get_context()</code></a>,
+and <a href="method.Task.get_priority.html"><code>g_task_get_priority()</code></a> allow you to get back the task’s
+<a href="class.Cancellable.html"><code>GCancellable</code></a>, <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.MainContext.html" class="external"><code>GMainContext</code></a>, and
+<a href="iface.AsyncResult.html#io-priority">I/O priority</a>
+when starting a new subtask, so you don’t have to keep track
+of them yourself. <a href="method.Task.attach_source.html"><code>g_task_attach_source()</code></a> simplifies the case
+of waiting for a source to fire (automatically using the correct
+<a href="javascript:void(0)" data-namespace="GLib" data-link="struct.MainContext.html" class="external"><code>GMainContext</code></a> and&nbsp;priority).</p>
+<p>Here is an example for chained asynchronous&nbsp;operations:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Cake</span><span class="w"> </span><span class="o">*</span><span class="n">cake</span><span class="p">;</span>
+<span class="w">  </span><span class="n">CakeFrostingType</span><span class="w"> </span><span class="n">frosting</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">message</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="n">BakingData</span><span class="p">;</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span>
+<span class="nf">decoration_data_free</span><span class="w"> </span><span class="p">(</span><span class="n">BakingData</span><span class="w"> </span><span class="o">*</span><span class="n">bd</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bd</span><span class="o">-&gt;</span><span class="n">cake</span><span class="p">)</span>
+<span class="w">    </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">bd</span><span class="o">-&gt;</span><span class="n">cake</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_free</span><span class="w"> </span><span class="p">(</span><span class="n">bd</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_slice_free</span><span class="w"> </span><span class="p">(</span><span class="n">BakingData</span><span class="p">,</span><span class="w"> </span><span class="n">bd</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span>
+<span class="nf">decorated_cb</span><span class="w"> </span><span class="p">(</span><span class="n">Cake</span><span class="w">         </span><span class="o">*</span><span class="n">cake</span><span class="p">,</span>
+<span class="w">              </span><span class="n">GAsyncResult</span><span class="w"> </span><span class="o">*</span><span class="n">result</span><span class="p">,</span>
+<span class="w">              </span><span class="n">gpointer</span><span class="w">      </span><span class="n">user_data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">GTask</span><span class="w"> </span><span class="o">*</span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">user_data</span><span class="p">;</span>
+<span class="w">  </span><span class="n">GError</span><span class="w"> </span><span class="o">*</span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">cake_decorate_finish</span><span class="w"> </span><span class="p">(</span><span class="n">cake</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">cake</span><span class="p">);</span>
+<span class="w">      </span><span class="n">g_task_return_error</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+<span class="w">      </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// baking_data_free() will drop its ref on the cake, so we have to</span>
+<span class="w">  </span><span class="c1">// take another here to give to the caller.</span>
+<span class="w">  </span><span class="n">g_task_return_pointer</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">g_object_ref</span><span class="w"> </span><span class="p">(</span><span class="n">cake</span><span class="p">),</span><span class="w"> </span><span class="n">g_object_unref</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">gboolean</span>
+<span class="nf">decorator_ready</span><span class="w"> </span><span class="p">(</span><span class="n">gpointer</span><span class="w"> </span><span class="n">user_data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">GTask</span><span class="w"> </span><span class="o">*</span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">user_data</span><span class="p">;</span>
+<span class="w">  </span><span class="n">BakingData</span><span class="w"> </span><span class="o">*</span><span class="n">bd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_task_get_task_data</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">cake_decorate_async</span><span class="w"> </span><span class="p">(</span><span class="n">bd</span><span class="o">-&gt;</span><span class="n">cake</span><span class="p">,</span><span class="w"> </span><span class="n">bd</span><span class="o">-&gt;</span><span class="n">frosting</span><span class="p">,</span><span class="w"> </span><span class="n">bd</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">g_task_get_cancellable</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">),</span>
+<span class="w">                       </span><span class="n">decorated_cb</span><span class="p">,</span><span class="w"> </span><span class="n">task</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">G_SOURCE_REMOVE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span>
+<span class="nf">baked_cb</span><span class="w"> </span><span class="p">(</span><span class="n">Cake</span><span class="w">     </span><span class="o">*</span><span class="n">cake</span><span class="p">,</span>
+<span class="w">          </span><span class="n">gpointer</span><span class="w">  </span><span class="n">user_data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">GTask</span><span class="w"> </span><span class="o">*</span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">user_data</span><span class="p">;</span>
+<span class="w">  </span><span class="n">BakingData</span><span class="w"> </span><span class="o">*</span><span class="n">bd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_task_get_task_data</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="w">  </span><span class="n">GError</span><span class="w"> </span><span class="o">*</span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cake</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">g_task_return_new_error</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">BAKER_ERROR</span><span class="p">,</span><span class="w"> </span><span class="n">BAKER_ERROR_NO_FLOUR</span><span class="p">,</span>
+<span class="w">                               </span><span class="s">&quot;Go to the supermarket&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">bd</span><span class="o">-&gt;</span><span class="n">cake</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cake</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Bail out now if the user has already cancelled</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">g_task_return_error_if_cancelled</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cake_decorator_available</span><span class="w"> </span><span class="p">(</span><span class="n">cake</span><span class="p">))</span>
+<span class="w">    </span><span class="n">decorator_ready</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">GSource</span><span class="w"> </span><span class="o">*</span><span class="n">source</span><span class="p">;</span>
+
+<span class="w">      </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cake_decorator_wait_source_new</span><span class="w"> </span><span class="p">(</span><span class="n">cake</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// Attach @source to @task’s GMainContext and have it call</span>
+<span class="w">      </span><span class="c1">// decorator_ready() when it is ready.</span>
+<span class="w">      </span><span class="n">g_task_attach_source</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">decorator_ready</span><span class="p">);</span>
+<span class="w">      </span><span class="n">g_source_unref</span><span class="w"> </span><span class="p">(</span><span class="n">source</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span>
+<span class="nf">baker_bake_cake_async</span><span class="w"> </span><span class="p">(</span><span class="n">Baker</span><span class="w">               </span><span class="o">*</span><span class="n">self</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">guint</span><span class="w">                </span><span class="n">radius</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">CakeFlavor</span><span class="w">           </span><span class="n">flavor</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">CakeFrostingType</span><span class="w">     </span><span class="n">frosting</span><span class="p">,</span>
+<span class="w">                       </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w">          </span><span class="o">*</span><span class="n">message</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">gint</span><span class="w">                 </span><span class="n">priority</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">GCancellable</span><span class="w">        </span><span class="o">*</span><span class="n">cancellable</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">GAsyncReadyCallback</span><span class="w">  </span><span class="n">callback</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">gpointer</span><span class="w">             </span><span class="n">user_data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">GTask</span><span class="w"> </span><span class="o">*</span><span class="n">task</span><span class="p">;</span>
+<span class="w">  </span><span class="n">BakingData</span><span class="w"> </span><span class="o">*</span><span class="n">bd</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_task_new</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">cancellable</span><span class="p">,</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span><span class="w"> </span><span class="n">user_data</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_task_set_priority</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">priority</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">bd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_slice_new0</span><span class="w"> </span><span class="p">(</span><span class="n">BakingData</span><span class="p">);</span>
+<span class="w">  </span><span class="n">bd</span><span class="o">-&gt;</span><span class="n">frosting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frosting</span><span class="p">;</span>
+<span class="w">  </span><span class="n">bd</span><span class="o">-&gt;</span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_strdup</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_task_set_task_data</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">bd</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">GDestroyNotify</span><span class="p">)</span><span class="w"> </span><span class="n">baking_data_free</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">_baker_begin_cake</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">radius</span><span class="p">,</span><span class="w"> </span><span class="n">flavor</span><span class="p">,</span><span class="w"> </span><span class="n">cancellable</span><span class="p">,</span><span class="w"> </span><span class="n">baked_cb</span><span class="p">,</span><span class="w"> </span><span class="n">task</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">Cake</span><span class="w"> </span><span class="o">*</span>
+<span class="nf">baker_bake_cake_finish</span><span class="w"> </span><span class="p">(</span><span class="n">Baker</span><span class="w">         </span><span class="o">*</span><span class="n">self</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">GAsyncResult</span><span class="w">  </span><span class="o">*</span><span class="n">result</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">GError</span><span class="w">       </span><span class="o">**</span><span class="n">error</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">g_return_val_if_fail</span><span class="w"> </span><span class="p">(</span><span class="n">g_task_is_valid</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">),</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">g_task_propagate_pointer</span><span class="w"> </span><span class="p">(</span><span class="n">G_TASK</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">),</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="asynchronous-operations-from-synchronous-ones">Asynchronous operations from synchronous ones<a class="md-anchor" href="#asynchronous-operations-from-synchronous-ones" title="Permanent link"></a></h2>
+<p>You can use <a href="method.Task.run_in_thread.html"><code>g_task_run_in_thread()</code></a> to turn a synchronous
+operation into an asynchronous one, by running it in a thread.
+When it completes, the result will be dispatched to the thread-default main
+context (see <a href="javascript:void(0)" data-namespace="GLib" data-link="method.MainContext.push_thread_default.html" class="external"><code>g_main_context_push_thread_default()</code></a>) where the <code>GTask</code>
+was&nbsp;created.</p>
+<p>Running a task in a&nbsp;thread:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">guint</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+<span class="w">  </span><span class="n">CakeFlavor</span><span class="w"> </span><span class="n">flavor</span><span class="p">;</span>
+<span class="w">  </span><span class="n">CakeFrostingType</span><span class="w"> </span><span class="n">frosting</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">message</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="n">CakeData</span><span class="p">;</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span>
+<span class="nf">cake_data_free</span><span class="w"> </span><span class="p">(</span><span class="n">CakeData</span><span class="w"> </span><span class="o">*</span><span class="n">cake_data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">g_free</span><span class="w"> </span><span class="p">(</span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_slice_free</span><span class="w"> </span><span class="p">(</span><span class="n">CakeData</span><span class="p">,</span><span class="w"> </span><span class="n">cake_data</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span>
+<span class="nf">bake_cake_thread</span><span class="w"> </span><span class="p">(</span><span class="n">GTask</span><span class="w">         </span><span class="o">*</span><span class="n">task</span><span class="p">,</span>
+<span class="w">                  </span><span class="n">gpointer</span><span class="w">       </span><span class="n">source_object</span><span class="p">,</span>
+<span class="w">                  </span><span class="n">gpointer</span><span class="w">       </span><span class="n">task_data</span><span class="p">,</span>
+<span class="w">                  </span><span class="n">GCancellable</span><span class="w">  </span><span class="o">*</span><span class="n">cancellable</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">Baker</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source_object</span><span class="p">;</span>
+<span class="w">  </span><span class="n">CakeData</span><span class="w"> </span><span class="o">*</span><span class="n">cake_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task_data</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Cake</span><span class="w"> </span><span class="o">*</span><span class="n">cake</span><span class="p">;</span>
+<span class="w">  </span><span class="n">GError</span><span class="w"> </span><span class="o">*</span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">cake</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bake_cake</span><span class="w"> </span><span class="p">(</span><span class="n">baker</span><span class="p">,</span><span class="w"> </span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">radius</span><span class="p">,</span><span class="w"> </span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">flavor</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">frosting</span><span class="p">,</span><span class="w"> </span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">cancellable</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cake</span><span class="p">)</span>
+<span class="w">    </span><span class="n">g_task_return_pointer</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">cake</span><span class="p">,</span><span class="w"> </span><span class="n">g_object_unref</span><span class="p">);</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="n">g_task_return_error</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span>
+<span class="nf">baker_bake_cake_async</span><span class="w"> </span><span class="p">(</span><span class="n">Baker</span><span class="w">               </span><span class="o">*</span><span class="n">self</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">guint</span><span class="w">                </span><span class="n">radius</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">CakeFlavor</span><span class="w">           </span><span class="n">flavor</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">CakeFrostingType</span><span class="w">     </span><span class="n">frosting</span><span class="p">,</span>
+<span class="w">                       </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w">          </span><span class="o">*</span><span class="n">message</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">GCancellable</span><span class="w">        </span><span class="o">*</span><span class="n">cancellable</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">GAsyncReadyCallback</span><span class="w">  </span><span class="n">callback</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">gpointer</span><span class="w">             </span><span class="n">user_data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">CakeData</span><span class="w"> </span><span class="o">*</span><span class="n">cake_data</span><span class="p">;</span>
+<span class="w">  </span><span class="n">GTask</span><span class="w"> </span><span class="o">*</span><span class="n">task</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">cake_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_slice_new</span><span class="w"> </span><span class="p">(</span><span class="n">CakeData</span><span class="p">);</span>
+<span class="w">  </span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+<span class="w">  </span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">flavor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">flavor</span><span class="p">;</span>
+<span class="w">  </span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">frosting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frosting</span><span class="p">;</span>
+<span class="w">  </span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_strdup</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="w">  </span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_task_new</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">cancellable</span><span class="p">,</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span><span class="w"> </span><span class="n">user_data</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_task_set_task_data</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">cake_data</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">GDestroyNotify</span><span class="p">)</span><span class="w"> </span><span class="n">cake_data_free</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_task_run_in_thread</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">bake_cake_thread</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">Cake</span><span class="w"> </span><span class="o">*</span>
+<span class="nf">baker_bake_cake_finish</span><span class="w"> </span><span class="p">(</span><span class="n">Baker</span><span class="w">         </span><span class="o">*</span><span class="n">self</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">GAsyncResult</span><span class="w">  </span><span class="o">*</span><span class="n">result</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">GError</span><span class="w">       </span><span class="o">**</span><span class="n">error</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">g_return_val_if_fail</span><span class="w"> </span><span class="p">(</span><span class="n">g_task_is_valid</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">),</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">g_task_propagate_pointer</span><span class="w"> </span><span class="p">(</span><span class="n">G_TASK</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">),</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="adding-cancellability-to-uncancellable-tasks">Adding cancellability to uncancellable tasks<a class="md-anchor" href="#adding-cancellability-to-uncancellable-tasks" title="Permanent link"></a></h2>
+<p>Finally, <a href="method.Task.run_in_thread.html"><code>g_task_run_in_thread()</code></a> and
+<a href="method.Task.run_in_thread_sync.html"><code>g_task_run_in_thread_sync()</code></a> can be used to turn an uncancellable
+operation into a cancellable one. If you call
+<a href="method.Task.set_return_on_cancel.html"><code>g_task_set_return_on_cancel()</code></a>, passing <code>TRUE</code>, then if the task’s
+<a href="class.Cancellable.html"><code>GCancellable</code></a> is cancelled, it will return control back to the
+caller immediately, while allowing the task thread to continue running in the
+background (and simply discarding its result when it finally does finish).
+Provided that the task thread is careful about how it uses
+locks and other externally-visible resources, this allows you
+to make ‘GLib-friendly’ asynchronous and cancellable
+synchronous variants of blocking&nbsp;APIs.</p>
+<p>Cancelling a&nbsp;task:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">void</span>
+<span class="nf">bake_cake_thread</span><span class="w"> </span><span class="p">(</span><span class="n">GTask</span><span class="w">         </span><span class="o">*</span><span class="n">task</span><span class="p">,</span>
+<span class="w">                  </span><span class="n">gpointer</span><span class="w">       </span><span class="n">source_object</span><span class="p">,</span>
+<span class="w">                  </span><span class="n">gpointer</span><span class="w">       </span><span class="n">task_data</span><span class="p">,</span>
+<span class="w">                  </span><span class="n">GCancellable</span><span class="w">  </span><span class="o">*</span><span class="n">cancellable</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">Baker</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source_object</span><span class="p">;</span>
+<span class="w">  </span><span class="n">CakeData</span><span class="w"> </span><span class="o">*</span><span class="n">cake_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task_data</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Cake</span><span class="w"> </span><span class="o">*</span><span class="n">cake</span><span class="p">;</span>
+<span class="w">  </span><span class="n">GError</span><span class="w"> </span><span class="o">*</span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">cake</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bake_cake</span><span class="w"> </span><span class="p">(</span><span class="n">baker</span><span class="p">,</span><span class="w"> </span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">radius</span><span class="p">,</span><span class="w"> </span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">flavor</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">frosting</span><span class="p">,</span><span class="w"> </span><span class="n">cake_data</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">,</span>
+<span class="w">                    </span><span class="o">&amp;</span><span class="n">error</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">g_task_return_error</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// If the task has already been cancelled, then we don’t want to add</span>
+<span class="w">  </span><span class="c1">// the cake to the cake cache. Likewise, we don’t  want to have the</span>
+<span class="w">  </span><span class="c1">// task get cancelled in the middle of updating the cache.</span>
+<span class="w">  </span><span class="c1">// g_task_set_return_on_cancel() will return %TRUE here if it managed</span>
+<span class="w">  </span><span class="c1">// to disable return-on-cancel, or %FALSE if the task was cancelled</span>
+<span class="w">  </span><span class="c1">// before it could.</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">g_task_set_return_on_cancel</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">FALSE</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// If the caller cancels at this point, their</span>
+<span class="w">      </span><span class="c1">// GAsyncReadyCallback won’t be invoked until we return,</span>
+<span class="w">      </span><span class="c1">// so we don’t have to worry that this code will run at</span>
+<span class="w">      </span><span class="c1">// the same time as that code does. But if there were</span>
+<span class="w">      </span><span class="c1">// other functions that might look at the cake cache,</span>
+<span class="w">      </span><span class="c1">// then we’d probably need a GMutex here as well.</span>
+<span class="w">      </span><span class="n">baker_add_cake_to_cache</span><span class="w"> </span><span class="p">(</span><span class="n">baker</span><span class="p">,</span><span class="w"> </span><span class="n">cake</span><span class="p">);</span>
+<span class="w">      </span><span class="n">g_task_return_pointer</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">cake</span><span class="p">,</span><span class="w"> </span><span class="n">g_object_unref</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span>
+<span class="nf">baker_bake_cake_async</span><span class="w"> </span><span class="p">(</span><span class="n">Baker</span><span class="w">               </span><span class="o">*</span><span class="n">self</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">guint</span><span class="w">                </span><span class="n">radius</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">CakeFlavor</span><span class="w">           </span><span class="n">flavor</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">CakeFrostingType</span><span class="w">     </span><span class="n">frosting</span><span class="p">,</span>
+<span class="w">                       </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w">          </span><span class="o">*</span><span class="n">message</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">GCancellable</span><span class="w">        </span><span class="o">*</span><span class="n">cancellable</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">GAsyncReadyCallback</span><span class="w">  </span><span class="n">callback</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">gpointer</span><span class="w">             </span><span class="n">user_data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">CakeData</span><span class="w"> </span><span class="o">*</span><span class="n">cake_data</span><span class="p">;</span>
+<span class="w">  </span><span class="n">GTask</span><span class="w"> </span><span class="o">*</span><span class="n">task</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">cake_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_slice_new</span><span class="w"> </span><span class="p">(</span><span class="n">CakeData</span><span class="p">);</span>
+
+<span class="w">  </span><span class="p">...</span>
+
+<span class="w">  </span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_task_new</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">cancellable</span><span class="p">,</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span><span class="w"> </span><span class="n">user_data</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_task_set_task_data</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">cake_data</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">GDestroyNotify</span><span class="p">)</span><span class="w"> </span><span class="n">cake_data_free</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_task_set_return_on_cancel</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">TRUE</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_task_run_in_thread</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">bake_cake_thread</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">Cake</span><span class="w"> </span><span class="o">*</span>
+<span class="nf">baker_bake_cake_sync</span><span class="w"> </span><span class="p">(</span><span class="n">Baker</span><span class="w">               </span><span class="o">*</span><span class="n">self</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">guint</span><span class="w">                </span><span class="n">radius</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">CakeFlavor</span><span class="w">           </span><span class="n">flavor</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">CakeFrostingType</span><span class="w">     </span><span class="n">frosting</span><span class="p">,</span>
+<span class="w">                      </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w">          </span><span class="o">*</span><span class="n">message</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">GCancellable</span><span class="w">        </span><span class="o">*</span><span class="n">cancellable</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">GError</span><span class="w">             </span><span class="o">**</span><span class="n">error</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">CakeData</span><span class="w"> </span><span class="o">*</span><span class="n">cake_data</span><span class="p">;</span>
+<span class="w">  </span><span class="n">GTask</span><span class="w"> </span><span class="o">*</span><span class="n">task</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Cake</span><span class="w"> </span><span class="o">*</span><span class="n">cake</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">cake_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_slice_new</span><span class="w"> </span><span class="p">(</span><span class="n">CakeData</span><span class="p">);</span>
+
+<span class="w">  </span><span class="p">...</span>
+
+<span class="w">  </span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_task_new</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">cancellable</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_task_set_task_data</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">cake_data</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">GDestroyNotify</span><span class="p">)</span><span class="w"> </span><span class="n">cake_data_free</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_task_set_return_on_cancel</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">TRUE</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_task_run_in_thread_sync</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">bake_cake_thread</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">cake</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_task_propagate_pointer</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">cake</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="porting-from-gsimpleasyncresult">Porting from <a href="class.SimpleAsyncResult.html"><code>GSimpleAsyncResult</code></a><a class="md-anchor" href="#porting-from-gsimpleasyncresult" title="Permanent link"></a></h2>
+<p><code>GTask</code>’s <span class="caps">API</span> attempts to be simpler than <a href="class.SimpleAsyncResult.html"><code>GSimpleAsyncResult</code></a>’s
+in several&nbsp;ways:</p>
+<ul>
+<li>You can save task-specific data with <a href="method.Task.set_task_data.html"><code>g_task_set_task_data()</code></a>, and
+  retrieve it later with <a href="method.Task.get_task_data.html"><code>g_task_get_task_data()</code></a>. This replaces the
+  abuse of <a href="method.SimpleAsyncResult.set_op_res_gpointer.html"><code>g_simple_async_result_set_op_res_gpointer()</code></a> for the same
+  purpose with <a href="class.SimpleAsyncResult.html"><code>GSimpleAsyncResult</code></a>.</li>
+<li>In addition to the task data, <code>GTask</code> also keeps track of the
+  <a href="iface.AsyncResult.html#io-priority">priority</a>, <a href="class.Cancellable.html"><code>GCancellable</code></a>,
+  and <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.MainContext.html" class="external"><code>GMainContext</code></a> associated with the task, so tasks that
+  consist of a chain of simpler asynchronous operations will have easy access
+  to those values when starting each&nbsp;sub-task.</li>
+<li><a href="method.Task.return_error_if_cancelled.html"><code>g_task_return_error_if_cancelled()</code></a> provides simplified
+  handling for cancellation. In addition, cancellation
+  overrides any other <code>GTask</code> return value by default, like
+  <a href="class.SimpleAsyncResult.html"><code>GSimpleAsyncResult</code></a> does when
+  <a href="method.SimpleAsyncResult.set_check_cancellable.html"><code>g_simple_async_result_set_check_cancellable()</code></a> is called.
+  (You can use <a href="method.Task.set_check_cancellable.html"><code>g_task_set_check_cancellable()</code></a> to turn off that
+  behavior.) On the other hand, <a href="method.Task.run_in_thread.html"><code>g_task_run_in_thread()</code></a>
+  guarantees that it will always run your
+  <code>task_func</code>, even if the task’s <a href="class.Cancellable.html"><code>GCancellable</code></a>
+  is already cancelled before the task gets a chance to run;
+  you can start your <code>task_func</code> with a
+  <a href="method.Task.return_error_if_cancelled.html"><code>g_task_return_error_if_cancelled()</code></a> check if you need the
+  old&nbsp;behavior.</li>
+<li>The ‘return’ methods (eg, <a href="method.Task.return_pointer.html"><code>g_task_return_pointer()</code></a>)
+  automatically cause the task to be ‘completed’ as well, and
+  there is no need to worry about the ‘complete’ vs ‘complete in idle’
+  distinction. (<code>GTask</code> automatically figures out
+  whether the task’s callback can be invoked directly, or
+  if it needs to be sent to another <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.MainContext.html" class="external"><code>GMainContext</code></a>, or delayed
+  until the next iteration of the current <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.MainContext.html" class="external"><code>GMainContext</code></a>.)</li>
+<li>The ‘finish’ functions for <code>GTask</code> based operations are generally
+  much simpler than <a href="class.SimpleAsyncResult.html"><code>GSimpleAsyncResult</code></a> ones, normally consisting
+  of only a single call to <a href="method.Task.propagate_pointer.html"><code>g_task_propagate_pointer()</code></a> or the like.
+  Since <a href="method.Task.propagate_pointer.html"><code>g_task_propagate_pointer()</code></a> ‘steals’ the return value from
+  the <code>GTask</code>, it is not necessary to juggle pointers around to
+  prevent it from being freed&nbsp;twice.</li>
+<li>With <a href="class.SimpleAsyncResult.html"><code>GSimpleAsyncResult</code></a>, it was common to call
+  <a href="method.SimpleAsyncResult.propagate_error.html"><code>g_simple_async_result_propagate_error()</code></a> from the
+  <code>_finish()</code> wrapper function, and have
+  virtual method implementations only deal with successful
+  returns. This behavior is deprecated, because it makes it
+  difficult for a subclass to chain to a parent class’s async
+  methods. Instead, the wrapper function should just be a
+  simple wrapper, and the virtual method should call an
+  appropriate <code>g_task_propagate_</code> function.
+  Note that wrapper methods can now use
+  <a href="method.AsyncResult.legacy_propagate_error.html"><code>g_async_result_legacy_propagate_error()</code></a> to do old-style
+  <a href="class.SimpleAsyncResult.html"><code>GSimpleAsyncResult</code></a> error-returning behavior, and
+  <a href="method.AsyncResult.is_tagged.html"><code>g_async_result_is_tagged()</code></a> to check if a result is tagged as
+  having come from the <code>_async()</code> wrapper
+  function (for ‘short-circuit’ results, such as when passing
+  <code>0</code> to <a href="method.InputStream.read_async.html"><code>g_input_stream_read_async()</code></a>).</li>
+</ul>
+<h2 id="thread-safety-considerations">Thread-safety considerations<a class="md-anchor" href="#thread-safety-considerations" title="Permanent link"></a></h2>
+<p>Due to some infelicities in the <span class="caps">API</span> design, there is a
+thread-safety concern that users of <code>GTask</code> have to be aware&nbsp;of:</p>
+<p>If the <code>main</code> thread drops its last reference to the source object
+or the task data before the task is finalized, then the finalizers
+of these objects may be called on the worker&nbsp;thread.</p>
+<p>This is a problem if the finalizers use non-threadsafe <span class="caps">API</span>, and
+can lead to hard-to-debug crashes. Possible workarounds&nbsp;include:</p>
+<ul>
+<li>Clear task data in a signal handler for <code>notify::completed</code></li>
+<li>Keep iterating a main context in the main thread and defer
+  dropping the reference to the source object to that main
+  context when the task is&nbsp;finalized.</li>
+</ul>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.AsyncResult.html" title="AsyncResult">GAsyncResult</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.Task.new.html">g_task_new</a></h6>
+          <div class="docblock">
+            <p>Creates a <code>GTask</code> acting on <code>source_object</code>, which will eventually be
+used to invoke <code>callback</code> in the current
+[thread-default main&nbsp;context][g-main-context-push-thread-default].</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.Task.is_valid.html">g_task_is_valid</a></h6>
+        <div class="docblock">
+          <p>Checks that <code>result</code> is a <code>GTask</code>, and that <code>source_object</code> is its
+source object (or that <code>source_object</code> is <code>NULL</code> and <code>result</code> has no
+source object). This can be used in <code>g_return_if_fail()</code> checks.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.36</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.Task.report_error.html">g_task_report_error</a></h6>
+        <div class="docblock">
+          <p>Creates a <code>GTask</code> and then immediately calls <code>g_task_return_error()</code>
+on it. Use this in the wrapper function of an asynchronous method
+when you want to avoid even calling the virtual method. You can
+then use <code>g_async_result_is_tagged()</code> in the finish method wrapper to
+check if the result there is tagged as having been created by the
+wrapper method, and deal with it appropriately if&nbsp;so.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.36</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.Task.report_new_error.html">g_task_report_new_error</a></h6>
+        <div class="docblock">
+          <p>Creates a <code>GTask</code> and then immediately calls
+<code>g_task_return_new_error()</code> on it. Use this in the wrapper function
+of an asynchronous method when you want to avoid even calling the
+virtual method. You can then use <code>g_async_result_is_tagged()</code> in the
+finish method wrapper to check if the result there is tagged as
+having been created by the wrapper method, and deal with it
+appropriately if&nbsp;so.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.36</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.Task.attach_source.html">g_task_attach_source</a></h6>
+          <div class="docblock">
+            <p>A utility function for dealing with async operations where you need
+to wait for a <code>GSource</code> to trigger. Attaches <code>source</code> to <code>task</code><span class="quo">&#8216;</span>s
+<code>GMainContext</code> with <code>task</code><span class="quo">&#8216;</span>s <a href="iface.AsyncResult.html#io-priority">priority</a>,
+and sets <code>source</code><span class="quo">&#8216;</span>s callback to <code>callback</code>, with <code>task</code> as the callback&#8217;s
+<code>user_data</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.get_cancellable.html">g_task_get_cancellable</a></h6>
+          <div class="docblock">
+            <p>Gets <code>task</code><span class="quo">&#8216;</span>s <code>GCancellable</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.get_check_cancellable.html">g_task_get_check_cancellable</a></h6>
+          <div class="docblock">
+            <p>Gets <code>task</code><span class="quo">&#8216;</span>s check-cancellable flag. See
+<code>g_task_set_check_cancellable()</code> for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.get_completed.html">g_task_get_completed</a></h6>
+          <div class="docblock">
+            <p>Gets the value of <code>GTask:completed</code>. This changes from <code>FALSE</code> to <code>TRUE</code> after
+the task’s callback is invoked, and will return <code>FALSE</code> if called from inside
+the&nbsp;callback.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.44</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.get_context.html">g_task_get_context</a></h6>
+          <div class="docblock">
+            <p>Gets the <code>GMainContext</code> that <code>task</code> will return its result in (that
+is, the context that was the
+[thread-default main context][g-main-context-push-thread-default]
+at the point when <code>task</code> was&nbsp;created).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.get_name.html">g_task_get_name</a></h6>
+          <div class="docblock">
+            <p>Gets <code>task</code>’s name. See&nbsp;g_task_set_name().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.get_priority.html">g_task_get_priority</a></h6>
+          <div class="docblock">
+            <p>Gets <code>task</code><span class="quo">&#8216;</span>s&nbsp;priority.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.get_return_on_cancel.html">g_task_get_return_on_cancel</a></h6>
+          <div class="docblock">
+            <p>Gets <code>task</code><span class="quo">&#8216;</span>s return-on-cancel flag. See
+<code>g_task_set_return_on_cancel()</code> for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.get_source_object.html">g_task_get_source_object</a></h6>
+          <div class="docblock">
+            <p>Gets the source object from <code>task</code>. Like
+g_async_result_get_source_object(), but does not ref the&nbsp;object.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.get_source_tag.html">g_task_get_source_tag</a></h6>
+          <div class="docblock">
+            <p>Gets <code>task</code><span class="quo">&#8216;</span>s source tag. See&nbsp;g_task_set_source_tag().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.get_task_data.html">g_task_get_task_data</a></h6>
+          <div class="docblock">
+            <p>Gets <code>task</code><span class="quo">&#8216;</span>s <code>task_data</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.had_error.html">g_task_had_error</a></h6>
+          <div class="docblock">
+            <p>Tests if <code>task</code> resulted in an&nbsp;error.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.propagate_boolean.html">g_task_propagate_boolean</a></h6>
+          <div class="docblock">
+            <p>Gets the result of <code>task</code> as a&nbsp;#gboolean.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.propagate_int.html">g_task_propagate_int</a></h6>
+          <div class="docblock">
+            <p>Gets the result of <code>task</code> as an integer&nbsp;(#gssize).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.propagate_pointer.html">g_task_propagate_pointer</a></h6>
+          <div class="docblock">
+            <p>Gets the result of <code>task</code> as a pointer, and transfers ownership
+of that value to the&nbsp;caller.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.propagate_value.html">g_task_propagate_value</a></h6>
+          <div class="docblock">
+            <p>Gets the result of <code>task</code> as a <code>GValue</code>, and transfers ownership of
+that value to the caller. As with g_task_return_value(), this is
+a generic low-level method; <code>g_task_propagate_pointer()</code> and the like
+will usually be more useful for C&nbsp;code.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.64</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.return_boolean.html">g_task_return_boolean</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code><span class="quo">&#8216;</span>s result to <code>result</code> and completes the task (see
+<code>g_task_return_pointer()</code> for more discussion of exactly what this&nbsp;means).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.return_error.html">g_task_return_error</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code><span class="quo">&#8216;</span>s result to <code>error</code> (which <code>task</code> assumes ownership of)
+and completes the task (see <code>g_task_return_pointer()</code> for more
+discussion of exactly what this&nbsp;means).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.return_error_if_cancelled.html">g_task_return_error_if_cancelled</a></h6>
+          <div class="docblock">
+            <p>Checks if <code>task</code><span class="quo">&#8216;</span>s <code>GCancellable</code> has been cancelled, and if so, sets
+<code>task</code><span class="quo">&#8216;</span>s error accordingly and completes the task (see
+<code>g_task_return_pointer()</code> for more discussion of exactly what this&nbsp;means).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.return_int.html">g_task_return_int</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code><span class="quo">&#8216;</span>s result to <code>result</code> and completes the task (see
+<code>g_task_return_pointer()</code> for more discussion of exactly what this&nbsp;means).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.return_new_error.html">g_task_return_new_error</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code><span class="quo">&#8216;</span>s result to a new <code>GError</code> created from <code>domain</code>, <code>code</code>,
+<code>format</code>, and the remaining arguments, and completes the task (see
+<code>g_task_return_pointer()</code> for more discussion of exactly what this&nbsp;means).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.return_new_error_literal.html">g_task_return_new_error_literal</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code>’s result to a new <code>GError</code> created from <code>domain</code>, <code>code</code>,
+<code>message</code> and completes the&nbsp;task.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.80</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.return_pointer.html">g_task_return_pointer</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code><span class="quo">&#8216;</span>s result to <code>result</code> and completes the task. If <code>result</code>
+is not <code>NULL</code>, then <code>result_destroy</code> will be used to free <code>result</code> if
+the caller does not take ownership of it with&nbsp;g_task_propagate_pointer().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.return_prefixed_error.html">g_task_return_prefixed_error</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code><span class="quo">&#8216;</span>s result to <code>error</code> (which <code>task</code> assumes ownership of), with
+the message prefixed according to <code>format</code>, and completes the task
+(see <code>g_task_return_pointer()</code> for more discussion of exactly what this&nbsp;means).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.80</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.return_value.html">g_task_return_value</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code><span class="quo">&#8216;</span>s result to <code>result</code> (by copying it) and completes the&nbsp;task.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.64</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.run_in_thread.html">g_task_run_in_thread</a></h6>
+          <div class="docblock">
+            <p>Runs <code>task_func</code> in another thread. When <code>task_func</code> returns, <code>task</code><span class="quo">&#8216;</span>s
+<code>GAsyncReadyCallback</code> will be invoked in <code>task</code><span class="quo">&#8216;</span>s <code>GMainContext</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.run_in_thread_sync.html">g_task_run_in_thread_sync</a></h6>
+          <div class="docblock">
+            <p>Runs <code>task_func</code> in another thread, and waits for it to return or be
+cancelled. You can use g_task_propagate_pointer(), etc, afterward
+to get the result of <code>task_func</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.set_check_cancellable.html">g_task_set_check_cancellable</a></h6>
+          <div class="docblock">
+            <p>Sets or clears <code>task</code><span class="quo">&#8216;</span>s check-cancellable flag. If this is <code>TRUE</code>
+(the default), then g_task_propagate_pointer(), etc, and
+<code>g_task_had_error()</code> will check the task&#8217;s <code>GCancellable</code> first, and
+if it has been cancelled, then they will consider the task to have
+returned an &#8220;Operation was cancelled&#8221; error
+(<code>G_IO_ERROR_CANCELLED</code>), regardless of any other error or return
+value the task may have&nbsp;had.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.set_name.html">g_task_set_name</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code>’s name, used in debugging and profiling. The name defaults to
+<code>NULL</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.set_priority.html">g_task_set_priority</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code><span class="quo">&#8216;</span>s priority. If you do not call this, it will default to
+<code>G_PRIORITY_DEFAULT</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.set_return_on_cancel.html">g_task_set_return_on_cancel</a></h6>
+          <div class="docblock">
+            <p>Sets or clears <code>task</code><span class="quo">&#8216;</span>s return-on-cancel flag. This is only
+meaningful for tasks run via <code>g_task_run_in_thread()</code> or&nbsp;g_task_run_in_thread_sync().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.set_source_tag.html">g_task_set_source_tag</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code><span class="quo">&#8216;</span>s source&nbsp;tag.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.set_static_name.html">g_task_set_static_name</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code>’s name, used in debugging and&nbsp;profiling.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.76</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Task.set_task_data.html">g_task_set_task_data</a></h6>
+          <div class="docblock">
+            <p>Sets <code>task</code><span class="quo">&#8216;</span>s task data (freeing the existing task data, if&nbsp;any).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</em></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.AsyncResult.html">GAsyncResult</a> (4)</h5><div class="docblock">
+          
+            <h6><a href="method.AsyncResult.get_source_object.html">g_async_result_get_source_object</a></h6><div class="docblock">
+              <p>Gets the source object from a <code>GAsyncResult</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.AsyncResult.get_user_data.html">g_async_result_get_user_data</a></h6><div class="docblock">
+              <p>Gets the user data from a <code>GAsyncResult</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.AsyncResult.is_tagged.html">g_async_result_is_tagged</a></h6><div class="docblock">
+              <p>Checks if <code>res</code> has the given <code>source_tag</code> (generally a function
+pointer indicating the function <code>res</code> was created&nbsp;by).</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.34</span></p>
+            </div>
+            
+            <h6><a href="method.AsyncResult.legacy_propagate_error.html">g_async_result_legacy_propagate_error</a></h6><div class="docblock">
+              <p>If <code>res</code> is a <code>GSimpleAsyncResult</code>, this is equivalent to
+<code>g_simple_async_result_propagate_error()</code>. Otherwise it returns
+<code>FALSE</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.34</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.Task.completed.html">Gio.Task:completed</a></h6>
+          <div class="docblock">
+            <p>Whether the task has completed, meaning its callback (if set) has been&nbsp;invoked.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.44</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioTaskClass {
+  /* no available fields */
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      <ul class="toc-list">
+      
+      
+        <li class="toc-list-item"><a href="#asynchronous-operations"><span class="link-text">Asynchronous operations</span></a></li>
+      
+        <li class="toc-list-item"><a href="#chained-asynchronous-operations"><span class="link-text">Chained asynchronous operations</span></a></li>
+      
+        <li class="toc-list-item"><a href="#asynchronous-operations-from-synchronous-ones"><span class="link-text">Asynchronous operations from synchronous ones</span></a></li>
+      
+        <li class="toc-list-item"><a href="#adding-cancellability-to-uncancellable-tasks"><span class="link-text">Adding cancellability to uncancellable tasks</span></a></li>
+      
+        <li class="toc-list-item"><a href="#porting-from-gsimpleasyncresult"><span class="link-text">Porting from GSimpleAsyncResult</span></a></li>
+      
+        <li class="toc-list-item"><a href="#thread-safety-considerations"><span class="link-text">Thread-safety considerations</span></a></li>
+      
+      
+      </ul>
+      
+      
+      
+      <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
+      
+      
+      <li class="toc-list-item"><a href="#implements"><span class="link-text">Implements</span></a></li>
+      
+      
+<li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#type-functions"><span class="link-text">Functions</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
+
+
+      
+
+      
+
+      
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/class.Task.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:56:07 GMT -->
+</html>

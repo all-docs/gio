@@ -1,0 +1,297 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/method.Task.attach_source.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.Task.attach_source</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta priority="og:title" content="Gio.Task.attach_source"/>
+  <meta priority="og:description" content="Reference for Gio.Task.attach_source"/>
+  <meta name="twitter:title" content="Gio.Task.attach_source"/>
+  <meta name="twitter:description" content="Reference for Gio.Task.attach_source"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="class.Task.html">Task</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Methods</h5>
+  <div class="links">
+  
+    <a class="method current" href="method.Task.attach_source.html">attach_source</a>
+  
+    <a class="method" href="method.Task.get_cancellable.html">get_cancellable</a>
+  
+    <a class="method" href="method.Task.get_check_cancellable.html">get_check_cancellable</a>
+  
+    <a class="method" href="method.Task.get_completed.html">get_completed</a>
+  
+    <a class="method" href="method.Task.get_context.html">get_context</a>
+  
+    <a class="method" href="method.Task.get_name.html">get_name</a>
+  
+    <a class="method" href="method.Task.get_priority.html">get_priority</a>
+  
+    <a class="method" href="method.Task.get_return_on_cancel.html">get_return_on_cancel</a>
+  
+    <a class="method" href="method.Task.get_source_object.html">get_source_object</a>
+  
+    <a class="method" href="method.Task.get_source_tag.html">get_source_tag</a>
+  
+    <a class="method" href="method.Task.get_task_data.html">get_task_data</a>
+  
+    <a class="method" href="method.Task.had_error.html">had_error</a>
+  
+    <a class="method" href="method.Task.propagate_boolean.html">propagate_boolean</a>
+  
+    <a class="method" href="method.Task.propagate_int.html">propagate_int</a>
+  
+    <a class="method" href="method.Task.propagate_pointer.html">propagate_pointer</a>
+  
+    <a class="method" href="method.Task.propagate_value.html">propagate_value</a>
+  
+    <a class="method" href="method.Task.return_boolean.html">return_boolean</a>
+  
+    <a class="method" href="method.Task.return_error.html">return_error</a>
+  
+    <a class="method" href="method.Task.return_error_if_cancelled.html">return_error_if_cancelled</a>
+  
+    <a class="method" href="method.Task.return_int.html">return_int</a>
+  
+    <a class="method" href="method.Task.return_new_error.html">return_new_error</a>
+  
+    <a class="method" href="method.Task.return_new_error_literal.html">return_new_error_literal</a>
+  
+    <a class="method" href="method.Task.return_pointer.html">return_pointer</a>
+  
+    <a class="method" href="method.Task.return_prefixed_error.html">return_prefixed_error</a>
+  
+    <a class="method" href="method.Task.return_value.html">return_value</a>
+  
+    <a class="method" href="method.Task.run_in_thread.html">run_in_thread</a>
+  
+    <a class="method" href="method.Task.run_in_thread_sync.html">run_in_thread_sync</a>
+  
+    <a class="method" href="method.Task.set_check_cancellable.html">set_check_cancellable</a>
+  
+    <a class="method" href="method.Task.set_name.html">set_name</a>
+  
+    <a class="method" href="method.Task.set_priority.html">set_priority</a>
+  
+    <a class="method" href="method.Task.set_return_on_cancel.html">set_return_on_cancel</a>
+  
+    <a class="method" href="method.Task.set_source_tag.html">set_source_tag</a>
+  
+    <a class="method" href="method.Task.set_static_name.html">set_static_name</a>
+  
+    <a class="method" href="method.Task.set_task_data.html">set_task_data</a>
+  
+  </div>
+</div>
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Method</h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span><a href="class.Task.html">Task</a><span class="sep"></span>attach_source</h1>
+  </header>
+
+  <section>
+    <div class="docblock">
+      <p><span class="emblem available">since: 2.36</span></p>
+    </div>
+
+    <div class="declaration toggle-wrapper">
+      <h4 style="display:flex;" id="declaration">
+        Declaration
+        <a class="anchor" href="#declaration"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gtask.h#L147">[src]</a>
+        
+      </h4>
+
+      <div class="docblock c-decl">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">g_task_attach_source</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">GTask</span><span class="o">*</span><span class="w"> </span><span class="n">task</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GSource</span><span class="o">*</span><span class="w"> </span><span class="n">source</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GSourceFunc</span><span class="w"> </span><span class="n">callback</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 style="display:flex;" id="description">
+        Description
+        <a class="anchor" href="#description"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gtask.c#L1774">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>A utility function for dealing with async operations where you need
+to wait for a <code>GSource</code> to trigger. Attaches <code>source</code> to <code>task</code><span class="quo">&#8216;</span>s
+<code>GMainContext</code> with <code>task</code><span class="quo">&#8216;</span>s <a href="iface.AsyncResult.html#io-priority">priority</a>,
+and sets <code>source</code><span class="quo">&#8216;</span>s callback to <code>callback</code>, with <code>task</code> as the callback&#8217;s
+<code>user_data</code>.</p>
+<p>It will set the <code>source</code>’s name to the task’s name (as set with
+g_task_set_name()), if one has been set on the task and the source doesn’t
+yet have a&nbsp;name.</p>
+<p>This takes a reference on <code>task</code> until <code>source</code> is&nbsp;destroyed.</p>
+      </div>
+
+      <div class="docblock">
+        
+        <p>Available since: 2.36</p>
+        
+        
+        <p>This method is not directly available to language bindings.</p>
+        
+        
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>source</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="struct.Source.html" data-namespace="GLib" class="external"><code>GSource</code></a></p>
+            <p>The source to&nbsp;attach.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>callback</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="callback.SourceFunc.html" data-namespace="GLib" class="external"><code>GSourceFunc</code></a></p>
+            <p>The callback to invoke when <code>source</code> triggers.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </table>
+          </dd>
+          
+
+          
+        </dl>
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/method.Task.attach_source.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:48 GMT -->
+</html>

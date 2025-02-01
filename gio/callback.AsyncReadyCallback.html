@@ -1,0 +1,205 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/callback.AsyncReadyCallback.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:08 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.AsyncReadyCallback</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.AsyncReadyCallback">
+  <meta property="og:description" content="Reference for Gio.AsyncReadyCallback">
+  <meta name="twitter:title" content="Gio.AsyncReadyCallback">
+  <meta name="twitter:description" content="Reference for Gio.AsyncReadyCallback">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Function </h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span>AsyncReadyCallback</h1>
+  </header>
+
+  <section>
+    <div class="docblock">
+      <p></p>
+    </div>
+    <div class="declaration toggle-wrapper">
+      <h4 id="declaration" style="display:flex;">
+        Declaration
+        <a href="#declaration" class="anchor"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">GAsyncReadyCallback</span><span class="p">)</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">GObject</span><span class="o">*</span><span class="w"> </span><span class="n">source_object</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GAsyncResult</span><span class="o">*</span><span class="w"> </span><span class="n">res</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">data</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 id="description" style="display:flex;">
+        Description
+        <a href="#description" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/giotypes.h#L171">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>Type definition for a function that will be called back when an asynchronous
+operation within <span class="caps">GIO</span> has been completed. <code>GAsyncReadyCallback</code>
+callbacks from <code>GTask</code> are guaranteed to be invoked in a later
+iteration of the
+[thread-default main context][g-main-context-push-thread-default]
+where the <code>GTask</code> was created. All other users of
+<code>GAsyncReadyCallback</code> must likewise call it asynchronously in a
+later iteration of the main&nbsp;context.</p>
+<p>The asynchronous operation is guaranteed to have held a reference to
+<code>source_object</code> from the time when the <code>*_async()</code> function was called, until
+after this callback&nbsp;returns.</p>
+      </div>
+
+      <div class="docblock">
+        
+        
+        
+        
+        
+        
+        
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>source_object</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject" class="external"><code>GObject</code></a></p>
+            <p>The object the asynchronous operation was started&nbsp;with.</p>
+            <table>
+            
+            <tbody><tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>res</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="iface.AsyncResult.html"><code>GAsyncResult</code></a></p>
+            <p>A <code>GAsyncResult</code>.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tbody><tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>data</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>gpointer</code></p>
+            <p>User data passed to the&nbsp;callback.</p>
+            <table>
+            
+            <tbody><tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+
+          
+        </dl>
+      </div>
+    </div>
+    
+
+    
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/callback.AsyncReadyCallback.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:08 GMT --></html>

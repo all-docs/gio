@@ -1,0 +1,775 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.DBusMessage.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:42:51 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.DBusMessage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.DBusMessage">
+  <meta property="og:description" content="Reference for Gio.DBusMessage">
+  <meta name="twitter:title" content="Gio.DBusMessage">
+  <meta name="twitter:description" content="Reference for Gio.DBusMessage">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>DBusMessage</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.26</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdbusmessage.c#L480">[src]</a>
+          
+        </h4>
+
+        <pre><code>final class Gio.DBusMessage : GObject.Object
+{
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p>A type for representing D-Bus messages that can be sent or received
+on a <a href="class.DBusConnection.html"><code>GDBusConnection</code></a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.26</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.DBusMessage.new.html">g_dbus_message_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new empty <code>GDBusMessage</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DBusMessage.new_from_blob.html">g_dbus_message_new_from_blob</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GDBusMessage</code> from the data stored at <code>blob</code>. The byte
+order that the message was in can be retrieved using&nbsp;g_dbus_message_get_byte_order().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DBusMessage.new_method_call.html">g_dbus_message_new_method_call</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GDBusMessage</code> for a method&nbsp;call.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DBusMessage.new_signal.html">g_dbus_message_new_signal</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GDBusMessage</code> for a signal&nbsp;emission.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.DBusMessage.bytes_needed.html">g_dbus_message_bytes_needed</a></h6>
+        <div class="docblock">
+          <p>Utility function to calculate how many bytes are needed to
+completely deserialize the D-Bus message stored at <code>blob</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.26</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.copy.html">g_dbus_message_copy</a></h6>
+          <div class="docblock">
+            <p>Copies <code>message</code>. The copy is a deep copy and the returned
+<code>GDBusMessage</code> is completely identical except that it is guaranteed
+to not be&nbsp;locked.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_arg0.html">g_dbus_message_get_arg0</a></h6>
+          <div class="docblock">
+            <p>Convenience to get the first item in the body of <code>message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_arg0_path.html">g_dbus_message_get_arg0_path</a></h6>
+          <div class="docblock">
+            <p>Convenience to get the first item in the body of <code>message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.80</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_body.html">g_dbus_message_get_body</a></h6>
+          <div class="docblock">
+            <p>Gets the body of a&nbsp;message.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_byte_order.html">g_dbus_message_get_byte_order</a></h6>
+          <div class="docblock">
+            <p>Gets the byte order of <code>message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_destination.html">g_dbus_message_get_destination</a></h6>
+          <div class="docblock">
+            <p>Convenience getter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_DESTINATION</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_error_name.html">g_dbus_message_get_error_name</a></h6>
+          <div class="docblock">
+            <p>Convenience getter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_ERROR_NAME</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_flags.html">g_dbus_message_get_flags</a></h6>
+          <div class="docblock">
+            <p>Gets the flags for <code>message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_header.html">g_dbus_message_get_header</a></h6>
+          <div class="docblock">
+            <p>Gets a header field on <code>message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_header_fields.html">g_dbus_message_get_header_fields</a></h6>
+          <div class="docblock">
+            <p>Gets an array of all header fields on <code>message</code> that are&nbsp;set.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_interface.html">g_dbus_message_get_interface</a></h6>
+          <div class="docblock">
+            <p>Convenience getter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_INTERFACE</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_locked.html">g_dbus_message_get_locked</a></h6>
+          <div class="docblock">
+            <p>Checks whether <code>message</code> is locked. To monitor changes to this
+value, conncet to the <code>GObject::notify</code> signal to listen for changes
+on the <code>GDBusMessage:locked</code> property.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_member.html">g_dbus_message_get_member</a></h6>
+          <div class="docblock">
+            <p>Convenience getter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_MEMBER</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_message_type.html">g_dbus_message_get_message_type</a></h6>
+          <div class="docblock">
+            <p>Gets the type of <code>message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_num_unix_fds.html">g_dbus_message_get_num_unix_fds</a></h6>
+          <div class="docblock">
+            <p>Convenience getter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_NUM_UNIX_FDS</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_path.html">g_dbus_message_get_path</a></h6>
+          <div class="docblock">
+            <p>Convenience getter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_PATH</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_reply_serial.html">g_dbus_message_get_reply_serial</a></h6>
+          <div class="docblock">
+            <p>Convenience getter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_REPLY_SERIAL</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_sender.html">g_dbus_message_get_sender</a></h6>
+          <div class="docblock">
+            <p>Convenience getter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_SENDER</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_serial.html">g_dbus_message_get_serial</a></h6>
+          <div class="docblock">
+            <p>Gets the serial for <code>message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_signature.html">g_dbus_message_get_signature</a></h6>
+          <div class="docblock">
+            <p>Convenience getter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_SIGNATURE</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.get_unix_fd_list.html">g_dbus_message_get_unix_fd_list</a></h6>
+          <div class="docblock">
+            <p>Gets the <span class="caps">UNIX</span> file descriptors associated with <code>message</code>, if&nbsp;any.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.lock.html">g_dbus_message_lock</a></h6>
+          <div class="docblock">
+            <p>If <code>message</code> is locked, does nothing. Otherwise locks the&nbsp;message.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.new_method_error.html">g_dbus_message_new_method_error</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GDBusMessage</code> that is an error reply to <code>method_call_message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.new_method_error_literal.html">g_dbus_message_new_method_error_literal</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GDBusMessage</code> that is an error reply to <code>method_call_message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.new_method_error_valist.html">g_dbus_message_new_method_error_valist</a></h6>
+          <div class="docblock">
+            <p>Like <code>g_dbus_message_new_method_error()</code> but intended for language&nbsp;bindings.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.new_method_reply.html">g_dbus_message_new_method_reply</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GDBusMessage</code> that is a reply to <code>method_call_message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.print.html">g_dbus_message_print</a></h6>
+          <div class="docblock">
+            <p>Produces a human-readable multi-line description of <code>message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_body.html">g_dbus_message_set_body</a></h6>
+          <div class="docblock">
+            <p>Sets the body <code>message</code>. As a side-effect the
+<code>G_DBUS_MESSAGE_HEADER_FIELD_SIGNATURE</code> header field is set to the
+type string of <code>body</code> (or cleared if <code>body</code> is <code>NULL</code>).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_byte_order.html">g_dbus_message_set_byte_order</a></h6>
+          <div class="docblock">
+            <p>Sets the byte order of <code>message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_destination.html">g_dbus_message_set_destination</a></h6>
+          <div class="docblock">
+            <p>Convenience setter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_DESTINATION</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_error_name.html">g_dbus_message_set_error_name</a></h6>
+          <div class="docblock">
+            <p>Convenience setter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_ERROR_NAME</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_flags.html">g_dbus_message_set_flags</a></h6>
+          <div class="docblock">
+            <p>Sets the flags to set on <code>message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_header.html">g_dbus_message_set_header</a></h6>
+          <div class="docblock">
+            <p>Sets a header field on <code>message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_interface.html">g_dbus_message_set_interface</a></h6>
+          <div class="docblock">
+            <p>Convenience setter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_INTERFACE</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_member.html">g_dbus_message_set_member</a></h6>
+          <div class="docblock">
+            <p>Convenience setter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_MEMBER</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_message_type.html">g_dbus_message_set_message_type</a></h6>
+          <div class="docblock">
+            <p>Sets <code>message</code> to be of <code>type</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_num_unix_fds.html">g_dbus_message_set_num_unix_fds</a></h6>
+          <div class="docblock">
+            <p>Convenience setter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_NUM_UNIX_FDS</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_path.html">g_dbus_message_set_path</a></h6>
+          <div class="docblock">
+            <p>Convenience setter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_PATH</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_reply_serial.html">g_dbus_message_set_reply_serial</a></h6>
+          <div class="docblock">
+            <p>Convenience setter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_REPLY_SERIAL</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_sender.html">g_dbus_message_set_sender</a></h6>
+          <div class="docblock">
+            <p>Convenience setter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_SENDER</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_serial.html">g_dbus_message_set_serial</a></h6>
+          <div class="docblock">
+            <p>Sets the serial for <code>message</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_signature.html">g_dbus_message_set_signature</a></h6>
+          <div class="docblock">
+            <p>Convenience setter for the <code>G_DBUS_MESSAGE_HEADER_FIELD_SIGNATURE</code> header&nbsp;field.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.set_unix_fd_list.html">g_dbus_message_set_unix_fd_list</a></h6>
+          <div class="docblock">
+            <p>Sets the <span class="caps">UNIX</span> file descriptors associated with <code>message</code>. As a
+side-effect the <code>G_DBUS_MESSAGE_HEADER_FIELD_NUM_UNIX_FDS</code> header
+field is set to the number of fds in <code>fd_list</code> (or cleared if
+<code>fd_list</code> is <code>NULL</code>).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.to_blob.html">g_dbus_message_to_blob</a></h6>
+          <div class="docblock">
+            <p>Serializes <code>message</code> to a blob. The byte order returned by
+<code>g_dbus_message_get_byte_order()</code> will be&nbsp;used.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusMessage.to_gerror.html">g_dbus_message_to_gerror</a></h6>
+          <div class="docblock">
+            <p>If <code>message</code> is not of type <code>G_DBUS_MESSAGE_TYPE_ERROR</code> does
+nothing and returns <code>FALSE</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.DBusMessage.locked.html">Gio.DBusMessage:locked</a></h6>
+          <div class="docblock">
+            No description available.
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.DBusMessage.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:43:25 GMT --></html>

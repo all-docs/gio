@@ -1,0 +1,702 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.ApplicationCommandLine.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:39:49 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.ApplicationCommandLine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.ApplicationCommandLine">
+  <meta property="og:description" content="Reference for Gio.ApplicationCommandLine">
+  <meta name="twitter:title" content="Gio.ApplicationCommandLine">
+  <meta name="twitter:description" content="Reference for Gio.ApplicationCommandLine">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>ApplicationCommandLine</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gapplicationcommandline.c#L42">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.ApplicationCommandLine : GObject.Object
+{
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GApplicationCommandLine</code> represents a command-line invocation of
+an&nbsp;application.</p>
+<p>It is created by <a href="class.Application.html"><code>GApplication</code></a> and emitted
+in the <a href="signal.Application.command-line.html"><code>GApplication::command-line</code></a> signal and virtual&nbsp;function.</p>
+<p>The class contains the list of arguments that the program was invoked
+with. It is also possible to query if the commandline invocation was
+local (ie: the current process is running in direct response to the
+invocation) or remote (ie: some other process forwarded the
+commandline to this&nbsp;process).</p>
+<p>The <code>GApplicationCommandLine</code> object can provide the <code>argc</code> and <code>argv</code>
+parameters for use with the <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.OptionContext.html" class="external"><code>GOptionContext</code></a> command-line parsing <span class="caps">API</span>,
+with the <a href="method.ApplicationCommandLine.get_arguments.html"><code>g_application_command_line_get_arguments()</code></a> function. See
+[gapplication-example-cmdline3.c][gapplication-example-cmdline3]
+for an&nbsp;example.</p>
+<p>The exit status of the originally-invoked process may be set and
+messages can be printed to stdout or stderr of that&nbsp;process.</p>
+<p>For remote invocation, the originally-invoked process exits when
+<a href="method.ApplicationCommandLine.done.html"><code>g_application_command_line_done()</code></a> method is called. This method is
+also automatically called when the object is&nbsp;disposed.</p>
+<p>The main use for <code>GApplicationCommandLine</code> (and the
+<a href="signal.Application.command-line.html"><code>GApplication::command-line</code></a> signal) is ‘Emacs server’ like use cases:
+You can set the <code>EDITOR</code> environment variable to have e.g. git use
+your favourite editor to edit commit messages, and if you already
+have an instance of the editor running, the editing will happen
+in the running instance, instead of opening a new one. An important
+aspect of this use case is that the process that gets started by git
+does not return until the editing is&nbsp;done.</p>
+<p>Normally, the commandline is completely handled in the
+<a href="signal.Application.command-line.html"><code>GApplication::command-line</code></a> handler. The launching instance exits
+once the signal handler in the primary instance has returned, and
+the return value of the signal handler becomes the exit status
+of the launching&nbsp;instance.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">int</span>
+<span class="nf">command_line</span><span class="w"> </span><span class="p">(</span><span class="n">GApplication</span><span class="w">            </span><span class="o">*</span><span class="n">application</span><span class="p">,</span>
+<span class="w">              </span><span class="n">GApplicationCommandLine</span><span class="w"> </span><span class="o">*</span><span class="n">cmdline</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">gchar</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">;</span>
+<span class="w">  </span><span class="n">gint</span><span class="w"> </span><span class="n">argc</span><span class="p">;</span>
+<span class="w">  </span><span class="n">gint</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">argv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_application_command_line_get_arguments</span><span class="w"> </span><span class="p">(</span><span class="n">cmdline</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">argc</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">g_application_command_line_print</span><span class="w"> </span><span class="p">(</span><span class="n">cmdline</span><span class="p">,</span>
+<span class="w">                                    </span><span class="s">"This text is written back</span><span class="se">\n</span><span class="s">"</span>
+<span class="w">                                    </span><span class="s">"to stdout of the caller</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">argc</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="n">g_print</span><span class="w"> </span><span class="p">(</span><span class="s">"argument %d: %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+
+<span class="w">  </span><span class="n">g_strfreev</span><span class="w"> </span><span class="p">(</span><span class="n">argv</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The complete example can be found here:
+<a href="https://gitlab.gnome.org/GNOME/glib/-/blob/HEAD/gio/tests/gapplication-example-cmdline.c">gapplication-example-cmdline.c</a></p>
+<p>In more complicated cases, the handling of the commandline can be
+split between the launcher and the primary&nbsp;instance.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="n">gboolean</span>
+<span class="w"> </span><span class="nf">test_local_cmdline</span><span class="w"> </span><span class="p">(</span><span class="n">GApplication</span><span class="w">   </span><span class="o">*</span><span class="n">application</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">gchar</span><span class="w">        </span><span class="o">***</span><span class="n">arguments</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">gint</span><span class="w">           </span><span class="o">*</span><span class="n">exit_status</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">gint</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">  </span><span class="n">gchar</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">argv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">arguments</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="o">*</span><span class="n">exit_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">g_str_has_prefix</span><span class="w"> </span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="s">"--local-"</span><span class="p">))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="n">g_print</span><span class="w"> </span><span class="p">(</span><span class="s">"handling argument %s locally</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">          </span><span class="n">g_free</span><span class="w"> </span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="n">j</span><span class="p">];</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="n">argv</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="n">g_print</span><span class="w"> </span><span class="p">(</span><span class="s">"not handling argument %s locally</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">          </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="o">*</span><span class="n">exit_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span>
+<span class="nf">test_application_class_init</span><span class="w"> </span><span class="p">(</span><span class="n">TestApplicationClass</span><span class="w"> </span><span class="o">*</span><span class="n">class</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">G_APPLICATION_CLASS</span><span class="w"> </span><span class="p">(</span><span class="n">class</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">local_command_line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test_local_cmdline</span><span class="p">;</span>
+
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>In this example of split commandline handling, options that start
+with <code>--local-</code> are handled locally, all other options are passed
+to the <a href="signal.Application.command-line.html"><code>GApplication::command-line</code></a> handler which runs in the primary&nbsp;instance.</p>
+<p>The complete example can be found here:
+<a href="https://gitlab.gnome.org/GNOME/glib/-/blob/HEAD/gio/tests/gapplication-example-cmdline2.c">gapplication-example-cmdline2.c</a></p>
+<p>If handling the commandline requires a lot of work, it may be better to defer&nbsp;it.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="n">gboolean</span>
+<span class="nf">my_cmdline_handler</span><span class="w"> </span><span class="p">(</span><span class="n">gpointer</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">GApplicationCommandLine</span><span class="w"> </span><span class="o">*</span><span class="n">cmdline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// do the heavy lifting in an idle</span>
+
+<span class="w">  </span><span class="n">g_application_command_line_set_exit_status</span><span class="w"> </span><span class="p">(</span><span class="n">cmdline</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_object_unref</span><span class="w"> </span><span class="p">(</span><span class="n">cmdline</span><span class="p">);</span><span class="w"> </span><span class="c1">// this releases the application</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">G_SOURCE_REMOVE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">int</span>
+<span class="nf">command_line</span><span class="w"> </span><span class="p">(</span><span class="n">GApplication</span><span class="w">            </span><span class="o">*</span><span class="n">application</span><span class="p">,</span>
+<span class="w">              </span><span class="n">GApplicationCommandLine</span><span class="w"> </span><span class="o">*</span><span class="n">cmdline</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">// keep the application running until we are done with this commandline</span>
+<span class="w">  </span><span class="n">g_application_hold</span><span class="w"> </span><span class="p">(</span><span class="n">application</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">g_object_set_data_full</span><span class="w"> </span><span class="p">(</span><span class="n">G_OBJECT</span><span class="w"> </span><span class="p">(</span><span class="n">cmdline</span><span class="p">),</span>
+<span class="w">                          </span><span class="s">"application"</span><span class="p">,</span><span class="w"> </span><span class="n">application</span><span class="p">,</span>
+<span class="w">                          </span><span class="p">(</span><span class="n">GDestroyNotify</span><span class="p">)</span><span class="n">g_application_release</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">g_object_ref</span><span class="w"> </span><span class="p">(</span><span class="n">cmdline</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_idle_add</span><span class="w"> </span><span class="p">(</span><span class="n">my_cmdline_handler</span><span class="p">,</span><span class="w"> </span><span class="n">cmdline</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>In this example the commandline is not completely handled before
+the <a href="signal.Application.command-line.html"><code>GApplication::command-line</code></a> handler returns. Instead, we keep
+a reference to the <code>GApplicationCommandLine</code> object and handle it
+later (in this example, in an idle). Note that it is necessary to
+hold the application until you are done with the&nbsp;commandline.</p>
+<p>The complete example can be found here:
+<a href="https://gitlab.gnome.org/GNOME/glib/-/blob/HEAD/gio/tests/gapplication-example-cmdline3.c">gapplication-example-cmdline3.c</a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.create_file_for_arg.html">g_application_command_line_create_file_for_arg</a></h6>
+          <div class="docblock">
+            <p>Creates a <code>GFile</code> corresponding to a filename that was given as part
+of the invocation of <code>cmdline</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.done.html">g_application_command_line_done</a></h6>
+          <div class="docblock">
+            <p>Signals that command line processing is&nbsp;completed.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.80</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.get_arguments.html">g_application_command_line_get_arguments</a></h6>
+          <div class="docblock">
+            <p>Gets the list of arguments that was passed on the command&nbsp;line.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.get_cwd.html">g_application_command_line_get_cwd</a></h6>
+          <div class="docblock">
+            <p>Gets the working directory of the command line invocation.
+The string may contain non-utf8&nbsp;data.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.get_environ.html">g_application_command_line_get_environ</a></h6>
+          <div class="docblock">
+            <p>Gets the contents of the ‘environ’ variable of the command line
+invocation, as would be returned by g_get_environ(), ie as a
+<code>NULL</code>-terminated list of strings in the form ‘<span class="caps">NAME</span>=<span class="caps">VALUE</span>’.
+The strings may contain non-utf8&nbsp;data.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.get_exit_status.html">g_application_command_line_get_exit_status</a></h6>
+          <div class="docblock">
+            <p>Gets the exit status of <code>cmdline</code>.  See
+<code>g_application_command_line_set_exit_status()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.get_is_remote.html">g_application_command_line_get_is_remote</a></h6>
+          <div class="docblock">
+            <p>Determines if <code>cmdline</code> represents a remote&nbsp;invocation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.get_options_dict.html">g_application_command_line_get_options_dict</a></h6>
+          <div class="docblock">
+            <p>Gets the options that were passed to&nbsp;g_application_command_line().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.40</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.get_platform_data.html">g_application_command_line_get_platform_data</a></h6>
+          <div class="docblock">
+            <p>Gets the platform data associated with the invocation of <code>cmdline</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.get_stdin.html">g_application_command_line_get_stdin</a></h6>
+          <div class="docblock">
+            <p>Gets the stdin of the invoking&nbsp;process.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.getenv.html">g_application_command_line_getenv</a></h6>
+          <div class="docblock">
+            <p>Gets the value of a particular environment variable of the command
+line invocation, as would be returned by g_getenv().  The strings may
+contain non-utf8&nbsp;data.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.print.html">g_application_command_line_print</a></h6>
+          <div class="docblock">
+            <p>Formats a message and prints it using the stdout print handler in the
+invoking&nbsp;process.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.print_literal.html">g_application_command_line_print_literal</a></h6>
+          <div class="docblock">
+            <p>Prints a message using the stdout print handler in the invoking&nbsp;process.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.80</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.printerr.html">g_application_command_line_printerr</a></h6>
+          <div class="docblock">
+            <p>Formats a message and prints it using the stderr print handler in the
+invoking&nbsp;process.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.printerr_literal.html">g_application_command_line_printerr_literal</a></h6>
+          <div class="docblock">
+            <p>Prints a message using the stderr print handler in the invoking&nbsp;process.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.80</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ApplicationCommandLine.set_exit_status.html">g_application_command_line_set_exit_status</a></h6>
+          <div class="docblock">
+            <p>Sets the exit status that will be used when the invoking process&nbsp;exits.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.ApplicationCommandLine.arguments.html">Gio.ApplicationCommandLine:arguments</a></h6>
+          <div class="docblock">
+            <p>The commandline that caused this <code>GApplication::command-line</code>
+signal&nbsp;emission.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.ApplicationCommandLine.is-remote.html">Gio.ApplicationCommandLine:is-remote</a></h6>
+          <div class="docblock">
+            <p>Whether this is a remote&nbsp;commandline.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.ApplicationCommandLine.options.html">Gio.ApplicationCommandLine:options</a></h6>
+          <div class="docblock">
+            <p>The options sent along with the&nbsp;commandline.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.ApplicationCommandLine.platform-data.html">Gio.ApplicationCommandLine:platform-data</a></h6>
+          <div class="docblock">
+            <p>Platform-specific data for the&nbsp;commandline.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioApplicationCommandLineClass {
+  void (* print_literal) (
+    GApplicationCommandLine* cmdline,
+    const gchar* message
+  );
+  void (* printerr_literal) (
+    GApplicationCommandLine* cmdline,
+    const gchar* message
+  );
+  GInputStream* (* get_stdin) (
+    GApplicationCommandLine* cmdline
+  );
+  void (* done) (
+    GApplicationCommandLine* cmdline
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>The <code>GApplicationCommandLineClass</code>-struct
+contains private data&nbsp;only.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>print_literal: void (* print_literal) (
+    GApplicationCommandLine* cmdline,
+    const gchar* message
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>printerr_literal: void (* printerr_literal) (
+    GApplicationCommandLine* cmdline,
+    const gchar* message
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>get_stdin: GInputStream* (* get_stdin) (
+    GApplicationCommandLine* cmdline
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>done: void (* done) (
+    GApplicationCommandLine* cmdline
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-done"><a href="vfunc.ApplicationCommandLine.done.html">Gio.ApplicationCommandLineClass.done</a></h6>
+        <div class="docblock">
+          <p>Signals that command line processing is&nbsp;completed.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.80</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_stdin"><a href="vfunc.ApplicationCommandLine.get_stdin.html">Gio.ApplicationCommandLineClass.get_stdin</a></h6>
+        <div class="docblock">
+          <p>Gets the stdin of the invoking&nbsp;process.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.34</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-print_literal"><a href="vfunc.ApplicationCommandLine.print_literal.html">Gio.ApplicationCommandLineClass.print_literal</a></h6>
+        <div class="docblock">
+          <p>Prints a message using the stdout print handler in the invoking&nbsp;process.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.80</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-printerr_literal"><a href="vfunc.ApplicationCommandLine.printerr_literal.html">Gio.ApplicationCommandLineClass.printerr_literal</a></h6>
+        <div class="docblock">
+          <p>Prints a message using the stderr print handler in the invoking&nbsp;process.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.80</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.ApplicationCommandLine.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:40:03 GMT --></html>

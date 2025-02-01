@@ -1,0 +1,196 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/callback.BusNameLostCallback.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:08 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.BusNameLostCallback</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.BusNameLostCallback">
+  <meta property="og:description" content="Reference for Gio.BusNameLostCallback">
+  <meta name="twitter:title" content="Gio.BusNameLostCallback">
+  <meta name="twitter:description" content="Reference for Gio.BusNameLostCallback">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Function </h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span>BusNameLostCallback</h1>
+  </header>
+
+  <section>
+    <div class="docblock">
+      <p><span class="emblem available">since: 2.26</span></p>
+    </div>
+    <div class="declaration toggle-wrapper">
+      <h4 id="declaration" style="display:flex;">
+        Declaration
+        <a href="#declaration" class="anchor"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">GBusNameLostCallback</span><span class="p">)</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">GDBusConnection</span><span class="o">*</span><span class="w"> </span><span class="n">connection</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">name</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">user_data</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 id="description" style="display:flex;">
+        Description
+        <a href="#description" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdbusnameowning.h#L62">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>Invoked when the name is lost or <code>connection</code> has been&nbsp;closed.</p>
+      </div>
+
+      <div class="docblock">
+        
+        <p>Available since: 2.26</p>
+        
+        
+        
+        
+        
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>connection</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.DBusConnection.html"><code>GDBusConnection</code></a></p>
+            <p>The <code>GDBusConnection</code> on which to acquire the name or <code>NULL</code> if
+the connection was&nbsp;disconnected.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tbody><tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>name</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>const gchar*</code></p>
+            <p>The name being&nbsp;owned.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tbody><tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            <tr><td>The value is a NUL terminated UTF-8 string.</td></tr>
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>user_data</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>gpointer</code></p>
+            <p>User data passed to <code>g_bus_own_name()</code> or&nbsp;g_bus_own_name_on_connection().</p>
+            <table>
+            
+            <tbody><tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+
+          
+        </dl>
+      </div>
+    </div>
+    
+
+    
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/callback.BusNameLostCallback.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:08 GMT --></html>

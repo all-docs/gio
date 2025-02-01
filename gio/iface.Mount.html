@@ -1,0 +1,1521 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/iface.Mount.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:03:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.Mount</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.Mount"/>
+  <meta property="og:description" content="Reference for Gio.Mount"/>
+  <meta name="twitter:title" content="Gio.Mount"/>
+  <meta name="twitter:description" content="Reference for Gio.Mount"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="iface.Mount.html#description">Mount</a>
+  </div>
+</div>
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.Mount.can_eject.html">can_eject</a>
+  
+    <a class="method" href="method.Mount.can_unmount.html">can_unmount</a>
+  
+    <a class="method" href="method.Mount.eject.html">eject</a>
+  
+    <a class="method" href="method.Mount.eject_finish.html">eject_finish</a>
+  
+    <a class="method" href="method.Mount.eject_with_operation.html">eject_with_operation</a>
+  
+    <a class="method" href="method.Mount.eject_with_operation_finish.html">eject_with_operation_finish</a>
+  
+    <a class="method" href="method.Mount.get_default_location.html">get_default_location</a>
+  
+    <a class="method" href="method.Mount.get_drive.html">get_drive</a>
+  
+    <a class="method" href="method.Mount.get_icon.html">get_icon</a>
+  
+    <a class="method" href="method.Mount.get_name.html">get_name</a>
+  
+    <a class="method" href="method.Mount.get_root.html">get_root</a>
+  
+    <a class="method" href="method.Mount.get_sort_key.html">get_sort_key</a>
+  
+    <a class="method" href="method.Mount.get_symbolic_icon.html">get_symbolic_icon</a>
+  
+    <a class="method" href="method.Mount.get_uuid.html">get_uuid</a>
+  
+    <a class="method" href="method.Mount.get_volume.html">get_volume</a>
+  
+    <a class="method" href="method.Mount.guess_content_type.html">guess_content_type</a>
+  
+    <a class="method" href="method.Mount.guess_content_type_finish.html">guess_content_type_finish</a>
+  
+    <a class="method" href="method.Mount.guess_content_type_sync.html">guess_content_type_sync</a>
+  
+    <a class="method" href="method.Mount.is_shadowed.html">is_shadowed</a>
+  
+    <a class="method" href="method.Mount.remount.html">remount</a>
+  
+    <a class="method" href="method.Mount.remount_finish.html">remount_finish</a>
+  
+    <a class="method" href="method.Mount.shadow.html">shadow</a>
+  
+    <a class="method" href="method.Mount.unmount.html">unmount</a>
+  
+    <a class="method" href="method.Mount.unmount_finish.html">unmount_finish</a>
+  
+    <a class="method" href="method.Mount.unmount_with_operation.html">unmount_with_operation</a>
+  
+    <a class="method" href="method.Mount.unmount_with_operation_finish.html">unmount_with_operation_finish</a>
+  
+    <a class="method" href="method.Mount.unshadow.html">unshadow</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.Mount.changed.html">changed</a>
+  
+    <a class="signal" href="signal.Mount.pre-unmount.html">pre-unmount</a>
+  
+    <a class="signal" href="signal.Mount.unmounted.html">unmounted</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.Mount.can_eject.html">can_eject</a>
+  
+    <a class="method" href="vfunc.Mount.can_unmount.html">can_unmount</a>
+  
+    <a class="method" href="vfunc.Mount.changed.html">changed</a>
+  
+    <a class="method" href="vfunc.Mount.eject.html">eject</a>
+  
+    <a class="method" href="vfunc.Mount.eject_finish.html">eject_finish</a>
+  
+    <a class="method" href="vfunc.Mount.eject_with_operation.html">eject_with_operation</a>
+  
+    <a class="method" href="vfunc.Mount.eject_with_operation_finish.html">eject_with_operation_finish</a>
+  
+    <a class="method" href="vfunc.Mount.get_default_location.html">get_default_location</a>
+  
+    <a class="method" href="vfunc.Mount.get_drive.html">get_drive</a>
+  
+    <a class="method" href="vfunc.Mount.get_icon.html">get_icon</a>
+  
+    <a class="method" href="vfunc.Mount.get_name.html">get_name</a>
+  
+    <a class="method" href="vfunc.Mount.get_root.html">get_root</a>
+  
+    <a class="method" href="vfunc.Mount.get_sort_key.html">get_sort_key</a>
+  
+    <a class="method" href="vfunc.Mount.get_symbolic_icon.html">get_symbolic_icon</a>
+  
+    <a class="method" href="vfunc.Mount.get_uuid.html">get_uuid</a>
+  
+    <a class="method" href="vfunc.Mount.get_volume.html">get_volume</a>
+  
+    <a class="method" href="vfunc.Mount.guess_content_type.html">guess_content_type</a>
+  
+    <a class="method" href="vfunc.Mount.guess_content_type_finish.html">guess_content_type_finish</a>
+  
+    <a class="method" href="vfunc.Mount.guess_content_type_sync.html">guess_content_type_sync</a>
+  
+    <a class="method" href="vfunc.Mount.pre_unmount.html">pre_unmount</a>
+  
+    <a class="method" href="vfunc.Mount.remount.html">remount</a>
+  
+    <a class="method" href="vfunc.Mount.remount_finish.html">remount_finish</a>
+  
+    <a class="method" href="vfunc.Mount.unmount.html">unmount</a>
+  
+    <a class="method" href="vfunc.Mount.unmount_finish.html">unmount_finish</a>
+  
+    <a class="method" href="vfunc.Mount.unmount_with_operation.html">unmount_with_operation</a>
+  
+    <a class="method" href="vfunc.Mount.unmount_with_operation_finish.html">unmount_with_operation_finish</a>
+  
+    <a class="method" href="vfunc.Mount.unmounted.html">unmounted</a>
+  
+  </div>
+</div>
+
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Interface</h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span>Mount</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gmount.c#L39">[src]</a>
+          
+        </h4>
+
+        <pre><code>interface Gio.Mount : GObject.Object</code></pre>
+
+        <div class="docblock">
+          <p>The <code>GMount</code> interface represents a user-visible mount, such as a mounted
+file&nbsp;system.</p>
+<p><code>GMount</code> is a ‘mounted’ filesystem that you can access. Mounted is in
+quotes because it’s not the same as a <span class="caps">UNIX</span> mount, it might be a <span class="caps">GVFS</span>
+mount, but you can still access the files on it if you use <span class="caps">GIO</span>.</p>
+<p>A <code>GMount</code> might be associated with a <a href="iface.Volume.html"><code>GVolume</code></a> (such as a <span class="caps">USB</span> flash
+drive) which hosts&nbsp;it.</p>
+<p>Unmounting a <code>GMount</code> instance is an asynchronous operation. For
+more information about asynchronous operations, see <a href="iface.AsyncResult.html"><code>GAsyncResult</code></a>
+and <a href="class.Task.html"><code>GTask</code></a>. To unmount a <code>GMount</code> instance, first call
+<a href="method.Mount.unmount_with_operation.html"><code>g_mount_unmount_with_operation()</code></a> with (at least) the <code>GMount</code>
+instance and a <a href="callback.AsyncReadyCallback.html"><code>GAsyncReadyCallback</code></a>.  The callback will be fired
+when the operation has resolved (either with success or failure), and a
+<a href="iface.AsyncResult.html"><code>GAsyncResult</code></a> structure will be passed to the callback.  That
+callback should then call <a href="method.Mount.unmount_with_operation_finish.html"><code>g_mount_unmount_with_operation_finish()</code></a>
+with the <code>GMount</code> and the <a href="iface.AsyncResult.html"><code>GAsyncResult</code></a> data to see if the
+operation was completed successfully.  If an <code>error</code> is present when
+<a href="method.Mount.unmount_with_operation_finish.html"><code>g_mount_unmount_with_operation_finish()</code></a> is called, then it will be
+filled with any error&nbsp;information.</p>
+<p>Note, when <a href="migrating-gnome-vfs.html">porting from GnomeVFS</a>, <code>GMount</code> is the
+moral equivalent of <code>GnomeVFSVolume</code>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    <div class="toggle-wrapper prerequisite">
+      <h4 id="prerequisite">
+        Prerequisite
+        <a href="#prerequisite" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <p>In order to implement Mount, your type must inherit from<a data-namespace="GObject" data-link="class.Object.html" href="javascript:void(0)" class="external"><code>GObject</code></a>.</p>
+      </div>
+    </div>
+
+    
+
+    
+
+    
+    <div class="methods toggle-wrapper">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.Mount.can_eject.html">g_mount_can_eject</a></h6>
+          <div class="docblock">
+            <p>Checks if <code>mount</code> can be&nbsp;ejected.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.can_unmount.html">g_mount_can_unmount</a></h6>
+          <div class="docblock">
+            <p>Checks if <code>mount</code> can be&nbsp;unmounted.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.Mount.eject.html">g_mount_eject</a></h6>
+          <div class="docblock">
+            <p>Ejects a mount. This is an asynchronous operation, and is
+finished by calling <code>g_mount_eject_finish()</code> with the <code>mount</code>
+and <code>GAsyncResult</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.Mount.eject_finish.html">g_mount_eject_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes ejecting a mount. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.eject_with_operation.html">g_mount_eject_with_operation</a></h6>
+          <div class="docblock">
+            <p>Ejects a mount. This is an asynchronous operation, and is
+finished by calling <code>g_mount_eject_with_operation_finish()</code> with the <code>mount</code>
+and <code>GAsyncResult</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.eject_with_operation_finish.html">g_mount_eject_with_operation_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes ejecting a mount. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.get_default_location.html">g_mount_get_default_location</a></h6>
+          <div class="docblock">
+            <p>Gets the default location of <code>mount</code>. The default location of the given
+<code>mount</code> is a path that reflects the main entry point for the user (e.g.
+the home directory, or the root of the&nbsp;volume).</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.get_drive.html">g_mount_get_drive</a></h6>
+          <div class="docblock">
+            <p>Gets the drive for the <code>mount</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.get_icon.html">g_mount_get_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the icon for <code>mount</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.get_name.html">g_mount_get_name</a></h6>
+          <div class="docblock">
+            <p>Gets the name of <code>mount</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.get_root.html">g_mount_get_root</a></h6>
+          <div class="docblock">
+            <p>Gets the root directory on <code>mount</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.get_sort_key.html">g_mount_get_sort_key</a></h6>
+          <div class="docblock">
+            <p>Gets the sort key for <code>mount</code>, if&nbsp;any.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.get_symbolic_icon.html">g_mount_get_symbolic_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the symbolic icon for <code>mount</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.get_uuid.html">g_mount_get_uuid</a></h6>
+          <div class="docblock">
+            <p>Gets the <span class="caps">UUID</span> for the <code>mount</code>. The reference is typically based on
+the file system <span class="caps">UUID</span> for the mount in question and should be
+considered an opaque string. Returns <code>NULL</code> if there is no <span class="caps">UUID</span>&nbsp;available.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.get_volume.html">g_mount_get_volume</a></h6>
+          <div class="docblock">
+            <p>Gets the volume for the <code>mount</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.guess_content_type.html">g_mount_guess_content_type</a></h6>
+          <div class="docblock">
+            <p>Tries to guess the type of content stored on <code>mount</code>. Returns one or
+more textual identifiers of well-known content types (typically
+prefixed with &#8220;x-content/&#8221;), e.g. x-content/image-dcf for camera
+memory cards. See the
+<a href="http://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec">shared-mime-info</a>
+specification for more on x-content&nbsp;types.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.18</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.guess_content_type_finish.html">g_mount_guess_content_type_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes guessing content types of <code>mount</code>. If any errors occurred
+during the operation, <code>error</code> will be set to contain the errors and
+<code>FALSE</code> will be returned. In particular, you may get an
+<code>G_IO_ERROR_NOT_SUPPORTED</code> if the mount does not support content&nbsp;guessing.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.18</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.guess_content_type_sync.html">g_mount_guess_content_type_sync</a></h6>
+          <div class="docblock">
+            <p>Tries to guess the type of content stored on <code>mount</code>. Returns one or
+more textual identifiers of well-known content types (typically
+prefixed with &#8220;x-content/&#8221;), e.g. x-content/image-dcf for camera
+memory cards. See the
+<a href="http://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec">shared-mime-info</a>
+specification for more on x-content&nbsp;types.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.18</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.is_shadowed.html">g_mount_is_shadowed</a></h6>
+          <div class="docblock">
+            <p>Determines if <code>mount</code> is shadowed. Applications or libraries should
+avoid displaying <code>mount</code> in the user interface if it is&nbsp;shadowed.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.20</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.remount.html">g_mount_remount</a></h6>
+          <div class="docblock">
+            <p>Remounts a mount. This is an asynchronous operation, and is
+finished by calling <code>g_mount_remount_finish()</code> with the <code>mount</code>
+and <code>GAsyncResults</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.remount_finish.html">g_mount_remount_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes remounting a mount. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.shadow.html">g_mount_shadow</a></h6>
+          <div class="docblock">
+            <p>Increments the shadow count on <code>mount</code>. Usually used by
+<code>GVolumeMonitor</code> implementations when creating a shadow mount for
+<code>mount</code>, see <code>g_mount_is_shadowed()</code> for more information. The caller
+will need to emit the <code>GMount::changed</code> signal on <code>mount</code> manually.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.20</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.Mount.unmount.html">g_mount_unmount</a></h6>
+          <div class="docblock">
+            <p>Unmounts a mount. This is an asynchronous operation, and is
+finished by calling <code>g_mount_unmount_finish()</code> with the <code>mount</code>
+and <code>GAsyncResult</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.Mount.unmount_finish.html">g_mount_unmount_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes unmounting a mount. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.unmount_with_operation.html">g_mount_unmount_with_operation</a></h6>
+          <div class="docblock">
+            <p>Unmounts a mount. This is an asynchronous operation, and is
+finished by calling <code>g_mount_unmount_with_operation_finish()</code> with the <code>mount</code>
+and <code>GAsyncResult</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.unmount_with_operation_finish.html">g_mount_unmount_with_operation_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes unmounting a mount. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Mount.unshadow.html">g_mount_unshadow</a></h6>
+          <div class="docblock">
+            <p>Decrements the shadow count on <code>mount</code>. Usually used by
+<code>GVolumeMonitor</code> implementations when destroying a shadow mount for
+<code>mount</code>, see <code>g_mount_is_shadowed()</code> for more information. The caller
+will need to emit the <code>GMount::changed</code> signal on <code>mount</code> manually.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.20</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+    </div>
+    
+
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.Mount.changed.html">Gio.Mount::changed</a></h6>
+          <div class="docblock">
+            <p>Emitted when the mount has been&nbsp;changed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Mount.pre-unmount.html">Gio.Mount::pre-unmount</a></h6>
+          <div class="docblock">
+            <p>This signal may be emitted when the <code>GMount</code> is about to be&nbsp;unmounted.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Mount.unmounted.html">Gio.Mount::unmounted</a></h6>
+          <div class="docblock">
+            <p>This signal is emitted when the <code>GMount</code> have been
+unmounted. If the recipient is holding references to the
+object they should release them so the object can be&nbsp;finalized.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="interface toggle-wrapper default-hide">
+      <h4 style="display:flex;" id="interface-struct">
+        Interface structure
+        <a href="#interface-struct" class="anchor"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioMountIface {
+  GTypeInterface g_iface;
+  void (* changed) (
+    GMount* mount
+  );
+  void (* unmounted) (
+    GMount* mount
+  );
+  GFile* (* get_root) (
+    GMount* mount
+  );
+  char* (* get_name) (
+    GMount* mount
+  );
+  GIcon* (* get_icon) (
+    GMount* mount
+  );
+  char* (* get_uuid) (
+    GMount* mount
+  );
+  GVolume* (* get_volume) (
+    GMount* mount
+  );
+  GDrive* (* get_drive) (
+    GMount* mount
+  );
+  gboolean (* can_unmount) (
+    GMount* mount
+  );
+  gboolean (* can_eject) (
+    GMount* mount
+  );
+  void (* unmount) (
+    GMount* mount,
+    GMountUnmountFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* unmount_finish) (
+    GMount* mount,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* eject) (
+    GMount* mount,
+    GMountUnmountFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* eject_finish) (
+    GMount* mount,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* remount) (
+    GMount* mount,
+    GMountMountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* remount_finish) (
+    GMount* mount,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* guess_content_type) (
+    GMount* mount,
+    gboolean force_rescan,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gchar** (* guess_content_type_finish) (
+    GMount* mount,
+    GAsyncResult* result,
+    GError** error
+  );
+  gchar** (* guess_content_type_sync) (
+    GMount* mount,
+    gboolean force_rescan,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* pre_unmount) (
+    GMount* mount
+  );
+  void (* unmount_with_operation) (
+    GMount* mount,
+    GMountUnmountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* unmount_with_operation_finish) (
+    GMount* mount,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* eject_with_operation) (
+    GMount* mount,
+    GMountUnmountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* eject_with_operation_finish) (
+    GMount* mount,
+    GAsyncResult* result,
+    GError** error
+  );
+  GFile* (* get_default_location) (
+    GMount* mount
+  );
+  const gchar* (* get_sort_key) (
+    GMount* mount
+  );
+  GIcon* (* get_symbolic_icon) (
+    GMount* mount
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>Interface for implementing operations for&nbsp;mounts.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Interface members</h6>
+
+        <table>
+        
+        <tr>
+          <td style="vertical-align:top"><code>g_iface</code></td>
+          <td style="vertical-align:top"><pre><code>GTypeInterface</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The parent&nbsp;interface.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>changed</code></td>
+          <td style="vertical-align:top"><pre><code>void (* changed) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Changed signal that is emitted when the mount&#8217;s state has&nbsp;changed.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>unmounted</code></td>
+          <td style="vertical-align:top"><pre><code>void (* unmounted) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The unmounted signal that is emitted when the <code>GMount</code> have been unmounted. If the recipient is holding references to the object they should release them so the object can be&nbsp;finalized.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_root</code></td>
+          <td style="vertical-align:top"><pre><code>GFile* (* get_root) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a <code>GFile</code> to the root directory of the <code>GMount</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_name</code></td>
+          <td style="vertical-align:top"><pre><code>char* (* get_name) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a string containing the name of the <code>GMount</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_icon</code></td>
+          <td style="vertical-align:top"><pre><code>GIcon* (* get_icon) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a <code>GIcon</code> for the <code>GMount</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_uuid</code></td>
+          <td style="vertical-align:top"><pre><code>char* (* get_uuid) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets the <span class="caps">UUID</span> for the <code>GMount</code>. The reference is typically based on the file system <span class="caps">UUID</span> for the mount in question and should be considered an opaque string. Returns <code>NULL</code> if there is no <span class="caps">UUID</span>&nbsp;available.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_volume</code></td>
+          <td style="vertical-align:top"><pre><code>GVolume* (* get_volume) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a <code>GVolume</code> the mount is located on. Returns <code>NULL</code> if the <code>GMount</code> is not associated with a <code>GVolume</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_drive</code></td>
+          <td style="vertical-align:top"><pre><code>GDrive* (* get_drive) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a <code>GDrive</code> the volume of the mount is located on. Returns <code>NULL</code> if the <code>GMount</code> is not associated with a <code>GDrive</code> or a <code>GVolume</code>. This is convenience method for getting the <code>GVolume</code> and using that to get the <code>GDrive</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>can_unmount</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* can_unmount) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Checks if a <code>GMount</code> can be&nbsp;unmounted.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>can_eject</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* can_eject) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Checks if a <code>GMount</code> can be&nbsp;ejected.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>unmount</code></td>
+          <td style="vertical-align:top"><pre><code>void (* unmount) (
+    GMount* mount,
+    GMountUnmountFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Starts unmounting a <code>GMount</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>unmount_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* unmount_finish) (
+    GMount* mount,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes an unmounting&nbsp;operation.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject</code></td>
+          <td style="vertical-align:top"><pre><code>void (* eject) (
+    GMount* mount,
+    GMountUnmountFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Starts ejecting a <code>GMount</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* eject_finish) (
+    GMount* mount,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes an eject&nbsp;operation.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>remount</code></td>
+          <td style="vertical-align:top"><pre><code>void (* remount) (
+    GMount* mount,
+    GMountMountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Starts remounting a <code>GMount</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>remount_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* remount_finish) (
+    GMount* mount,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes a remounting&nbsp;operation.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>guess_content_type</code></td>
+          <td style="vertical-align:top"><pre><code>void (* guess_content_type) (
+    GMount* mount,
+    gboolean force_rescan,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Starts guessing the type of the content of a <code>GMount</code>.
+    See <code>g_mount_guess_content_type()</code> for more information on content
+    type guessing. This operation was added in&nbsp;2.18.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>guess_content_type_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gchar** (* guess_content_type_finish) (
+    GMount* mount,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes a content type guessing operation. Added in&nbsp;2.18.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>guess_content_type_sync</code></td>
+          <td style="vertical-align:top"><pre><code>gchar** (* guess_content_type_sync) (
+    GMount* mount,
+    gboolean force_rescan,
+    GCancellable* cancellable,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Synchronous variant of <code>guess_content_type</code>. Added in&nbsp;2.18.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>pre_unmount</code></td>
+          <td style="vertical-align:top"><pre><code>void (* pre_unmount) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The ::pre-unmount signal that is emitted when the <code>GMount</code> will soon be emitted. If the recipient is somehow holding the mount open by keeping an open file on it it should close the&nbsp;file.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>unmount_with_operation</code></td>
+          <td style="vertical-align:top"><pre><code>void (* unmount_with_operation) (
+    GMount* mount,
+    GMountUnmountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Starts unmounting a <code>GMount</code> using a <code>GMountOperation</code>. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>unmount_with_operation_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* unmount_with_operation_finish) (
+    GMount* mount,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes an unmounting operation using a <code>GMountOperation</code>. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject_with_operation</code></td>
+          <td style="vertical-align:top"><pre><code>void (* eject_with_operation) (
+    GMount* mount,
+    GMountUnmountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Starts ejecting a <code>GMount</code> using a <code>GMountOperation</code>. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject_with_operation_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* eject_with_operation_finish) (
+    GMount* mount,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes an eject operation using a <code>GMountOperation</code>. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_default_location</code></td>
+          <td style="vertical-align:top"><pre><code>GFile* (* get_default_location) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a <code>GFile</code> indication a start location that can be use as the entry point for this mount. Since&nbsp;2.24.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_sort_key</code></td>
+          <td style="vertical-align:top"><pre><code>const gchar* (* get_sort_key) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a key used for sorting <code>GMount</code> instance or <code>NULL</code> if no such key exists. Since&nbsp;2.32.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_symbolic_icon</code></td>
+          <td style="vertical-align:top"><pre><code>GIcon* (* get_symbolic_icon) (
+    GMount* mount
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a symbolic <code>GIcon</code> for the <code>GMount</code>. Since&nbsp;2.34.</p></td>
+        </tr>
+        
+        </table>
+      </div>
+      
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6 id="vfunc-can_eject"><a href="vfunc.Mount.can_eject.html">Gio.Mount.can_eject</a></h6>
+          <div class="docblock">
+            <p>Checks if <code>mount</code> can be&nbsp;ejected.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-can_unmount"><a href="vfunc.Mount.can_unmount.html">Gio.Mount.can_unmount</a></h6>
+          <div class="docblock">
+            <p>Checks if <code>mount</code> can be&nbsp;unmounted.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-changed"><a href="vfunc.Mount.changed.html">Gio.Mount.changed</a></h6>
+          <div class="docblock">
+            <p>Changed signal that is emitted when the mount&#8217;s state has&nbsp;changed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6 id="vfunc-eject"><a href="vfunc.Mount.eject.html">Gio.Mount.eject</a></h6>
+          <div class="docblock">
+            <p>Ejects a mount. This is an asynchronous operation, and is
+finished by calling <code>g_mount_eject_finish()</code> with the <code>mount</code>
+and <code>GAsyncResult</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6 id="vfunc-eject_finish"><a href="vfunc.Mount.eject_finish.html">Gio.Mount.eject_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes ejecting a mount. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-eject_with_operation"><a href="vfunc.Mount.eject_with_operation.html">Gio.Mount.eject_with_operation</a></h6>
+          <div class="docblock">
+            <p>Ejects a mount. This is an asynchronous operation, and is
+finished by calling <code>g_mount_eject_with_operation_finish()</code> with the <code>mount</code>
+and <code>GAsyncResult</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-eject_with_operation_finish"><a href="vfunc.Mount.eject_with_operation_finish.html">Gio.Mount.eject_with_operation_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes ejecting a mount. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_default_location"><a href="vfunc.Mount.get_default_location.html">Gio.Mount.get_default_location</a></h6>
+          <div class="docblock">
+            <p>Gets the default location of <code>mount</code>. The default location of the given
+<code>mount</code> is a path that reflects the main entry point for the user (e.g.
+the home directory, or the root of the&nbsp;volume).</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_drive"><a href="vfunc.Mount.get_drive.html">Gio.Mount.get_drive</a></h6>
+          <div class="docblock">
+            <p>Gets the drive for the <code>mount</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_icon"><a href="vfunc.Mount.get_icon.html">Gio.Mount.get_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the icon for <code>mount</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_name"><a href="vfunc.Mount.get_name.html">Gio.Mount.get_name</a></h6>
+          <div class="docblock">
+            <p>Gets the name of <code>mount</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_root"><a href="vfunc.Mount.get_root.html">Gio.Mount.get_root</a></h6>
+          <div class="docblock">
+            <p>Gets the root directory on <code>mount</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_sort_key"><a href="vfunc.Mount.get_sort_key.html">Gio.Mount.get_sort_key</a></h6>
+          <div class="docblock">
+            <p>Gets the sort key for <code>mount</code>, if&nbsp;any.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_symbolic_icon"><a href="vfunc.Mount.get_symbolic_icon.html">Gio.Mount.get_symbolic_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the symbolic icon for <code>mount</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_uuid"><a href="vfunc.Mount.get_uuid.html">Gio.Mount.get_uuid</a></h6>
+          <div class="docblock">
+            <p>Gets the <span class="caps">UUID</span> for the <code>mount</code>. The reference is typically based on
+the file system <span class="caps">UUID</span> for the mount in question and should be
+considered an opaque string. Returns <code>NULL</code> if there is no <span class="caps">UUID</span>&nbsp;available.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_volume"><a href="vfunc.Mount.get_volume.html">Gio.Mount.get_volume</a></h6>
+          <div class="docblock">
+            <p>Gets the volume for the <code>mount</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-guess_content_type"><a href="vfunc.Mount.guess_content_type.html">Gio.Mount.guess_content_type</a></h6>
+          <div class="docblock">
+            <p>Tries to guess the type of content stored on <code>mount</code>. Returns one or
+more textual identifiers of well-known content types (typically
+prefixed with &#8220;x-content/&#8221;), e.g. x-content/image-dcf for camera
+memory cards. See the
+<a href="http://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec">shared-mime-info</a>
+specification for more on x-content&nbsp;types.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.18</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-guess_content_type_finish"><a href="vfunc.Mount.guess_content_type_finish.html">Gio.Mount.guess_content_type_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes guessing content types of <code>mount</code>. If any errors occurred
+during the operation, <code>error</code> will be set to contain the errors and
+<code>FALSE</code> will be returned. In particular, you may get an
+<code>G_IO_ERROR_NOT_SUPPORTED</code> if the mount does not support content&nbsp;guessing.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.18</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-guess_content_type_sync"><a href="vfunc.Mount.guess_content_type_sync.html">Gio.Mount.guess_content_type_sync</a></h6>
+          <div class="docblock">
+            <p>Tries to guess the type of content stored on <code>mount</code>. Returns one or
+more textual identifiers of well-known content types (typically
+prefixed with &#8220;x-content/&#8221;), e.g. x-content/image-dcf for camera
+memory cards. See the
+<a href="http://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec">shared-mime-info</a>
+specification for more on x-content&nbsp;types.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.18</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-pre_unmount"><a href="vfunc.Mount.pre_unmount.html">Gio.Mount.pre_unmount</a></h6>
+          <div class="docblock">
+            <p>The ::pre-unmount signal that is emitted when the <code>GMount</code> will soon be emitted. If the recipient is somehow holding the mount open by keeping an open file on it it should close the&nbsp;file.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-remount"><a href="vfunc.Mount.remount.html">Gio.Mount.remount</a></h6>
+          <div class="docblock">
+            <p>Remounts a mount. This is an asynchronous operation, and is
+finished by calling <code>g_mount_remount_finish()</code> with the <code>mount</code>
+and <code>GAsyncResults</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-remount_finish"><a href="vfunc.Mount.remount_finish.html">Gio.Mount.remount_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes remounting a mount. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6 id="vfunc-unmount"><a href="vfunc.Mount.unmount.html">Gio.Mount.unmount</a></h6>
+          <div class="docblock">
+            <p>Unmounts a mount. This is an asynchronous operation, and is
+finished by calling <code>g_mount_unmount_finish()</code> with the <code>mount</code>
+and <code>GAsyncResult</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6 id="vfunc-unmount_finish"><a href="vfunc.Mount.unmount_finish.html">Gio.Mount.unmount_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes unmounting a mount. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-unmount_with_operation"><a href="vfunc.Mount.unmount_with_operation.html">Gio.Mount.unmount_with_operation</a></h6>
+          <div class="docblock">
+            <p>Unmounts a mount. This is an asynchronous operation, and is
+finished by calling <code>g_mount_unmount_with_operation_finish()</code> with the <code>mount</code>
+and <code>GAsyncResult</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-unmount_with_operation_finish"><a href="vfunc.Mount.unmount_with_operation_finish.html">Gio.Mount.unmount_with_operation_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes unmounting a mount. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-unmounted"><a href="vfunc.Mount.unmounted.html">Gio.Mount.unmounted</a></h6>
+          <div class="docblock">
+            <p>The unmounted signal that is emitted when the <code>GMount</code> have been unmounted. If the recipient is holding references to the object they should release them so the object can be&nbsp;finalized.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/iface.Mount.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:04:31 GMT -->
+</html>

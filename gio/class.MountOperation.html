@@ -1,0 +1,1084 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/class.MountOperation.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:49:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.MountOperation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.MountOperation"/>
+  <meta property="og:description" content="Reference for Gio.MountOperation"/>
+  <meta name="twitter:title" content="Gio.MountOperation"/>
+  <meta name="twitter:description" content="Reference for Gio.MountOperation"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="class.MountOperation.html#description">MountOperation</a>
+  </div>
+</div>
+
+
+  
+<div class="section">
+  <h5>Constructors</h5>
+  <div class="links">
+  
+    <a class="ctor" href="ctor.MountOperation.new.html">new</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.MountOperation.get_anonymous.html">get_anonymous</a>
+  
+    <a class="method" href="method.MountOperation.get_choice.html">get_choice</a>
+  
+    <a class="method" href="method.MountOperation.get_domain.html">get_domain</a>
+  
+    <a class="method" href="method.MountOperation.get_is_tcrypt_hidden_volume.html">get_is_tcrypt_hidden_volume</a>
+  
+    <a class="method" href="method.MountOperation.get_is_tcrypt_system_volume.html">get_is_tcrypt_system_volume</a>
+  
+    <a class="method" href="method.MountOperation.get_password.html">get_password</a>
+  
+    <a class="method" href="method.MountOperation.get_password_save.html">get_password_save</a>
+  
+    <a class="method" href="method.MountOperation.get_pim.html">get_pim</a>
+  
+    <a class="method" href="method.MountOperation.get_username.html">get_username</a>
+  
+    <a class="method" href="method.MountOperation.reply.html">reply</a>
+  
+    <a class="method" href="method.MountOperation.set_anonymous.html">set_anonymous</a>
+  
+    <a class="method" href="method.MountOperation.set_choice.html">set_choice</a>
+  
+    <a class="method" href="method.MountOperation.set_domain.html">set_domain</a>
+  
+    <a class="method" href="method.MountOperation.set_is_tcrypt_hidden_volume.html">set_is_tcrypt_hidden_volume</a>
+  
+    <a class="method" href="method.MountOperation.set_is_tcrypt_system_volume.html">set_is_tcrypt_system_volume</a>
+  
+    <a class="method" href="method.MountOperation.set_password.html">set_password</a>
+  
+    <a class="method" href="method.MountOperation.set_password_save.html">set_password_save</a>
+  
+    <a class="method" href="method.MountOperation.set_pim.html">set_pim</a>
+  
+    <a class="method" href="method.MountOperation.set_username.html">set_username</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Properties</h5>
+  <div class="links">
+  
+    <a class="property" href="property.MountOperation.anonymous.html">anonymous</a>
+  
+    <a class="property" href="property.MountOperation.choice.html">choice</a>
+  
+    <a class="property" href="property.MountOperation.domain.html">domain</a>
+  
+    <a class="property" href="property.MountOperation.is-tcrypt-hidden-volume.html">is-tcrypt-hidden-volume</a>
+  
+    <a class="property" href="property.MountOperation.is-tcrypt-system-volume.html">is-tcrypt-system-volume</a>
+  
+    <a class="property" href="property.MountOperation.password.html">password</a>
+  
+    <a class="property" href="property.MountOperation.password-save.html">password-save</a>
+  
+    <a class="property" href="property.MountOperation.pim.html">pim</a>
+  
+    <a class="property" href="property.MountOperation.username.html">username</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.MountOperation.aborted.html">aborted</a>
+  
+    <a class="signal" href="signal.MountOperation.ask-password.html">ask-password</a>
+  
+    <a class="signal" href="signal.MountOperation.ask-question.html">ask-question</a>
+  
+    <a class="signal" href="signal.MountOperation.reply.html">reply</a>
+  
+    <a class="signal" href="signal.MountOperation.show-processes.html">show-processes</a>
+  
+    <a class="signal" href="signal.MountOperation.show-unmount-progress.html">show-unmount-progress</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.MountOperation.aborted.html">aborted</a>
+  
+    <a class="method" href="vfunc.MountOperation.ask_password.html">ask_password</a>
+  
+    <a class="method" href="vfunc.MountOperation.ask_question.html">ask_question</a>
+  
+    <a class="method" href="vfunc.MountOperation.reply.html">reply</a>
+  
+    <a class="method" href="vfunc.MountOperation.show_processes.html">show_processes</a>
+  
+    <a class="method" href="vfunc.MountOperation.show_unmount_progress.html">show_unmount_progress</a>
+  
+  </div>
+</div>
+
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>MountOperation</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gmountoperation.c#L33">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.MountOperation : GObject.Object
+{
+  priv: GMountOperationPrivate*
+}</pre></code>
+
+        <div class="docblock">
+          <p><code>GMountOperation</code> provides a mechanism for interacting with the user.
+It can be used for authenticating mountable operations, such as loop
+mounting files, hard drive partitions or server locations. It can
+also be used to ask the user questions or show a list of applications
+preventing unmount or eject operations from&nbsp;completing.</p>
+<p>Note that <code>GMountOperation</code> is used for more than just <a href="iface.Mount.html"><code>GMount</code></a>
+objects – for example it is also used in <a href="method.Drive.start.html"><code>g_drive_start()</code></a> and
+<a href="method.Drive.stop.html"><code>g_drive_stop()</code></a>.</p>
+<p>Users should instantiate a subclass of this that implements all the
+various callbacks to show the required dialogs, such as
+<a href="https://docs.gtk.org/gtk4/class.MountOperation.html"><code>GtkMountOperation</code></a>.
+If no user interaction is desired (for example when automounting
+filesystems at login time), usually <code>NULL</code> can be passed, see each method
+taking a <code>GMountOperation</code> for&nbsp;details.</p>
+<p>Throughout the <span class="caps">API</span>, the term ‘<span class="caps">TCRYPT</span>’ is used to mean ‘compatible with TrueCrypt and VeraCrypt’.
+<a href="https://en.wikipedia.org/wiki/TrueCrypt">TrueCrypt</a> is a discontinued system for
+encrypting file containers, partitions or whole disks, typically used with Windows.
+<a href="https://www.veracrypt.fr/">VeraCrypt</a> is a maintained fork of TrueCrypt with various
+improvements and auditing&nbsp;fixes.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.MountOperation.new.html">g_mount_operation_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.MountOperation.get_anonymous.html">g_mount_operation_get_anonymous</a></h6>
+          <div class="docblock">
+            <p>Check to see whether the mount operation is being used
+for an anonymous&nbsp;user.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.get_choice.html">g_mount_operation_get_choice</a></h6>
+          <div class="docblock">
+            <p>Gets a choice from the mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.get_domain.html">g_mount_operation_get_domain</a></h6>
+          <div class="docblock">
+            <p>Gets the domain of the mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.get_is_tcrypt_hidden_volume.html">g_mount_operation_get_is_tcrypt_hidden_volume</a></h6>
+          <div class="docblock">
+            <p>Check to see whether the mount operation is being used
+for a <span class="caps">TCRYPT</span> hidden&nbsp;volume.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.58</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.get_is_tcrypt_system_volume.html">g_mount_operation_get_is_tcrypt_system_volume</a></h6>
+          <div class="docblock">
+            <p>Check to see whether the mount operation is being used
+for a <span class="caps">TCRYPT</span> system&nbsp;volume.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.58</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.get_password.html">g_mount_operation_get_password</a></h6>
+          <div class="docblock">
+            <p>Gets a password from the mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.get_password_save.html">g_mount_operation_get_password_save</a></h6>
+          <div class="docblock">
+            <p>Gets the state of saving passwords for the mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.get_pim.html">g_mount_operation_get_pim</a></h6>
+          <div class="docblock">
+            <p>Gets a <span class="caps">PIM</span> from the mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.58</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.get_username.html">g_mount_operation_get_username</a></h6>
+          <div class="docblock">
+            <p>Get the user name from the mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.reply.html">g_mount_operation_reply</a></h6>
+          <div class="docblock">
+            <p>Emits the <code>GMountOperation::reply</code> signal.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.set_anonymous.html">g_mount_operation_set_anonymous</a></h6>
+          <div class="docblock">
+            <p>Sets the mount operation to use an anonymous user if <code>anonymous</code> is <code>TRUE</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.set_choice.html">g_mount_operation_set_choice</a></h6>
+          <div class="docblock">
+            <p>Sets a default choice for the mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.set_domain.html">g_mount_operation_set_domain</a></h6>
+          <div class="docblock">
+            <p>Sets the mount operation&#8217;s&nbsp;domain.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.set_is_tcrypt_hidden_volume.html">g_mount_operation_set_is_tcrypt_hidden_volume</a></h6>
+          <div class="docblock">
+            <p>Sets the mount operation to use a hidden volume if <code>hidden_volume</code> is <code>TRUE</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.58</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.set_is_tcrypt_system_volume.html">g_mount_operation_set_is_tcrypt_system_volume</a></h6>
+          <div class="docblock">
+            <p>Sets the mount operation to use a system volume if <code>system_volume</code> is <code>TRUE</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.58</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.set_password.html">g_mount_operation_set_password</a></h6>
+          <div class="docblock">
+            <p>Sets the mount operation&#8217;s password to <code>password</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.set_password_save.html">g_mount_operation_set_password_save</a></h6>
+          <div class="docblock">
+            <p>Sets the state of saving passwords for the mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.set_pim.html">g_mount_operation_set_pim</a></h6>
+          <div class="docblock">
+            <p>Sets the mount operation&#8217;s <span class="caps">PIM</span> to <code>pim</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.58</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MountOperation.set_username.html">g_mount_operation_set_username</a></h6>
+          <div class="docblock">
+            <p>Sets the user name within <code>op</code> to <code>username</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</em></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.MountOperation.anonymous.html">Gio.MountOperation:anonymous</a></h6>
+          <div class="docblock">
+            <p>Whether to use an anonymous user when&nbsp;authenticating.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.MountOperation.choice.html">Gio.MountOperation:choice</a></h6>
+          <div class="docblock">
+            <p>The index of the user&#8217;s choice when a question is asked during the
+mount operation. See the <code>GMountOperation::ask-question</code> signal.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.MountOperation.domain.html">Gio.MountOperation:domain</a></h6>
+          <div class="docblock">
+            <p>The domain to use for the mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.MountOperation.is-tcrypt-hidden-volume.html">Gio.MountOperation:is-tcrypt-hidden-volume</a></h6>
+          <div class="docblock">
+            <p>Whether the device to be unlocked is a <span class="caps">TCRYPT</span> hidden volume.
+See <a href="https://www.veracrypt.fr/en/Hidden Volume.html">the VeraCrypt documentation</a>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.58</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.MountOperation.is-tcrypt-system-volume.html">Gio.MountOperation:is-tcrypt-system-volume</a></h6>
+          <div class="docblock">
+            <p>Whether the device to be unlocked is a <span class="caps">TCRYPT</span> system volume.
+In this context, a system volume is a volume with a bootloader
+and operating system installed. This is only supported for Windows
+operating systems. For further documentation, see
+<a href="https://www.veracrypt.fr/en/System Encryption.html">the VeraCrypt documentation</a>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.58</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.MountOperation.password.html">Gio.MountOperation:password</a></h6>
+          <div class="docblock">
+            <p>The password that is used for authentication when carrying out
+the mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.MountOperation.password-save.html">Gio.MountOperation:password-save</a></h6>
+          <div class="docblock">
+            <p>Determines if and how the password information should be&nbsp;saved.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.MountOperation.pim.html">Gio.MountOperation:pim</a></h6>
+          <div class="docblock">
+            <p>The VeraCrypt <span class="caps">PIM</span> value, when unlocking a VeraCrypt volume. See
+<a href="https://www.veracrypt.fr/en/Personal Iterations Multiplier (PIM).html">the VeraCrypt documentation</a>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.58</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.MountOperation.username.html">Gio.MountOperation:username</a></h6>
+          <div class="docblock">
+            <p>The user name that is used for authentication when carrying out
+the mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.MountOperation.aborted.html">Gio.MountOperation::aborted</a></h6>
+          <div class="docblock">
+            <p>Emitted by the backend when e.g. a device becomes unavailable
+while a mount operation is in&nbsp;progress.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.20</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.MountOperation.ask-password.html">Gio.MountOperation::ask-password</a></h6>
+          <div class="docblock">
+            <p>Emitted when a mount operation asks the user for a&nbsp;password.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.MountOperation.ask-question.html">Gio.MountOperation::ask-question</a></h6>
+          <div class="docblock">
+            <p>Emitted when asking the user a question and gives a list of
+choices for the user to choose&nbsp;from.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.MountOperation.reply.html">Gio.MountOperation::reply</a></h6>
+          <div class="docblock">
+            <p>Emitted when the user has replied to the mount&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.MountOperation.show-processes.html">Gio.MountOperation::show-processes</a></h6>
+          <div class="docblock">
+            <p>Emitted when one or more processes are blocking an operation
+e.g. unmounting/ejecting a <code>GMount</code> or stopping a <code>GDrive</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.MountOperation.show-unmount-progress.html">Gio.MountOperation::show-unmount-progress</a></h6>
+          <div class="docblock">
+            <p>Emitted when an unmount operation has been busy for more than some time
+(typically 1.5&nbsp;seconds).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioMountOperationClass {
+  GObjectClass parent_class;
+  void (* ask_password) (
+    GMountOperation* op,
+    const char* message,
+    const char* default_user,
+    const char* default_domain,
+    GAskPasswordFlags flags
+  );
+  void (* ask_question) (
+    GMountOperation* op,
+    const char* message,
+    const char** choices
+  );
+  void (* reply) (
+    GMountOperation* op,
+    GMountOperationResult result
+  );
+  void (* aborted) (
+    GMountOperation* op
+  );
+  void (* show_processes) (
+    GMountOperation* op,
+    const gchar* message,
+    GArray* processes,
+    const gchar** choices
+  );
+  void (* show_unmount_progress) (
+    GMountOperation* op,
+    const gchar* message,
+    gint64 time_left,
+    gint64 bytes_left
+  );
+  void (* _g_reserved1) (
+void
+  );
+  void (* _g_reserved2) (
+void
+  );
+  void (* _g_reserved3) (
+void
+  );
+  void (* _g_reserved4) (
+void
+  );
+  void (* _g_reserved5) (
+void
+  );
+  void (* _g_reserved6) (
+void
+  );
+  void (* _g_reserved7) (
+void
+  );
+  void (* _g_reserved8) (
+void
+  );
+  void (* _g_reserved9) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>ask_password: void (* ask_password) (
+    GMountOperation* op,
+    const char* message,
+    const char* default_user,
+    const char* default_domain,
+    GAskPasswordFlags flags
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>ask_question: void (* ask_question) (
+    GMountOperation* op,
+    const char* message,
+    const char** choices
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>reply: void (* reply) (
+    GMountOperation* op,
+    GMountOperationResult result
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>aborted: void (* aborted) (
+    GMountOperation* op
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>show_processes: void (* show_processes) (
+    GMountOperation* op,
+    const gchar* message,
+    GArray* processes,
+    const gchar** choices
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>show_unmount_progress: void (* show_unmount_progress) (
+    GMountOperation* op,
+    const gchar* message,
+    gint64 time_left,
+    gint64 bytes_left
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved1: void (* _g_reserved1) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved2: void (* _g_reserved2) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved3: void (* _g_reserved3) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved4: void (* _g_reserved4) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved5: void (* _g_reserved5) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved6: void (* _g_reserved6) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved7: void (* _g_reserved7) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved8: void (* _g_reserved8) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved9: void (* _g_reserved9) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        </dd>
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-aborted"><a href="vfunc.MountOperation.aborted.html">Gio.MountOperationClass.aborted</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-ask_password"><a href="vfunc.MountOperation.ask_password.html">Gio.MountOperationClass.ask_password</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-ask_question"><a href="vfunc.MountOperation.ask_question.html">Gio.MountOperationClass.ask_question</a></h6>
+        <div class="docblock">
+          <p>Virtual implementation of <code>GMountOperation::ask-question</code>.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-reply"><a href="vfunc.MountOperation.reply.html">Gio.MountOperationClass.reply</a></h6>
+        <div class="docblock">
+          <p>Emits the <code>GMountOperation::reply</code> signal.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-show_processes"><a href="vfunc.MountOperation.show_processes.html">Gio.MountOperationClass.show_processes</a></h6>
+        <div class="docblock">
+          <p>Virtual implementation of <code>GMountOperation::show-processes</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-show_unmount_progress"><a href="vfunc.MountOperation.show_unmount_progress.html">Gio.MountOperationClass.show_unmount_progress</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+      
+      <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
+      
+      
+      
+<li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/class.MountOperation.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:49:39 GMT -->
+</html>

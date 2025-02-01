@@ -1,0 +1,497 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.ConverterOutputStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:41:09 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.ConverterOutputStream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.ConverterOutputStream">
+  <meta property="og:description" content="Reference for Gio.ConverterOutputStream">
+  <meta name="twitter:title" content="Gio.ConverterOutputStream">
+  <meta name="twitter:description" content="Reference for Gio.ConverterOutputStream">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>ConverterOutputStream</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gconverteroutputstream.c#L35">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.ConverterOutputStream : Gio.FilterOutputStream
+  implements Gio.PollableOutputStream {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p>Converter output stream implements <a href="class.OutputStream.html"><code>GOutputStream</code></a> and allows
+conversion of data of various types during&nbsp;reading.</p>
+<p>As of GLib 2.34, <code>GConverterOutputStream</code> implements
+<a href="iface.PollableOutputStream.html"><code>GPollableOutputStream</code></a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a href="class.FilterOutputStream.html" title="FilterOutputStream">GFilterOutputStream</a></li>
+          
+        
+          
+          <li class="class"><a href="class.OutputStream.html" title="OutputStream">GOutputStream</a></li>
+          
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.PollableOutputStream.html" title="PollableOutputStream">GPollableOutputStream</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.ConverterOutputStream.new.html">g_converter_output_stream_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new converter output stream for the <code>base_stream</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.ConverterOutputStream.get_converter.html">g_converter_output_stream_get_converter</a></h6>
+          <div class="docblock">
+            <p>Gets the <code>GConverter</code> that is used by <code>converter_stream</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="class.FilterOutputStream.html">GFilterOutputStream</a> (3)</h5><div class="docblock">
+          
+            <h6><a href="method.FilterOutputStream.get_base_stream.html">g_filter_output_stream_get_base_stream</a></h6><div class="docblock">
+              <p>Gets the base stream for the filter&nbsp;stream.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.FilterOutputStream.get_close_base_stream.html">g_filter_output_stream_get_close_base_stream</a></h6><div class="docblock">
+              <p>Returns whether the base stream will be closed when <code>stream</code> is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.FilterOutputStream.set_close_base_stream.html">g_filter_output_stream_set_close_base_stream</a></h6><div class="docblock">
+              <p>Sets whether the base stream will be closed when <code>stream</code> is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="class.OutputStream.html">GOutputStream</a> (31)</h5><div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a href="class.OutputStream.html#methods">GOutputStream</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.PollableOutputStream.html">GPollableOutputStream</a> (5)</h5><div class="docblock">
+          
+            <h6><a href="method.PollableOutputStream.can_poll.html">g_pollable_output_stream_can_poll</a></h6><div class="docblock">
+              <p>Checks if <code>stream</code> is actually pollable. Some classes may implement
+<code>GPollableOutputStream</code> but have only certain instances of that
+class be pollable. If this method returns <code>FALSE</code>, then the behavior
+of other <code>GPollableOutputStream</code> methods is&nbsp;undefined.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.PollableOutputStream.create_source.html">g_pollable_output_stream_create_source</a></h6><div class="docblock">
+              <p>Creates a <code>GSource</code> that triggers when <code>stream</code> can be written, or
+<code>cancellable</code> is triggered or an error occurs. The callback on the
+source is of the <code>GPollableSourceFunc</code> type.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.PollableOutputStream.is_writable.html">g_pollable_output_stream_is_writable</a></h6><div class="docblock">
+              <p>Checks if <code>stream</code> can be&nbsp;written.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.PollableOutputStream.write_nonblocking.html">g_pollable_output_stream_write_nonblocking</a></h6><div class="docblock">
+              <p>Attempts to write up to <code>count</code> bytes from <code>buffer</code> to <code>stream</code>, as
+with g_output_stream_write(). If <code>stream</code> is not currently writable,
+this will immediately return <code>G_IO_ERROR_WOULD_BLOCK</code>, and you can
+use <code>g_pollable_output_stream_create_source()</code> to create a <code>GSource</code>
+that will be triggered when <code>stream</code> is&nbsp;writable.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.PollableOutputStream.writev_nonblocking.html">g_pollable_output_stream_writev_nonblocking</a></h6><div class="docblock">
+              <p>Attempts to write the bytes contained in the <code>n_vectors</code> <code>vectors</code> to <code>stream</code>,
+as with g_output_stream_writev(). If <code>stream</code> is not currently writable,
+this will immediately return %<code>G_POLLABLE_RETURN_WOULD_BLOCK</code>, and you can
+use <code>g_pollable_output_stream_create_source()</code> to create a <code>GSource</code>
+that will be triggered when <code>stream</code> is writable. <code>error</code> will <em>not</em> be
+set in that&nbsp;case.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.60</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.ConverterOutputStream.converter.html">Gio.ConverterOutputStream:converter</a></h6>
+          <div class="docblock">
+            <p>The converter&nbsp;object.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-properties">
+          <h5 style="display:block;">Properties inherited from <a href="class.FilterOutputStream.html">GFilterOutputStream</a> (2)</h5><div class="docblock">
+          
+            <h6><a href="property.FilterOutputStream.base-stream.html">Gio.FilterOutputStream:base-stream</a></h6><div class="docblock">
+              <p>The underlying base stream on which the I/O ops will be&nbsp;done.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.FilterOutputStream.close-base-stream.html">Gio.FilterOutputStream:close-base-stream</a></h6><div class="docblock">
+              <p>Whether the base stream should be closed when the filter stream is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+      
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+      
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioConverterOutputStreamClass {
+  GFilterOutputStreamClass parent_class;
+  void (* _g_reserved1) (
+void
+  );
+  void (* _g_reserved2) (
+void
+  );
+  void (* _g_reserved3) (
+void
+  );
+  void (* _g_reserved4) (
+void
+  );
+  void (* _g_reserved5) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GFilterOutputStreamClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved1: void (* _g_reserved1) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved2: void (* _g_reserved2) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved3: void (* _g_reserved3) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved4: void (* _g_reserved4) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved5: void (* _g_reserved5) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.ConverterOutputStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:41:14 GMT --></html>

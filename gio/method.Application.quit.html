@@ -1,0 +1,250 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/method.Application.quit.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.Application.quit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta priority="og:title" content="Gio.Application.quit"/>
+  <meta priority="og:description" content="Reference for Gio.Application.quit"/>
+  <meta name="twitter:title" content="Gio.Application.quit"/>
+  <meta name="twitter:description" content="Reference for Gio.Application.quit"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="class.Application.html">Application</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.Application.activate.html">activate</a>
+  
+    <a class="method" href="method.Application.add_main_option.html">add_main_option</a>
+  
+    <a class="method" href="method.Application.add_main_option_entries.html">add_main_option_entries</a>
+  
+    <a class="method" href="method.Application.add_option_group.html">add_option_group</a>
+  
+    <a class="method" href="method.Application.bind_busy_property.html">bind_busy_property</a>
+  
+    <a class="method" href="method.Application.get_application_id.html">get_application_id</a>
+  
+    <a class="method" href="method.Application.get_dbus_connection.html">get_dbus_connection</a>
+  
+    <a class="method" href="method.Application.get_dbus_object_path.html">get_dbus_object_path</a>
+  
+    <a class="method" href="method.Application.get_flags.html">get_flags</a>
+  
+    <a class="method" href="method.Application.get_inactivity_timeout.html">get_inactivity_timeout</a>
+  
+    <a class="method" href="method.Application.get_is_busy.html">get_is_busy</a>
+  
+    <a class="method" href="method.Application.get_is_registered.html">get_is_registered</a>
+  
+    <a class="method" href="method.Application.get_is_remote.html">get_is_remote</a>
+  
+    <a class="method" href="method.Application.get_resource_base_path.html">get_resource_base_path</a>
+  
+    <a class="method" href="method.Application.get_version.html">get_version</a>
+  
+    <a class="method" href="method.Application.hold.html">hold</a>
+  
+    <a class="method" href="method.Application.mark_busy.html">mark_busy</a>
+  
+    <a class="method" href="method.Application.open.html">open</a>
+  
+    <a class="method current" href="method.Application.quit.html">quit</a>
+  
+    <a class="method" href="method.Application.register.html">register</a>
+  
+    <a class="method" href="method.Application.release.html">release</a>
+  
+    <a class="method" href="method.Application.run.html">run</a>
+  
+    <a class="method" href="method.Application.send_notification.html">send_notification</a>
+  
+    <a class="method" href="method.Application.set_action_group.html">set_action_group</a>
+  
+    <a class="method" href="method.Application.set_application_id.html">set_application_id</a>
+  
+    <a class="method" href="method.Application.set_default.html">set_default</a>
+  
+    <a class="method" href="method.Application.set_flags.html">set_flags</a>
+  
+    <a class="method" href="method.Application.set_inactivity_timeout.html">set_inactivity_timeout</a>
+  
+    <a class="method" href="method.Application.set_option_context_description.html">set_option_context_description</a>
+  
+    <a class="method" href="method.Application.set_option_context_parameter_string.html">set_option_context_parameter_string</a>
+  
+    <a class="method" href="method.Application.set_option_context_summary.html">set_option_context_summary</a>
+  
+    <a class="method" href="method.Application.set_resource_base_path.html">set_resource_base_path</a>
+  
+    <a class="method" href="method.Application.set_version.html">set_version</a>
+  
+    <a class="method" href="method.Application.unbind_busy_property.html">unbind_busy_property</a>
+  
+    <a class="method" href="method.Application.unmark_busy.html">unmark_busy</a>
+  
+    <a class="method" href="method.Application.withdraw_notification.html">withdraw_notification</a>
+  
+  </div>
+</div>
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Method</h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span><a href="class.Application.html">Application</a><span class="sep"></span>quit</h1>
+  </header>
+
+  <section>
+    <div class="docblock">
+      <p><span class="emblem available">since: 2.32</span></p>
+    </div>
+
+    <div class="declaration toggle-wrapper">
+      <h4 style="display:flex;" id="declaration">
+        Declaration
+        <a class="anchor" href="#declaration"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gapplication.h#L229">[src]</a>
+        
+      </h4>
+
+      <div class="docblock c-decl">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">g_application_quit</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">GApplication</span><span class="o">*</span><span class="w"> </span><span class="n">application</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 style="display:flex;" id="description">
+        Description
+        <a class="anchor" href="#description"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gapplication.c#L2938">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>Immediately quits the&nbsp;application.</p>
+<p>Upon return to the mainloop, <code>g_application_run()</code> will return,
+calling only the &#8216;shutdown&#8217; function before doing&nbsp;so.</p>
+<p>The hold count is ignored.
+Take care if your code has called <code>g_application_hold()</code> on the application and
+is therefore still expecting it to exist.
+(Note that you may have called <code>g_application_hold()</code> indirectly, for example
+through&nbsp;gtk_application_add_window().)</p>
+<p>The result of calling <code>g_application_run()</code> again after it returns is&nbsp;unspecified.</p>
+      </div>
+
+      <div class="docblock">
+        
+        <p>Available since: 2.32</p>
+        
+        
+        
+        
+        
+      </div>
+
+      
+    </div>
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/method.Application.quit.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:17 GMT -->
+</html>

@@ -1,0 +1,388 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/method.Socket.connect.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.Socket.connect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta priority="og:title" content="Gio.Socket.connect"/>
+  <meta priority="og:description" content="Reference for Gio.Socket.connect"/>
+  <meta name="twitter:title" content="Gio.Socket.connect"/>
+  <meta name="twitter:description" content="Reference for Gio.Socket.connect"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="class.Socket.html">Socket</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.Socket.accept.html">accept</a>
+  
+    <a class="method" href="method.Socket.bind.html">bind</a>
+  
+    <a class="method" href="method.Socket.check_connect_result.html">check_connect_result</a>
+  
+    <a class="method" href="method.Socket.close.html">close</a>
+  
+    <a class="method" href="method.Socket.condition_check.html">condition_check</a>
+  
+    <a class="method" href="method.Socket.condition_timed_wait.html">condition_timed_wait</a>
+  
+    <a class="method" href="method.Socket.condition_wait.html">condition_wait</a>
+  
+    <a class="method current" href="method.Socket.connect.html">connect</a>
+  
+    <a class="method" href="method.Socket.connection_factory_create_connection.html">connection_factory_create_connection</a>
+  
+    <a class="method" href="method.Socket.create_source.html">create_source</a>
+  
+    <a class="method" href="method.Socket.get_available_bytes.html">get_available_bytes</a>
+  
+    <a class="method" href="method.Socket.get_blocking.html">get_blocking</a>
+  
+    <a class="method" href="method.Socket.get_broadcast.html">get_broadcast</a>
+  
+    <a class="method" href="method.Socket.get_credentials.html">get_credentials</a>
+  
+    <a class="method" href="method.Socket.get_family.html">get_family</a>
+  
+    <a class="method" href="method.Socket.get_fd.html">get_fd</a>
+  
+    <a class="method" href="method.Socket.get_keepalive.html">get_keepalive</a>
+  
+    <a class="method" href="method.Socket.get_listen_backlog.html">get_listen_backlog</a>
+  
+    <a class="method" href="method.Socket.get_local_address.html">get_local_address</a>
+  
+    <a class="method" href="method.Socket.get_multicast_loopback.html">get_multicast_loopback</a>
+  
+    <a class="method" href="method.Socket.get_multicast_ttl.html">get_multicast_ttl</a>
+  
+    <a class="method" href="method.Socket.get_option.html">get_option</a>
+  
+    <a class="method" href="method.Socket.get_protocol.html">get_protocol</a>
+  
+    <a class="method" href="method.Socket.get_remote_address.html">get_remote_address</a>
+  
+    <a class="method" href="method.Socket.get_socket_type.html">get_socket_type</a>
+  
+    <a class="method" href="method.Socket.get_timeout.html">get_timeout</a>
+  
+    <a class="method" href="method.Socket.get_ttl.html">get_ttl</a>
+  
+    <a class="method" href="method.Socket.is_closed.html">is_closed</a>
+  
+    <a class="method" href="method.Socket.is_connected.html">is_connected</a>
+  
+    <a class="method" href="method.Socket.join_multicast_group.html">join_multicast_group</a>
+  
+    <a class="method" href="method.Socket.join_multicast_group_ssm.html">join_multicast_group_ssm</a>
+  
+    <a class="method" href="method.Socket.leave_multicast_group.html">leave_multicast_group</a>
+  
+    <a class="method" href="method.Socket.leave_multicast_group_ssm.html">leave_multicast_group_ssm</a>
+  
+    <a class="method" href="method.Socket.listen.html">listen</a>
+  
+    <a class="method" href="method.Socket.receive.html">receive</a>
+  
+    <a class="method" href="method.Socket.receive_bytes.html">receive_bytes</a>
+  
+    <a class="method" href="method.Socket.receive_bytes_from.html">receive_bytes_from</a>
+  
+    <a class="method" href="method.Socket.receive_from.html">receive_from</a>
+  
+    <a class="method" href="method.Socket.receive_message.html">receive_message</a>
+  
+    <a class="method" href="method.Socket.receive_messages.html">receive_messages</a>
+  
+    <a class="method" href="method.Socket.receive_with_blocking.html">receive_with_blocking</a>
+  
+    <a class="method" href="method.Socket.send.html">send</a>
+  
+    <a class="method" href="method.Socket.send_message.html">send_message</a>
+  
+    <a class="method" href="method.Socket.send_message_with_timeout.html">send_message_with_timeout</a>
+  
+    <a class="method" href="method.Socket.send_messages.html">send_messages</a>
+  
+    <a class="method" href="method.Socket.send_to.html">send_to</a>
+  
+    <a class="method" href="method.Socket.send_with_blocking.html">send_with_blocking</a>
+  
+    <a class="method" href="method.Socket.set_blocking.html">set_blocking</a>
+  
+    <a class="method" href="method.Socket.set_broadcast.html">set_broadcast</a>
+  
+    <a class="method" href="method.Socket.set_keepalive.html">set_keepalive</a>
+  
+    <a class="method" href="method.Socket.set_listen_backlog.html">set_listen_backlog</a>
+  
+    <a class="method" href="method.Socket.set_multicast_loopback.html">set_multicast_loopback</a>
+  
+    <a class="method" href="method.Socket.set_multicast_ttl.html">set_multicast_ttl</a>
+  
+    <a class="method" href="method.Socket.set_option.html">set_option</a>
+  
+    <a class="method" href="method.Socket.set_timeout.html">set_timeout</a>
+  
+    <a class="method" href="method.Socket.set_ttl.html">set_ttl</a>
+  
+    <a class="method" href="method.Socket.shutdown.html">shutdown</a>
+  
+    <a class="method" href="method.Socket.speaks_ipv4.html">speaks_ipv4</a>
+  
+  </div>
+</div>
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Method</h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span><a href="class.Socket.html">Socket</a><span class="sep"></span>connect</h1>
+  </header>
+
+  <section>
+    <div class="docblock">
+      <p><span class="emblem available">since: 2.22</span></p>
+    </div>
+
+    <div class="declaration toggle-wrapper">
+      <h4 style="display:flex;" id="declaration">
+        Declaration
+        <a class="anchor" href="#declaration"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gsocket.h#L175">[src]</a>
+        
+      </h4>
+
+      <div class="docblock c-decl">
+        <pre><code><div class="highlight"><pre><span></span><span class="n">gboolean</span>
+<span class="n">g_socket_connect</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">GSocket</span><span class="o">*</span><span class="w"> </span><span class="n">socket</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GSocketAddress</span><span class="o">*</span><span class="w"> </span><span class="n">address</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GCancellable</span><span class="o">*</span><span class="w"> </span><span class="n">cancellable</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 style="display:flex;" id="description">
+        Description
+        <a class="anchor" href="#description"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gsocket.c#L3072">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>Connect the socket to the specified remote&nbsp;address.</p>
+<p>For connection oriented socket this generally means we attempt to make
+a connection to the <code>address</code>. For a connection-less socket it sets
+the default address for <code>g_socket_send()</code> and discards all incoming datagrams
+from other&nbsp;sources.</p>
+<p>Generally connection oriented sockets can only connect once, but
+connection-less sockets can connect multiple times to change the
+default&nbsp;address.</p>
+<p>If the connect call needs to do network I/O it will block, unless
+non-blocking I/O is enabled. Then <code>G_IO_ERROR_PENDING</code> is returned
+and the user can be notified of the connection finishing by waiting
+for the G_IO_OUT condition. The result of the connection must then be
+checked with&nbsp;g_socket_check_connect_result().</p>
+      </div>
+
+      <div class="docblock">
+        
+        <p>Available since: 2.22</p>
+        
+        
+        
+        
+        
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>address</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.SocketAddress.html"><code>GSocketAddress</code></a></p>
+            <p>A <code>GSocketAddress</code> specifying the remote&nbsp;address.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>cancellable</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.Cancellable.html"><code>GCancellable</code></a></p>
+            <p>A %GCancellable or <code>NULL</code>.</p>
+            <table>
+            
+            <tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            
+            </table>
+          </dd>
+          
+
+          
+          <dt class="arg-name"><code>error</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Error.html" class="external"><code>GError **</code></a></p>
+            <p>The return location for <a href="https://docs.gtk.org/glib/error-reporting.html#rules-for-use-of-gerror">a recoverable error</a>.</p>
+            <table>
+              <tr><td>The argument can be <code>NULL</code>.</td></tr>
+              <tr><td>If the return location is not <code>NULL</code>, then you must initialize it to a <code>NULL</code> <code>GError*</code>.</td></tr>
+              <tr><td>The argument will be left initialized to <code>NULL</code> by the method if there are no errors.</td></tr>
+              <tr><td>In case of error, the argument will be set to a newly allocated <code>GError</code>; the caller will take ownership of the data, and be responsible for freeing it.</td></tr>
+            </table>
+          </dd>
+          
+        </dl>
+      </div>
+    </div>
+    
+
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <div class="returns">
+          <div class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>gboolean</code></p>
+            <p><code>TRUE</code> if connected, <code>FALSE</code> on&nbsp;error.</p>
+          </div>
+          <div>
+            <table>
+            
+            
+            
+            
+            
+            
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/method.Socket.connect.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:44 GMT -->
+</html>

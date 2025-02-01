@@ -1,0 +1,1538 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.Application.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:38:46 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.Application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.Application">
+  <meta property="og:description" content="Reference for Gio.Application">
+  <meta name="twitter:title" content="Gio.Application">
+  <meta name="twitter:description" content="Reference for Gio.Application">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>Application</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.28</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gapplication.c#L48">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.Application : GObject.Object
+  implements Gio.ActionGroup, Gio.ActionMap {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GApplication</code> is the core class for application&nbsp;support.</p>
+<p>A <code>GApplication</code> is the foundation of an application. It wraps some
+low-level platform-specific services and is intended to act as the
+foundation for higher-level application classes such as
+<code>GtkApplication</code> or <code>MxApplication</code>. In general, you should not use
+this class outside of a higher level&nbsp;framework.</p>
+<p><code>GApplication</code> provides convenient life-cycle management by maintaining
+a “use count” for the primary application instance. The use count can
+be changed using <a href="method.Application.hold.html"><code>g_application_hold()</code></a> and
+<a href="method.Application.release.html"><code>g_application_release()</code></a>. If it drops to zero, the application
+exits. Higher-level classes such as <code>GtkApplication</code> employ the use count
+to ensure that the application stays alive as long as it has any opened&nbsp;windows.</p>
+<p>Another feature that <code>GApplication</code> (optionally) provides is process
+uniqueness. Applications can make use of this functionality by
+providing a unique application <span class="caps">ID</span>. If given, only one application
+with this <span class="caps">ID</span> can be running at a time per session. The session
+concept is platform-dependent, but corresponds roughly to a graphical
+desktop login. When your application is launched again, its
+arguments are passed through platform communication to the already
+running program. The already running instance of the program is
+called the “primary instance”; for non-unique applications this is
+always the current instance. On Linux, the D-Bus session bus
+is used for&nbsp;communication.</p>
+<p>The use of <code>GApplication</code> differs from some other commonly-used
+uniqueness libraries (such as libunique) in important ways. The
+application is not expected to manually register itself and check
+if it is the primary instance. Instead, the <code>main()</code> function of a
+<code>GApplication</code> should do very little more than instantiating the
+application instance, possibly connecting signal handlers, then
+calling <a href="method.Application.run.html"><code>g_application_run()</code></a>. All checks for uniqueness are done
+internally. If the application is the primary instance then the
+startup signal is emitted and the mainloop runs. If the application
+is not the primary instance then a signal is sent to the primary
+instance and <a href="method.Application.run.html"><code>g_application_run()</code></a> promptly returns. See the code
+examples&nbsp;below.</p>
+<p>If used, the expected form of an application identifier is the
+same as that of a
+<a href="https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names-bus">D-Bus well-known bus name</a>.
+Examples include: <code>com.example.MyApp</code>, <code>org.example.internal_apps.Calculator</code>,
+<code>org._7_zip.Archiver</code>.
+For details on valid application identifiers, see <a href="type_func.Application.id_is_valid.html"><code>g_application_id_is_valid()</code></a>.</p>
+<p>On Linux, the application identifier is claimed as a well-known bus name
+on the user’s session bus. This means that the uniqueness of your
+application is scoped to the current session. It also means that your
+application may provide additional services (through registration of other
+object paths) at that bus name. The registration of these object paths
+should be done with the shared GDBus session bus. Note that due to the
+internal architecture of GDBus, method calls can be dispatched at any time
+(even if a main loop is not running). For this reason, you must ensure that
+any object paths that you wish to register are registered before <code>GApplication</code>
+attempts to acquire the bus name of your application (which happens in
+<a href="method.Application.register.html"><code>g_application_register()</code></a>). Unfortunately, this means that you cannot
+use <a href="property.Application.is-remote.html"><code>GApplication:is-remote</code></a> to decide if you want to register
+object&nbsp;paths.</p>
+<p><code>GApplication</code> also implements the <a href="iface.ActionGroup.html"><code>GActionGroup</code></a> and <a href="iface.ActionMap.html"><code>GActionMap</code></a>
+interfaces and lets you easily export actions by adding them with
+<a href="method.ActionMap.add_action.html"><code>g_action_map_add_action()</code></a>. When invoking an action by calling
+<a href="method.ActionGroup.activate_action.html"><code>g_action_group_activate_action()</code></a> on the application, it is always
+invoked in the primary instance. The actions are also exported on
+the session bus, and <span class="caps">GIO</span> provides the <a href="class.DBusActionGroup.html"><code>GDBusActionGroup</code></a> wrapper to
+conveniently access them remotely. <span class="caps">GIO</span> provides a <a href="class.DBusMenuModel.html"><code>GDBusMenuModel</code></a> wrapper
+for remote access to exported <a href="class.MenuModel.html"><code>GMenuModel</code></a>s.</p>
+<p>Note: Due to the fact that actions are exported on the session bus,
+using <code>maybe</code> parameters is not supported, since D-Bus does not support
+<code>maybe</code> types.</p>
+<p>There is a number of different entry points into a <code>GApplication</code>:</p>
+<ul>
+<li>
+<p>via ‘Activate’ (i.e. just starting the&nbsp;application)</p>
+</li>
+<li>
+<p>via ‘Open’ (i.e. opening some&nbsp;files)</p>
+</li>
+<li>
+<p>by handling a&nbsp;command-line</p>
+</li>
+<li>
+<p>via activating an&nbsp;action</p>
+</li>
+</ul>
+<p>The <a href="signal.Application.startup.html"><code>GApplication::startup</code></a> signal lets you handle the application
+initialization for all of these in a single&nbsp;place.</p>
+<p>Regardless of which of these entry points is used to start the
+application, <code>GApplication</code> passes some ‘platform data’ from the
+launching instance to the primary instance, in the form of a
+<a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Variant.html" class="external"><code>GVariant</code></a> dictionary mapping strings to variants. To use platform
+data, override the <a href="vfunc.Application.before_emit.html"><code>Gio.ApplicationClass.before_emit</code></a> or
+<a href="vfunc.Application.after_emit.html"><code>Gio.ApplicationClass.after_emit</code></a> virtual functions
+in your <code>GApplication</code> subclass. When dealing with
+<a href="class.ApplicationCommandLine.html"><code>GApplicationCommandLine</code></a> objects, the platform data is
+directly available via <a href="method.ApplicationCommandLine.get_cwd.html"><code>g_application_command_line_get_cwd()</code></a>,
+<a href="method.ApplicationCommandLine.get_environ.html"><code>g_application_command_line_get_environ()</code></a> and
+<a href="method.ApplicationCommandLine.get_platform_data.html"><code>g_application_command_line_get_platform_data()</code></a>.</p>
+<p>As the name indicates, the platform data may vary depending on the
+operating system, but it always includes the current directory (key
+<code>cwd</code>), and optionally the environment (ie the set of environment
+variables and their values) of the calling process (key <code>environ</code>).
+The environment is only added to the platform data if the
+<code>G_APPLICATION_SEND_ENVIRONMENT</code> flag is set. <code>GApplication</code> subclasses
+can add their own platform data by overriding the
+<a href="vfunc.Application.add_platform_data.html"><code>Gio.ApplicationClass.add_platform_data</code></a> virtual function. For instance,
+<code>GtkApplication</code> adds startup notification data in this&nbsp;way.</p>
+<p>To parse commandline arguments you may handle the
+<a href="signal.Application.command-line.html"><code>GApplication::command-line</code></a> signal or override the
+<a href="vfunc.Application.local_command_line.html"><code>Gio.ApplicationClass.local_command_line</code></a> virtual function, to parse them in
+either the primary instance or the local instance,&nbsp;respectively.</p>
+<p>For an example of opening files with a <code>GApplication</code>, see
+<a href="https://gitlab.gnome.org/GNOME/glib/-/blob/HEAD/gio/tests/gapplication-example-open.c">gapplication-example-open.c</a>.</p>
+<p>For an example of using actions with <code>GApplication</code>, see
+<a href="https://gitlab.gnome.org/GNOME/glib/-/blob/HEAD/gio/tests/gapplication-example-actions.c">gapplication-example-actions.c</a>.</p>
+<p>For an example of using extra D-Bus hooks with <code>GApplication</code>, see
+<a href="https://gitlab.gnome.org/GNOME/glib/-/blob/HEAD/gio/tests/gapplication-example-dbushooks.c">gapplication-example-dbushooks.c</a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.28</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.ActionGroup.html" title="ActionGroup">GActionGroup</a></li>
+          
+        
+          
+          <li class="interface"><a href="iface.ActionMap.html" title="ActionMap">GActionMap</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.Application.new.html">g_application_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GApplication</code> instance.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.Application.get_default.html">g_application_get_default</a></h6>
+        <div class="docblock">
+          <p>Returns the default <code>GApplication</code> instance for this&nbsp;process.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.32</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.Application.id_is_valid.html">g_application_id_is_valid</a></h6>
+        <div class="docblock">
+          <p>Checks if <code>application_id</code> is a valid application&nbsp;identifier.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.Application.activate.html">g_application_activate</a></h6>
+          <div class="docblock">
+            <p>Activates the&nbsp;application.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.add_main_option.html">g_application_add_main_option</a></h6>
+          <div class="docblock">
+            <p>Add an option to be handled by <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.42</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.add_main_option_entries.html">g_application_add_main_option_entries</a></h6>
+          <div class="docblock">
+            <p>Adds main option entries to be handled by <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.40</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.add_option_group.html">g_application_add_option_group</a></h6>
+          <div class="docblock">
+            <p>Adds a <code>GOptionGroup</code> to the commandline handling of <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.40</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.bind_busy_property.html">g_application_bind_busy_property</a></h6>
+          <div class="docblock">
+            <p>Marks <code>application</code> as busy (see g_application_mark_busy()) while
+<code>property</code> on <code>object</code> is <code>TRUE</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.44</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_application_id.html">g_application_get_application_id</a></h6>
+          <div class="docblock">
+            <p>Gets the unique identifier for <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_dbus_connection.html">g_application_get_dbus_connection</a></h6>
+          <div class="docblock">
+            <p>Gets the <code>GDBusConnection</code> being used by the application, or <code>NULL</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_dbus_object_path.html">g_application_get_dbus_object_path</a></h6>
+          <div class="docblock">
+            <p>Gets the D-Bus object path being used by the application, or <code>NULL</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_flags.html">g_application_get_flags</a></h6>
+          <div class="docblock">
+            <p>Gets the flags for <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_inactivity_timeout.html">g_application_get_inactivity_timeout</a></h6>
+          <div class="docblock">
+            <p>Gets the current inactivity timeout for the&nbsp;application.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_is_busy.html">g_application_get_is_busy</a></h6>
+          <div class="docblock">
+            <p>Gets the application’s current busy state, as set through
+<code>g_application_mark_busy()</code> or&nbsp;g_application_bind_busy_property().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.44</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_is_registered.html">g_application_get_is_registered</a></h6>
+          <div class="docblock">
+            <p>Checks if <code>application</code> is&nbsp;registered.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_is_remote.html">g_application_get_is_remote</a></h6>
+          <div class="docblock">
+            <p>Checks if <code>application</code> is&nbsp;remote.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_resource_base_path.html">g_application_get_resource_base_path</a></h6>
+          <div class="docblock">
+            <p>Gets the resource base path of <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.42</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.get_version.html">g_application_get_version</a></h6>
+          <div class="docblock">
+            <p>Gets the version of <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.80</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.hold.html">g_application_hold</a></h6>
+          <div class="docblock">
+            <p>Increases the use count of <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.mark_busy.html">g_application_mark_busy</a></h6>
+          <div class="docblock">
+            <p>Increases the busy count of <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.38</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.open.html">g_application_open</a></h6>
+          <div class="docblock">
+            <p>Opens the given&nbsp;files.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.quit.html">g_application_quit</a></h6>
+          <div class="docblock">
+            <p>Immediately quits the&nbsp;application.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.register.html">g_application_register</a></h6>
+          <div class="docblock">
+            <p>Attempts registration of the&nbsp;application.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.release.html">g_application_release</a></h6>
+          <div class="docblock">
+            <p>Decrease the use count of <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.run.html">g_application_run</a></h6>
+          <div class="docblock">
+            <p>Runs the&nbsp;application.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.send_notification.html">g_application_send_notification</a></h6>
+          <div class="docblock">
+            <p>Sends a notification on behalf of <code>application</code> to the desktop shell.
+There is no guarantee that the notification is displayed immediately,
+or even at&nbsp;all.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.40</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.Application.set_action_group.html">g_application_set_action_group</a></h6>
+          <div class="docblock">
+            <p>This used to be how actions were associated with a <code>GApplication</code>.
+Now there is <code>GActionMap</code> for&nbsp;that.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.32</span>&nbsp;<span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_application_id.html">g_application_set_application_id</a></h6>
+          <div class="docblock">
+            <p>Sets the unique identifier for <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_default.html">g_application_set_default</a></h6>
+          <div class="docblock">
+            <p>Sets or unsets the default application for the process, as returned
+by&nbsp;g_application_get_default().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_flags.html">g_application_set_flags</a></h6>
+          <div class="docblock">
+            <p>Sets the flags for <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_inactivity_timeout.html">g_application_set_inactivity_timeout</a></h6>
+          <div class="docblock">
+            <p>Sets the current inactivity timeout for the&nbsp;application.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_option_context_description.html">g_application_set_option_context_description</a></h6>
+          <div class="docblock">
+            <p>Adds a description to the <code>application</code> option&nbsp;context.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.56</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_option_context_parameter_string.html">g_application_set_option_context_parameter_string</a></h6>
+          <div class="docblock">
+            <p>Sets the parameter string to be used by the commandline handling of <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.56</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_option_context_summary.html">g_application_set_option_context_summary</a></h6>
+          <div class="docblock">
+            <p>Adds a summary to the <code>application</code> option&nbsp;context.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.56</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_resource_base_path.html">g_application_set_resource_base_path</a></h6>
+          <div class="docblock">
+            <p>Sets (or unsets) the base resource path of <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.42</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.set_version.html">g_application_set_version</a></h6>
+          <div class="docblock">
+            <p>Sets the version number of <code>application</code>. This will be used to implement
+a <code>--version</code> command line&nbsp;argument.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.80</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.unbind_busy_property.html">g_application_unbind_busy_property</a></h6>
+          <div class="docblock">
+            <p>Destroys a binding between <code>property</code> and the busy state of
+<code>application</code> that was previously created with&nbsp;g_application_bind_busy_property().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.44</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.unmark_busy.html">g_application_unmark_busy</a></h6>
+          <div class="docblock">
+            <p>Decreases the busy count of <code>application</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.38</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Application.withdraw_notification.html">g_application_withdraw_notification</a></h6>
+          <div class="docblock">
+            <p>Withdraws a notification that was sent with&nbsp;g_application_send_notification().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.40</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.ActionGroup.html">GActionGroup</a> (14)</h5><div class="docblock">
+          
+            <h6><a href="method.ActionGroup.action_added.html">g_action_group_action_added</a></h6><div class="docblock">
+              <p>Emits the <code>GActionGroup::action-added</code> signal on <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.action_enabled_changed.html">g_action_group_action_enabled_changed</a></h6><div class="docblock">
+              <p>Emits the <code>GActionGroup::action-enabled-changed</code> signal on <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.action_removed.html">g_action_group_action_removed</a></h6><div class="docblock">
+              <p>Emits the <code>GActionGroup::action-removed</code> signal on <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.action_state_changed.html">g_action_group_action_state_changed</a></h6><div class="docblock">
+              <p>Emits the <code>GActionGroup::action-state-changed</code> signal on <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.activate_action.html">g_action_group_activate_action</a></h6><div class="docblock">
+              <p>Activate the named action within <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.change_action_state.html">g_action_group_change_action_state</a></h6><div class="docblock">
+              <p>Request for the state of the named action within <code>action_group</code> to be
+changed to <code>value</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.get_action_enabled.html">g_action_group_get_action_enabled</a></h6><div class="docblock">
+              <p>Checks if the named action within <code>action_group</code> is currently&nbsp;enabled.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.get_action_parameter_type.html">g_action_group_get_action_parameter_type</a></h6><div class="docblock">
+              <p>Queries the type of the parameter that must be given when activating
+the named action within <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.get_action_state.html">g_action_group_get_action_state</a></h6><div class="docblock">
+              <p>Queries the current state of the named action within <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.get_action_state_hint.html">g_action_group_get_action_state_hint</a></h6><div class="docblock">
+              <p>Requests a hint about the valid range of values for the state of the
+named action within <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.get_action_state_type.html">g_action_group_get_action_state_type</a></h6><div class="docblock">
+              <p>Queries the type of the state of the named action within
+<code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.has_action.html">g_action_group_has_action</a></h6><div class="docblock">
+              <p>Checks if the named action exists within <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.list_actions.html">g_action_group_list_actions</a></h6><div class="docblock">
+              <p>Lists the actions contained within <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.query_action.html">g_action_group_query_action</a></h6><div class="docblock">
+              <p>Queries all aspects of the named action within an <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.32</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.ActionMap.html">GActionMap</a> (5)</h5><div class="docblock">
+          
+            <h6><a href="method.ActionMap.add_action.html">g_action_map_add_action</a></h6><div class="docblock">
+              <p>Adds an action to the <code>action_map</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.32</span></p>
+            </div>
+            
+            <h6><a href="method.ActionMap.add_action_entries.html">g_action_map_add_action_entries</a></h6><div class="docblock">
+              <p>A convenience function for creating multiple <code>GSimpleAction</code>
+instances and adding them to a <code>GActionMap</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.32</span></p>
+            </div>
+            
+            <h6><a href="method.ActionMap.lookup_action.html">g_action_map_lookup_action</a></h6><div class="docblock">
+              <p>Looks up the action with the name <code>action_name</code> in <code>action_map</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.32</span></p>
+            </div>
+            
+            <h6><a href="method.ActionMap.remove_action.html">g_action_map_remove_action</a></h6><div class="docblock">
+              <p>Removes the named action from the action&nbsp;map.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.32</span></p>
+            </div>
+            
+            <h6><a href="method.ActionMap.remove_action_entries.html">g_action_map_remove_action_entries</a></h6><div class="docblock">
+              <p>Remove actions from a <code>GActionMap</code>. This is meant as the reverse of
+<code>g_action_map_add_action_entries()</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.78</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="deprecated">
+          <h6><a href="property.Application.action-group.html">Gio.Application:action-group</a></h6>
+          <div class="docblock">
+            <p>The group of actions that the application&nbsp;exports.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.32</span>&nbsp;<span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.application-id.html">Gio.Application:application-id</a></h6>
+          <div class="docblock">
+            <p>The unique identifier for the&nbsp;application.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.flags.html">Gio.Application:flags</a></h6>
+          <div class="docblock">
+            <p>Flags specifying the behaviour of the&nbsp;application.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.inactivity-timeout.html">Gio.Application:inactivity-timeout</a></h6>
+          <div class="docblock">
+            <p>Time (in milliseconds) to stay alive after becoming&nbsp;idle.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.is-busy.html">Gio.Application:is-busy</a></h6>
+          <div class="docblock">
+            <p>Whether the application is currently marked as busy through
+<code>g_application_mark_busy()</code> or&nbsp;g_application_bind_busy_property().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.44</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.is-registered.html">Gio.Application:is-registered</a></h6>
+          <div class="docblock">
+            <p>Whether <code>g_application_register()</code> has been&nbsp;called.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.is-remote.html">Gio.Application:is-remote</a></h6>
+          <div class="docblock">
+            <p>Whether this application instance is&nbsp;remote.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.resource-base-path.html">Gio.Application:resource-base-path</a></h6>
+          <div class="docblock">
+            <p>The base resource path for the&nbsp;application.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Application.version.html">Gio.Application:version</a></h6>
+          <div class="docblock">
+            <p>The human-readable version number of the&nbsp;application.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.80</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.Application.activate.html">Gio.Application::activate</a></h6>
+          <div class="docblock">
+            <p>The ::activate signal is emitted on the primary instance when an
+activation occurs. See&nbsp;g_application_activate().</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Application.command-line.html">Gio.Application::command-line</a></h6>
+          <div class="docblock">
+            <p>The ::command-line signal is emitted on the primary instance when
+a commandline is not handled locally. See <code>g_application_run()</code> and
+the <code>GApplicationCommandLine</code> documentation for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Application.handle-local-options.html">Gio.Application::handle-local-options</a></h6>
+          <div class="docblock">
+            <p>The ::handle-local-options signal is emitted on the local instance
+after the parsing of the commandline options has&nbsp;occurred.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.40</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Application.name-lost.html">Gio.Application::name-lost</a></h6>
+          <div class="docblock">
+            <p>The ::name-lost signal is emitted only on the registered primary instance
+when a new instance has taken over. This can only happen if the application
+is using the <code>G_APPLICATION_ALLOW_REPLACEMENT</code> flag.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Application.open.html">Gio.Application::open</a></h6>
+          <div class="docblock">
+            <p>The ::open signal is emitted on the primary instance when there are
+files to open. See <code>g_application_open()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Application.shutdown.html">Gio.Application::shutdown</a></h6>
+          <div class="docblock">
+            <p>The ::shutdown signal is emitted only on the registered primary instance
+immediately after the main loop&nbsp;terminates.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Application.startup.html">Gio.Application::startup</a></h6>
+          <div class="docblock">
+            <p>The ::startup signal is emitted on the primary instance immediately
+after registration. See&nbsp;g_application_register().</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals">
+          <h5 style="display:block;">Signals inherited from <a href="iface.ActionGroup.html">GActionGroup</a> (4)</h5><div class="docblock">
+          
+            <h6><a href="signal.ActionGroup.action-added.html">GActionGroup::action-added</a></h6><div class="docblock">
+              <p>Signals that a new action was just added to the&nbsp;group.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="signal.ActionGroup.action-enabled-changed.html">GActionGroup::action-enabled-changed</a></h6><div class="docblock">
+              <p>Signals that the enabled status of the named action has&nbsp;changed.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="signal.ActionGroup.action-removed.html">GActionGroup::action-removed</a></h6><div class="docblock">
+              <p>Signals that an action is just about to be removed from the&nbsp;group.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="signal.ActionGroup.action-state-changed.html">GActionGroup::action-state-changed</a></h6><div class="docblock">
+              <p>Signals that the state of the named action has&nbsp;changed.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioApplicationClass {
+  void (* startup) (
+    GApplication* application
+  );
+  void (* activate) (
+    GApplication* application
+  );
+  void (* open) (
+    GApplication* application,
+    GFile** files,
+    gint n_files,
+    const gchar* hint
+  );
+  int (* command_line) (
+    GApplication* application,
+    GApplicationCommandLine* command_line
+  );
+  gboolean (* local_command_line) (
+    GApplication* application,
+    gchar*** arguments,
+    int* exit_status
+  );
+  void (* before_emit) (
+    GApplication* application,
+    GVariant* platform_data
+  );
+  void (* after_emit) (
+    GApplication* application,
+    GVariant* platform_data
+  );
+  void (* add_platform_data) (
+    GApplication* application,
+    GVariantBuilder* builder
+  );
+  void (* quit_mainloop) (
+    GApplication* application
+  );
+  void (* run_mainloop) (
+    GApplication* application
+  );
+  void (* shutdown) (
+    GApplication* application
+  );
+  gboolean (* dbus_register) (
+    GApplication* application,
+    GDBusConnection* connection,
+    const gchar* object_path,
+    GError** error
+  );
+  void (* dbus_unregister) (
+    GApplication* application,
+    GDBusConnection* connection,
+    const gchar* object_path
+  );
+  gint (* handle_local_options) (
+    GApplication* application,
+    GVariantDict* options
+  );
+  gboolean (* name_lost) (
+    GApplication* application
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>Virtual function table for <code>GApplication</code>.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>startup: void (* startup) (
+    GApplication* application
+  )</code></dt>
+          <dd><p>Invoked on the primary instance immediately after&nbsp;registration.</p></dd>
+        
+          <dt><code>activate: void (* activate) (
+    GApplication* application
+  )</code></dt>
+          <dd><p>Invoked on the primary instance when an activation&nbsp;occurs.</p></dd>
+        
+          <dt><code>open: void (* open) (
+    GApplication* application,
+    GFile** files,
+    gint n_files,
+    const gchar* hint
+  )</code></dt>
+          <dd><p>Invoked on the primary instance when there are files to&nbsp;open.</p></dd>
+        
+          <dt><code>command_line: int (* command_line) (
+    GApplication* application,
+    GApplicationCommandLine* command_line
+  )</code></dt>
+          <dd><p>Invoked on the primary instance when a command-line is
+  not handled&nbsp;locally.</p></dd>
+        
+          <dt><code>local_command_line: gboolean (* local_command_line) (
+    GApplication* application,
+    gchar*** arguments,
+    int* exit_status
+  )</code></dt>
+          <dd><p>Invoked (locally). The virtual function has the chance
+    to inspect (and possibly replace) command line arguments. See
+    <code>g_application_run()</code> for more information. Also see the
+    <code>GApplication::handle-local-options</code> signal, which is a simpler
+    alternative to handling some commandline options&nbsp;locally.</p></dd>
+        
+          <dt><code>before_emit: void (* before_emit) (
+    GApplication* application,
+    GVariant* platform_data
+  )</code></dt>
+          <dd><p>Invoked on the primary instance before ‘activate’, ‘open’,
+    ‘command-line’ or any action invocation, gets the ‘platform data’ from
+    the calling&nbsp;instance.</p></dd>
+        
+          <dt><code>after_emit: void (* after_emit) (
+    GApplication* application,
+    GVariant* platform_data
+  )</code></dt>
+          <dd><p>Invoked on the primary instance after ‘activate’, ‘open’,
+    ‘command-line’ or any action invocation, gets the ‘platform data’ from
+    the calling&nbsp;instance.</p></dd>
+        
+          <dt><code>add_platform_data: void (* add_platform_data) (
+    GApplication* application,
+    GVariantBuilder* builder
+  )</code></dt>
+          <dd><p>Invoked (locally) to add ‘platform data’ to be sent to
+    the primary instance when activating, opening or invoking&nbsp;actions.</p></dd>
+        
+          <dt><code>quit_mainloop: void (* quit_mainloop) (
+    GApplication* application
+  )</code></dt>
+          <dd><p>Used to be invoked on the primary instance when the use
+    count of the application drops to zero (and after any inactivity
+    timeout, if requested). Not used anymore since&nbsp;2.32.</p></dd>
+        
+          <dt><code>run_mainloop: void (* run_mainloop) (
+    GApplication* application
+  )</code></dt>
+          <dd><p>Used to be invoked on the primary instance from
+    <code>g_application_run()</code> if the use-count is non-zero. Since 2.32,
+    GApplication is iterating the main context directly and is not
+    using <code>run_mainloop</code> anymore.</p></dd>
+        
+          <dt><code>shutdown: void (* shutdown) (
+    GApplication* application
+  )</code></dt>
+          <dd><p>Invoked only on the registered primary instance immediately
+     after the main loop&nbsp;terminates.</p></dd>
+        
+          <dt><code>dbus_register: gboolean (* dbus_register) (
+    GApplication* application,
+    GDBusConnection* connection,
+    const gchar* object_path,
+    GError** error
+  )</code></dt>
+          <dd><p>Invoked locally during registration, if the application is
+    using its D-Bus backend. You can use this to export extra objects on the
+    bus, that need to exist before the application tries to own the bus name.
+    The function is passed the <code>GDBusConnection</code> to to session bus, and the
+    object path that <code>GApplication</code> will use to export its D-Bus <span class="caps">API</span>.
+    If this function returns <code>TRUE</code>, registration will proceed; otherwise
+    registration will abort. Since:&nbsp;2.34.</p></dd>
+        
+          <dt><code>dbus_unregister: void (* dbus_unregister) (
+    GApplication* application,
+    GDBusConnection* connection,
+    const gchar* object_path
+  )</code></dt>
+          <dd><p>Invoked locally during unregistration, if the application
+    is using its D-Bus backend. Use this to undo anything done by
+    the <code>dbus_register</code> vfunc. Since:&nbsp;2.34.</p></dd>
+        
+          <dt><code>handle_local_options: gint (* handle_local_options) (
+    GApplication* application,
+    GVariantDict* options
+  )</code></dt>
+          <dd><p>Invoked locally after the parsing of the commandline
+ options has occurred. Since:&nbsp;2.40.</p></dd>
+        
+          <dt><code>name_lost: gboolean (* name_lost) (
+    GApplication* application
+  )</code></dt>
+          <dd><p>Invoked when another instance is taking over the name. Since:&nbsp;2.60.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-activate"><a href="vfunc.Application.activate.html">Gio.ApplicationClass.activate</a></h6>
+        <div class="docblock">
+          <p>Activates the&nbsp;application.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.28</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-add_platform_data"><a href="vfunc.Application.add_platform_data.html">Gio.ApplicationClass.add_platform_data</a></h6>
+        <div class="docblock">
+          <p>Invoked (locally) to add ‘platform data’ to be sent to
+    the primary instance when activating, opening or invoking&nbsp;actions.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-after_emit"><a href="vfunc.Application.after_emit.html">Gio.ApplicationClass.after_emit</a></h6>
+        <div class="docblock">
+          <p>Invoked on the primary instance after ‘activate’, ‘open’,
+    ‘command-line’ or any action invocation, gets the ‘platform data’ from
+    the calling&nbsp;instance.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-before_emit"><a href="vfunc.Application.before_emit.html">Gio.ApplicationClass.before_emit</a></h6>
+        <div class="docblock">
+          <p>Invoked on the primary instance before ‘activate’, ‘open’,
+    ‘command-line’ or any action invocation, gets the ‘platform data’ from
+    the calling&nbsp;instance.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-command_line"><a href="vfunc.Application.command_line.html">Gio.ApplicationClass.command_line</a></h6>
+        <div class="docblock">
+          <p>Invoked on the primary instance when a command-line is
+  not handled&nbsp;locally.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-dbus_register"><a href="vfunc.Application.dbus_register.html">Gio.ApplicationClass.dbus_register</a></h6>
+        <div class="docblock">
+          <p>Invoked locally during registration, if the application is
+    using its D-Bus backend. You can use this to export extra objects on the
+    bus, that need to exist before the application tries to own the bus name.
+    The function is passed the <code>GDBusConnection</code> to to session bus, and the
+    object path that <code>GApplication</code> will use to export its D-Bus <span class="caps">API</span>.
+    If this function returns <code>TRUE</code>, registration will proceed; otherwise
+    registration will abort. Since:&nbsp;2.34.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-dbus_unregister"><a href="vfunc.Application.dbus_unregister.html">Gio.ApplicationClass.dbus_unregister</a></h6>
+        <div class="docblock">
+          <p>Invoked locally during unregistration, if the application
+    is using its D-Bus backend. Use this to undo anything done by
+    the <code>dbus_register</code> vfunc. Since:&nbsp;2.34.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-handle_local_options"><a href="vfunc.Application.handle_local_options.html">Gio.ApplicationClass.handle_local_options</a></h6>
+        <div class="docblock">
+          <p>Invoked locally after the parsing of the commandline
+ options has occurred. Since:&nbsp;2.40.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-local_command_line"><a href="vfunc.Application.local_command_line.html">Gio.ApplicationClass.local_command_line</a></h6>
+        <div class="docblock">
+          <p>This virtual function is always invoked in the local instance. It
+gets passed a pointer to a <code>NULL</code>-terminated copy of <code>argv</code> and is
+expected to remove arguments that it handled (shifting up remaining&nbsp;arguments).</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-name_lost"><a href="vfunc.Application.name_lost.html">Gio.ApplicationClass.name_lost</a></h6>
+        <div class="docblock">
+          <p>Invoked when another instance is taking over the name. Since:&nbsp;2.60.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-open"><a href="vfunc.Application.open.html">Gio.ApplicationClass.open</a></h6>
+        <div class="docblock">
+          <p>Opens the given&nbsp;files.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.28</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-quit_mainloop"><a href="vfunc.Application.quit_mainloop.html">Gio.ApplicationClass.quit_mainloop</a></h6>
+        <div class="docblock">
+          <p>Used to be invoked on the primary instance when the use
+    count of the application drops to zero (and after any inactivity
+    timeout, if requested). Not used anymore since&nbsp;2.32.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-run_mainloop"><a href="vfunc.Application.run_mainloop.html">Gio.ApplicationClass.run_mainloop</a></h6>
+        <div class="docblock">
+          <p>Used to be invoked on the primary instance from
+    <code>g_application_run()</code> if the use-count is non-zero. Since 2.32,
+    GApplication is iterating the main context directly and is not
+    using <code>run_mainloop</code> anymore.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-shutdown"><a href="vfunc.Application.shutdown.html">Gio.ApplicationClass.shutdown</a></h6>
+        <div class="docblock">
+          <p>Invoked only on the registered primary instance immediately
+     after the main loop&nbsp;terminates.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-startup"><a href="vfunc.Application.startup.html">Gio.ApplicationClass.startup</a></h6>
+        <div class="docblock">
+          <p>Invoked on the primary instance immediately after&nbsp;registration.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.Application.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:39:49 GMT --></html>

@@ -1,0 +1,1004 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.DBusConnection.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:41:52 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.DBusConnection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.DBusConnection">
+  <meta property="og:description" content="Reference for Gio.DBusConnection">
+  <meta name="twitter:title" content="Gio.DBusConnection">
+  <meta name="twitter:description" content="Reference for Gio.DBusConnection">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>DBusConnection</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.26</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdbusconnection.c#L134">[src]</a>
+          
+        </h4>
+
+        <pre><code>final class Gio.DBusConnection : GObject.Object
+  implements Gio.AsyncInitable, Gio.Initable {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p>The <code>GDBusConnection</code> type is used for D-Bus connections to remote
+peers such as a message&nbsp;buses.</p>
+<p>It is a low-level <span class="caps">API</span> that offers a lot of flexibility. For instance,
+it lets you establish a connection over any transport that can by represented
+as a <a href="class.IOStream.html"><code>GIOStream</code></a>.</p>
+<p>This class is rarely used directly in D-Bus clients. If you are writing
+a D-Bus client, it is often easier to use the <a href="func.bus_own_name.html"><code>g_bus_own_name()</code></a>,
+<a href="func.bus_watch_name.html"><code>g_bus_watch_name()</code></a> or <a href="type_func.DBusProxy.new_for_bus.html"><code>g_dbus_proxy_new_for_bus()</code></a>&nbsp;APIs.</p>
+<p>As an exception to the usual GLib rule that a particular object must not
+be used by two threads at the same time, <code>GDBusConnection</code>s methods may be
+called from any thread. This is so that <a href="func.bus_get.html"><code>g_bus_get()</code></a> and
+<a href="func.bus_get_sync.html"><code>g_bus_get_sync()</code></a> can safely return the same <code>GDBusConnection</code> when
+called from any&nbsp;thread.</p>
+<p>Most of the ways to obtain a <code>GDBusConnection</code> automatically initialize it
+(i.e. connect to D-Bus): for instance, <a href="type_func.DBusConnection.new.html"><code>g_dbus_connection_new()</code></a> and
+<a href="func.bus_get.html"><code>g_bus_get()</code></a>, and the synchronous versions of those methods, give you
+an initialized connection. Language bindings for <span class="caps">GIO</span> should use
+<a href="type_func.Initable.new.html"><code>g_initable_new()</code></a> or <a href="type_func.AsyncInitable.new_async.html"><code>g_async_initable_new_async()</code></a>, which also
+initialize the&nbsp;connection.</p>
+<p>If you construct an uninitialized <code>GDBusConnection</code>, such as via
+<a href="javascript:void(0)" data-namespace="GObject" data-link="ctor.Object.new.html" class="external"><code>g_object_new()</code></a>, you must initialize it via <a href="method.Initable.init.html"><code>g_initable_init()</code></a> or
+<a href="method.AsyncInitable.init_async.html"><code>g_async_initable_init_async()</code></a> before using its methods or properties.
+Calling methods or accessing properties on a <code>GDBusConnection</code> that has not
+completed initialization successfully is considered to be invalid, and leads
+to undefined behaviour. In particular, if initialization fails with a
+<code>GError</code>, the only valid thing you can do with that <code>GDBusConnection</code> is to
+free it with <a href="javascript:void(0)" data-namespace="GObject" data-link="method.Object.unref.html" class="external"><code>g_object_unref()</code></a>.</p>
+<h2 id="an-example-d-bus-server">An example D-Bus server<a class="md-anchor" href="#an-example-d-bus-server" title="Permanent link"></a></h2>
+<p>Here is an example for a D-Bus server:
+<a href="https://gitlab.gnome.org/GNOME/glib/-/blob/HEAD/gio/tests/gdbus-example-server.c">gdbus-example-server.c</a></p>
+<h2 id="an-example-for-exporting-a-subtree">An example for exporting a subtree<a class="md-anchor" href="#an-example-for-exporting-a-subtree" title="Permanent link"></a></h2>
+<p>Here is an example for exporting a subtree:
+<a href="https://gitlab.gnome.org/GNOME/glib/-/blob/HEAD/gio/tests/gdbus-example-subtree.c">gdbus-example-subtree.c</a></p>
+<h2 id="an-example-for-file-descriptor-passing">An example for file descriptor passing<a class="md-anchor" href="#an-example-for-file-descriptor-passing" title="Permanent link"></a></h2>
+<p>Here is an example for passing <span class="caps">UNIX</span> file descriptors:
+<a href="https://gitlab.gnome.org/GNOME/glib/-/blob/HEAD/gio/tests/gdbus-example-unix-fd-client.c">gdbus-unix-fd-client.c</a></p>
+<h2 id="an-example-for-exporting-a-gobject">An example for exporting a GObject<a class="md-anchor" href="#an-example-for-exporting-a-gobject" title="Permanent link"></a></h2>
+<p>Here is an example for exporting a <code>GObject</code>:
+<a href="https://gitlab.gnome.org/GNOME/glib/-/blob/HEAD/gio/tests/gdbus-example-export.c">gdbus-example-export.c</a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.26</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.AsyncInitable.html" title="AsyncInitable">GAsyncInitable</a></li>
+          
+        
+          
+          <li class="interface"><a href="iface.Initable.html" title="Initable">GInitable</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.DBusConnection.new_finish.html">g_dbus_connection_new_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with&nbsp;g_dbus_connection_new().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DBusConnection.new_for_address_finish.html">g_dbus_connection_new_for_address_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with&nbsp;g_dbus_connection_new_for_address().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DBusConnection.new_for_address_sync.html">g_dbus_connection_new_for_address_sync</a></h6>
+          <div class="docblock">
+            <p>Synchronously connects and sets up a D-Bus client connection for
+exchanging D-Bus messages with an endpoint specified by <code>address</code>
+which must be in the
+<a href="https://dbus.freedesktop.org/doc/dbus-specification.html#addresses">D-Bus address format</a>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DBusConnection.new_sync.html">g_dbus_connection_new_sync</a></h6>
+          <div class="docblock">
+            <p>Synchronously sets up a D-Bus connection for exchanging D-Bus messages
+with the end represented by <code>stream</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.DBusConnection.new.html">g_dbus_connection_new</a></h6>
+        <div class="docblock">
+          <p>Asynchronously sets up a D-Bus connection for exchanging D-Bus messages
+with the end represented by <code>stream</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.26</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.DBusConnection.new_for_address.html">g_dbus_connection_new_for_address</a></h6>
+        <div class="docblock">
+          <p>Asynchronously connects and sets up a D-Bus client connection for
+exchanging D-Bus messages with an endpoint specified by <code>address</code>
+which must be in the
+<a href="https://dbus.freedesktop.org/doc/dbus-specification.html#addresses">D-Bus address format</a>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.26</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.add_filter.html">g_dbus_connection_add_filter</a></h6>
+          <div class="docblock">
+            <p>Adds a message filter. Filters are handlers that are run on all
+incoming and outgoing messages, prior to standard dispatch. Filters
+are run in the order that they were added.  The same handler can be
+added as a filter more than once, in which case it will be run more
+than once.  Filters added during a filter callback won’t be run on
+the message being processed. Filter functions are allowed to modify
+and even drop&nbsp;messages.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.call.html">g_dbus_connection_call</a></h6>
+          <div class="docblock">
+            <p>Asynchronously invokes the <code>method_name</code> method on the
+<code>interface_name</code> D-Bus interface on the remote object at
+<code>object_path</code> owned by <code>bus_name</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.call_finish.html">g_dbus_connection_call_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with&nbsp;g_dbus_connection_call().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.call_sync.html">g_dbus_connection_call_sync</a></h6>
+          <div class="docblock">
+            <p>Synchronously invokes the <code>method_name</code> method on the
+<code>interface_name</code> D-Bus interface on the remote object at
+<code>object_path</code> owned by <code>bus_name</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.call_with_unix_fd_list.html">g_dbus_connection_call_with_unix_fd_list</a></h6>
+          <div class="docblock">
+            <p>Like <code>g_dbus_connection_call()</code> but also takes a <code>GUnixFDList</code> object.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.call_with_unix_fd_list_finish.html">g_dbus_connection_call_with_unix_fd_list_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with&nbsp;g_dbus_connection_call_with_unix_fd_list().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.call_with_unix_fd_list_sync.html">g_dbus_connection_call_with_unix_fd_list_sync</a></h6>
+          <div class="docblock">
+            <p>Like <code>g_dbus_connection_call_sync()</code> but also takes and returns <code>GUnixFDList</code> objects.
+See <code>g_dbus_connection_call_with_unix_fd_list()</code> and
+<code>g_dbus_connection_call_with_unix_fd_list_finish()</code> for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.close.html">g_dbus_connection_close</a></h6>
+          <div class="docblock">
+            <p>Closes <code>connection</code>. Note that this never causes the process to
+exit (this might only happen if the other end of a shared message
+bus connection disconnects, see <code>GDBusConnection:exit-on-close</code>).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.close_finish.html">g_dbus_connection_close_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with&nbsp;g_dbus_connection_close().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.close_sync.html">g_dbus_connection_close_sync</a></h6>
+          <div class="docblock">
+            <p>Synchronously closes <code>connection</code>. The calling thread is blocked
+until this is done. See <code>g_dbus_connection_close()</code> for the
+asynchronous version of this method and more details about what it&nbsp;does.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.emit_signal.html">g_dbus_connection_emit_signal</a></h6>
+          <div class="docblock">
+            <p>Emits a&nbsp;signal.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.export_action_group.html">g_dbus_connection_export_action_group</a></h6>
+          <div class="docblock">
+            <p>Exports <code>action_group</code> on <code>connection</code> at <code>object_path</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.export_menu_model.html">g_dbus_connection_export_menu_model</a></h6>
+          <div class="docblock">
+            <p>Exports <code>menu</code> on <code>connection</code> at <code>object_path</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.flush.html">g_dbus_connection_flush</a></h6>
+          <div class="docblock">
+            <p>Asynchronously flushes <code>connection</code>, that is, writes all queued
+outgoing message to the transport and then flushes the transport
+(using g_output_stream_flush_async()). This is useful in programs
+that wants to emit a D-Bus signal and then exit immediately. Without
+flushing the connection, there is no guaranteed that the message has
+been sent to the networking buffers in the <span class="caps">OS</span>&nbsp;kernel.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.flush_finish.html">g_dbus_connection_flush_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with&nbsp;g_dbus_connection_flush().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.flush_sync.html">g_dbus_connection_flush_sync</a></h6>
+          <div class="docblock">
+            <p>Synchronously flushes <code>connection</code>. The calling thread is blocked
+until this is done. See <code>g_dbus_connection_flush()</code> for the
+asynchronous version of this method and more details about what it&nbsp;does.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.get_capabilities.html">g_dbus_connection_get_capabilities</a></h6>
+          <div class="docblock">
+            <p>Gets the capabilities negotiated with the remote&nbsp;peer.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.get_exit_on_close.html">g_dbus_connection_get_exit_on_close</a></h6>
+          <div class="docblock">
+            <p>Gets whether the process is terminated when <code>connection</code> is
+closed by the remote peer. See
+<code>GDBusConnection:exit-on-close</code> for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.get_flags.html">g_dbus_connection_get_flags</a></h6>
+          <div class="docblock">
+            <p>Gets the flags used to construct this&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.get_guid.html">g_dbus_connection_get_guid</a></h6>
+          <div class="docblock">
+            <p>The <span class="caps">GUID</span> of the peer performing the role of server when
+authenticating. See <code>GDBusConnection:guid</code> for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.get_last_serial.html">g_dbus_connection_get_last_serial</a></h6>
+          <div class="docblock">
+            <p>Retrieves the last serial number assigned to a <code>GDBusMessage</code> on
+the current thread. This includes messages sent via both low-level
+<span class="caps">API</span> such as <code>g_dbus_connection_send_message()</code> as well as
+high-level <span class="caps">API</span> such as g_dbus_connection_emit_signal(),
+<code>g_dbus_connection_call()</code> or&nbsp;g_dbus_proxy_call().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.get_peer_credentials.html">g_dbus_connection_get_peer_credentials</a></h6>
+          <div class="docblock">
+            <p>Gets the credentials of the authenticated peer. This will always
+return <code>NULL</code> unless <code>connection</code> acted as a server
+(e.g. <code>G_DBUS_CONNECTION_FLAGS_AUTHENTICATION_SERVER</code> was passed)
+when set up and the client passed credentials as part of the
+authentication&nbsp;process.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.get_stream.html">g_dbus_connection_get_stream</a></h6>
+          <div class="docblock">
+            <p>Gets the underlying stream used for <span class="caps">IO</span>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.get_unique_name.html">g_dbus_connection_get_unique_name</a></h6>
+          <div class="docblock">
+            <p>Gets the unique name of <code>connection</code> as assigned by the message
+bus. This can also be used to figure out if <code>connection</code> is a
+message bus&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.is_closed.html">g_dbus_connection_is_closed</a></h6>
+          <div class="docblock">
+            <p>Gets whether <code>connection</code> is&nbsp;closed.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.register_object.html">g_dbus_connection_register_object</a></h6>
+          <div class="docblock">
+            <p>Registers callbacks for exported objects at <code>object_path</code> with the
+D-Bus interface that is described in <code>interface_info</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.register_object_with_closures.html">g_dbus_connection_register_object_with_closures</a></h6>
+          <div class="docblock">
+            <p>Version of <code>g_dbus_connection_register_object()</code> using closures instead of a
+<code>GDBusInterfaceVTable</code> for easier binding in other&nbsp;languages.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.46</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.register_subtree.html">g_dbus_connection_register_subtree</a></h6>
+          <div class="docblock">
+            <p>Registers a whole subtree of dynamic&nbsp;objects.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.remove_filter.html">g_dbus_connection_remove_filter</a></h6>
+          <div class="docblock">
+            <p>Removes a&nbsp;filter.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.send_message.html">g_dbus_connection_send_message</a></h6>
+          <div class="docblock">
+            <p>Asynchronously sends <code>message</code> to the peer represented by <code>connection</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.send_message_with_reply.html">g_dbus_connection_send_message_with_reply</a></h6>
+          <div class="docblock">
+            <p>Asynchronously sends <code>message</code> to the peer represented by <code>connection</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.send_message_with_reply_finish.html">g_dbus_connection_send_message_with_reply_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with&nbsp;g_dbus_connection_send_message_with_reply().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.send_message_with_reply_sync.html">g_dbus_connection_send_message_with_reply_sync</a></h6>
+          <div class="docblock">
+            <p>Synchronously sends <code>message</code> to the peer represented by <code>connection</code>
+and blocks the calling thread until a reply is received or the
+timeout is reached. See <code>g_dbus_connection_send_message_with_reply()</code>
+for the asynchronous version of this&nbsp;method.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.set_exit_on_close.html">g_dbus_connection_set_exit_on_close</a></h6>
+          <div class="docblock">
+            <p>Sets whether the process should be terminated when <code>connection</code> is
+closed by the remote peer. See <code>GDBusConnection:exit-on-close</code> for
+more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.signal_subscribe.html">g_dbus_connection_signal_subscribe</a></h6>
+          <div class="docblock">
+            <p>Subscribes to signals on <code>connection</code> and invokes <code>callback</code> whenever
+the signal is received. Note that <code>callback</code> will be invoked in the
+[thread-default main context][g-main-context-push-thread-default]
+of the thread you are calling this method&nbsp;from.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.signal_unsubscribe.html">g_dbus_connection_signal_unsubscribe</a></h6>
+          <div class="docblock">
+            <p>Unsubscribes from&nbsp;signals.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.start_message_processing.html">g_dbus_connection_start_message_processing</a></h6>
+          <div class="docblock">
+            <p>If <code>connection</code> was created with
+<code>G_DBUS_CONNECTION_FLAGS_DELAY_MESSAGE_PROCESSING</code>, this method
+starts processing messages. Does nothing on if <code>connection</code> wasn’t
+created with this flag or if the method has already been&nbsp;called.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.unexport_action_group.html">g_dbus_connection_unexport_action_group</a></h6>
+          <div class="docblock">
+            <p>Reverses the effect of a previous call to
+<code>g_dbus_connection_export_action_group()</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.unexport_menu_model.html">g_dbus_connection_unexport_menu_model</a></h6>
+          <div class="docblock">
+            <p>Reverses the effect of a previous call to&nbsp;g_dbus_connection_export_menu_model().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.unregister_object.html">g_dbus_connection_unregister_object</a></h6>
+          <div class="docblock">
+            <p>Unregisters an&nbsp;object.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusConnection.unregister_subtree.html">g_dbus_connection_unregister_subtree</a></h6>
+          <div class="docblock">
+            <p>Unregisters a&nbsp;subtree.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.AsyncInitable.html">GAsyncInitable</a> (3)</h5><div class="docblock">
+          
+            <h6><a href="method.AsyncInitable.init_async.html">g_async_initable_init_async</a></h6><div class="docblock">
+              <p>Starts asynchronous initialization of the object implementing the
+interface. This must be done before any real use of the object after
+initial construction. If the object also implements <code>GInitable</code> you can
+optionally call <code>g_initable_init()</code> instead.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.AsyncInitable.init_finish.html">g_async_initable_init_finish</a></h6><div class="docblock">
+              <p>Finishes asynchronous initialization and returns the result.
+See&nbsp;g_async_initable_init_async().</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.AsyncInitable.new_finish.html">g_async_initable_new_finish</a></h6><div class="docblock">
+              <p>Finishes the async construction for the various g_async_initable_new
+calls, returning the created object or <code>NULL</code> on&nbsp;error.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.Initable.html">GInitable</a> (1)</h5><div class="docblock">
+          
+            <h6><a href="method.Initable.init.html">g_initable_init</a></h6><div class="docblock">
+              <p>Initializes the object implementing the&nbsp;interface.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.DBusConnection.address.html">Gio.DBusConnection:address</a></h6>
+          <div class="docblock">
+            <p>A D-Bus address specifying potential endpoints that can be used
+when establishing the&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusConnection.authentication-observer.html">Gio.DBusConnection:authentication-observer</a></h6>
+          <div class="docblock">
+            <p>A <code>GDBusAuthObserver</code> object to assist in the authentication process or <code>NULL</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusConnection.capabilities.html">Gio.DBusConnection:capabilities</a></h6>
+          <div class="docblock">
+            <p>Flags from the <code>GDBusCapabilityFlags</code> enumeration
+representing connection features negotiated with the other&nbsp;peer.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusConnection.closed.html">Gio.DBusConnection:closed</a></h6>
+          <div class="docblock">
+            <p>A boolean specifying whether the connection has been&nbsp;closed.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusConnection.exit-on-close.html">Gio.DBusConnection:exit-on-close</a></h6>
+          <div class="docblock">
+            <p>A boolean specifying whether the process will be terminated (by
+calling <code>raise(SIGTERM)</code>) if the connection is closed by the
+remote&nbsp;peer.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusConnection.flags.html">Gio.DBusConnection:flags</a></h6>
+          <div class="docblock">
+            <p>Flags from the <code>GDBusConnectionFlags</code> enumeration.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusConnection.guid.html">Gio.DBusConnection:guid</a></h6>
+          <div class="docblock">
+            <p>The <span class="caps">GUID</span> of the peer performing the role of server when&nbsp;authenticating.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusConnection.stream.html">Gio.DBusConnection:stream</a></h6>
+          <div class="docblock">
+            <p>The underlying <code>GIOStream</code> used for&nbsp;I/O.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusConnection.unique-name.html">Gio.DBusConnection:unique-name</a></h6>
+          <div class="docblock">
+            <p>The unique name as assigned by the message bus or <code>NULL</code> if the
+connection is not open or not a message bus&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.DBusConnection.closed.html">Gio.DBusConnection::closed</a></h6>
+          <div class="docblock">
+            <p>Emitted when the connection is&nbsp;closed.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.DBusConnection.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:42:29 GMT --></html>

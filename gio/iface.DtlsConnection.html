@@ -1,0 +1,1208 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/iface.DtlsConnection.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:00:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.DtlsConnection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.DtlsConnection"/>
+  <meta property="og:description" content="Reference for Gio.DtlsConnection"/>
+  <meta name="twitter:title" content="Gio.DtlsConnection"/>
+  <meta name="twitter:description" content="Reference for Gio.DtlsConnection"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="iface.DtlsConnection.html#description">DtlsConnection</a>
+  </div>
+</div>
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.DtlsConnection.close.html">close</a>
+  
+    <a class="method" href="method.DtlsConnection.close_async.html">close_async</a>
+  
+    <a class="method" href="method.DtlsConnection.close_finish.html">close_finish</a>
+  
+    <a class="method" href="method.DtlsConnection.emit_accept_certificate.html">emit_accept_certificate</a>
+  
+    <a class="method" href="method.DtlsConnection.get_certificate.html">get_certificate</a>
+  
+    <a class="method" href="method.DtlsConnection.get_channel_binding_data.html">get_channel_binding_data</a>
+  
+    <a class="method" href="method.DtlsConnection.get_ciphersuite_name.html">get_ciphersuite_name</a>
+  
+    <a class="method" href="method.DtlsConnection.get_database.html">get_database</a>
+  
+    <a class="method" href="method.DtlsConnection.get_interaction.html">get_interaction</a>
+  
+    <a class="method" href="method.DtlsConnection.get_negotiated_protocol.html">get_negotiated_protocol</a>
+  
+    <a class="method" href="method.DtlsConnection.get_peer_certificate.html">get_peer_certificate</a>
+  
+    <a class="method" href="method.DtlsConnection.get_peer_certificate_errors.html">get_peer_certificate_errors</a>
+  
+    <a class="method" href="method.DtlsConnection.get_protocol_version.html">get_protocol_version</a>
+  
+    <a class="method" href="method.DtlsConnection.get_rehandshake_mode.html">get_rehandshake_mode</a>
+  
+    <a class="method" href="method.DtlsConnection.get_require_close_notify.html">get_require_close_notify</a>
+  
+    <a class="method" href="method.DtlsConnection.handshake.html">handshake</a>
+  
+    <a class="method" href="method.DtlsConnection.handshake_async.html">handshake_async</a>
+  
+    <a class="method" href="method.DtlsConnection.handshake_finish.html">handshake_finish</a>
+  
+    <a class="method" href="method.DtlsConnection.set_advertised_protocols.html">set_advertised_protocols</a>
+  
+    <a class="method" href="method.DtlsConnection.set_certificate.html">set_certificate</a>
+  
+    <a class="method" href="method.DtlsConnection.set_database.html">set_database</a>
+  
+    <a class="method" href="method.DtlsConnection.set_interaction.html">set_interaction</a>
+  
+    <a class="method" href="method.DtlsConnection.set_rehandshake_mode.html">set_rehandshake_mode</a>
+  
+    <a class="method" href="method.DtlsConnection.set_require_close_notify.html">set_require_close_notify</a>
+  
+    <a class="method" href="method.DtlsConnection.shutdown.html">shutdown</a>
+  
+    <a class="method" href="method.DtlsConnection.shutdown_async.html">shutdown_async</a>
+  
+    <a class="method" href="method.DtlsConnection.shutdown_finish.html">shutdown_finish</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Properties</h5>
+  <div class="links">
+  
+    <a class="property" href="property.DtlsConnection.advertised-protocols.html">advertised-protocols</a>
+  
+    <a class="property" href="property.DtlsConnection.base-socket.html">base-socket</a>
+  
+    <a class="property" href="property.DtlsConnection.certificate.html">certificate</a>
+  
+    <a class="property" href="property.DtlsConnection.ciphersuite-name.html">ciphersuite-name</a>
+  
+    <a class="property" href="property.DtlsConnection.database.html">database</a>
+  
+    <a class="property" href="property.DtlsConnection.interaction.html">interaction</a>
+  
+    <a class="property" href="property.DtlsConnection.negotiated-protocol.html">negotiated-protocol</a>
+  
+    <a class="property" href="property.DtlsConnection.peer-certificate.html">peer-certificate</a>
+  
+    <a class="property" href="property.DtlsConnection.peer-certificate-errors.html">peer-certificate-errors</a>
+  
+    <a class="property" href="property.DtlsConnection.protocol-version.html">protocol-version</a>
+  
+    <a class="property" href="property.DtlsConnection.rehandshake-mode.html">rehandshake-mode</a>
+  
+    <a class="property" href="property.DtlsConnection.require-close-notify.html">require-close-notify</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.DtlsConnection.accept-certificate.html">accept-certificate</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.DtlsConnection.accept_certificate.html">accept_certificate</a>
+  
+    <a class="method" href="vfunc.DtlsConnection.get_binding_data.html">get_binding_data</a>
+  
+    <a class="method" href="vfunc.DtlsConnection.get_negotiated_protocol.html">get_negotiated_protocol</a>
+  
+    <a class="method" href="vfunc.DtlsConnection.handshake.html">handshake</a>
+  
+    <a class="method" href="vfunc.DtlsConnection.handshake_async.html">handshake_async</a>
+  
+    <a class="method" href="vfunc.DtlsConnection.handshake_finish.html">handshake_finish</a>
+  
+    <a class="method" href="vfunc.DtlsConnection.set_advertised_protocols.html">set_advertised_protocols</a>
+  
+    <a class="method" href="vfunc.DtlsConnection.shutdown.html">shutdown</a>
+  
+    <a class="method" href="vfunc.DtlsConnection.shutdown_async.html">shutdown_async</a>
+  
+    <a class="method" href="vfunc.DtlsConnection.shutdown_finish.html">shutdown_finish</a>
+  
+  </div>
+</div>
+
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Interface</h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span>DtlsConnection</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.48</span></p>
+      </div>
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdtlsconnection.c#L38">[src]</a>
+          
+        </h4>
+
+        <pre><code>interface Gio.DtlsConnection : Gio.DatagramBased</code></pre>
+
+        <div class="docblock">
+          <p><code>GDtlsConnection</code> is the base <span class="caps">DTLS</span> connection class type, which wraps
+a <a href="iface.DatagramBased.html"><code>GDatagramBased</code></a> and provides <span class="caps">DTLS</span> encryption on top of it. Its
+subclasses, <a href="iface.DtlsClientConnection.html"><code>GDtlsClientConnection</code></a> and
+<a href="iface.DtlsServerConnection.html"><code>GDtlsServerConnection</code></a>, implement client-side and server-side <span class="caps">DTLS</span>,&nbsp;respectively.</p>
+<p>For <span class="caps">TLS</span> support, see <a href="class.TlsConnection.html"><code>GTlsConnection</code></a>.</p>
+<p>As <span class="caps">DTLS</span> is datagram based, <code>GDtlsConnection</code> implements
+<a href="iface.DatagramBased.html"><code>GDatagramBased</code></a>, presenting a datagram-socket-like <span class="caps">API</span> for the
+encrypted connection. This operates over a base datagram connection, which is
+also a <code>GDatagramBased</code> (<a href="property.DtlsConnection.base-socket.html"><code>GDtlsConnection:base-socket</code></a>).</p>
+<p>To close a <span class="caps">DTLS</span> connection, use <a href="method.DtlsConnection.close.html"><code>g_dtls_connection_close()</code></a>.</p>
+<p>Neither <a href="iface.DtlsServerConnection.html"><code>GDtlsServerConnection</code></a> or <a href="iface.DtlsClientConnection.html"><code>GDtlsClientConnection</code></a>
+set the peer address on their base <a href="iface.DatagramBased.html"><code>GDatagramBased</code></a> if it is a
+<a href="class.Socket.html"><code>GSocket</code></a> — it is up to the caller to do that if they wish. If they
+do not, and <a href="method.Socket.close.html"><code>g_socket_close()</code></a> is called on the base socket, the
+<code>GDtlsConnection</code> will not raise a <code>G_IO_ERROR_NOT_CONNECTED</code> error on
+further&nbsp;I/O.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.48</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    <div class="toggle-wrapper prerequisite">
+      <h4 id="prerequisite">
+        Prerequisite
+        <a href="#prerequisite" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <p>In order to implement DtlsConnection, your type must inherit from<a href="iface.DatagramBased.html"><code>GDatagramBased</code></a>.</p>
+      </div>
+    </div>
+
+    
+
+    
+
+    
+    <div class="methods toggle-wrapper">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.close.html">g_dtls_connection_close</a></h6>
+          <div class="docblock">
+            <p>Close the <span class="caps">DTLS</span> connection. This is equivalent to calling
+<code>g_dtls_connection_shutdown()</code> to shut down both sides of the&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.close_async.html">g_dtls_connection_close_async</a></h6>
+          <div class="docblock">
+            <p>Asynchronously close the <span class="caps">DTLS</span> connection. See <code>g_dtls_connection_close()</code> for
+more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.close_finish.html">g_dtls_connection_close_finish</a></h6>
+          <div class="docblock">
+            <p>Finish an asynchronous <span class="caps">TLS</span> close operation. See <code>g_dtls_connection_close()</code>
+for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.emit_accept_certificate.html">g_dtls_connection_emit_accept_certificate</a></h6>
+          <div class="docblock">
+            <p>Used by <code>GDtlsConnection</code> implementations to emit the
+<code>GDtlsConnection::accept-certificate</code> signal.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.get_certificate.html">g_dtls_connection_get_certificate</a></h6>
+          <div class="docblock">
+            <p>Gets <code>conn</code><span class="quo">&#8216;</span>s certificate, as set by&nbsp;g_dtls_connection_set_certificate().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.get_channel_binding_data.html">g_dtls_connection_get_channel_binding_data</a></h6>
+          <div class="docblock">
+            <p>Query the <span class="caps">TLS</span> backend for <span class="caps">TLS</span> channel binding data of <code>type</code> for <code>conn</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.66</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.get_ciphersuite_name.html">g_dtls_connection_get_ciphersuite_name</a></h6>
+          <div class="docblock">
+            <p>Returns the name of the current <span class="caps">DTLS</span> ciphersuite, or <code>NULL</code> if the
+connection has not handshaked or has been closed. Beware that the <span class="caps">TLS</span>
+backend may use any of multiple different naming conventions, because
+OpenSSL and GnuTLS have their own ciphersuite naming conventions that
+are different from each other and different from the standard, <span class="caps">IANA</span>-
+registered ciphersuite names. The ciphersuite name is intended to be
+displayed to the user for informative purposes only, and parsing it
+is not&nbsp;recommended.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.70</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.get_database.html">g_dtls_connection_get_database</a></h6>
+          <div class="docblock">
+            <p>Gets the certificate database that <code>conn</code> uses to verify
+peer certificates. See&nbsp;g_dtls_connection_set_database().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.get_interaction.html">g_dtls_connection_get_interaction</a></h6>
+          <div class="docblock">
+            <p>Get the object that will be used to interact with the user. It will be used
+for things like prompting the user for passwords. If <code>NULL</code> is returned, then
+no user interaction will occur for this&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.get_negotiated_protocol.html">g_dtls_connection_get_negotiated_protocol</a></h6>
+          <div class="docblock">
+            <p>Gets the name of the application-layer protocol negotiated during
+the&nbsp;handshake.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.get_peer_certificate.html">g_dtls_connection_get_peer_certificate</a></h6>
+          <div class="docblock">
+            <p>Gets <code>conn</code><span class="quo">&#8216;</span>s peer&#8217;s certificate after the handshake has completed
+or failed. (It is not set during the emission of
+<code>GDtlsConnection::accept-certificate</code>.).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.get_peer_certificate_errors.html">g_dtls_connection_get_peer_certificate_errors</a></h6>
+          <div class="docblock">
+            <p>Gets the errors associated with validating <code>conn</code><span class="quo">&#8216;</span>s peer&#8217;s
+certificate, after the handshake has completed or failed. (It is
+not set during the emission of <code>GDtlsConnection::accept-certificate</code>.).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.get_protocol_version.html">g_dtls_connection_get_protocol_version</a></h6>
+          <div class="docblock">
+            <p>Returns the current <span class="caps">DTLS</span> protocol version, which may be
+<code>G_TLS_PROTOCOL_VERSION_UNKNOWN</code> if the connection has not handshaked, or
+has been closed, or if the <span class="caps">TLS</span> backend has implemented a protocol version
+that is not a recognized <code>GTlsProtocolVersion</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.70</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.DtlsConnection.get_rehandshake_mode.html">g_dtls_connection_get_rehandshake_mode</a></h6>
+          <div class="docblock">
+            <p>Gets <code>conn</code> rehandshaking mode. See
+<code>g_dtls_connection_set_rehandshake_mode()</code> for&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.64.</span>&nbsp;<span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.get_require_close_notify.html">g_dtls_connection_get_require_close_notify</a></h6>
+          <div class="docblock">
+            <p>Tests whether or not <code>conn</code> expects a proper <span class="caps">TLS</span> close notification
+when the connection is closed. See
+<code>g_dtls_connection_set_require_close_notify()</code> for&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.handshake.html">g_dtls_connection_handshake</a></h6>
+          <div class="docblock">
+            <p>Attempts a <span class="caps">TLS</span> handshake on <code>conn</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.handshake_async.html">g_dtls_connection_handshake_async</a></h6>
+          <div class="docblock">
+            <p>Asynchronously performs a <span class="caps">TLS</span> handshake on <code>conn</code>. See
+<code>g_dtls_connection_handshake()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.handshake_finish.html">g_dtls_connection_handshake_finish</a></h6>
+          <div class="docblock">
+            <p>Finish an asynchronous <span class="caps">TLS</span> handshake operation. See
+<code>g_dtls_connection_handshake()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.set_advertised_protocols.html">g_dtls_connection_set_advertised_protocols</a></h6>
+          <div class="docblock">
+            <p>Sets the list of application-layer protocols to advertise that the
+caller is willing to speak on this connection. The
+Application-Layer Protocol Negotiation (<span class="caps">ALPN</span>) extension will be
+used to negotiate a compatible protocol with the peer; use
+<code>g_dtls_connection_get_negotiated_protocol()</code> to find the negotiated
+protocol after the handshake.  Specifying <code>NULL</code> for the the value
+of <code>protocols</code> will disable <span class="caps">ALPN</span>&nbsp;negotiation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.set_certificate.html">g_dtls_connection_set_certificate</a></h6>
+          <div class="docblock">
+            <p>This sets the certificate that <code>conn</code> will present to its peer
+during the <span class="caps">TLS</span> handshake. For a <code>GDtlsServerConnection</code>, it is
+mandatory to set this, and that will normally be done at construct&nbsp;time.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.set_database.html">g_dtls_connection_set_database</a></h6>
+          <div class="docblock">
+            <p>Sets the certificate database that is used to verify peer certificates.
+This is set to the default database by default. See
+g_tls_backend_get_default_database(). If set to <code>NULL</code>, then
+peer certificate validation will always set the
+<code>G_TLS_CERTIFICATE_UNKNOWN_CA</code> error (meaning
+<code>GDtlsConnection::accept-certificate</code> will always be emitted on
+client-side connections, unless that bit is not set in
+<code>GDtlsClientConnection:validation-flags</code>).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.set_interaction.html">g_dtls_connection_set_interaction</a></h6>
+          <div class="docblock">
+            <p>Set the object that will be used to interact with the user. It will be used
+for things like prompting the user for&nbsp;passwords.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.DtlsConnection.set_rehandshake_mode.html">g_dtls_connection_set_rehandshake_mode</a></h6>
+          <div class="docblock">
+            <p>Since GLib 2.64, changing the rehandshake mode is no longer supported
+and will have no effect. With <span class="caps">TLS</span> 1.3, rehandshaking has been removed from
+the <span class="caps">TLS</span> protocol, replaced by separate post-handshake authentication and
+rekey&nbsp;operations.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.60.</span>&nbsp;<span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.set_require_close_notify.html">g_dtls_connection_set_require_close_notify</a></h6>
+          <div class="docblock">
+            <p>Sets whether or not <code>conn</code> expects a proper <span class="caps">TLS</span> close notification
+before the connection is closed. If this is <code>TRUE</code> (the default),
+then <code>conn</code> will expect to receive a <span class="caps">TLS</span> close notification from its
+peer before the connection is closed, and will return a
+<code>G_TLS_ERROR_EOF</code> error if the connection is closed without proper
+notification (since this may indicate a network error, or
+man-in-the-middle&nbsp;attack).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.shutdown.html">g_dtls_connection_shutdown</a></h6>
+          <div class="docblock">
+            <p>Shut down part or all of a <span class="caps">DTLS</span>&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.shutdown_async.html">g_dtls_connection_shutdown_async</a></h6>
+          <div class="docblock">
+            <p>Asynchronously shut down part or all of the <span class="caps">DTLS</span> connection. See
+<code>g_dtls_connection_shutdown()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DtlsConnection.shutdown_finish.html">g_dtls_connection_shutdown_finish</a></h6>
+          <div class="docblock">
+            <p>Finish an asynchronous <span class="caps">TLS</span> shutdown operation. See
+<code>g_dtls_connection_shutdown()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+    </div>
+    
+
+    
+    <div class="properties toggle-wrapper">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.DtlsConnection.advertised-protocols.html">Gio.DtlsConnection:advertised-protocols</a></h6>
+          <div class="docblock">
+            <p>The list of application-layer protocols that the connection
+advertises that it is willing to speak. See&nbsp;g_dtls_connection_set_advertised_protocols().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DtlsConnection.base-socket.html">Gio.DtlsConnection:base-socket</a></h6>
+          <div class="docblock">
+            <p>The <code>GDatagramBased</code> that the connection wraps. Note that this may be any
+implementation of <code>GDatagramBased</code>, not just a <code>GSocket</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DtlsConnection.certificate.html">Gio.DtlsConnection:certificate</a></h6>
+          <div class="docblock">
+            <p>The connection&#8217;s certificate; see&nbsp;g_dtls_connection_set_certificate().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DtlsConnection.ciphersuite-name.html">Gio.DtlsConnection:ciphersuite-name</a></h6>
+          <div class="docblock">
+            <p>The name of the <span class="caps">DTLS</span> ciphersuite in use. See&nbsp;g_dtls_connection_get_ciphersuite_name().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.70</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DtlsConnection.database.html">Gio.DtlsConnection:database</a></h6>
+          <div class="docblock">
+            <p>The certificate database to use when verifying this <span class="caps">TLS</span> connection.
+If no certificate database is set, then the default database will be
+used. See&nbsp;g_tls_backend_get_default_database().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DtlsConnection.interaction.html">Gio.DtlsConnection:interaction</a></h6>
+          <div class="docblock">
+            <p>A <code>GTlsInteraction</code> object to be used when the connection or certificate
+database need to interact with the user. This will be used to prompt the
+user for passwords where&nbsp;necessary.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DtlsConnection.negotiated-protocol.html">Gio.DtlsConnection:negotiated-protocol</a></h6>
+          <div class="docblock">
+            <p>The application-layer protocol negotiated during the <span class="caps">TLS</span>
+handshake. See&nbsp;g_dtls_connection_get_negotiated_protocol().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DtlsConnection.peer-certificate.html">Gio.DtlsConnection:peer-certificate</a></h6>
+          <div class="docblock">
+            <p>The connection&#8217;s peer&#8217;s certificate, after the <span class="caps">TLS</span> handshake has
+completed or failed. Note in particular that this is not yet set
+during the emission of <code>GDtlsConnection::accept-certificate</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DtlsConnection.peer-certificate-errors.html">Gio.DtlsConnection:peer-certificate-errors</a></h6>
+          <div class="docblock">
+            <p>The errors noticed while verifying
+<code>GDtlsConnection:peer-certificate</code>. Normally this should be 0, but
+it may not be if <code>GDtlsClientConnection:validation-flags</code> is not
+<code>G_TLS_CERTIFICATE_VALIDATE_ALL</code>, or if
+<code>GDtlsConnection::accept-certificate</code> overrode the default&nbsp;behavior.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DtlsConnection.protocol-version.html">Gio.DtlsConnection:protocol-version</a></h6>
+          <div class="docblock">
+            <p>The <span class="caps">DTLS</span> protocol version in use. See&nbsp;g_dtls_connection_get_protocol_version().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.70</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="property.DtlsConnection.rehandshake-mode.html">Gio.DtlsConnection:rehandshake-mode</a></h6>
+          <div class="docblock">
+            <p>The rehandshaking mode. See&nbsp;g_dtls_connection_set_rehandshake_mode().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.60</span>&nbsp;<span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DtlsConnection.require-close-notify.html">Gio.DtlsConnection:require-close-notify</a></h6>
+          <div class="docblock">
+            <p>Whether or not proper <span class="caps">TLS</span> close notification is required.
+See&nbsp;g_dtls_connection_set_require_close_notify().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.DtlsConnection.accept-certificate.html">Gio.DtlsConnection::accept-certificate</a></h6>
+          <div class="docblock">
+            <p>Emitted during the <span class="caps">TLS</span> handshake after the peer certificate has
+been received. You can examine <code>peer_cert</code><span class="quo">&#8216;</span>s certification path by
+calling <code>g_tls_certificate_get_issuer()</code> on&nbsp;it.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="interface toggle-wrapper default-hide">
+      <h4 style="display:flex;" id="interface-struct">
+        Interface structure
+        <a href="#interface-struct" class="anchor"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioDtlsConnectionInterface {
+  GTypeInterface g_iface;
+  gboolean (* accept_certificate) (
+    GDtlsConnection* connection,
+    GTlsCertificate* peer_cert,
+    GTlsCertificateFlags errors
+  );
+  gboolean (* handshake) (
+    GDtlsConnection* conn,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* handshake_async) (
+    GDtlsConnection* conn,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* handshake_finish) (
+    GDtlsConnection* conn,
+    GAsyncResult* result,
+    GError** error
+  );
+  gboolean (* shutdown) (
+    GDtlsConnection* conn,
+    gboolean shutdown_read,
+    gboolean shutdown_write,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* shutdown_async) (
+    GDtlsConnection* conn,
+    gboolean shutdown_read,
+    gboolean shutdown_write,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* shutdown_finish) (
+    GDtlsConnection* conn,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* set_advertised_protocols) (
+    GDtlsConnection* conn,
+    const gchar* const* protocols
+  );
+  const gchar* (* get_negotiated_protocol) (
+    GDtlsConnection* conn
+  );
+  gboolean (* get_binding_data) (
+    GDtlsConnection* conn,
+    GTlsChannelBindingType type,
+    GByteArray* data,
+    GError** error
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>Virtual method table for a <code>GDtlsConnection</code> implementation.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Interface members</h6>
+
+        <table>
+        
+        <tr>
+          <td style="vertical-align:top"><code>g_iface</code></td>
+          <td style="vertical-align:top"><pre><code>GTypeInterface</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The parent&nbsp;interface.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>accept_certificate</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* accept_certificate) (
+    GDtlsConnection* connection,
+    GTlsCertificate* peer_cert,
+    GTlsCertificateFlags errors
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Check whether to accept a&nbsp;certificate.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>handshake</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* handshake) (
+    GDtlsConnection* conn,
+    GCancellable* cancellable,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Perform a handshake&nbsp;operation.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>handshake_async</code></td>
+          <td style="vertical-align:top"><pre><code>void (* handshake_async) (
+    GDtlsConnection* conn,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Start an asynchronous handshake&nbsp;operation.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>handshake_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* handshake_finish) (
+    GDtlsConnection* conn,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finish an asynchronous handshake&nbsp;operation.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>shutdown</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* shutdown) (
+    GDtlsConnection* conn,
+    gboolean shutdown_read,
+    gboolean shutdown_write,
+    GCancellable* cancellable,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Shut down one or both directions of the&nbsp;connection.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>shutdown_async</code></td>
+          <td style="vertical-align:top"><pre><code>void (* shutdown_async) (
+    GDtlsConnection* conn,
+    gboolean shutdown_read,
+    gboolean shutdown_write,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Start an asynchronous shutdown&nbsp;operation.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>shutdown_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* shutdown_finish) (
+    GDtlsConnection* conn,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finish an asynchronous shutdown&nbsp;operation.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>set_advertised_protocols</code></td>
+          <td style="vertical-align:top"><pre><code>void (* set_advertised_protocols) (
+    GDtlsConnection* conn,
+    const gchar* const* protocols
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Set <span class="caps">APLN</span> protocol list (Since:&nbsp;2.60).</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_negotiated_protocol</code></td>
+          <td style="vertical-align:top"><pre><code>const gchar* (* get_negotiated_protocol) (
+    GDtlsConnection* conn
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Get <span class="caps">ALPN</span>-negotiated protocol (Since:&nbsp;2.60).</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_binding_data</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* get_binding_data) (
+    GDtlsConnection* conn,
+    GTlsChannelBindingType type,
+    GByteArray* data,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Retrieve <span class="caps">TLS</span> channel binding data (Since:&nbsp;2.66).</p></td>
+        </tr>
+        
+        </table>
+      </div>
+      
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6 id="vfunc-accept_certificate"><a href="vfunc.DtlsConnection.accept_certificate.html">Gio.DtlsConnection.accept_certificate</a></h6>
+          <div class="docblock">
+            <p>Check whether to accept a&nbsp;certificate.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_binding_data"><a href="vfunc.DtlsConnection.get_binding_data.html">Gio.DtlsConnection.get_binding_data</a></h6>
+          <div class="docblock">
+            <p>Retrieve <span class="caps">TLS</span> channel binding data (Since:&nbsp;2.66).</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_negotiated_protocol"><a href="vfunc.DtlsConnection.get_negotiated_protocol.html">Gio.DtlsConnection.get_negotiated_protocol</a></h6>
+          <div class="docblock">
+            <p>Gets the name of the application-layer protocol negotiated during
+the&nbsp;handshake.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-handshake"><a href="vfunc.DtlsConnection.handshake.html">Gio.DtlsConnection.handshake</a></h6>
+          <div class="docblock">
+            <p>Attempts a <span class="caps">TLS</span> handshake on <code>conn</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-handshake_async"><a href="vfunc.DtlsConnection.handshake_async.html">Gio.DtlsConnection.handshake_async</a></h6>
+          <div class="docblock">
+            <p>Asynchronously performs a <span class="caps">TLS</span> handshake on <code>conn</code>. See
+<code>g_dtls_connection_handshake()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-handshake_finish"><a href="vfunc.DtlsConnection.handshake_finish.html">Gio.DtlsConnection.handshake_finish</a></h6>
+          <div class="docblock">
+            <p>Finish an asynchronous <span class="caps">TLS</span> handshake operation. See
+<code>g_dtls_connection_handshake()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-set_advertised_protocols"><a href="vfunc.DtlsConnection.set_advertised_protocols.html">Gio.DtlsConnection.set_advertised_protocols</a></h6>
+          <div class="docblock">
+            <p>Sets the list of application-layer protocols to advertise that the
+caller is willing to speak on this connection. The
+Application-Layer Protocol Negotiation (<span class="caps">ALPN</span>) extension will be
+used to negotiate a compatible protocol with the peer; use
+<code>g_dtls_connection_get_negotiated_protocol()</code> to find the negotiated
+protocol after the handshake.  Specifying <code>NULL</code> for the the value
+of <code>protocols</code> will disable <span class="caps">ALPN</span>&nbsp;negotiation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-shutdown"><a href="vfunc.DtlsConnection.shutdown.html">Gio.DtlsConnection.shutdown</a></h6>
+          <div class="docblock">
+            <p>Shut down part or all of a <span class="caps">DTLS</span>&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-shutdown_async"><a href="vfunc.DtlsConnection.shutdown_async.html">Gio.DtlsConnection.shutdown_async</a></h6>
+          <div class="docblock">
+            <p>Asynchronously shut down part or all of the <span class="caps">DTLS</span> connection. See
+<code>g_dtls_connection_shutdown()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-shutdown_finish"><a href="vfunc.DtlsConnection.shutdown_finish.html">Gio.DtlsConnection.shutdown_finish</a></h6>
+          <div class="docblock">
+            <p>Finish an asynchronous <span class="caps">TLS</span> shutdown operation. See
+<code>g_dtls_connection_shutdown()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/iface.DtlsConnection.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:01:06 GMT -->
+</html>

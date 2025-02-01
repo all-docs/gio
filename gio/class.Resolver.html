@@ -1,0 +1,1190 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/class.Resolver.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:51:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.Resolver</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.Resolver"/>
+  <meta property="og:description" content="Reference for Gio.Resolver"/>
+  <meta name="twitter:title" content="Gio.Resolver"/>
+  <meta name="twitter:description" content="Reference for Gio.Resolver"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="class.Resolver.html#description">Resolver</a>
+  </div>
+</div>
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Functions</h5>
+  <div class="links">
+  
+    <a class="func" href="type_func.Resolver.free_addresses.html">free_addresses</a>
+  
+    <a class="func" href="type_func.Resolver.free_targets.html">free_targets</a>
+  
+    <a class="func" href="type_func.Resolver.get_default.html">get_default</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.Resolver.get_timeout.html">get_timeout</a>
+  
+    <a class="method" href="method.Resolver.lookup_by_address.html">lookup_by_address</a>
+  
+    <a class="method" href="method.Resolver.lookup_by_address_async.html">lookup_by_address_async</a>
+  
+    <a class="method" href="method.Resolver.lookup_by_address_finish.html">lookup_by_address_finish</a>
+  
+    <a class="method" href="method.Resolver.lookup_by_name.html">lookup_by_name</a>
+  
+    <a class="method" href="method.Resolver.lookup_by_name_async.html">lookup_by_name_async</a>
+  
+    <a class="method" href="method.Resolver.lookup_by_name_finish.html">lookup_by_name_finish</a>
+  
+    <a class="method" href="method.Resolver.lookup_by_name_with_flags.html">lookup_by_name_with_flags</a>
+  
+    <a class="method" href="method.Resolver.lookup_by_name_with_flags_async.html">lookup_by_name_with_flags_async</a>
+  
+    <a class="method" href="method.Resolver.lookup_by_name_with_flags_finish.html">lookup_by_name_with_flags_finish</a>
+  
+    <a class="method" href="method.Resolver.lookup_records.html">lookup_records</a>
+  
+    <a class="method" href="method.Resolver.lookup_records_async.html">lookup_records_async</a>
+  
+    <a class="method" href="method.Resolver.lookup_records_finish.html">lookup_records_finish</a>
+  
+    <a class="method" href="method.Resolver.lookup_service.html">lookup_service</a>
+  
+    <a class="method" href="method.Resolver.lookup_service_async.html">lookup_service_async</a>
+  
+    <a class="method" href="method.Resolver.lookup_service_finish.html">lookup_service_finish</a>
+  
+    <a class="method" href="method.Resolver.set_default.html">set_default</a>
+  
+    <a class="method" href="method.Resolver.set_timeout.html">set_timeout</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Properties</h5>
+  <div class="links">
+  
+    <a class="property" href="property.Resolver.timeout.html">timeout</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.Resolver.reload.html">reload</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.Resolver.lookup_by_address.html">lookup_by_address</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_by_address_async.html">lookup_by_address_async</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_by_address_finish.html">lookup_by_address_finish</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_by_name.html">lookup_by_name</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_by_name_async.html">lookup_by_name_async</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_by_name_finish.html">lookup_by_name_finish</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_by_name_with_flags.html">lookup_by_name_with_flags</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_by_name_with_flags_async.html">lookup_by_name_with_flags_async</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_by_name_with_flags_finish.html">lookup_by_name_with_flags_finish</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_records.html">lookup_records</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_records_async.html">lookup_records_async</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_records_finish.html">lookup_records_finish</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_service.html">lookup_service</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_service_async.html">lookup_service_async</a>
+  
+    <a class="method" href="vfunc.Resolver.lookup_service_finish.html">lookup_service_finish</a>
+  
+    <a class="method" href="vfunc.Resolver.reload.html">reload</a>
+  
+  </div>
+</div>
+
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>Resolver</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gresolver.c#L45">[src]</a>
+          
+        </h4>
+
+        <pre><code>abstract class Gio.Resolver : GObject.Object
+{
+  priv: GResolverPrivate*
+}</pre></code>
+
+        <div class="docblock">
+          <p>The object that handles <span class="caps">DNS</span> resolution. Use <a href="type_func.Resolver.get_default.html"><code>g_resolver_get_default()</code></a>
+to get the default&nbsp;resolver.</p>
+<p><code>GResolver</code> provides cancellable synchronous and asynchronous <span class="caps">DNS</span>
+resolution, for hostnames (<a href="method.Resolver.lookup_by_address.html"><code>g_resolver_lookup_by_address()</code></a>,
+<a href="method.Resolver.lookup_by_name.html"><code>g_resolver_lookup_by_name()</code></a> and their async variants) and <span class="caps">SRV</span>
+(service) records (<a href="method.Resolver.lookup_service.html"><code>g_resolver_lookup_service()</code></a>).</p>
+<p><a href="class.NetworkAddress.html"><code>GNetworkAddress</code></a> and <a href="class.NetworkService.html"><code>GNetworkService</code></a> provide wrappers
+around <code>GResolver</code> functionality that also implement
+<a href="iface.SocketConnectable.html"><code>GSocketConnectable</code></a>, making it easy to connect to a remote&nbsp;host/service.</p>
+<p>The default resolver (see <a href="type_func.Resolver.get_default.html"><code>g_resolver_get_default()</code></a>) has a timeout of
+30s set on it since GLib 2.78. Earlier versions of GLib did not support
+resolver&nbsp;timeouts.</p>
+<p>This is an abstract type; subclasses of it implement different resolvers for
+different platforms and&nbsp;situations.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="descendants toggle-wrapper default-hide">
+      <h4 id="descendants">Descendants <a href="#descendants" class="anchor"></a></h4>
+      <div class="docblock">
+        <ul>
+          <li class="class"><a href="class.ThreadedResolver.html" title="ThreadedResolver">GThreadedResolver</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.Resolver.free_addresses.html">g_resolver_free_addresses</a></h6>
+        <div class="docblock">
+          <p>Frees <code>addresses</code> (which should be the return value from
+<code>g_resolver_lookup_by_name()</code> or g_resolver_lookup_by_name_finish()).
+(This is a convenience method; you can also simply free the results
+by&nbsp;hand.).</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.Resolver.free_targets.html">g_resolver_free_targets</a></h6>
+        <div class="docblock">
+          <p>Frees <code>targets</code> (which should be the return value from
+<code>g_resolver_lookup_service()</code> or g_resolver_lookup_service_finish()).
+(This is a convenience method; you can also simply free the
+results by&nbsp;hand.).</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.Resolver.get_default.html">g_resolver_get_default</a></h6>
+        <div class="docblock">
+          <p>Gets the default <code>GResolver</code>. You should unref it when you are done
+with it. <code>GResolver</code> may use its reference count as a hint about how
+many threads it should allocate for concurrent <span class="caps">DNS</span>&nbsp;resolutions.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.Resolver.get_timeout.html">g_resolver_get_timeout</a></h6>
+          <div class="docblock">
+            <p>Get the timeout applied to all resolver lookups. See <code>GResolver:timeout</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.78</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_by_address.html">g_resolver_lookup_by_address</a></h6>
+          <div class="docblock">
+            <p>Synchronously reverse-resolves <code>address</code> to determine its
+associated&nbsp;hostname.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_by_address_async.html">g_resolver_lookup_by_address_async</a></h6>
+          <div class="docblock">
+            <p>Begins asynchronously reverse-resolving <code>address</code> to determine its
+associated hostname, and eventually calls <code>callback</code>, which must
+call <code>g_resolver_lookup_by_address_finish()</code> to get the final&nbsp;result.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_by_address_finish.html">g_resolver_lookup_by_address_finish</a></h6>
+          <div class="docblock">
+            <p>Retrieves the result of a previous call to&nbsp;g_resolver_lookup_by_address_async().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_by_name.html">g_resolver_lookup_by_name</a></h6>
+          <div class="docblock">
+            <p>Synchronously resolves <code>hostname</code> to determine its associated <span class="caps">IP</span>
+address(es). <code>hostname</code> may be an <span class="caps">ASCII</span>-only or <span class="caps">UTF</span>-8 hostname, or
+the textual form of an <span class="caps">IP</span> address (in which case this just becomes
+a wrapper around&nbsp;g_inet_address_new_from_string()).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_by_name_async.html">g_resolver_lookup_by_name_async</a></h6>
+          <div class="docblock">
+            <p>Begins asynchronously resolving <code>hostname</code> to determine its
+associated <span class="caps">IP</span> address(es), and eventually calls <code>callback</code>, which
+must call <code>g_resolver_lookup_by_name_finish()</code> to get the result.
+See <code>g_resolver_lookup_by_name()</code> for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_by_name_finish.html">g_resolver_lookup_by_name_finish</a></h6>
+          <div class="docblock">
+            <p>Retrieves the result of a call to&nbsp;g_resolver_lookup_by_name_async().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_by_name_with_flags.html">g_resolver_lookup_by_name_with_flags</a></h6>
+          <div class="docblock">
+            <p>This differs from <code>g_resolver_lookup_by_name()</code> in that you can modify
+the lookup behavior with <code>flags</code>. For example this can be used to limit
+results with <code>G_RESOLVER_NAME_LOOKUP_FLAGS_IPV4_ONLY</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_by_name_with_flags_async.html">g_resolver_lookup_by_name_with_flags_async</a></h6>
+          <div class="docblock">
+            <p>Begins asynchronously resolving <code>hostname</code> to determine its
+associated <span class="caps">IP</span> address(es), and eventually calls <code>callback</code>, which
+must call <code>g_resolver_lookup_by_name_with_flags_finish()</code> to get the result.
+See <code>g_resolver_lookup_by_name()</code> for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_by_name_with_flags_finish.html">g_resolver_lookup_by_name_with_flags_finish</a></h6>
+          <div class="docblock">
+            <p>Retrieves the result of a call to&nbsp;g_resolver_lookup_by_name_with_flags_async().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_records.html">g_resolver_lookup_records</a></h6>
+          <div class="docblock">
+            <p>Synchronously performs a <span class="caps">DNS</span> record lookup for the given <code>rrname</code> and returns
+a list of records as <code>GVariant</code> tuples. See <code>GResolverRecordType</code> for
+information on what the records contain for each <code>record_type</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_records_async.html">g_resolver_lookup_records_async</a></h6>
+          <div class="docblock">
+            <p>Begins asynchronously performing a <span class="caps">DNS</span> lookup for the given
+<code>rrname</code>, and eventually calls <code>callback</code>, which must call
+<code>g_resolver_lookup_records_finish()</code> to get the final result. See
+<code>g_resolver_lookup_records()</code> for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_records_finish.html">g_resolver_lookup_records_finish</a></h6>
+          <div class="docblock">
+            <p>Retrieves the result of a previous call to
+g_resolver_lookup_records_async(). Returns a non-empty list of records as
+<code>GVariant</code> tuples. See <code>GResolverRecordType</code> for information on what the
+records&nbsp;contain.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_service.html">g_resolver_lookup_service</a></h6>
+          <div class="docblock">
+            <p>Synchronously performs a <span class="caps">DNS</span> <span class="caps">SRV</span> lookup for the given <code>service</code> and
+<code>protocol</code> in the given <code>domain</code> and returns an array of <code>GSrvTarget</code>.
+<code>domain</code> may be an <span class="caps">ASCII</span>-only or <span class="caps">UTF</span>-8 hostname. Note also that the
+<code>service</code> and <code>protocol</code> arguments do not include the leading underscore
+that appears in the actual <span class="caps">DNS</span>&nbsp;entry.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_service_async.html">g_resolver_lookup_service_async</a></h6>
+          <div class="docblock">
+            <p>Begins asynchronously performing a <span class="caps">DNS</span> <span class="caps">SRV</span> lookup for the given
+<code>service</code> and <code>protocol</code> in the given <code>domain</code>, and eventually calls
+<code>callback</code>, which must call <code>g_resolver_lookup_service_finish()</code> to
+get the final result. See <code>g_resolver_lookup_service()</code> for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.lookup_service_finish.html">g_resolver_lookup_service_finish</a></h6>
+          <div class="docblock">
+            <p>Retrieves the result of a previous call to&nbsp;g_resolver_lookup_service_async().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.set_default.html">g_resolver_set_default</a></h6>
+          <div class="docblock">
+            <p>Sets <code>resolver</code> to be the application&#8217;s default resolver (reffing
+<code>resolver</code>, and unreffing the previous default resolver, if any).
+Future calls to <code>g_resolver_get_default()</code> will return this&nbsp;resolver.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Resolver.set_timeout.html">g_resolver_set_timeout</a></h6>
+          <div class="docblock">
+            <p>Set the timeout applied to all resolver lookups. See <code>GResolver:timeout</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.78</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</em></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.Resolver.timeout.html">Gio.Resolver:timeout</a></h6>
+          <div class="docblock">
+            <p>The timeout applied to all resolver lookups, in&nbsp;milliseconds.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.78</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.Resolver.reload.html">Gio.Resolver::reload</a></h6>
+          <div class="docblock">
+            <p>Emitted when the resolver notices that the system resolver
+configuration has&nbsp;changed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioResolverClass {
+  GObjectClass parent_class;
+  void (* reload) (
+    GResolver* resolver
+  );
+  GList* (* lookup_by_name) (
+    GResolver* resolver,
+    const gchar* hostname,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* lookup_by_name_async) (
+    GResolver* resolver,
+    const gchar* hostname,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  GList* (* lookup_by_name_finish) (
+    GResolver* resolver,
+    GAsyncResult* result,
+    GError** error
+  );
+  gchar* (* lookup_by_address) (
+    GResolver* resolver,
+    GInetAddress* address,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* lookup_by_address_async) (
+    GResolver* resolver,
+    GInetAddress* address,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gchar* (* lookup_by_address_finish) (
+    GResolver* resolver,
+    GAsyncResult* result,
+    GError** error
+  );
+  GList* (* lookup_service) (
+    GResolver* resolver,
+    const gchar* rrname,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* lookup_service_async) (
+    GResolver* resolver,
+    const gchar* rrname,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  GList* (* lookup_service_finish) (
+    GResolver* resolver,
+    GAsyncResult* result,
+    GError** error
+  );
+  GList* (* lookup_records) (
+    GResolver* resolver,
+    const gchar* rrname,
+    GResolverRecordType record_type,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* lookup_records_async) (
+    GResolver* resolver,
+    const gchar* rrname,
+    GResolverRecordType record_type,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  GList* (* lookup_records_finish) (
+    GResolver* resolver,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* lookup_by_name_with_flags_async) (
+    GResolver* resolver,
+    const gchar* hostname,
+    GResolverNameLookupFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  GList* (* lookup_by_name_with_flags_finish) (
+    GResolver* resolver,
+    GAsyncResult* result,
+    GError** error
+  );
+  GList* (* lookup_by_name_with_flags) (
+    GResolver* resolver,
+    const gchar* hostname,
+    GResolverNameLookupFlags flags,
+    GCancellable* cancellable,
+    GError** error
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>reload: void (* reload) (
+    GResolver* resolver
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_by_name: GList* (* lookup_by_name) (
+    GResolver* resolver,
+    const gchar* hostname,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_by_name_async: void (* lookup_by_name_async) (
+    GResolver* resolver,
+    const gchar* hostname,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_by_name_finish: GList* (* lookup_by_name_finish) (
+    GResolver* resolver,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_by_address: gchar* (* lookup_by_address) (
+    GResolver* resolver,
+    GInetAddress* address,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_by_address_async: void (* lookup_by_address_async) (
+    GResolver* resolver,
+    GInetAddress* address,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_by_address_finish: gchar* (* lookup_by_address_finish) (
+    GResolver* resolver,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_service: GList* (* lookup_service) (
+    GResolver* resolver,
+    const gchar* rrname,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_service_async: void (* lookup_service_async) (
+    GResolver* resolver,
+    const gchar* rrname,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_service_finish: GList* (* lookup_service_finish) (
+    GResolver* resolver,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_records: GList* (* lookup_records) (
+    GResolver* resolver,
+    const gchar* rrname,
+    GResolverRecordType record_type,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_records_async: void (* lookup_records_async) (
+    GResolver* resolver,
+    const gchar* rrname,
+    GResolverRecordType record_type,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_records_finish: GList* (* lookup_records_finish) (
+    GResolver* resolver,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_by_name_with_flags_async: void (* lookup_by_name_with_flags_async) (
+    GResolver* resolver,
+    const gchar* hostname,
+    GResolverNameLookupFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_by_name_with_flags_finish: GList* (* lookup_by_name_with_flags_finish) (
+    GResolver* resolver,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>lookup_by_name_with_flags: GList* (* lookup_by_name_with_flags) (
+    GResolver* resolver,
+    const gchar* hostname,
+    GResolverNameLookupFlags flags,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        </dd>
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-lookup_by_address"><a href="vfunc.Resolver.lookup_by_address.html">Gio.ResolverClass.lookup_by_address</a></h6>
+        <div class="docblock">
+          <p>Synchronously reverse-resolves <code>address</code> to determine its
+associated&nbsp;hostname.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_by_address_async"><a href="vfunc.Resolver.lookup_by_address_async.html">Gio.ResolverClass.lookup_by_address_async</a></h6>
+        <div class="docblock">
+          <p>Begins asynchronously reverse-resolving <code>address</code> to determine its
+associated hostname, and eventually calls <code>callback</code>, which must
+call <code>g_resolver_lookup_by_address_finish()</code> to get the final&nbsp;result.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_by_address_finish"><a href="vfunc.Resolver.lookup_by_address_finish.html">Gio.ResolverClass.lookup_by_address_finish</a></h6>
+        <div class="docblock">
+          <p>Retrieves the result of a previous call to&nbsp;g_resolver_lookup_by_address_async().</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_by_name"><a href="vfunc.Resolver.lookup_by_name.html">Gio.ResolverClass.lookup_by_name</a></h6>
+        <div class="docblock">
+          <p>Synchronously resolves <code>hostname</code> to determine its associated <span class="caps">IP</span>
+address(es). <code>hostname</code> may be an <span class="caps">ASCII</span>-only or <span class="caps">UTF</span>-8 hostname, or
+the textual form of an <span class="caps">IP</span> address (in which case this just becomes
+a wrapper around&nbsp;g_inet_address_new_from_string()).</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_by_name_async"><a href="vfunc.Resolver.lookup_by_name_async.html">Gio.ResolverClass.lookup_by_name_async</a></h6>
+        <div class="docblock">
+          <p>Begins asynchronously resolving <code>hostname</code> to determine its
+associated <span class="caps">IP</span> address(es), and eventually calls <code>callback</code>, which
+must call <code>g_resolver_lookup_by_name_finish()</code> to get the result.
+See <code>g_resolver_lookup_by_name()</code> for more&nbsp;details.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_by_name_finish"><a href="vfunc.Resolver.lookup_by_name_finish.html">Gio.ResolverClass.lookup_by_name_finish</a></h6>
+        <div class="docblock">
+          <p>Retrieves the result of a call to&nbsp;g_resolver_lookup_by_name_async().</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_by_name_with_flags"><a href="vfunc.Resolver.lookup_by_name_with_flags.html">Gio.ResolverClass.lookup_by_name_with_flags</a></h6>
+        <div class="docblock">
+          <p>This differs from <code>g_resolver_lookup_by_name()</code> in that you can modify
+the lookup behavior with <code>flags</code>. For example this can be used to limit
+results with <code>G_RESOLVER_NAME_LOOKUP_FLAGS_IPV4_ONLY</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.60</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_by_name_with_flags_async"><a href="vfunc.Resolver.lookup_by_name_with_flags_async.html">Gio.ResolverClass.lookup_by_name_with_flags_async</a></h6>
+        <div class="docblock">
+          <p>Begins asynchronously resolving <code>hostname</code> to determine its
+associated <span class="caps">IP</span> address(es), and eventually calls <code>callback</code>, which
+must call <code>g_resolver_lookup_by_name_with_flags_finish()</code> to get the result.
+See <code>g_resolver_lookup_by_name()</code> for more&nbsp;details.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.60</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_by_name_with_flags_finish"><a href="vfunc.Resolver.lookup_by_name_with_flags_finish.html">Gio.ResolverClass.lookup_by_name_with_flags_finish</a></h6>
+        <div class="docblock">
+          <p>Retrieves the result of a call to&nbsp;g_resolver_lookup_by_name_with_flags_async().</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.60</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_records"><a href="vfunc.Resolver.lookup_records.html">Gio.ResolverClass.lookup_records</a></h6>
+        <div class="docblock">
+          <p>Synchronously performs a <span class="caps">DNS</span> record lookup for the given <code>rrname</code> and returns
+a list of records as <code>GVariant</code> tuples. See <code>GResolverRecordType</code> for
+information on what the records contain for each <code>record_type</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.34</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_records_async"><a href="vfunc.Resolver.lookup_records_async.html">Gio.ResolverClass.lookup_records_async</a></h6>
+        <div class="docblock">
+          <p>Begins asynchronously performing a <span class="caps">DNS</span> lookup for the given
+<code>rrname</code>, and eventually calls <code>callback</code>, which must call
+<code>g_resolver_lookup_records_finish()</code> to get the final result. See
+<code>g_resolver_lookup_records()</code> for more&nbsp;details.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.34</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_records_finish"><a href="vfunc.Resolver.lookup_records_finish.html">Gio.ResolverClass.lookup_records_finish</a></h6>
+        <div class="docblock">
+          <p>Retrieves the result of a previous call to
+g_resolver_lookup_records_async(). Returns a non-empty list of records as
+<code>GVariant</code> tuples. See <code>GResolverRecordType</code> for information on what the
+records&nbsp;contain.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.34</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_service"><a href="vfunc.Resolver.lookup_service.html">Gio.ResolverClass.lookup_service</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_service_async"><a href="vfunc.Resolver.lookup_service_async.html">Gio.ResolverClass.lookup_service_async</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_service_finish"><a href="vfunc.Resolver.lookup_service_finish.html">Gio.ResolverClass.lookup_service_finish</a></h6>
+        <div class="docblock">
+          <p>Retrieves the result of a previous call to&nbsp;g_resolver_lookup_service_async().</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-reload"><a href="vfunc.Resolver.reload.html">Gio.ResolverClass.reload</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+      
+      <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
+      
+      
+      
+
+      
+<li class="toc-list-item"><a href="#type-functions"><span class="link-text">Functions</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/class.Resolver.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:51:50 GMT -->
+</html>

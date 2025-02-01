@@ -1,0 +1,524 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.AppLaunchContext.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:38:35 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.AppLaunchContext</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.AppLaunchContext">
+  <meta property="og:description" content="Reference for Gio.AppLaunchContext">
+  <meta name="twitter:title" content="Gio.AppLaunchContext">
+  <meta name="twitter:description" content="Reference for Gio.AppLaunchContext">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>AppLaunchContext</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gappinfo.h#L294">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.AppLaunchContext : GObject.Object
+{
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p>Integrating the launch with the launching application. This is used to
+handle for instance startup notification and launching the new application
+on the same screen as the launching&nbsp;window.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.AppLaunchContext.new.html">g_app_launch_context_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new application launch context. This is not normally used,
+instead you instantiate a subclass of this, such as
+<a href="https://docs.gtk.org/gdk4/class.AppLaunchContext.html"><code>GdkAppLaunchContext</code></a>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.AppLaunchContext.get_display.html">g_app_launch_context_get_display</a></h6>
+          <div class="docblock">
+            <p>Gets the display string for the <code>context</code>. This is used to ensure new
+applications are started on the same display as the launching
+application, by setting the <code>DISPLAY</code> environment&nbsp;variable.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.AppLaunchContext.get_environment.html">g_app_launch_context_get_environment</a></h6>
+          <div class="docblock">
+            <p>Gets the complete environment variable list to be passed to
+the child process when <code>context</code> is used to launch an application.
+This is a <code>NULL</code>-terminated array of strings, where each string has
+the form <code>KEY=VALUE</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.AppLaunchContext.get_startup_notify_id.html">g_app_launch_context_get_startup_notify_id</a></h6>
+          <div class="docblock">
+            <p>Initiates startup notification for the application and returns the
+<code>XDG_ACTIVATION_TOKEN</code> or <code>DESKTOP_STARTUP_ID</code> for the launched operation,
+if&nbsp;supported.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.AppLaunchContext.launch_failed.html">g_app_launch_context_launch_failed</a></h6>
+          <div class="docblock">
+            <p>Called when an application has failed to launch, so that it can cancel
+the application startup notification started in
+<code>g_app_launch_context_get_startup_notify_id()</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.AppLaunchContext.setenv.html">g_app_launch_context_setenv</a></h6>
+          <div class="docblock">
+            <p>Arranges for <code>variable</code> to be set to <code>value</code> in the child’s environment when
+<code>context</code> is used to launch an&nbsp;application.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.AppLaunchContext.unsetenv.html">g_app_launch_context_unsetenv</a></h6>
+          <div class="docblock">
+            <p>Arranges for <code>variable</code> to be unset in the child’s environment when <code>context</code>
+is used to launch an&nbsp;application.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.AppLaunchContext.launch-failed.html">Gio.AppLaunchContext::launch-failed</a></h6>
+          <div class="docblock">
+            <p>The <code>GAppLaunchContext::launch-failed</code> signal is emitted when a
+<code>GAppInfo</code> launch fails. The startup notification id is provided,
+so that the launcher can cancel the startup&nbsp;notification.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.AppLaunchContext.launch-started.html">Gio.AppLaunchContext::launch-started</a></h6>
+          <div class="docblock">
+            <p>The <code>GAppLaunchContext::launch-started</code> signal is emitted when a
+<code>GAppInfo</code> is about to be launched. If non-null the
+<code>platform_data</code> is an GVariant dictionary mapping strings to variants
+(ie <code>a{sv}</code>), which contains additional, platform-specific data about this
+launch. On <span class="caps">UNIX</span>, at least the <code>startup-notification-id</code> keys will be&nbsp;present.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.72</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.AppLaunchContext.launched.html">Gio.AppLaunchContext::launched</a></h6>
+          <div class="docblock">
+            <p>The <code>GAppLaunchContext::launched</code> signal is emitted when a
+<code>GAppInfo</code> is successfully&nbsp;launched.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioAppLaunchContextClass {
+  GObjectClass parent_class;
+  char* (* get_display) (
+    GAppLaunchContext* context,
+    GAppInfo* info,
+    GList* files
+  );
+  char* (* get_startup_notify_id) (
+    GAppLaunchContext* context,
+    GAppInfo* info,
+    GList* files
+  );
+  void (* launch_failed) (
+    GAppLaunchContext* context,
+    const char* startup_notify_id
+  );
+  void (* launched) (
+    GAppLaunchContext* context,
+    GAppInfo* info,
+    GVariant* platform_data
+  );
+  void (* launch_started) (
+    GAppLaunchContext* context,
+    GAppInfo* info,
+    GVariant* platform_data
+  );
+  void (* _g_reserved1) (
+void
+  );
+  void (* _g_reserved2) (
+void
+  );
+  void (* _g_reserved3) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>get_display: char* (* get_display) (
+    GAppLaunchContext* context,
+    GAppInfo* info,
+    GList* files
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>get_startup_notify_id: char* (* get_startup_notify_id) (
+    GAppLaunchContext* context,
+    GAppInfo* info,
+    GList* files
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>launch_failed: void (* launch_failed) (
+    GAppLaunchContext* context,
+    const char* startup_notify_id
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>launched: void (* launched) (
+    GAppLaunchContext* context,
+    GAppInfo* info,
+    GVariant* platform_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>launch_started: void (* launch_started) (
+    GAppLaunchContext* context,
+    GAppInfo* info,
+    GVariant* platform_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved1: void (* _g_reserved1) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved2: void (* _g_reserved2) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved3: void (* _g_reserved3) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-get_display"><a href="vfunc.AppLaunchContext.get_display.html">Gio.AppLaunchContextClass.get_display</a></h6>
+        <div class="docblock">
+          <p>Gets the display string for the <code>context</code>. This is used to ensure new
+applications are started on the same display as the launching
+application, by setting the <code>DISPLAY</code> environment&nbsp;variable.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_startup_notify_id"><a href="vfunc.AppLaunchContext.get_startup_notify_id.html">Gio.AppLaunchContextClass.get_startup_notify_id</a></h6>
+        <div class="docblock">
+          <p>Initiates startup notification for the application and returns the
+<code>XDG_ACTIVATION_TOKEN</code> or <code>DESKTOP_STARTUP_ID</code> for the launched operation,
+if&nbsp;supported.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-launch_failed"><a href="vfunc.AppLaunchContext.launch_failed.html">Gio.AppLaunchContextClass.launch_failed</a></h6>
+        <div class="docblock">
+          <p>Called when an application has failed to launch, so that it can cancel
+the application startup notification started in
+<code>g_app_launch_context_get_startup_notify_id()</code>.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-launch_started"><a href="vfunc.AppLaunchContext.launch_started.html">Gio.AppLaunchContextClass.launch_started</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-launched"><a href="vfunc.AppLaunchContext.launched.html">Gio.AppLaunchContextClass.launched</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.AppLaunchContext.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:38:46 GMT --></html>

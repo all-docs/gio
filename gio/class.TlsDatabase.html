@@ -1,0 +1,920 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/class.TlsDatabase.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:57:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.TlsDatabase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.TlsDatabase"/>
+  <meta property="og:description" content="Reference for Gio.TlsDatabase"/>
+  <meta name="twitter:title" content="Gio.TlsDatabase"/>
+  <meta name="twitter:description" content="Reference for Gio.TlsDatabase"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="class.TlsDatabase.html#description">TlsDatabase</a>
+  </div>
+</div>
+
+
+  
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.TlsDatabase.create_certificate_handle.html">create_certificate_handle</a>
+  
+    <a class="method" href="method.TlsDatabase.lookup_certificate_for_handle.html">lookup_certificate_for_handle</a>
+  
+    <a class="method" href="method.TlsDatabase.lookup_certificate_for_handle_async.html">lookup_certificate_for_handle_async</a>
+  
+    <a class="method" href="method.TlsDatabase.lookup_certificate_for_handle_finish.html">lookup_certificate_for_handle_finish</a>
+  
+    <a class="method" href="method.TlsDatabase.lookup_certificate_issuer.html">lookup_certificate_issuer</a>
+  
+    <a class="method" href="method.TlsDatabase.lookup_certificate_issuer_async.html">lookup_certificate_issuer_async</a>
+  
+    <a class="method" href="method.TlsDatabase.lookup_certificate_issuer_finish.html">lookup_certificate_issuer_finish</a>
+  
+    <a class="method" href="method.TlsDatabase.lookup_certificates_issued_by.html">lookup_certificates_issued_by</a>
+  
+    <a class="method" href="method.TlsDatabase.lookup_certificates_issued_by_async.html">lookup_certificates_issued_by_async</a>
+  
+    <a class="method" href="method.TlsDatabase.lookup_certificates_issued_by_finish.html">lookup_certificates_issued_by_finish</a>
+  
+    <a class="method" href="method.TlsDatabase.verify_chain.html">verify_chain</a>
+  
+    <a class="method" href="method.TlsDatabase.verify_chain_async.html">verify_chain_async</a>
+  
+    <a class="method" href="method.TlsDatabase.verify_chain_finish.html">verify_chain_finish</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.TlsDatabase.create_certificate_handle.html">create_certificate_handle</a>
+  
+    <a class="method" href="vfunc.TlsDatabase.lookup_certificate_for_handle.html">lookup_certificate_for_handle</a>
+  
+    <a class="method" href="vfunc.TlsDatabase.lookup_certificate_for_handle_async.html">lookup_certificate_for_handle_async</a>
+  
+    <a class="method" href="vfunc.TlsDatabase.lookup_certificate_for_handle_finish.html">lookup_certificate_for_handle_finish</a>
+  
+    <a class="method" href="vfunc.TlsDatabase.lookup_certificate_issuer.html">lookup_certificate_issuer</a>
+  
+    <a class="method" href="vfunc.TlsDatabase.lookup_certificate_issuer_async.html">lookup_certificate_issuer_async</a>
+  
+    <a class="method" href="vfunc.TlsDatabase.lookup_certificate_issuer_finish.html">lookup_certificate_issuer_finish</a>
+  
+    <a class="method" href="vfunc.TlsDatabase.lookup_certificates_issued_by.html">lookup_certificates_issued_by</a>
+  
+    <a class="method" href="vfunc.TlsDatabase.lookup_certificates_issued_by_async.html">lookup_certificates_issued_by_async</a>
+  
+    <a class="method" href="vfunc.TlsDatabase.lookup_certificates_issued_by_finish.html">lookup_certificates_issued_by_finish</a>
+  
+    <a class="method" href="vfunc.TlsDatabase.verify_chain.html">verify_chain</a>
+  
+    <a class="method" href="vfunc.TlsDatabase.verify_chain_async.html">verify_chain_async</a>
+  
+    <a class="method" href="vfunc.TlsDatabase.verify_chain_finish.html">verify_chain_finish</a>
+  
+  </div>
+</div>
+
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>TlsDatabase</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.30</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gtlsdatabase.c#L35">[src]</a>
+          
+        </h4>
+
+        <pre><code>abstract class Gio.TlsDatabase : GObject.Object
+{
+  priv: GTlsDatabasePrivate*
+}</pre></code>
+
+        <div class="docblock">
+          <p><code>GTlsDatabase</code> is used to look up certificates and other information
+from a certificate or key store. It is an abstract base class which
+<span class="caps">TLS</span> library specific subtypes&nbsp;override.</p>
+<p>A <code>GTlsDatabase</code> may be accessed from multiple threads by the <span class="caps">TLS</span> backend.
+All implementations are required to be fully&nbsp;thread-safe.</p>
+<p>Most common client applications will not directly interact with
+<code>GTlsDatabase</code>. It is used internally by <a href="class.TlsConnection.html"><code>GTlsConnection</code></a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.30</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.create_certificate_handle.html">g_tls_database_create_certificate_handle</a></h6>
+          <div class="docblock">
+            <p>Create a handle string for the certificate. The database will only be able
+to create a handle for certificates that originate from the database. In
+cases where the database cannot create a handle for a certificate, <code>NULL</code>
+will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.lookup_certificate_for_handle.html">g_tls_database_lookup_certificate_for_handle</a></h6>
+          <div class="docblock">
+            <p>Look up a certificate by its&nbsp;handle.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.lookup_certificate_for_handle_async.html">g_tls_database_lookup_certificate_for_handle_async</a></h6>
+          <div class="docblock">
+            <p>Asynchronously look up a certificate by its handle in the database. See
+<code>g_tls_database_lookup_certificate_for_handle()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.lookup_certificate_for_handle_finish.html">g_tls_database_lookup_certificate_for_handle_finish</a></h6>
+          <div class="docblock">
+            <p>Finish an asynchronous lookup of a certificate by its handle. See
+<code>g_tls_database_lookup_certificate_for_handle()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.lookup_certificate_issuer.html">g_tls_database_lookup_certificate_issuer</a></h6>
+          <div class="docblock">
+            <p>Look up the issuer of <code>certificate</code> in the database. The
+<code>GTlsCertificate:issuer</code> property of <code>certificate</code> is not modified, and
+the two certificates are not hooked into a&nbsp;chain.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.lookup_certificate_issuer_async.html">g_tls_database_lookup_certificate_issuer_async</a></h6>
+          <div class="docblock">
+            <p>Asynchronously look up the issuer of <code>certificate</code> in the database. See
+<code>g_tls_database_lookup_certificate_issuer()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.lookup_certificate_issuer_finish.html">g_tls_database_lookup_certificate_issuer_finish</a></h6>
+          <div class="docblock">
+            <p>Finish an asynchronous lookup issuer operation. See
+<code>g_tls_database_lookup_certificate_issuer()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.lookup_certificates_issued_by.html">g_tls_database_lookup_certificates_issued_by</a></h6>
+          <div class="docblock">
+            <p>Look up certificates issued by this issuer in the&nbsp;database.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.lookup_certificates_issued_by_async.html">g_tls_database_lookup_certificates_issued_by_async</a></h6>
+          <div class="docblock">
+            <p>Asynchronously look up certificates issued by this issuer in the database. See
+<code>g_tls_database_lookup_certificates_issued_by()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.lookup_certificates_issued_by_finish.html">g_tls_database_lookup_certificates_issued_by_finish</a></h6>
+          <div class="docblock">
+            <p>Finish an asynchronous lookup of certificates. See
+<code>g_tls_database_lookup_certificates_issued_by()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.verify_chain.html">g_tls_database_verify_chain</a></h6>
+          <div class="docblock">
+            <p>Determines the validity of a certificate chain, outside the context
+of a <span class="caps">TLS</span>&nbsp;session.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.verify_chain_async.html">g_tls_database_verify_chain_async</a></h6>
+          <div class="docblock">
+            <p>Asynchronously determines the validity of a certificate chain after
+looking up and adding any missing certificates to the chain. See
+<code>g_tls_database_verify_chain()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsDatabase.verify_chain_finish.html">g_tls_database_verify_chain_finish</a></h6>
+          <div class="docblock">
+            <p>Finish an asynchronous verify chain operation. See
+<code>g_tls_database_verify_chain()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</em></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioTlsDatabaseClass {
+  GObjectClass parent_class;
+  GTlsCertificateFlags (* verify_chain) (
+    GTlsDatabase* self,
+    GTlsCertificate* chain,
+    const gchar* purpose,
+    GSocketConnectable* identity,
+    GTlsInteraction* interaction,
+    GTlsDatabaseVerifyFlags flags,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* verify_chain_async) (
+    GTlsDatabase* self,
+    GTlsCertificate* chain,
+    const gchar* purpose,
+    GSocketConnectable* identity,
+    GTlsInteraction* interaction,
+    GTlsDatabaseVerifyFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  GTlsCertificateFlags (* verify_chain_finish) (
+    GTlsDatabase* self,
+    GAsyncResult* result,
+    GError** error
+  );
+  gchar* (* create_certificate_handle) (
+    GTlsDatabase* self,
+    GTlsCertificate* certificate
+  );
+  GTlsCertificate* (* lookup_certificate_for_handle) (
+    GTlsDatabase* self,
+    const gchar* handle,
+    GTlsInteraction* interaction,
+    GTlsDatabaseLookupFlags flags,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* lookup_certificate_for_handle_async) (
+    GTlsDatabase* self,
+    const gchar* handle,
+    GTlsInteraction* interaction,
+    GTlsDatabaseLookupFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  GTlsCertificate* (* lookup_certificate_for_handle_finish) (
+    GTlsDatabase* self,
+    GAsyncResult* result,
+    GError** error
+  );
+  GTlsCertificate* (* lookup_certificate_issuer) (
+    GTlsDatabase* self,
+    GTlsCertificate* certificate,
+    GTlsInteraction* interaction,
+    GTlsDatabaseLookupFlags flags,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* lookup_certificate_issuer_async) (
+    GTlsDatabase* self,
+    GTlsCertificate* certificate,
+    GTlsInteraction* interaction,
+    GTlsDatabaseLookupFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  GTlsCertificate* (* lookup_certificate_issuer_finish) (
+    GTlsDatabase* self,
+    GAsyncResult* result,
+    GError** error
+  );
+  GList* (* lookup_certificates_issued_by) (
+    GTlsDatabase* self,
+    GByteArray* issuer_raw_dn,
+    GTlsInteraction* interaction,
+    GTlsDatabaseLookupFlags flags,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* lookup_certificates_issued_by_async) (
+    GTlsDatabase* self,
+    GByteArray* issuer_raw_dn,
+    GTlsInteraction* interaction,
+    GTlsDatabaseLookupFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  GList* (* lookup_certificates_issued_by_finish) (
+    GTlsDatabase* self,
+    GAsyncResult* result,
+    GError** error
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>The class for <code>GTlsDatabase</code>. Derived classes should implement the various
+virtual methods. _async and _finish methods have a default
+implementation that runs the corresponding sync method in a&nbsp;thread.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>verify_chain: GTlsCertificateFlags (* verify_chain) (
+    GTlsDatabase* self,
+    GTlsCertificate* chain,
+    const gchar* purpose,
+    GSocketConnectable* identity,
+    GTlsInteraction* interaction,
+    GTlsDatabaseVerifyFlags flags,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_verify_chain().</p></dd>
+        
+          <dt><code>verify_chain_async: void (* verify_chain_async) (
+    GTlsDatabase* self,
+    GTlsCertificate* chain,
+    const gchar* purpose,
+    GSocketConnectable* identity,
+    GTlsInteraction* interaction,
+    GTlsDatabaseVerifyFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_verify_chain_async().</p></dd>
+        
+          <dt><code>verify_chain_finish: GTlsCertificateFlags (* verify_chain_finish) (
+    GTlsDatabase* self,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_verify_chain_finish().</p></dd>
+        
+          <dt><code>create_certificate_handle: gchar* (* create_certificate_handle) (
+    GTlsDatabase* self,
+    GTlsCertificate* certificate
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_create_certificate_handle().</p></dd>
+        
+          <dt><code>lookup_certificate_for_handle: GTlsCertificate* (* lookup_certificate_for_handle) (
+    GTlsDatabase* self,
+    const gchar* handle,
+    GTlsInteraction* interaction,
+    GTlsDatabaseLookupFlags flags,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_lookup_certificate_for_handle().</p></dd>
+        
+          <dt><code>lookup_certificate_for_handle_async: void (* lookup_certificate_for_handle_async) (
+    GTlsDatabase* self,
+    const gchar* handle,
+    GTlsInteraction* interaction,
+    GTlsDatabaseLookupFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_lookup_certificate_for_handle_async().</p></dd>
+        
+          <dt><code>lookup_certificate_for_handle_finish: GTlsCertificate* (* lookup_certificate_for_handle_finish) (
+    GTlsDatabase* self,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_lookup_certificate_for_handle_finish().</p></dd>
+        
+          <dt><code>lookup_certificate_issuer: GTlsCertificate* (* lookup_certificate_issuer) (
+    GTlsDatabase* self,
+    GTlsCertificate* certificate,
+    GTlsInteraction* interaction,
+    GTlsDatabaseLookupFlags flags,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_lookup_certificate_issuer().</p></dd>
+        
+          <dt><code>lookup_certificate_issuer_async: void (* lookup_certificate_issuer_async) (
+    GTlsDatabase* self,
+    GTlsCertificate* certificate,
+    GTlsInteraction* interaction,
+    GTlsDatabaseLookupFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_lookup_certificate_issuer_async().</p></dd>
+        
+          <dt><code>lookup_certificate_issuer_finish: GTlsCertificate* (* lookup_certificate_issuer_finish) (
+    GTlsDatabase* self,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_lookup_certificate_issuer_finish().</p></dd>
+        
+          <dt><code>lookup_certificates_issued_by: GList* (* lookup_certificates_issued_by) (
+    GTlsDatabase* self,
+    GByteArray* issuer_raw_dn,
+    GTlsInteraction* interaction,
+    GTlsDatabaseLookupFlags flags,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_lookup_certificates_issued_by().</p></dd>
+        
+          <dt><code>lookup_certificates_issued_by_async: void (* lookup_certificates_issued_by_async) (
+    GTlsDatabase* self,
+    GByteArray* issuer_raw_dn,
+    GTlsInteraction* interaction,
+    GTlsDatabaseLookupFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_lookup_certificates_issued_by_async().</p></dd>
+        
+          <dt><code>lookup_certificates_issued_by_finish: GList* (* lookup_certificates_issued_by_finish) (
+    GTlsDatabase* self,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>Virtual method implementing&nbsp;g_tls_database_lookup_certificates_issued_by_finish().</p></dd>
+        
+        </dd>
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-create_certificate_handle"><a href="vfunc.TlsDatabase.create_certificate_handle.html">Gio.TlsDatabaseClass.create_certificate_handle</a></h6>
+        <div class="docblock">
+          <p>Create a handle string for the certificate. The database will only be able
+to create a handle for certificates that originate from the database. In
+cases where the database cannot create a handle for a certificate, <code>NULL</code>
+will be&nbsp;returned.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_certificate_for_handle"><a href="vfunc.TlsDatabase.lookup_certificate_for_handle.html">Gio.TlsDatabaseClass.lookup_certificate_for_handle</a></h6>
+        <div class="docblock">
+          <p>Look up a certificate by its&nbsp;handle.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_certificate_for_handle_async"><a href="vfunc.TlsDatabase.lookup_certificate_for_handle_async.html">Gio.TlsDatabaseClass.lookup_certificate_for_handle_async</a></h6>
+        <div class="docblock">
+          <p>Asynchronously look up a certificate by its handle in the database. See
+<code>g_tls_database_lookup_certificate_for_handle()</code> for more&nbsp;information.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_certificate_for_handle_finish"><a href="vfunc.TlsDatabase.lookup_certificate_for_handle_finish.html">Gio.TlsDatabaseClass.lookup_certificate_for_handle_finish</a></h6>
+        <div class="docblock">
+          <p>Finish an asynchronous lookup of a certificate by its handle. See
+<code>g_tls_database_lookup_certificate_for_handle()</code> for more&nbsp;information.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_certificate_issuer"><a href="vfunc.TlsDatabase.lookup_certificate_issuer.html">Gio.TlsDatabaseClass.lookup_certificate_issuer</a></h6>
+        <div class="docblock">
+          <p>Look up the issuer of <code>certificate</code> in the database. The
+<code>GTlsCertificate:issuer</code> property of <code>certificate</code> is not modified, and
+the two certificates are not hooked into a&nbsp;chain.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_certificate_issuer_async"><a href="vfunc.TlsDatabase.lookup_certificate_issuer_async.html">Gio.TlsDatabaseClass.lookup_certificate_issuer_async</a></h6>
+        <div class="docblock">
+          <p>Asynchronously look up the issuer of <code>certificate</code> in the database. See
+<code>g_tls_database_lookup_certificate_issuer()</code> for more&nbsp;information.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_certificate_issuer_finish"><a href="vfunc.TlsDatabase.lookup_certificate_issuer_finish.html">Gio.TlsDatabaseClass.lookup_certificate_issuer_finish</a></h6>
+        <div class="docblock">
+          <p>Finish an asynchronous lookup issuer operation. See
+<code>g_tls_database_lookup_certificate_issuer()</code> for more&nbsp;information.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_certificates_issued_by"><a href="vfunc.TlsDatabase.lookup_certificates_issued_by.html">Gio.TlsDatabaseClass.lookup_certificates_issued_by</a></h6>
+        <div class="docblock">
+          <p>Look up certificates issued by this issuer in the&nbsp;database.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_certificates_issued_by_async"><a href="vfunc.TlsDatabase.lookup_certificates_issued_by_async.html">Gio.TlsDatabaseClass.lookup_certificates_issued_by_async</a></h6>
+        <div class="docblock">
+          <p>Asynchronously look up certificates issued by this issuer in the database. See
+<code>g_tls_database_lookup_certificates_issued_by()</code> for more&nbsp;information.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-lookup_certificates_issued_by_finish"><a href="vfunc.TlsDatabase.lookup_certificates_issued_by_finish.html">Gio.TlsDatabaseClass.lookup_certificates_issued_by_finish</a></h6>
+        <div class="docblock">
+          <p>Finish an asynchronous lookup of certificates. See
+<code>g_tls_database_lookup_certificates_issued_by()</code> for more&nbsp;information.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-verify_chain"><a href="vfunc.TlsDatabase.verify_chain.html">Gio.TlsDatabaseClass.verify_chain</a></h6>
+        <div class="docblock">
+          <p>Determines the validity of a certificate chain, outside the context
+of a <span class="caps">TLS</span>&nbsp;session.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-verify_chain_async"><a href="vfunc.TlsDatabase.verify_chain_async.html">Gio.TlsDatabaseClass.verify_chain_async</a></h6>
+        <div class="docblock">
+          <p>Asynchronously determines the validity of a certificate chain after
+looking up and adding any missing certificates to the chain. See
+<code>g_tls_database_verify_chain()</code> for more&nbsp;information.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-verify_chain_finish"><a href="vfunc.TlsDatabase.verify_chain_finish.html">Gio.TlsDatabaseClass.verify_chain_finish</a></h6>
+        <div class="docblock">
+          <p>Finish an asynchronous verify chain operation. See
+<code>g_tls_database_verify_chain()</code> for more&nbsp;information.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+      
+      <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
+      
+      
+      
+
+      
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+
+      
+
+      
+
+      
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/class.TlsDatabase.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:57:32 GMT -->
+</html>

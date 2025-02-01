@@ -1,0 +1,531 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.DebugControllerDBus.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:44:48 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.DebugControllerDBus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.DebugControllerDBus">
+  <meta property="og:description" content="Reference for Gio.DebugControllerDBus">
+  <meta name="twitter:title" content="Gio.DebugControllerDBus">
+  <meta name="twitter:description" content="Reference for Gio.DebugControllerDBus">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>DebugControllerDBus</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.72</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdebugcontrollerdbus.c#L33">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.DebugControllerDBus : GObject.Object
+  implements Gio.DebugController, Gio.Initable {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GDebugControllerDBus</code> is an implementation of <a href="iface.DebugController.html"><code>GDebugController</code></a>
+which exposes debug settings as a D-Bus&nbsp;object.</p>
+<p>It is a <a href="iface.Initable.html"><code>GInitable</code></a> object, and will register an object at
+<code>/org/gtk/Debugging</code> on the bus given as
+<a href="property.DebugControllerDBus.connection.html"><code>GDebugControllerDBus:connection</code></a> once it’s initialized. The
+object will be unregistered when the last reference to the
+<code>GDebugControllerDBus</code> is&nbsp;dropped.</p>
+<p>This D-Bus object can be used by remote processes to enable or disable debug
+output in this process. Remote processes calling
+<code>org.gtk.Debugging.SetDebugEnabled()</code> will affect the value of
+<a href="property.DebugController.debug-enabled.html"><code>GDebugController:debug-enabled</code></a> and, by default,
+<a href="javascript:void(0)" data-namespace="GLib" data-link="func.log_get_debug_enabled.html" class="external"><code>g_log_get_debug_enabled()</code></a>.</p>
+<p>By default, no processes are allowed to call <code>SetDebugEnabled()</code> unless a
+<a href="signal.DebugControllerDBus.authorize.html"><code>GDebugControllerDBus::authorize</code></a> signal handler is installed. This
+is because the process may be privileged, or might expose sensitive
+information in its debug output. You may want to restrict the ability to
+enable debug output to privileged users or&nbsp;processes.</p>
+<p>One option is to install a D-Bus security policy which restricts access to
+<code>SetDebugEnabled()</code>, installing something like the following in
+<code>$datadir/dbus-1/system.d/</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0"?&gt;</span><span class="w"> </span><span class="cm">&lt;!--*-nxml-*--&gt;</span>
+<span class="cp">&lt;!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"</span>
+<span class="cp">     "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd"&gt;</span>
+<span class="nt">&lt;busconfig&gt;</span>
+<span class="w">  </span><span class="nt">&lt;policy</span><span class="w"> </span><span class="na">user=</span><span class="s">"root"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;allow</span><span class="w"> </span><span class="na">send_destination=</span><span class="s">"com.example.MyService"</span><span class="w"> </span><span class="na">send_interface=</span><span class="s">"org.gtk.Debugging"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/policy&gt;</span>
+<span class="w">  </span><span class="nt">&lt;policy</span><span class="w"> </span><span class="na">context=</span><span class="s">"default"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;deny</span><span class="w"> </span><span class="na">send_destination=</span><span class="s">"com.example.MyService"</span><span class="w"> </span><span class="na">send_interface=</span><span class="s">"org.gtk.Debugging"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/policy&gt;</span>
+<span class="nt">&lt;/busconfig&gt;</span>
+</code></pre></div>
+
+<p>This will prevent the <code>SetDebugEnabled()</code> method from being called by all
+except root. It will not prevent the <code>DebugEnabled</code> property from being read,
+as it’s accessed through the <code>org.freedesktop.DBus.Properties</code> interface.</p>
+<p>Another option is to use polkit to allow or deny requests on a case-by-case
+basis, allowing for the possibility of dynamic authorisation. To do this,
+connect to the <a href="signal.DebugControllerDBus.authorize.html"><code>GDebugControllerDBus::authorize</code></a> signal and query
+polkit in&nbsp;it:</p>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">GError</span><span class="p">)</span><span class="w"> </span><span class="n">child_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">  </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">GDBusConnection</span><span class="p">)</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_bus_get_sync</span><span class="w"> </span><span class="p">(</span><span class="n">G_BUS_TYPE_SYSTEM</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="w">  </span><span class="n">gulong</span><span class="w"> </span><span class="n">debug_controller_authorize_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Set up the debug controller.</span>
+<span class="w">  </span><span class="n">debug_controller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">G_DEBUG_CONTROLLER</span><span class="w"> </span><span class="p">(</span><span class="n">g_debug_controller_dbus_new</span><span class="w"> </span><span class="p">(</span><span class="n">priv</span><span class="o">-&gt;</span><span class="n">connection</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">child_error</span><span class="p">));</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">debug_controller</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">g_error</span><span class="w"> </span><span class="p">(</span><span class="s">"Could not register debug controller on bus: %s"</span><span class="p">),</span>
+<span class="w">               </span><span class="n">child_error</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">debug_controller_authorize_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_signal_connect</span><span class="w"> </span><span class="p">(</span><span class="n">debug_controller</span><span class="p">,</span>
+<span class="w">                                                    </span><span class="s">"authorize"</span><span class="p">,</span>
+<span class="w">                                                    </span><span class="n">G_CALLBACK</span><span class="w"> </span><span class="p">(</span><span class="n">debug_controller_authorize_cb</span><span class="p">),</span>
+<span class="w">                                                    </span><span class="n">self</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">gboolean</span>
+<span class="w">  </span><span class="nf">debug_controller_authorize_cb</span><span class="w"> </span><span class="p">(</span><span class="n">GDebugControllerDBus</span><span class="w">  </span><span class="o">*</span><span class="n">debug_controller</span><span class="p">,</span>
+<span class="w">                                 </span><span class="n">GDBusMethodInvocation</span><span class="w"> </span><span class="o">*</span><span class="n">invocation</span><span class="p">,</span>
+<span class="w">                                 </span><span class="n">gpointer</span><span class="w">               </span><span class="n">user_data</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">PolkitAuthority</span><span class="p">)</span><span class="w"> </span><span class="n">authority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">PolkitSubject</span><span class="p">)</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">PolkitAuthorizationResult</span><span class="p">)</span><span class="w"> </span><span class="n">auth_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">GError</span><span class="p">)</span><span class="w"> </span><span class="n">local_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="n">GDBusMessage</span><span class="w"> </span><span class="o">*</span><span class="n">message</span><span class="p">;</span>
+<span class="w">    </span><span class="n">GDBusMessageFlags</span><span class="w"> </span><span class="n">message_flags</span><span class="p">;</span>
+<span class="w">    </span><span class="n">PolkitCheckAuthorizationFlags</span><span class="w"> </span><span class="n">flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">POLKIT_CHECK_AUTHORIZATION_FLAGS_NONE</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_dbus_method_invocation_get_message</span><span class="w"> </span><span class="p">(</span><span class="n">invocation</span><span class="p">);</span>
+<span class="w">    </span><span class="n">message_flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_dbus_message_get_flags</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">authority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">polkit_authority_get_sync</span><span class="w"> </span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">local_error</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">authority</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="n">g_warning</span><span class="w"> </span><span class="p">(</span><span class="s">"Failed to get polkit authority: %s"</span><span class="p">,</span><span class="w"> </span><span class="n">local_error</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">message_flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">G_DBUS_MESSAGE_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION</span><span class="p">)</span>
+<span class="w">      </span><span class="n">flags</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">POLKIT_CHECK_AUTHORIZATION_FLAGS_ALLOW_USER_INTERACTION</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">polkit_system_bus_name_new</span><span class="w"> </span><span class="p">(</span><span class="n">g_dbus_method_invocation_get_sender</span><span class="w"> </span><span class="p">(</span><span class="n">invocation</span><span class="p">));</span>
+
+<span class="w">    </span><span class="n">auth_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">polkit_authority_check_authorization_sync</span><span class="w"> </span><span class="p">(</span><span class="n">authority</span><span class="p">,</span>
+<span class="w">                                                             </span><span class="n">subject</span><span class="p">,</span>
+<span class="w">                                                             </span><span class="s">"com.example.MyService.set-debug-enabled"</span><span class="p">,</span>
+<span class="w">                                                             </span><span class="nb">NULL</span><span class="p">,</span>
+<span class="w">                                                             </span><span class="n">flags</span><span class="p">,</span>
+<span class="w">                                                             </span><span class="nb">NULL</span><span class="p">,</span>
+<span class="w">                                                             </span><span class="o">&amp;</span><span class="n">local_error</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">auth_result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="n">g_warning</span><span class="w"> </span><span class="p">(</span><span class="s">"Failed to get check polkit authorization: %s"</span><span class="p">,</span><span class="w"> </span><span class="n">local_error</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">polkit_authorization_result_get_is_authorized</span><span class="w"> </span><span class="p">(</span><span class="n">auth_result</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.72</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.DebugController.html" title="DebugController">GDebugController</a></li>
+          
+        
+          
+          <li class="interface"><a href="iface.Initable.html" title="Initable">GInitable</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.DebugControllerDBus.new.html">g_debug_controller_dbus_new</a></h6>
+          <div class="docblock">
+            <p>Create a new <code>GDebugControllerDBus</code> and synchronously initialize&nbsp;it.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.72</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.DebugControllerDBus.stop.html">g_debug_controller_dbus_stop</a></h6>
+          <div class="docblock">
+            <p>Stop the debug controller, unregistering its object from the&nbsp;bus.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.72</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.DebugController.html">GDebugController</a> (2)</h5><div class="docblock">
+          
+            <h6><a href="method.DebugController.get_debug_enabled.html">g_debug_controller_get_debug_enabled</a></h6><div class="docblock">
+              <p>Get the value of <code>GDebugController:debug-enabled</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.72</span></p>
+            </div>
+            
+            <h6><a href="method.DebugController.set_debug_enabled.html">g_debug_controller_set_debug_enabled</a></h6><div class="docblock">
+              <p>Set the value of <code>GDebugController:debug-enabled</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.72</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.Initable.html">GInitable</a> (1)</h5><div class="docblock">
+          
+            <h6><a href="method.Initable.init.html">g_initable_init</a></h6><div class="docblock">
+              <p>Initializes the object implementing the&nbsp;interface.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.DebugControllerDBus.connection.html">Gio.DebugControllerDBus:connection</a></h6>
+          <div class="docblock">
+            <p>The D-Bus connection to expose the debugging interface&nbsp;on.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.72</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-properties">
+          <h5 style="display:block;">Properties inherited from <a href="iface.DebugController.html">GDebugController</a> (1)</h5><div class="docblock">
+          
+            <h6><a href="property.DebugController.debug-enabled.html">GDebugController:debug-enabled</a></h6><div class="docblock">
+              <p><code>TRUE</code> if debug output should be exposed (for example by forwarding it to
+the journal), <code>FALSE</code> otherwise.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.72</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.DebugControllerDBus.authorize.html">Gio.DebugControllerDBus::authorize</a></h6>
+          <div class="docblock">
+            <p>Emitted when a D-Bus peer is trying to change the debug settings and used
+to determine if that is&nbsp;authorized.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.72</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioDebugControllerDBusClass {
+  GObjectClass parent_class;
+  gboolean (* authorize) (
+    GDebugControllerDBus* controller,
+    GDBusMethodInvocation* invocation
+  );
+  None padding;
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>The virtual function table for <code>GDebugControllerDBus</code>.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>The parent&nbsp;class.</p></dd>
+        
+          <dt><code>authorize: gboolean (* authorize) (
+    GDebugControllerDBus* controller,
+    GDBusMethodInvocation* invocation
+  )</code></dt>
+          <dd><p>Default handler for the <code>GDebugControllerDBus::authorize</code> signal.</p></dd>
+        
+          <dt><code>padding: None</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-authorize"><a href="vfunc.DebugControllerDBus.authorize.html">Gio.DebugControllerDBusClass.authorize</a></h6>
+        <div class="docblock">
+          <p>Default handler for the <code>GDebugControllerDBus::authorize</code> signal.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.DebugControllerDBus.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:44:54 GMT --></html>

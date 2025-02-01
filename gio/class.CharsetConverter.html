@@ -1,0 +1,418 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.CharsetConverter.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:40:57 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.CharsetConverter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.CharsetConverter">
+  <meta property="og:description" content="Reference for Gio.CharsetConverter">
+  <meta name="twitter:title" content="Gio.CharsetConverter">
+  <meta name="twitter:description" content="Reference for Gio.CharsetConverter">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>CharsetConverter</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gcharsetconverter.c#L41">[src]</a>
+          
+        </h4>
+
+        <pre><code>final class Gio.CharsetConverter : GObject.Object
+  implements Gio.Converter, Gio.Initable {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GCharsetConverter</code> is an implementation of <a href="iface.Converter.html"><code>GConverter</code></a> based on
+<a href="javascript:void(0)" data-namespace="GLib" data-link="struct.IConv.html" class="external"><code>GIConv</code></a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.Converter.html" title="Converter">GConverter</a></li>
+          
+        
+          
+          <li class="interface"><a href="iface.Initable.html" title="Initable">GInitable</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.CharsetConverter.new.html">g_charset_converter_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GCharsetConverter</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.CharsetConverter.get_num_fallbacks.html">g_charset_converter_get_num_fallbacks</a></h6>
+          <div class="docblock">
+            <p>Gets the number of fallbacks that <code>converter</code> has applied so&nbsp;far.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.CharsetConverter.get_use_fallback.html">g_charset_converter_get_use_fallback</a></h6>
+          <div class="docblock">
+            <p>Gets the <code>GCharsetConverter:use-fallback</code> property.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.CharsetConverter.set_use_fallback.html">g_charset_converter_set_use_fallback</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>GCharsetConverter:use-fallback</code> property.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.Converter.html">GConverter</a> (3)</h5><div class="docblock">
+          
+            <h6><a href="method.Converter.convert.html">g_converter_convert</a></h6><div class="docblock">
+              <p>This is the main operation used when converting data. It is to be called
+multiple times in a loop, and each time it will do some work, i.e.
+producing some output (in <code>outbuf</code>) or consuming some input (from <code>inbuf</code>) or
+both. If its not possible to do any work an error is&nbsp;returned.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.24</span></p>
+            </div>
+            
+            <h6><a href="method.Converter.convert_bytes.html">g_converter_convert_bytes</a></h6><div class="docblock">
+              <p>Applies <code>converter</code> to the data in <code>bytes</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.82</span></p>
+            </div>
+            
+            <h6><a href="method.Converter.reset.html">g_converter_reset</a></h6><div class="docblock">
+              <p>Resets all internal state in the converter, making it behave
+as if it was just created. If the converter has any internal
+state that would produce output then that output is&nbsp;lost.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.24</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.Initable.html">GInitable</a> (1)</h5><div class="docblock">
+          
+            <h6><a href="method.Initable.init.html">g_initable_init</a></h6><div class="docblock">
+              <p>Initializes the object implementing the&nbsp;interface.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.CharsetConverter.from-charset.html">Gio.CharsetConverter:from-charset</a></h6>
+          <div class="docblock">
+            <p>The character encoding to convert&nbsp;from.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.CharsetConverter.to-charset.html">Gio.CharsetConverter:to-charset</a></h6>
+          <div class="docblock">
+            <p>The character encoding to convert&nbsp;to.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.CharsetConverter.use-fallback.html">Gio.CharsetConverter:use-fallback</a></h6>
+          <div class="docblock">
+            <p>Use fallback (of form <code>\&lt;hexval&gt;</code>) for invalid&nbsp;bytes.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioCharsetConverterClass {
+  GObjectClass parent_class;
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.CharsetConverter.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:41:04 GMT --></html>

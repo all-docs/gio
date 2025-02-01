@@ -1,0 +1,520 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.BufferedOutputStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:40:32 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.BufferedOutputStream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.BufferedOutputStream">
+  <meta property="og:description" content="Reference for Gio.BufferedOutputStream">
+  <meta name="twitter:title" content="Gio.BufferedOutputStream">
+  <meta name="twitter:description" content="Reference for Gio.BufferedOutputStream">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>BufferedOutputStream</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gbufferedoutputstream.c#L32">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.BufferedOutputStream : Gio.FilterOutputStream
+  implements Gio.Seekable {
+  priv: GBufferedOutputStreamPrivate*
+}</code></pre>
+
+        <div class="docblock">
+          <p>Buffered output stream implements <a href="class.FilterOutputStream.html"><code>GFilterOutputStream</code></a> and provides
+for buffered&nbsp;writes.</p>
+<p>By default, <code>GBufferedOutputStream</code><span class="quo">‘</span>s buffer size is set at 4&nbsp;kilobytes.</p>
+<p>To create a buffered output stream, use <a href="ctor.BufferedOutputStream.new.html"><code>g_buffered_output_stream_new()</code></a>,
+or <a href="ctor.BufferedOutputStream.new_sized.html"><code>g_buffered_output_stream_new_sized()</code></a> to specify the buffer’s size
+at&nbsp;construction.</p>
+<p>To get the size of a buffer within a buffered input stream, use
+<a href="method.BufferedOutputStream.get_buffer_size.html"><code>g_buffered_output_stream_get_buffer_size()</code></a>. To change the size of a
+buffered output stream’s buffer, use <a href="method.BufferedOutputStream.set_buffer_size.html"><code>g_buffered_output_stream_set_buffer_size()</code></a>.
+Note that the buffer’s size cannot be reduced below the size of the data within the&nbsp;buffer.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a href="class.FilterOutputStream.html" title="FilterOutputStream">GFilterOutputStream</a></li>
+          
+        
+          
+          <li class="class"><a href="class.OutputStream.html" title="OutputStream">GOutputStream</a></li>
+          
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.Seekable.html" title="Seekable">GSeekable</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.BufferedOutputStream.new.html">g_buffered_output_stream_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new buffered output stream for a base&nbsp;stream.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.BufferedOutputStream.new_sized.html">g_buffered_output_stream_new_sized</a></h6>
+          <div class="docblock">
+            <p>Creates a new buffered output stream with a given buffer&nbsp;size.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.BufferedOutputStream.get_auto_grow.html">g_buffered_output_stream_get_auto_grow</a></h6>
+          <div class="docblock">
+            <p>Checks if the buffer automatically grows as data is&nbsp;added.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.BufferedOutputStream.get_buffer_size.html">g_buffered_output_stream_get_buffer_size</a></h6>
+          <div class="docblock">
+            <p>Gets the size of the buffer in the <code>stream</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.BufferedOutputStream.set_auto_grow.html">g_buffered_output_stream_set_auto_grow</a></h6>
+          <div class="docblock">
+            <p>Sets whether or not the <code>stream</code><span class="quo">‘</span>s buffer should automatically grow.
+If <code>auto_grow</code> is true, then each write will just make the buffer
+larger, and you must manually flush the buffer to actually write out
+the data to the underlying&nbsp;stream.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.BufferedOutputStream.set_buffer_size.html">g_buffered_output_stream_set_buffer_size</a></h6>
+          <div class="docblock">
+            <p>Sets the size of the internal buffer to <code>size</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="class.FilterOutputStream.html">GFilterOutputStream</a> (3)</h5><div class="docblock">
+          
+            <h6><a href="method.FilterOutputStream.get_base_stream.html">g_filter_output_stream_get_base_stream</a></h6><div class="docblock">
+              <p>Gets the base stream for the filter&nbsp;stream.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.FilterOutputStream.get_close_base_stream.html">g_filter_output_stream_get_close_base_stream</a></h6><div class="docblock">
+              <p>Returns whether the base stream will be closed when <code>stream</code> is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.FilterOutputStream.set_close_base_stream.html">g_filter_output_stream_set_close_base_stream</a></h6><div class="docblock">
+              <p>Sets whether the base stream will be closed when <code>stream</code> is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="class.OutputStream.html">GOutputStream</a> (31)</h5><div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a href="class.OutputStream.html#methods">GOutputStream</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.Seekable.html">GSeekable</a> (5)</h5><div class="docblock">
+          
+            <h6><a href="method.Seekable.can_seek.html">g_seekable_can_seek</a></h6><div class="docblock">
+              <p>Tests if the stream supports the <code>GSeekableIface</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.can_truncate.html">g_seekable_can_truncate</a></h6><div class="docblock">
+              <p>Tests if the length of the stream can be adjusted with&nbsp;g_seekable_truncate().</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.seek.html">g_seekable_seek</a></h6><div class="docblock">
+              <p>Seeks in the stream by the given <code>offset</code>, modified by <code>type</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.tell.html">g_seekable_tell</a></h6><div class="docblock">
+              <p>Tells the current position within the&nbsp;stream.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.truncate.html">g_seekable_truncate</a></h6><div class="docblock">
+              <p>Sets the length of the stream to <code>offset</code>. If the stream was previously
+larger than <code>offset</code>, the extra data is discarded. If the stream was
+previously shorter than <code>offset</code>, it is extended with <span class="caps">NUL</span> (‘\0’)&nbsp;bytes.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.BufferedOutputStream.auto-grow.html">Gio.BufferedOutputStream:auto-grow</a></h6>
+          <div class="docblock">
+            <p>Whether the buffer should automatically&nbsp;grow.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.BufferedOutputStream.buffer-size.html">Gio.BufferedOutputStream:buffer-size</a></h6>
+          <div class="docblock">
+            <p>The size of the backend buffer, in&nbsp;bytes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-properties">
+          <h5 style="display:block;">Properties inherited from <a href="class.FilterOutputStream.html">GFilterOutputStream</a> (2)</h5><div class="docblock">
+          
+            <h6><a href="property.FilterOutputStream.base-stream.html">Gio.FilterOutputStream:base-stream</a></h6><div class="docblock">
+              <p>The underlying base stream on which the I/O ops will be&nbsp;done.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="property.FilterOutputStream.close-base-stream.html">Gio.FilterOutputStream:close-base-stream</a></h6><div class="docblock">
+              <p>Whether the base stream should be closed when the filter stream is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+      
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+      
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioBufferedOutputStreamClass {
+  GFilterOutputStreamClass parent_class;
+  void (* _g_reserved1) (
+void
+  );
+  void (* _g_reserved2) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GFilterOutputStreamClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved1: void (* _g_reserved1) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved2: void (* _g_reserved2) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.BufferedOutputStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:40:40 GMT --></html>

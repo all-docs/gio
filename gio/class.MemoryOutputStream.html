@@ -1,0 +1,589 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.MemoryOutputStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:48:27 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.MemoryOutputStream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.MemoryOutputStream">
+  <meta property="og:description" content="Reference for Gio.MemoryOutputStream">
+  <meta name="twitter:title" content="Gio.MemoryOutputStream">
+  <meta name="twitter:description" content="Reference for Gio.MemoryOutputStream">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>MemoryOutputStream</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gmemoryoutputstream.c#L37">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.MemoryOutputStream : Gio.OutputStream
+  implements Gio.PollableOutputStream, Gio.Seekable {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GMemoryOutputStream</code> is a class for using arbitrary
+memory chunks as output for <span class="caps">GIO</span> streaming output&nbsp;operations.</p>
+<p>As of GLib 2.34, <code>GMemoryOutputStream</code> trivially implements
+<a href="iface.PollableOutputStream.html"><code>GPollableOutputStream</code></a>: it always polls as&nbsp;ready.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a href="class.OutputStream.html" title="OutputStream">GOutputStream</a></li>
+          
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.PollableOutputStream.html" title="PollableOutputStream">GPollableOutputStream</a></li>
+          
+        
+          
+          <li class="interface"><a href="iface.Seekable.html" title="Seekable">GSeekable</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.MemoryOutputStream.new.html">g_memory_output_stream_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GMemoryOutputStream</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.MemoryOutputStream.new_resizable.html">g_memory_output_stream_new_resizable</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GMemoryOutputStream</code>, using <code>g_realloc()</code> and <code>g_free()</code>
+for memory&nbsp;allocation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.MemoryOutputStream.get_data.html">g_memory_output_stream_get_data</a></h6>
+          <div class="docblock">
+            <p>Gets any loaded data from the <code>ostream</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MemoryOutputStream.get_data_size.html">g_memory_output_stream_get_data_size</a></h6>
+          <div class="docblock">
+            <p>Returns the number of bytes from the start up to including the last
+byte written in the stream that has not been truncated&nbsp;away.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.18</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MemoryOutputStream.get_size.html">g_memory_output_stream_get_size</a></h6>
+          <div class="docblock">
+            <p>Gets the size of the currently allocated data area (available from&nbsp;g_memory_output_stream_get_data()).</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MemoryOutputStream.steal_as_bytes.html">g_memory_output_stream_steal_as_bytes</a></h6>
+          <div class="docblock">
+            <p>Returns data from the <code>ostream</code> as a <code>GBytes</code>. <code>ostream</code> must be
+closed before calling this&nbsp;function.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.MemoryOutputStream.steal_data.html">g_memory_output_stream_steal_data</a></h6>
+          <div class="docblock">
+            <p>Gets any loaded data from the <code>ostream</code>. Ownership of the data
+is transferred to the caller; when no longer needed it must be
+freed using the free function set in <code>ostream</code><span class="quo">‘</span>s
+<code>GMemoryOutputStream:destroy-function</code> property.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="class.OutputStream.html">GOutputStream</a> (31)</h5><div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a href="class.OutputStream.html#methods">GOutputStream</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.PollableOutputStream.html">GPollableOutputStream</a> (5)</h5><div class="docblock">
+          
+            <h6><a href="method.PollableOutputStream.can_poll.html">g_pollable_output_stream_can_poll</a></h6><div class="docblock">
+              <p>Checks if <code>stream</code> is actually pollable. Some classes may implement
+<code>GPollableOutputStream</code> but have only certain instances of that
+class be pollable. If this method returns <code>FALSE</code>, then the behavior
+of other <code>GPollableOutputStream</code> methods is&nbsp;undefined.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.PollableOutputStream.create_source.html">g_pollable_output_stream_create_source</a></h6><div class="docblock">
+              <p>Creates a <code>GSource</code> that triggers when <code>stream</code> can be written, or
+<code>cancellable</code> is triggered or an error occurs. The callback on the
+source is of the <code>GPollableSourceFunc</code> type.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.PollableOutputStream.is_writable.html">g_pollable_output_stream_is_writable</a></h6><div class="docblock">
+              <p>Checks if <code>stream</code> can be&nbsp;written.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.PollableOutputStream.write_nonblocking.html">g_pollable_output_stream_write_nonblocking</a></h6><div class="docblock">
+              <p>Attempts to write up to <code>count</code> bytes from <code>buffer</code> to <code>stream</code>, as
+with g_output_stream_write(). If <code>stream</code> is not currently writable,
+this will immediately return <code>G_IO_ERROR_WOULD_BLOCK</code>, and you can
+use <code>g_pollable_output_stream_create_source()</code> to create a <code>GSource</code>
+that will be triggered when <code>stream</code> is&nbsp;writable.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.PollableOutputStream.writev_nonblocking.html">g_pollable_output_stream_writev_nonblocking</a></h6><div class="docblock">
+              <p>Attempts to write the bytes contained in the <code>n_vectors</code> <code>vectors</code> to <code>stream</code>,
+as with g_output_stream_writev(). If <code>stream</code> is not currently writable,
+this will immediately return %<code>G_POLLABLE_RETURN_WOULD_BLOCK</code>, and you can
+use <code>g_pollable_output_stream_create_source()</code> to create a <code>GSource</code>
+that will be triggered when <code>stream</code> is writable. <code>error</code> will <em>not</em> be
+set in that&nbsp;case.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.60</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.Seekable.html">GSeekable</a> (5)</h5><div class="docblock">
+          
+            <h6><a href="method.Seekable.can_seek.html">g_seekable_can_seek</a></h6><div class="docblock">
+              <p>Tests if the stream supports the <code>GSeekableIface</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.can_truncate.html">g_seekable_can_truncate</a></h6><div class="docblock">
+              <p>Tests if the length of the stream can be adjusted with&nbsp;g_seekable_truncate().</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.seek.html">g_seekable_seek</a></h6><div class="docblock">
+              <p>Seeks in the stream by the given <code>offset</code>, modified by <code>type</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.tell.html">g_seekable_tell</a></h6><div class="docblock">
+              <p>Tells the current position within the&nbsp;stream.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.truncate.html">g_seekable_truncate</a></h6><div class="docblock">
+              <p>Sets the length of the stream to <code>offset</code>. If the stream was previously
+larger than <code>offset</code>, the extra data is discarded. If the stream was
+previously shorter than <code>offset</code>, it is extended with <span class="caps">NUL</span> (‘\0’)&nbsp;bytes.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.MemoryOutputStream.data.html">Gio.MemoryOutputStream:data</a></h6>
+          <div class="docblock">
+            <p>Pointer to buffer where data will be&nbsp;written.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.MemoryOutputStream.data-size.html">Gio.MemoryOutputStream:data-size</a></h6>
+          <div class="docblock">
+            <p>Size of data written to the&nbsp;buffer.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.MemoryOutputStream.destroy-function.html">Gio.MemoryOutputStream:destroy-function</a></h6>
+          <div class="docblock">
+            <p>Function called with the buffer as argument when the stream is&nbsp;destroyed.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.MemoryOutputStream.realloc-function.html">Gio.MemoryOutputStream:realloc-function</a></h6>
+          <div class="docblock">
+            <p>Function with realloc semantics called to enlarge the&nbsp;buffer.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.MemoryOutputStream.size.html">Gio.MemoryOutputStream:size</a></h6>
+          <div class="docblock">
+            <p>Current size of the data&nbsp;buffer.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+        
+      
+
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioMemoryOutputStreamClass {
+  GOutputStreamClass parent_class;
+  void (* _g_reserved1) (
+void
+  );
+  void (* _g_reserved2) (
+void
+  );
+  void (* _g_reserved3) (
+void
+  );
+  void (* _g_reserved4) (
+void
+  );
+  void (* _g_reserved5) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GOutputStreamClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved1: void (* _g_reserved1) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved2: void (* _g_reserved2) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved3: void (* _g_reserved3) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved4: void (* _g_reserved4) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved5: void (* _g_reserved5) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.MemoryOutputStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:48:35 GMT --></html>

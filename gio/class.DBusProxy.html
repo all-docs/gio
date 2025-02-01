@@ -1,0 +1,893 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.DBusProxy.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:44:16 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.DBusProxy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.DBusProxy">
+  <meta property="og:description" content="Reference for Gio.DBusProxy">
+  <meta name="twitter:title" content="Gio.DBusProxy">
+  <meta name="twitter:description" content="Reference for Gio.DBusProxy">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>DBusProxy</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.26</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdbusproxy.c#L49">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.DBusProxy : GObject.Object
+  implements Gio.AsyncInitable, Gio.DBusInterface, Gio.Initable {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GDBusProxy</code> is a base class used for proxies to access a D-Bus
+interface on a remote object. A <code>GDBusProxy</code> can be constructed for
+both well-known and unique&nbsp;names.</p>
+<p>By default, <code>GDBusProxy</code> will cache all properties (and listen to
+changes) of the remote object, and proxy all signals that get
+emitted. This behaviour can be changed by passing suitable
+<a href="flags.DBusProxyFlags.html"><code>GDBusProxyFlags</code></a> when the proxy is created. If the proxy is for a
+well-known name, the property cache is flushed when the name owner
+vanishes and reloaded when a name owner&nbsp;appears.</p>
+<p>The unique name owner of the proxy’s name is tracked and can be read from
+<a href="property.DBusProxy.g-name-owner.html"><code>GDBusProxy:g-name-owner</code></a>. Connect to the
+<a href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html" class="external"><code>GObject::notify</code></a> signal to get notified of changes.
+Additionally, only signals and property changes emitted from the current name
+owner are considered and calls are always sent to the current name owner.
+This avoids a number of race conditions when the name is lost by one owner
+and claimed by another. However, if no name owner currently exists,
+then calls will be sent to the well-known name which may result in
+the message bus launching an owner (unless
+<code>G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START</code> is&nbsp;set).</p>
+<p>If the proxy is for a stateless D-Bus service, where the name owner may
+be started and stopped between calls, the
+<a href="property.DBusProxy.g-name-owner.html"><code>GDBusProxy:g-name-owner</code></a> tracking of <code>GDBusProxy</code> will cause the
+proxy to drop signal and property changes from the service after it has
+restarted for the first time. When interacting with a stateless D-Bus
+service, do not use <code>GDBusProxy</code> — use direct D-Bus method calls and signal&nbsp;connections.</p>
+<p>The generic <a href="signal.DBusProxy.g-properties-changed.html"><code>GDBusProxy::g-properties-changed</code></a> and
+<a href="signal.DBusProxy.g-signal.html"><code>GDBusProxy::g-signal</code></a> signals are not very convenient to work
+with. Therefore, the recommended way of working with proxies is to subclass
+<code>GDBusProxy</code>, and have more natural properties and signals in your derived
+class. This <a href="migrating-gdbus.html#using-gdbus-codegen">example</a> shows how
+this can easily be done using the <a href="gdbus-codegen.html"><code>gdbus-codegen</code></a>&nbsp;tool.</p>
+<p>A <code>GDBusProxy</code> instance can be used from multiple threads but note
+that all signals (e.g. <a href="signal.DBusProxy.g-signal.html"><code>GDBusProxy::g-signal</code></a>,
+<a href="signal.DBusProxy.g-properties-changed.html"><code>GDBusProxy::g-properties-changed</code></a> and
+<a href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html" class="external"><code>GObject::notify</code></a>) are emitted in the thread-default main
+context (see <a href="javascript:void(0)" data-namespace="GLib" data-link="method.MainContext.push_thread_default.html" class="external"><code>g_main_context_push_thread_default()</code></a>) of the thread
+where the instance was&nbsp;constructed.</p>
+<p>An example using a proxy for a well-known name can be found in
+<a href="https://gitlab.gnome.org/GNOME/glib/-/blob/HEAD/gio/tests/gdbus-example-watch-proxy.c"><code>gdbus-example-watch-proxy.c</code></a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.26</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.AsyncInitable.html" title="AsyncInitable">GAsyncInitable</a></li>
+          
+        
+          
+          <li class="interface"><a href="iface.DBusInterface.html" title="DBusInterface">GDBusInterface</a></li>
+          
+        
+          
+          <li class="interface"><a href="iface.Initable.html" title="Initable">GInitable</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.DBusProxy.new_finish.html">g_dbus_proxy_new_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes creating a <code>GDBusProxy</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DBusProxy.new_for_bus_finish.html">g_dbus_proxy_new_for_bus_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes creating a <code>GDBusProxy</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DBusProxy.new_for_bus_sync.html">g_dbus_proxy_new_for_bus_sync</a></h6>
+          <div class="docblock">
+            <p>Like <code>g_dbus_proxy_new_sync()</code> but takes a <code>GBusType</code> instead of a <code>GDBusConnection</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DBusProxy.new_sync.html">g_dbus_proxy_new_sync</a></h6>
+          <div class="docblock">
+            <p>Creates a proxy for accessing <code>interface_name</code> on the remote object
+at <code>object_path</code> owned by <code>name</code> at <code>connection</code> and synchronously
+loads D-Bus properties unless the
+<code>G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES</code> flag is&nbsp;used.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.DBusProxy.new.html">g_dbus_proxy_new</a></h6>
+        <div class="docblock">
+          <p>Creates a proxy for accessing <code>interface_name</code> on the remote object
+at <code>object_path</code> owned by <code>name</code> at <code>connection</code> and asynchronously
+loads D-Bus properties unless the
+<code>G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES</code> flag is used. Connect to
+the <code>GDBusProxy::g-properties-changed</code> signal to get notified about
+property&nbsp;changes.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.26</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.DBusProxy.new_for_bus.html">g_dbus_proxy_new_for_bus</a></h6>
+        <div class="docblock">
+          <p>Like <code>g_dbus_proxy_new()</code> but takes a <code>GBusType</code> instead of a <code>GDBusConnection</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.26</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.call.html">g_dbus_proxy_call</a></h6>
+          <div class="docblock">
+            <p>Asynchronously invokes the <code>method_name</code> method on <code>proxy</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.call_finish.html">g_dbus_proxy_call_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with&nbsp;g_dbus_proxy_call().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.call_sync.html">g_dbus_proxy_call_sync</a></h6>
+          <div class="docblock">
+            <p>Synchronously invokes the <code>method_name</code> method on <code>proxy</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.call_with_unix_fd_list.html">g_dbus_proxy_call_with_unix_fd_list</a></h6>
+          <div class="docblock">
+            <p>Like <code>g_dbus_proxy_call()</code> but also takes a <code>GUnixFDList</code> object.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.call_with_unix_fd_list_finish.html">g_dbus_proxy_call_with_unix_fd_list_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with&nbsp;g_dbus_proxy_call_with_unix_fd_list().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.call_with_unix_fd_list_sync.html">g_dbus_proxy_call_with_unix_fd_list_sync</a></h6>
+          <div class="docblock">
+            <p>Like <code>g_dbus_proxy_call_sync()</code> but also takes and returns <code>GUnixFDList</code> objects.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.get_cached_property.html">g_dbus_proxy_get_cached_property</a></h6>
+          <div class="docblock">
+            <p>Looks up the value for a property from the cache. This call does no
+blocking <span class="caps">IO</span>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.get_cached_property_names.html">g_dbus_proxy_get_cached_property_names</a></h6>
+          <div class="docblock">
+            <p>Gets the names of all cached properties on <code>proxy</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.get_connection.html">g_dbus_proxy_get_connection</a></h6>
+          <div class="docblock">
+            <p>Gets the connection <code>proxy</code> is&nbsp;for.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.get_default_timeout.html">g_dbus_proxy_get_default_timeout</a></h6>
+          <div class="docblock">
+            <p>Gets the timeout to use if -1 (specifying default timeout) is
+passed as <code>timeout_msec</code> in the <code>g_dbus_proxy_call()</code> and
+<code>g_dbus_proxy_call_sync()</code> functions.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.get_flags.html">g_dbus_proxy_get_flags</a></h6>
+          <div class="docblock">
+            <p>Gets the flags that <code>proxy</code> was constructed&nbsp;with.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.get_interface_info.html">g_dbus_proxy_get_interface_info</a></h6>
+          <div class="docblock">
+            <p>Returns the <code>GDBusInterfaceInfo</code>, if any, specifying the interface
+that <code>proxy</code> conforms to. See the <code>GDBusProxy:g-interface-info</code>
+property for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.get_interface_name.html">g_dbus_proxy_get_interface_name</a></h6>
+          <div class="docblock">
+            <p>Gets the D-Bus interface name <code>proxy</code> is&nbsp;for.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.get_name.html">g_dbus_proxy_get_name</a></h6>
+          <div class="docblock">
+            <p>Gets the name that <code>proxy</code> was constructed&nbsp;for.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.get_name_owner.html">g_dbus_proxy_get_name_owner</a></h6>
+          <div class="docblock">
+            <p>The unique name that owns the name that <code>proxy</code> is for or <code>NULL</code> if
+no-one currently owns that name. You may connect to the
+<code>GObject::notify</code> signal to track changes to the
+<code>GDBusProxy:g-name-owner</code> property.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.get_object_path.html">g_dbus_proxy_get_object_path</a></h6>
+          <div class="docblock">
+            <p>Gets the object path <code>proxy</code> is&nbsp;for.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.set_cached_property.html">g_dbus_proxy_set_cached_property</a></h6>
+          <div class="docblock">
+            <p>If <code>value</code> is not <code>NULL</code>, sets the cached value for the property with
+name <code>property_name</code> to the value in <code>value</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.set_default_timeout.html">g_dbus_proxy_set_default_timeout</a></h6>
+          <div class="docblock">
+            <p>Sets the timeout to use if -1 (specifying default timeout) is
+passed as <code>timeout_msec</code> in the <code>g_dbus_proxy_call()</code> and
+<code>g_dbus_proxy_call_sync()</code> functions.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusProxy.set_interface_info.html">g_dbus_proxy_set_interface_info</a></h6>
+          <div class="docblock">
+            <p>Ensure that interactions with <code>proxy</code> conform to the given
+interface. See the <code>GDBusProxy:g-interface-info</code> property for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.AsyncInitable.html">GAsyncInitable</a> (3)</h5><div class="docblock">
+          
+            <h6><a href="method.AsyncInitable.init_async.html">g_async_initable_init_async</a></h6><div class="docblock">
+              <p>Starts asynchronous initialization of the object implementing the
+interface. This must be done before any real use of the object after
+initial construction. If the object also implements <code>GInitable</code> you can
+optionally call <code>g_initable_init()</code> instead.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.AsyncInitable.init_finish.html">g_async_initable_init_finish</a></h6><div class="docblock">
+              <p>Finishes asynchronous initialization and returns the result.
+See&nbsp;g_async_initable_init_async().</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.AsyncInitable.new_finish.html">g_async_initable_new_finish</a></h6><div class="docblock">
+              <p>Finishes the async construction for the various g_async_initable_new
+calls, returning the created object or <code>NULL</code> on&nbsp;error.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.DBusInterface.html">GDBusInterface</a> (4)</h5><div class="docblock">
+          
+            <h6><a href="method.DBusInterface.dup_object.html">g_dbus_interface_dup_object</a></h6><div class="docblock">
+              <p>Gets the <code>GDBusObject</code> that <code>interface_</code> belongs to, if&nbsp;any.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.32</span></p>
+            </div>
+            
+            <h6><a href="method.DBusInterface.get_info.html">g_dbus_interface_get_info</a></h6><div class="docblock">
+              <p>Gets D-Bus introspection information for the D-Bus interface
+implemented by <code>interface_</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="method.DBusInterface.get_object.html">g_dbus_interface_get_object</a></h6><div class="docblock">
+              <p>Gets the <code>GDBusObject</code> that <code>interface_</code> belongs to, if&nbsp;any.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="method.DBusInterface.set_object.html">g_dbus_interface_set_object</a></h6><div class="docblock">
+              <p>Sets the <code>GDBusObject</code> for <code>interface_</code> to <code>object</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.Initable.html">GInitable</a> (1)</h5><div class="docblock">
+          
+            <h6><a href="method.Initable.init.html">g_initable_init</a></h6><div class="docblock">
+              <p>Initializes the object implementing the&nbsp;interface.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.DBusProxy.g-bus-type.html">Gio.DBusProxy:g-bus-type</a></h6>
+          <div class="docblock">
+            <p>If this property is not <code>G_BUS_TYPE_NONE</code>, then
+<code>GDBusProxy:g-connection</code> must be <code>NULL</code> and will be set to the
+<code>GDBusConnection</code> obtained by calling <code>g_bus_get()</code> with the value
+of this&nbsp;property.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusProxy.g-connection.html">Gio.DBusProxy:g-connection</a></h6>
+          <div class="docblock">
+            <p>The <code>GDBusConnection</code> the proxy is&nbsp;for.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusProxy.g-default-timeout.html">Gio.DBusProxy:g-default-timeout</a></h6>
+          <div class="docblock">
+            <p>The timeout to use if -1 (specifying default timeout) is passed
+as <code>timeout_msec</code> in the <code>g_dbus_proxy_call()</code> and
+<code>g_dbus_proxy_call_sync()</code> functions.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusProxy.g-flags.html">Gio.DBusProxy:g-flags</a></h6>
+          <div class="docblock">
+            <p>Flags from the <code>GDBusProxyFlags</code> enumeration.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusProxy.g-interface-info.html">Gio.DBusProxy:g-interface-info</a></h6>
+          <div class="docblock">
+            <p>Ensure that interactions with this proxy conform to the given
+interface. This is mainly to ensure that malformed data received
+from the other peer is ignored. The given <code>GDBusInterfaceInfo</code> is
+said to be the “expected&nbsp;interface”.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusProxy.g-interface-name.html">Gio.DBusProxy:g-interface-name</a></h6>
+          <div class="docblock">
+            <p>The D-Bus interface name the proxy is&nbsp;for.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusProxy.g-name.html">Gio.DBusProxy:g-name</a></h6>
+          <div class="docblock">
+            <p>The well-known or unique name that the proxy is&nbsp;for.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusProxy.g-name-owner.html">Gio.DBusProxy:g-name-owner</a></h6>
+          <div class="docblock">
+            <p>The unique name that owns <code>GDBusProxy:g-name</code> or <code>NULL</code> if no-one
+currently owns that name. You may connect to <code>GObject::notify</code> signal to
+track changes to this&nbsp;property.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusProxy.g-object-path.html">Gio.DBusProxy:g-object-path</a></h6>
+          <div class="docblock">
+            <p>The object path the proxy is&nbsp;for.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+        
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.DBusProxy.g-properties-changed.html">Gio.DBusProxy::g-properties-changed</a></h6>
+          <div class="docblock">
+            <p>Emitted when one or more D-Bus properties on <code>proxy</code> changes. The
+local cache has already been updated when this signal fires. Note
+that both <code>changed_properties</code> and <code>invalidated_properties</code> are
+guaranteed to never be <code>NULL</code> (either may be empty&nbsp;though).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.DBusProxy.g-signal.html">Gio.DBusProxy::g-signal</a></h6>
+          <div class="docblock">
+            <p>Emitted when a signal from the remote object and interface that <code>proxy</code> is for, has been&nbsp;received.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioDBusProxyClass {
+  void (* g_properties_changed) (
+    GDBusProxy* proxy,
+    GVariant* changed_properties,
+    const gchar* const* invalidated_properties
+  );
+  void (* g_signal) (
+    GDBusProxy* proxy,
+    const gchar* sender_name,
+    const gchar* signal_name,
+    GVariant* parameters
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>Class structure for <code>GDBusProxy</code>.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>g_properties_changed: void (* g_properties_changed) (
+    GDBusProxy* proxy,
+    GVariant* changed_properties,
+    const gchar* const* invalidated_properties
+  )</code></dt>
+          <dd><p>Signal class handler for the <code>GDBusProxy::g-properties-changed</code> signal.</p></dd>
+        
+          <dt><code>g_signal: void (* g_signal) (
+    GDBusProxy* proxy,
+    const gchar* sender_name,
+    const gchar* signal_name,
+    GVariant* parameters
+  )</code></dt>
+          <dd><p>Signal class handler for the <code>GDBusProxy::g-signal</code> signal.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-g_properties_changed"><a href="vfunc.DBusProxy.g_properties_changed.html">Gio.DBusProxyClass.g_properties_changed</a></h6>
+        <div class="docblock">
+          <p>Signal class handler for the <code>GDBusProxy::g-properties-changed</code> signal.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-g_signal"><a href="vfunc.DBusProxy.g_signal.html">Gio.DBusProxyClass.g_signal</a></h6>
+        <div class="docblock">
+          <p>Signal class handler for the <code>GDBusProxy::g-signal</code> signal.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.DBusProxy.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:44:39 GMT --></html>

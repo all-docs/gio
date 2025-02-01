@@ -1,0 +1,293 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/callback.DBusInterfaceMethodCallFunc.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:08 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.DBusInterfaceMethodCallFunc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.DBusInterfaceMethodCallFunc">
+  <meta property="og:description" content="Reference for Gio.DBusInterfaceMethodCallFunc">
+  <meta name="twitter:title" content="Gio.DBusInterfaceMethodCallFunc">
+  <meta name="twitter:description" content="Reference for Gio.DBusInterfaceMethodCallFunc">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Function </h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span>DBusInterfaceMethodCallFunc</h1>
+  </header>
+
+  <section>
+    <div class="docblock">
+      <p><span class="emblem available">since: 2.26</span></p>
+    </div>
+    <div class="declaration toggle-wrapper">
+      <h4 id="declaration" style="display:flex;">
+        Declaration
+        <a href="#declaration" class="anchor"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">GDBusInterfaceMethodCallFunc</span><span class="p">)</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">GDBusConnection</span><span class="o">*</span><span class="w"> </span><span class="n">connection</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">object_path</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">interface_name</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">method_name</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GVariant</span><span class="o">*</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GDBusMethodInvocation</span><span class="o">*</span><span class="w"> </span><span class="n">invocation</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">user_data</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 id="description" style="display:flex;">
+        Description
+        <a href="#description" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdbusconnection.h#L265">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>The type of the <code>method_call</code> function in <code>GDBusInterfaceVTable</code>.</p>
+<p><code>interface_name</code> may be <code>NULL</code> if not specified by the sender, although it’s
+encouraged for the sender to set it. If unset, and the object has only one
+method (across all interfaces) matching <code>method_name</code>, that method is invoked.
+Otherwise, behaviour is implementation defined. See the
+<a href="https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-types-method">D-Bus specification</a>.
+It is recommended to return <a href="error.DBusError.html#unknown-method"><code>G_DBUS_ERROR_UNKNOWN_METHOD</code></a>.</p>
+      </div>
+
+      <div class="docblock">
+        
+        <p>Available since: 2.26</p>
+        
+        
+        
+        
+        
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>connection</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.DBusConnection.html"><code>GDBusConnection</code></a></p>
+            <p>A <code>GDBusConnection</code>.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tbody><tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>sender</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>const gchar*</code></p>
+            <p>The unique bus name of the remote caller, or <code>NULL</code> if
+    not specified by the caller, e.g. on peer-to-peer&nbsp;connections.</p>
+            <table>
+            
+            <tbody><tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            <tr><td>The value is a NUL terminated UTF-8 string.</td></tr>
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>object_path</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>const gchar*</code></p>
+            <p>The object path that the method was invoked&nbsp;on.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tbody><tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            <tr><td>The value is a NUL terminated UTF-8 string.</td></tr>
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>interface_name</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>const gchar*</code></p>
+            <p>The D-Bus interface name the method was invoked on,
+    or <code>NULL</code> if not specified by the&nbsp;sender.</p>
+            <table>
+            
+            <tbody><tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            <tr><td>The value is a NUL terminated UTF-8 string.</td></tr>
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>method_name</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>const gchar*</code></p>
+            <p>The name of the method that was&nbsp;invoked.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tbody><tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            <tr><td>The value is a NUL terminated UTF-8 string.</td></tr>
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>parameters</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-link="struct.Variant.html" data-namespace="GLib" class="external"><code>GVariant</code></a></p>
+            <p>A <code>GVariant</code> tuple with&nbsp;parameters.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tbody><tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>invocation</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.DBusMethodInvocation.html"><code>GDBusMethodInvocation</code></a></p>
+            <p>A <code>GDBusMethodInvocation</code> object that must be used to return a value or&nbsp;error.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tbody><tr><td title="transfer: full">The called function takes ownership of the data, and is responsible for freeing it.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>user_data</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>gpointer</code></p>
+            <p>The <code>user_data</code> #gpointer passed to&nbsp;g_dbus_connection_register_object().</p>
+            <table>
+            
+            <tbody><tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+
+          
+        </dl>
+      </div>
+    </div>
+    
+
+    
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/callback.DBusInterfaceMethodCallFunc.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:08 GMT --></html>

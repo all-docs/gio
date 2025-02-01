@@ -1,0 +1,1216 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/iface.Volume.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:05:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.Volume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.Volume"/>
+  <meta property="og:description" content="Reference for Gio.Volume"/>
+  <meta name="twitter:title" content="Gio.Volume"/>
+  <meta name="twitter:description" content="Reference for Gio.Volume"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="iface.Volume.html#description">Volume</a>
+  </div>
+</div>
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.Volume.can_eject.html">can_eject</a>
+  
+    <a class="method" href="method.Volume.can_mount.html">can_mount</a>
+  
+    <a class="method" href="method.Volume.eject.html">eject</a>
+  
+    <a class="method" href="method.Volume.eject_finish.html">eject_finish</a>
+  
+    <a class="method" href="method.Volume.eject_with_operation.html">eject_with_operation</a>
+  
+    <a class="method" href="method.Volume.eject_with_operation_finish.html">eject_with_operation_finish</a>
+  
+    <a class="method" href="method.Volume.enumerate_identifiers.html">enumerate_identifiers</a>
+  
+    <a class="method" href="method.Volume.get_activation_root.html">get_activation_root</a>
+  
+    <a class="method" href="method.Volume.get_drive.html">get_drive</a>
+  
+    <a class="method" href="method.Volume.get_icon.html">get_icon</a>
+  
+    <a class="method" href="method.Volume.get_identifier.html">get_identifier</a>
+  
+    <a class="method" href="method.Volume.get_mount.html">get_mount</a>
+  
+    <a class="method" href="method.Volume.get_name.html">get_name</a>
+  
+    <a class="method" href="method.Volume.get_sort_key.html">get_sort_key</a>
+  
+    <a class="method" href="method.Volume.get_symbolic_icon.html">get_symbolic_icon</a>
+  
+    <a class="method" href="method.Volume.get_uuid.html">get_uuid</a>
+  
+    <a class="method" href="method.Volume.mount.html">mount</a>
+  
+    <a class="method" href="method.Volume.mount_finish.html">mount_finish</a>
+  
+    <a class="method" href="method.Volume.should_automount.html">should_automount</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.Volume.changed.html">changed</a>
+  
+    <a class="signal" href="signal.Volume.removed.html">removed</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.Volume.can_eject.html">can_eject</a>
+  
+    <a class="method" href="vfunc.Volume.can_mount.html">can_mount</a>
+  
+    <a class="method" href="vfunc.Volume.changed.html">changed</a>
+  
+    <a class="method" href="vfunc.Volume.eject.html">eject</a>
+  
+    <a class="method" href="vfunc.Volume.eject_finish.html">eject_finish</a>
+  
+    <a class="method" href="vfunc.Volume.eject_with_operation.html">eject_with_operation</a>
+  
+    <a class="method" href="vfunc.Volume.eject_with_operation_finish.html">eject_with_operation_finish</a>
+  
+    <a class="method" href="vfunc.Volume.enumerate_identifiers.html">enumerate_identifiers</a>
+  
+    <a class="method" href="vfunc.Volume.get_activation_root.html">get_activation_root</a>
+  
+    <a class="method" href="vfunc.Volume.get_drive.html">get_drive</a>
+  
+    <a class="method" href="vfunc.Volume.get_icon.html">get_icon</a>
+  
+    <a class="method" href="vfunc.Volume.get_identifier.html">get_identifier</a>
+  
+    <a class="method" href="vfunc.Volume.get_mount.html">get_mount</a>
+  
+    <a class="method" href="vfunc.Volume.get_name.html">get_name</a>
+  
+    <a class="method" href="vfunc.Volume.get_sort_key.html">get_sort_key</a>
+  
+    <a class="method" href="vfunc.Volume.get_symbolic_icon.html">get_symbolic_icon</a>
+  
+    <a class="method" href="vfunc.Volume.get_uuid.html">get_uuid</a>
+  
+    <a class="method" href="vfunc.Volume.mount_finish.html">mount_finish</a>
+  
+    <a class="method" href="vfunc.Volume.mount_fn.html">mount_fn</a>
+  
+    <a class="method" href="vfunc.Volume.removed.html">removed</a>
+  
+    <a class="method" href="vfunc.Volume.should_automount.html">should_automount</a>
+  
+  </div>
+</div>
+
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Interface</h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span>Volume</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gvolume.c#L34">[src]</a>
+          
+        </h4>
+
+        <pre><code>interface Gio.Volume : GObject.Object</code></pre>
+
+        <div class="docblock">
+          <p>The <code>GVolume</code> interface represents user-visible objects that can be
+mounted. For example, a file system partition on a <span class="caps">USB</span> flash drive, or an
+optical disc inserted into a disc&nbsp;drive.</p>
+<p>If a <code>GVolume</code> is currently mounted, the corresponding <a href="iface.Mount.html"><code>GMount</code></a> can
+be retrieved using <a href="method.Volume.get_mount.html"><code>g_volume_get_mount()</code></a>.</p>
+<p>Mounting a <code>GVolume</code> instance is an asynchronous operation. For more
+information about asynchronous operations, see <a href="iface.AsyncResult.html"><code>GAsyncResult</code></a> and
+<a href="class.Task.html"><code>GTask</code></a>. To mount a <code>GVolume</code>, first call <a href="method.Volume.mount.html"><code>g_volume_mount()</code></a>
+with (at least) the <code>GVolume</code> instance, optionally a
+<a href="class.MountOperation.html"><code>GMountOperation</code></a> object and a <a href="callback.AsyncReadyCallback.html"><code>GAsyncReadyCallback</code></a>.</p>
+<p>Typically, one will only want to pass <code>NULL</code> for the
+<a href="class.MountOperation.html"><code>GMountOperation</code></a> if automounting all volumes when a desktop session
+starts since it’s not desirable to put up a lot of dialogs asking
+for&nbsp;credentials.</p>
+<p>The callback will be fired when the operation has resolved (either
+with success or failure), and a <a href="iface.AsyncResult.html"><code>GAsyncResult</code></a> instance will be
+passed to the callback.  That callback should then call
+<a href="method.Volume.mount_finish.html"><code>g_volume_mount_finish()</code></a> with the <code>GVolume</code> instance and the
+<a href="iface.AsyncResult.html"><code>GAsyncResult</code></a> data to see if the operation was completed
+successfully.  If a <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Error.html" class="external"><code>GError</code></a> is present when
+<a href="method.Volume.mount_finish.html"><code>g_volume_mount_finish()</code></a> is called, then it will be filled with any
+error&nbsp;information.</p>
+<p>Note, when <a href="migrating-gnome-vfs.html">porting from GnomeVFS</a>,
+<code>GVolume</code> is the moral equivalent of <code>GnomeVFSDrive</code>.</p>
+<h2 id="volume-identifiers">Volume Identifiers<a class="md-anchor" href="#volume-identifiers" title="Permanent link"></a></h2>
+<p>It is sometimes necessary to directly access the underlying
+operating system object behind a volume (e.g. for passing a volume
+to an application via the command line). For this purpose, <span class="caps">GIO</span>
+allows to obtain an ‘identifier’ for the volume. There can be
+different kinds of identifiers, such as Hal UDIs, filesystem labels,
+traditional Unix devices (e.g. <code>/dev/sda2</code>), UUIDs. <span class="caps">GIO</span> uses predefined
+strings as names for the different kinds of identifiers:
+<code>G_VOLUME_IDENTIFIER_KIND_UUID</code>, <code>G_VOLUME_IDENTIFIER_KIND_LABEL</code>, etc.
+Use <a href="method.Volume.get_identifier.html"><code>g_volume_get_identifier()</code></a> to obtain an identifier for a&nbsp;volume.</p>
+<p>Note that <code>G_VOLUME_IDENTIFIER_KIND_HAL_UDI</code> will only be available
+when the <span class="caps">GVFS</span> hal volume monitor is in use. Other volume monitors
+will generally be able to provide the <code>G_VOLUME_IDENTIFIER_KIND_UNIX_DEVICE</code>
+identifier, which can be used to obtain a hal device by means of
+<code>libhal_manager_find_device_string_match()</code>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    <div class="toggle-wrapper prerequisite">
+      <h4 id="prerequisite">
+        Prerequisite
+        <a href="#prerequisite" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <p>In order to implement Volume, your type must inherit from<a data-namespace="GObject" data-link="class.Object.html" href="javascript:void(0)" class="external"><code>GObject</code></a>.</p>
+      </div>
+    </div>
+
+    
+
+    
+
+    
+    <div class="methods toggle-wrapper">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.Volume.can_eject.html">g_volume_can_eject</a></h6>
+          <div class="docblock">
+            <p>Checks if a volume can be&nbsp;ejected.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.can_mount.html">g_volume_can_mount</a></h6>
+          <div class="docblock">
+            <p>Checks if a volume can be&nbsp;mounted.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.Volume.eject.html">g_volume_eject</a></h6>
+          <div class="docblock">
+            <p>Ejects a volume. This is an asynchronous operation, and is
+finished by calling <code>g_volume_eject_finish()</code> with the <code>volume</code>
+and <code>GAsyncResult</code> returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.Volume.eject_finish.html">g_volume_eject_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes ejecting a volume. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.eject_with_operation.html">g_volume_eject_with_operation</a></h6>
+          <div class="docblock">
+            <p>Ejects a volume. This is an asynchronous operation, and is
+finished by calling <code>g_volume_eject_with_operation_finish()</code> with the <code>volume</code>
+and <code>GAsyncResult</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.eject_with_operation_finish.html">g_volume_eject_with_operation_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes ejecting a volume. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.enumerate_identifiers.html">g_volume_enumerate_identifiers</a></h6>
+          <div class="docblock">
+            <p>Gets the kinds of <a href="#volume-identifiers">identifiers</a> that <code>volume</code> has.
+Use <code>g_volume_get_identifier()</code> to obtain the identifiers&nbsp;themselves.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.get_activation_root.html">g_volume_get_activation_root</a></h6>
+          <div class="docblock">
+            <p>Gets the activation root for a <code>GVolume</code> if it is known ahead of
+mount time. Returns <code>NULL</code> otherwise. If not <code>NULL</code> and if <code>volume</code>
+is mounted, then the result of <code>g_mount_get_root()</code> on the
+<code>GMount</code> object obtained from <code>g_volume_get_mount()</code> will always
+either be equal or a prefix of what this function returns. In
+other words, in&nbsp;code.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.18</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.get_drive.html">g_volume_get_drive</a></h6>
+          <div class="docblock">
+            <p>Gets the drive for the <code>volume</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.get_icon.html">g_volume_get_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the icon for <code>volume</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.get_identifier.html">g_volume_get_identifier</a></h6>
+          <div class="docblock">
+            <p>Gets the identifier of the given kind for <code>volume</code>.
+See the <a href="#volume-identifiers">introduction</a> for more
+information about volume&nbsp;identifiers.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.get_mount.html">g_volume_get_mount</a></h6>
+          <div class="docblock">
+            <p>Gets the mount for the <code>volume</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.get_name.html">g_volume_get_name</a></h6>
+          <div class="docblock">
+            <p>Gets the name of <code>volume</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.get_sort_key.html">g_volume_get_sort_key</a></h6>
+          <div class="docblock">
+            <p>Gets the sort key for <code>volume</code>, if&nbsp;any.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.get_symbolic_icon.html">g_volume_get_symbolic_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the symbolic icon for <code>volume</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.get_uuid.html">g_volume_get_uuid</a></h6>
+          <div class="docblock">
+            <p>Gets the <span class="caps">UUID</span> for the <code>volume</code>. The reference is typically based on
+the file system <span class="caps">UUID</span> for the volume in question and should be
+considered an opaque string. Returns <code>NULL</code> if there is no <span class="caps">UUID</span>&nbsp;available.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.mount.html">g_volume_mount</a></h6>
+          <div class="docblock">
+            <p>Mounts a volume. This is an asynchronous operation, and is
+finished by calling <code>g_volume_mount_finish()</code> with the <code>volume</code>
+and <code>GAsyncResult</code> returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.mount_finish.html">g_volume_mount_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes mounting a volume. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Volume.should_automount.html">g_volume_should_automount</a></h6>
+          <div class="docblock">
+            <p>Returns whether the volume should be automatically&nbsp;mounted.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+
+    </div>
+    
+
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.Volume.changed.html">Gio.Volume::changed</a></h6>
+          <div class="docblock">
+            <p>Emitted when the volume has been&nbsp;changed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Volume.removed.html">Gio.Volume::removed</a></h6>
+          <div class="docblock">
+            <p>This signal is emitted when the <code>GVolume</code> have been removed. If
+the recipient is holding references to the object they should
+release them so the object can be&nbsp;finalized.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="interface toggle-wrapper default-hide">
+      <h4 style="display:flex;" id="interface-struct">
+        Interface structure
+        <a href="#interface-struct" class="anchor"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioVolumeIface {
+  GTypeInterface g_iface;
+  void (* changed) (
+    GVolume* volume
+  );
+  void (* removed) (
+    GVolume* volume
+  );
+  char* (* get_name) (
+    GVolume* volume
+  );
+  GIcon* (* get_icon) (
+    GVolume* volume
+  );
+  char* (* get_uuid) (
+    GVolume* volume
+  );
+  GDrive* (* get_drive) (
+    GVolume* volume
+  );
+  GMount* (* get_mount) (
+    GVolume* volume
+  );
+  gboolean (* can_mount) (
+    GVolume* volume
+  );
+  gboolean (* can_eject) (
+    GVolume* volume
+  );
+  void (* mount_fn) (
+    GVolume* volume,
+    GMountMountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* mount_finish) (
+    GVolume* volume,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* eject) (
+    GVolume* volume,
+    GMountUnmountFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* eject_finish) (
+    GVolume* volume,
+    GAsyncResult* result,
+    GError** error
+  );
+  char* (* get_identifier) (
+    GVolume* volume,
+    const char* kind
+  );
+  char** (* enumerate_identifiers) (
+    GVolume* volume
+  );
+  gboolean (* should_automount) (
+    GVolume* volume
+  );
+  GFile* (* get_activation_root) (
+    GVolume* volume
+  );
+  void (* eject_with_operation) (
+    GVolume* volume,
+    GMountUnmountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* eject_with_operation_finish) (
+    GVolume* volume,
+    GAsyncResult* result,
+    GError** error
+  );
+  const gchar* (* get_sort_key) (
+    GVolume* volume
+  );
+  GIcon* (* get_symbolic_icon) (
+    GVolume* volume
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>Interface for implementing operations for mountable&nbsp;volumes.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Interface members</h6>
+
+        <table>
+        
+        <tr>
+          <td style="vertical-align:top"><code>g_iface</code></td>
+          <td style="vertical-align:top"><pre><code>GTypeInterface</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The parent&nbsp;interface.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>changed</code></td>
+          <td style="vertical-align:top"><pre><code>void (* changed) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Changed signal that is emitted when the volume&#8217;s state has&nbsp;changed.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>removed</code></td>
+          <td style="vertical-align:top"><pre><code>void (* removed) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The removed signal that is emitted when the <code>GVolume</code> have been removed. If the recipient is holding references to the object they should release them so the object can be&nbsp;finalized.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_name</code></td>
+          <td style="vertical-align:top"><pre><code>char* (* get_name) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a string containing the name of the <code>GVolume</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_icon</code></td>
+          <td style="vertical-align:top"><pre><code>GIcon* (* get_icon) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a <code>GIcon</code> for the <code>GVolume</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_uuid</code></td>
+          <td style="vertical-align:top"><pre><code>char* (* get_uuid) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets the <span class="caps">UUID</span> for the <code>GVolume</code>. The reference is typically based on the file system <span class="caps">UUID</span> for the mount in question and should be considered an opaque string. Returns <code>NULL</code> if there is no <span class="caps">UUID</span>&nbsp;available.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_drive</code></td>
+          <td style="vertical-align:top"><pre><code>GDrive* (* get_drive) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a <code>GDrive</code> the volume is located on. Returns <code>NULL</code> if the <code>GVolume</code> is not associated with a <code>GDrive</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_mount</code></td>
+          <td style="vertical-align:top"><pre><code>GMount* (* get_mount) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a <code>GMount</code> representing the mounted volume. Returns <code>NULL</code> if the <code>GVolume</code> is not&nbsp;mounted.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>can_mount</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* can_mount) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns <code>TRUE</code> if the <code>GVolume</code> can be&nbsp;mounted.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>can_eject</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* can_eject) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Checks if a <code>GVolume</code> can be&nbsp;ejected.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>mount_fn</code></td>
+          <td style="vertical-align:top"><pre><code>void (* mount_fn) (
+    GVolume* volume,
+    GMountMountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Mounts a given <code>GVolume</code>.
+    <code>GVolume</code> implementations must emit the <code>GMountOperation::aborted</code>
+    signal before completing a mount operation that is aborted while
+    awaiting input from the user through a <code>GMountOperation</code> instance.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>mount_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* mount_finish) (
+    GVolume* volume,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes a mount&nbsp;operation.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject</code></td>
+          <td style="vertical-align:top"><pre><code>void (* eject) (
+    GVolume* volume,
+    GMountUnmountFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Ejects a given <code>GVolume</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* eject_finish) (
+    GVolume* volume,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes an eject&nbsp;operation.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_identifier</code></td>
+          <td style="vertical-align:top"><pre><code>char* (* get_identifier) (
+    GVolume* volume,
+    const char* kind
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns the <a href="#volume-identifiers">identifier</a> of the given kind, or <code>NULL</code> if
+   the <code>GVolume</code> doesn&#8217;t have&nbsp;one.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>enumerate_identifiers</code></td>
+          <td style="vertical-align:top"><pre><code>char** (* enumerate_identifiers) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns an array strings listing the kinds
+   of <a href="#volume-identifiers">identifiers</a> which the <code>GVolume</code> has.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>should_automount</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* should_automount) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns <code>TRUE</code> if the <code>GVolume</code> should be automatically&nbsp;mounted.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_activation_root</code></td>
+          <td style="vertical-align:top"><pre><code>GFile* (* get_activation_root) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns the activation root for the <code>GVolume</code> if it is known in advance or <code>NULL</code> if
+  it is not&nbsp;known.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject_with_operation</code></td>
+          <td style="vertical-align:top"><pre><code>void (* eject_with_operation) (
+    GVolume* volume,
+    GMountUnmountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Starts ejecting a <code>GVolume</code> using a <code>GMountOperation</code>. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject_with_operation_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* eject_with_operation_finish) (
+    GVolume* volume,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes an eject operation using a <code>GMountOperation</code>. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_sort_key</code></td>
+          <td style="vertical-align:top"><pre><code>const gchar* (* get_sort_key) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a key used for sorting <code>GVolume</code> instance or <code>NULL</code> if no such key exists. Since&nbsp;2.32.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_symbolic_icon</code></td>
+          <td style="vertical-align:top"><pre><code>GIcon* (* get_symbolic_icon) (
+    GVolume* volume
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a symbolic <code>GIcon</code> for the <code>GVolume</code>. Since&nbsp;2.34.</p></td>
+        </tr>
+        
+        </table>
+      </div>
+      
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6 id="vfunc-can_eject"><a href="vfunc.Volume.can_eject.html">Gio.Volume.can_eject</a></h6>
+          <div class="docblock">
+            <p>Checks if a volume can be&nbsp;ejected.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-can_mount"><a href="vfunc.Volume.can_mount.html">Gio.Volume.can_mount</a></h6>
+          <div class="docblock">
+            <p>Checks if a volume can be&nbsp;mounted.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-changed"><a href="vfunc.Volume.changed.html">Gio.Volume.changed</a></h6>
+          <div class="docblock">
+            <p>Changed signal that is emitted when the volume&#8217;s state has&nbsp;changed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6 id="vfunc-eject"><a href="vfunc.Volume.eject.html">Gio.Volume.eject</a></h6>
+          <div class="docblock">
+            <p>Ejects a volume. This is an asynchronous operation, and is
+finished by calling <code>g_volume_eject_finish()</code> with the <code>volume</code>
+and <code>GAsyncResult</code> returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6 id="vfunc-eject_finish"><a href="vfunc.Volume.eject_finish.html">Gio.Volume.eject_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes ejecting a volume. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-eject_with_operation"><a href="vfunc.Volume.eject_with_operation.html">Gio.Volume.eject_with_operation</a></h6>
+          <div class="docblock">
+            <p>Ejects a volume. This is an asynchronous operation, and is
+finished by calling <code>g_volume_eject_with_operation_finish()</code> with the <code>volume</code>
+and <code>GAsyncResult</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-eject_with_operation_finish"><a href="vfunc.Volume.eject_with_operation_finish.html">Gio.Volume.eject_with_operation_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes ejecting a volume. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-enumerate_identifiers"><a href="vfunc.Volume.enumerate_identifiers.html">Gio.Volume.enumerate_identifiers</a></h6>
+          <div class="docblock">
+            <p>Gets the kinds of <a href="#volume-identifiers">identifiers</a> that <code>volume</code> has.
+Use <code>g_volume_get_identifier()</code> to obtain the identifiers&nbsp;themselves.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_activation_root"><a href="vfunc.Volume.get_activation_root.html">Gio.Volume.get_activation_root</a></h6>
+          <div class="docblock">
+            <p>Gets the activation root for a <code>GVolume</code> if it is known ahead of
+mount time. Returns <code>NULL</code> otherwise. If not <code>NULL</code> and if <code>volume</code>
+is mounted, then the result of <code>g_mount_get_root()</code> on the
+<code>GMount</code> object obtained from <code>g_volume_get_mount()</code> will always
+either be equal or a prefix of what this function returns. In
+other words, in&nbsp;code.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.18</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_drive"><a href="vfunc.Volume.get_drive.html">Gio.Volume.get_drive</a></h6>
+          <div class="docblock">
+            <p>Gets the drive for the <code>volume</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_icon"><a href="vfunc.Volume.get_icon.html">Gio.Volume.get_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the icon for <code>volume</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_identifier"><a href="vfunc.Volume.get_identifier.html">Gio.Volume.get_identifier</a></h6>
+          <div class="docblock">
+            <p>Gets the identifier of the given kind for <code>volume</code>.
+See the <a href="#volume-identifiers">introduction</a> for more
+information about volume&nbsp;identifiers.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_mount"><a href="vfunc.Volume.get_mount.html">Gio.Volume.get_mount</a></h6>
+          <div class="docblock">
+            <p>Gets the mount for the <code>volume</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_name"><a href="vfunc.Volume.get_name.html">Gio.Volume.get_name</a></h6>
+          <div class="docblock">
+            <p>Gets the name of <code>volume</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_sort_key"><a href="vfunc.Volume.get_sort_key.html">Gio.Volume.get_sort_key</a></h6>
+          <div class="docblock">
+            <p>Gets the sort key for <code>volume</code>, if&nbsp;any.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_symbolic_icon"><a href="vfunc.Volume.get_symbolic_icon.html">Gio.Volume.get_symbolic_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the symbolic icon for <code>volume</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_uuid"><a href="vfunc.Volume.get_uuid.html">Gio.Volume.get_uuid</a></h6>
+          <div class="docblock">
+            <p>Gets the <span class="caps">UUID</span> for the <code>volume</code>. The reference is typically based on
+the file system <span class="caps">UUID</span> for the volume in question and should be
+considered an opaque string. Returns <code>NULL</code> if there is no <span class="caps">UUID</span>&nbsp;available.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-mount_finish"><a href="vfunc.Volume.mount_finish.html">Gio.Volume.mount_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes mounting a volume. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-mount_fn"><a href="vfunc.Volume.mount_fn.html">Gio.Volume.mount_fn</a></h6>
+          <div class="docblock">
+            <p>Mounts a volume. This is an asynchronous operation, and is
+finished by calling <code>g_volume_mount_finish()</code> with the <code>volume</code>
+and <code>GAsyncResult</code> returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-removed"><a href="vfunc.Volume.removed.html">Gio.Volume.removed</a></h6>
+          <div class="docblock">
+            <p>The removed signal that is emitted when the <code>GVolume</code> have been removed. If the recipient is holding references to the object they should release them so the object can be&nbsp;finalized.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-should_automount"><a href="vfunc.Volume.should_automount.html">Gio.Volume.should_automount</a></h6>
+          <div class="docblock">
+            <p>Returns whether the volume should be automatically&nbsp;mounted.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      <ul class="toc-list">
+      
+      
+      
+      </ul>
+      
+      
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/iface.Volume.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:05:53 GMT -->
+</html>

@@ -1,0 +1,391 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.IOModule.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:47:58 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.IOModule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.IOModule">
+  <meta property="og:description" content="Reference for Gio.IOModule">
+  <meta name="twitter:title" content="Gio.IOModule">
+  <meta name="twitter:description" content="Reference for Gio.IOModule">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>IOModule</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/giomodule.c#L79">[src]</a>
+          
+        </h4>
+
+        <pre><code>final class Gio.IOModule : GObject.TypeModule
+  implements GObject.TypePlugin {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p>Provides an interface and default functions for loading and unloading
+modules. This is used internally to make <span class="caps">GIO</span> extensible, but can also
+be used by others to implement module&nbsp;loading.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.TypeModule.html" data-namespace="GObject">GTypeModule</a></li>
+          
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a class="external" href="javascript:void(0)" data-link="iface.TypePlugin.html" data-namespace="GObject">GTypePlugin</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.IOModule.new.html">g_io_module_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new GIOModule that will load the specific
+shared library when in&nbsp;use.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.IOModule.query.html">g_io_module_query</a></h6>
+        <div class="docblock">
+          <p>Optional <span class="caps">API</span> for <span class="caps">GIO</span> modules to&nbsp;implement.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.24</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.IOModule.load.html">g_io_module_load</a></h6>
+          <div class="docblock">
+            <p>Required <span class="caps">API</span> for <span class="caps">GIO</span> modules to&nbsp;implement.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.IOModule.unload.html">g_io_module_unload</a></h6>
+          <div class="docblock">
+            <p>Required <span class="caps">API</span> for <span class="caps">GIO</span> modules to&nbsp;implement.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.TypeModule.html" data-namespace="GObject">GTypeModule</a> (7)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="method.TypeModule.add_interface.html">g_type_module_add_interface</a></h6>
+            <div class="docblock">
+              <p>Registers an additional interface for a type, whose interface lives
+in the given type plugin. If the interface was already registered
+for the type in this plugin, nothing will be&nbsp;done.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="method.TypeModule.register_enum.html">g_type_module_register_enum</a></h6>
+            <div class="docblock">
+              <p>Looks up or registers an enumeration that is implemented with a particular
+type plugin. If a type with name <code>type_name</code> was previously registered,
+the <code>GType</code> identifier for the type is returned, otherwise the type
+is newly registered, and the resulting <code>GType</code> identifier&nbsp;returned.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="method.TypeModule.register_flags.html">g_type_module_register_flags</a></h6>
+            <div class="docblock">
+              <p>Looks up or registers a flags type that is implemented with a particular
+type plugin. If a type with name <code>type_name</code> was previously registered,
+the <code>GType</code> identifier for the type is returned, otherwise the type
+is newly registered, and the resulting <code>GType</code> identifier&nbsp;returned.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="method.TypeModule.register_type.html">g_type_module_register_type</a></h6>
+            <div class="docblock">
+              <p>Looks up or registers a type that is implemented with a particular
+type plugin. If a type with name <code>type_name</code> was previously registered,
+the <code>GType</code> identifier for the type is returned, otherwise the type
+is newly registered, and the resulting <code>GType</code> identifier&nbsp;returned.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="method.TypeModule.set_name.html">g_type_module_set_name</a></h6>
+            <div class="docblock">
+              <p>Sets the name for a <code>GTypeModule</code>.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="method.TypeModule.unuse.html">g_type_module_unuse</a></h6>
+            <div class="docblock">
+              <p>Decreases the use count of a <code>GTypeModule</code> by one. If the
+result is zero, the module will be unloaded. (However, the
+<code>GTypeModule</code> will not be freed, and types associated with the
+<code>GTypeModule</code> are not unregistered. Once a <code>GTypeModule</code> is
+initialized, it must exist&nbsp;forever.).</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="method.TypeModule.use.html">g_type_module_use</a></h6>
+            <div class="docblock">
+              <p>Increases the use count of a <code>GTypeModule</code> by one. If the
+use count was zero before, the plugin will be loaded.
+If loading the plugin fails, the use count is reset to
+its prior&nbsp;value.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="iface.TypePlugin.html" data-namespace="GObject">GTypePlugin</a> (4)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="method.TypePlugin.complete_interface_info.html">g_type_plugin_complete_interface_info</a></h6>
+            <div class="docblock">
+              <p>Calls the <code>complete_interface_info</code> function from the
+<code>GTypePluginClass</code> of <code>plugin</code>. There should be no need to use this
+function outside of the GObject type system&nbsp;itself.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="method.TypePlugin.complete_type_info.html">g_type_plugin_complete_type_info</a></h6>
+            <div class="docblock">
+              <p>Calls the <code>complete_type_info</code> function from the <code>GTypePluginClass</code> of <code>plugin</code>.
+There should be no need to use this function outside of the GObject
+type system&nbsp;itself.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="method.TypePlugin.unuse.html">g_type_plugin_unuse</a></h6>
+            <div class="docblock">
+              <p>Calls the <code>unuse_plugin</code> function from the <code>GTypePluginClass</code> of
+<code>plugin</code>.  There should be no need to use this function outside of
+the GObject type system&nbsp;itself.</p>
+            </div><h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="method.TypePlugin.use.html">g_type_plugin_use</a></h6>
+            <div class="docblock">
+              <p>Calls the <code>use_plugin</code> function from the <code>GTypePluginClass</code> of
+<code>plugin</code>.  There should be no need to use this function outside of
+the GObject type system&nbsp;itself.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioIOModuleClass {
+  /* no available fields */
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.IOModule.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:48:08 GMT --></html>

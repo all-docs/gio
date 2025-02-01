@@ -1,0 +1,1065 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/class.VolumeMonitor.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:58:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.VolumeMonitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.VolumeMonitor"/>
+  <meta property="og:description" content="Reference for Gio.VolumeMonitor"/>
+  <meta name="twitter:title" content="Gio.VolumeMonitor"/>
+  <meta name="twitter:description" content="Reference for Gio.VolumeMonitor"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="class.VolumeMonitor.html#description">VolumeMonitor</a>
+  </div>
+</div>
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Functions</h5>
+  <div class="links">
+  
+    <a class="func" href="type_func.VolumeMonitor.adopt_orphan_mount.html">adopt_orphan_mount</a>
+  
+    <a class="func" href="type_func.VolumeMonitor.get.html">get</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.VolumeMonitor.get_connected_drives.html">get_connected_drives</a>
+  
+    <a class="method" href="method.VolumeMonitor.get_mount_for_uuid.html">get_mount_for_uuid</a>
+  
+    <a class="method" href="method.VolumeMonitor.get_mounts.html">get_mounts</a>
+  
+    <a class="method" href="method.VolumeMonitor.get_volume_for_uuid.html">get_volume_for_uuid</a>
+  
+    <a class="method" href="method.VolumeMonitor.get_volumes.html">get_volumes</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.VolumeMonitor.drive-changed.html">drive-changed</a>
+  
+    <a class="signal" href="signal.VolumeMonitor.drive-connected.html">drive-connected</a>
+  
+    <a class="signal" href="signal.VolumeMonitor.drive-disconnected.html">drive-disconnected</a>
+  
+    <a class="signal" href="signal.VolumeMonitor.drive-eject-button.html">drive-eject-button</a>
+  
+    <a class="signal" href="signal.VolumeMonitor.drive-stop-button.html">drive-stop-button</a>
+  
+    <a class="signal" href="signal.VolumeMonitor.mount-added.html">mount-added</a>
+  
+    <a class="signal" href="signal.VolumeMonitor.mount-changed.html">mount-changed</a>
+  
+    <a class="signal" href="signal.VolumeMonitor.mount-pre-unmount.html">mount-pre-unmount</a>
+  
+    <a class="signal" href="signal.VolumeMonitor.mount-removed.html">mount-removed</a>
+  
+    <a class="signal" href="signal.VolumeMonitor.volume-added.html">volume-added</a>
+  
+    <a class="signal" href="signal.VolumeMonitor.volume-changed.html">volume-changed</a>
+  
+    <a class="signal" href="signal.VolumeMonitor.volume-removed.html">volume-removed</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.VolumeMonitor.drive_changed.html">drive_changed</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.drive_connected.html">drive_connected</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.drive_disconnected.html">drive_disconnected</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.drive_eject_button.html">drive_eject_button</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.drive_stop_button.html">drive_stop_button</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.get_connected_drives.html">get_connected_drives</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.get_mount_for_uuid.html">get_mount_for_uuid</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.get_mounts.html">get_mounts</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.get_volume_for_uuid.html">get_volume_for_uuid</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.get_volumes.html">get_volumes</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.mount_added.html">mount_added</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.mount_changed.html">mount_changed</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.mount_pre_unmount.html">mount_pre_unmount</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.mount_removed.html">mount_removed</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.volume_added.html">volume_added</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.volume_changed.html">volume_changed</a>
+  
+    <a class="method" href="vfunc.VolumeMonitor.volume_removed.html">volume_removed</a>
+  
+  </div>
+</div>
+
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>VolumeMonitor</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gvolumemonitor.c#L34">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.VolumeMonitor : GObject.Object
+{
+  /* No available fields */
+}</pre></code>
+
+        <div class="docblock">
+          <p><code>GVolumeMonitor</code> is for listing the user interesting devices and volumes
+on the computer. In other words, what a file selector or file manager
+would show in a&nbsp;sidebar.</p>
+<p><code>GVolumeMonitor</code> is not
+thread-default-context aware (see
+<a href="javascript:void(0)" data-namespace="GLib" data-link="method.MainContext.push_thread_default.html" class="external"><code>g_main_context_push_thread_default()</code></a>), and so should not be used
+other than from the main thread, with no thread-default-context&nbsp;active.</p>
+<p>In order to receive updates about volumes and mounts monitored through <span class="caps">GVFS</span>,
+a main loop must be&nbsp;running.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="descendants toggle-wrapper default-hide">
+      <h4 id="descendants">Descendants <a href="#descendants" class="anchor"></a></h4>
+      <div class="docblock">
+        <ul>
+          <li class="class"><a href="class.NativeVolumeMonitor.html" title="NativeVolumeMonitor">GNativeVolumeMonitor</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="deprecated">
+        <h6><a href="type_func.VolumeMonitor.adopt_orphan_mount.html">g_volume_monitor_adopt_orphan_mount</a></h6>
+        <div class="docblock">
+          <p>This function should be called by any <code>GVolumeMonitor</code>
+implementation when a new <code>GMount</code> object is created that is not
+associated with a <code>GVolume</code> object. It must be called just before
+emitting the <code>mount_added</code> signal.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem deprecated">deprecated: 2.20</span>&nbsp;</p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.VolumeMonitor.get.html">g_volume_monitor_get</a></h6>
+        <div class="docblock">
+          <p>Gets the volume monitor used by&nbsp;gio.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.VolumeMonitor.get_connected_drives.html">g_volume_monitor_get_connected_drives</a></h6>
+          <div class="docblock">
+            <p>Gets a list of drives connected to the&nbsp;system.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.VolumeMonitor.get_mount_for_uuid.html">g_volume_monitor_get_mount_for_uuid</a></h6>
+          <div class="docblock">
+            <p>Finds a <code>GMount</code> object by its <span class="caps">UUID</span> (see&nbsp;g_mount_get_uuid()).</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.VolumeMonitor.get_mounts.html">g_volume_monitor_get_mounts</a></h6>
+          <div class="docblock">
+            <p>Gets a list of the mounts on the&nbsp;system.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.VolumeMonitor.get_volume_for_uuid.html">g_volume_monitor_get_volume_for_uuid</a></h6>
+          <div class="docblock">
+            <p>Finds a <code>GVolume</code> object by its <span class="caps">UUID</span> (see&nbsp;g_volume_get_uuid()).</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.VolumeMonitor.get_volumes.html">g_volume_monitor_get_volumes</a></h6>
+          <div class="docblock">
+            <p>Gets a list of the volumes on the&nbsp;system.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</em></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.VolumeMonitor.drive-changed.html">Gio.VolumeMonitor::drive-changed</a></h6>
+          <div class="docblock">
+            <p>Emitted when a drive&nbsp;changes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.VolumeMonitor.drive-connected.html">Gio.VolumeMonitor::drive-connected</a></h6>
+          <div class="docblock">
+            <p>Emitted when a drive is connected to the&nbsp;system.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.VolumeMonitor.drive-disconnected.html">Gio.VolumeMonitor::drive-disconnected</a></h6>
+          <div class="docblock">
+            <p>Emitted when a drive is disconnected from the&nbsp;system.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.VolumeMonitor.drive-eject-button.html">Gio.VolumeMonitor::drive-eject-button</a></h6>
+          <div class="docblock">
+            <p>Emitted when the eject button is pressed on <code>drive</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.18</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.VolumeMonitor.drive-stop-button.html">Gio.VolumeMonitor::drive-stop-button</a></h6>
+          <div class="docblock">
+            <p>Emitted when the stop button is pressed on <code>drive</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.VolumeMonitor.mount-added.html">Gio.VolumeMonitor::mount-added</a></h6>
+          <div class="docblock">
+            <p>Emitted when a mount is&nbsp;added.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.VolumeMonitor.mount-changed.html">Gio.VolumeMonitor::mount-changed</a></h6>
+          <div class="docblock">
+            <p>Emitted when a mount&nbsp;changes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.VolumeMonitor.mount-pre-unmount.html">Gio.VolumeMonitor::mount-pre-unmount</a></h6>
+          <div class="docblock">
+            <p>May be emitted when a mount is about to be&nbsp;removed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.VolumeMonitor.mount-removed.html">Gio.VolumeMonitor::mount-removed</a></h6>
+          <div class="docblock">
+            <p>Emitted when a mount is&nbsp;removed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.VolumeMonitor.volume-added.html">Gio.VolumeMonitor::volume-added</a></h6>
+          <div class="docblock">
+            <p>Emitted when a mountable volume is added to the&nbsp;system.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.VolumeMonitor.volume-changed.html">Gio.VolumeMonitor::volume-changed</a></h6>
+          <div class="docblock">
+            <p>Emitted when mountable volume is&nbsp;changed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.VolumeMonitor.volume-removed.html">Gio.VolumeMonitor::volume-removed</a></h6>
+          <div class="docblock">
+            <p>Emitted when a mountable volume is removed from the&nbsp;system.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioVolumeMonitorClass {
+  GObjectClass parent_class;
+  void (* volume_added) (
+    GVolumeMonitor* volume_monitor,
+    GVolume* volume
+  );
+  void (* volume_removed) (
+    GVolumeMonitor* volume_monitor,
+    GVolume* volume
+  );
+  void (* volume_changed) (
+    GVolumeMonitor* volume_monitor,
+    GVolume* volume
+  );
+  void (* mount_added) (
+    GVolumeMonitor* volume_monitor,
+    GMount* mount
+  );
+  void (* mount_removed) (
+    GVolumeMonitor* volume_monitor,
+    GMount* mount
+  );
+  void (* mount_pre_unmount) (
+    GVolumeMonitor* volume_monitor,
+    GMount* mount
+  );
+  void (* mount_changed) (
+    GVolumeMonitor* volume_monitor,
+    GMount* mount
+  );
+  void (* drive_connected) (
+    GVolumeMonitor* volume_monitor,
+    GDrive* drive
+  );
+  void (* drive_disconnected) (
+    GVolumeMonitor* volume_monitor,
+    GDrive* drive
+  );
+  void (* drive_changed) (
+    GVolumeMonitor* volume_monitor,
+    GDrive* drive
+  );
+  gboolean (* is_supported) (
+void
+  );
+  GList* (* get_connected_drives) (
+    GVolumeMonitor* volume_monitor
+  );
+  GList* (* get_volumes) (
+    GVolumeMonitor* volume_monitor
+  );
+  GList* (* get_mounts) (
+    GVolumeMonitor* volume_monitor
+  );
+  GVolume* (* get_volume_for_uuid) (
+    GVolumeMonitor* volume_monitor,
+    const char* uuid
+  );
+  GMount* (* get_mount_for_uuid) (
+    GVolumeMonitor* volume_monitor,
+    const char* uuid
+  );
+  GVolume* (* adopt_orphan_mount) (
+    GMount* mount,
+    GVolumeMonitor* volume_monitor
+  );
+  void (* drive_eject_button) (
+    GVolumeMonitor* volume_monitor,
+    GDrive* drive
+  );
+  void (* drive_stop_button) (
+    GVolumeMonitor* volume_monitor,
+    GDrive* drive
+  );
+  void (* _g_reserved1) (
+void
+  );
+  void (* _g_reserved2) (
+void
+  );
+  void (* _g_reserved3) (
+void
+  );
+  void (* _g_reserved4) (
+void
+  );
+  void (* _g_reserved5) (
+void
+  );
+  void (* _g_reserved6) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>volume_added: void (* volume_added) (
+    GVolumeMonitor* volume_monitor,
+    GVolume* volume
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>volume_removed: void (* volume_removed) (
+    GVolumeMonitor* volume_monitor,
+    GVolume* volume
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>volume_changed: void (* volume_changed) (
+    GVolumeMonitor* volume_monitor,
+    GVolume* volume
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>mount_added: void (* mount_added) (
+    GVolumeMonitor* volume_monitor,
+    GMount* mount
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>mount_removed: void (* mount_removed) (
+    GVolumeMonitor* volume_monitor,
+    GMount* mount
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>mount_pre_unmount: void (* mount_pre_unmount) (
+    GVolumeMonitor* volume_monitor,
+    GMount* mount
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>mount_changed: void (* mount_changed) (
+    GVolumeMonitor* volume_monitor,
+    GMount* mount
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>drive_connected: void (* drive_connected) (
+    GVolumeMonitor* volume_monitor,
+    GDrive* drive
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>drive_disconnected: void (* drive_disconnected) (
+    GVolumeMonitor* volume_monitor,
+    GDrive* drive
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>drive_changed: void (* drive_changed) (
+    GVolumeMonitor* volume_monitor,
+    GDrive* drive
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>is_supported: gboolean (* is_supported) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>get_connected_drives: GList* (* get_connected_drives) (
+    GVolumeMonitor* volume_monitor
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>get_volumes: GList* (* get_volumes) (
+    GVolumeMonitor* volume_monitor
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>get_mounts: GList* (* get_mounts) (
+    GVolumeMonitor* volume_monitor
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>get_volume_for_uuid: GVolume* (* get_volume_for_uuid) (
+    GVolumeMonitor* volume_monitor,
+    const char* uuid
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>get_mount_for_uuid: GMount* (* get_mount_for_uuid) (
+    GVolumeMonitor* volume_monitor,
+    const char* uuid
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>adopt_orphan_mount: GVolume* (* adopt_orphan_mount) (
+    GMount* mount,
+    GVolumeMonitor* volume_monitor
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>drive_eject_button: void (* drive_eject_button) (
+    GVolumeMonitor* volume_monitor,
+    GDrive* drive
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>drive_stop_button: void (* drive_stop_button) (
+    GVolumeMonitor* volume_monitor,
+    GDrive* drive
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved1: void (* _g_reserved1) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved2: void (* _g_reserved2) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved3: void (* _g_reserved3) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved4: void (* _g_reserved4) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved5: void (* _g_reserved5) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved6: void (* _g_reserved6) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        </dd>
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-drive_changed"><a href="vfunc.VolumeMonitor.drive_changed.html">Gio.VolumeMonitorClass.drive_changed</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-drive_connected"><a href="vfunc.VolumeMonitor.drive_connected.html">Gio.VolumeMonitorClass.drive_connected</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-drive_disconnected"><a href="vfunc.VolumeMonitor.drive_disconnected.html">Gio.VolumeMonitorClass.drive_disconnected</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-drive_eject_button"><a href="vfunc.VolumeMonitor.drive_eject_button.html">Gio.VolumeMonitorClass.drive_eject_button</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-drive_stop_button"><a href="vfunc.VolumeMonitor.drive_stop_button.html">Gio.VolumeMonitorClass.drive_stop_button</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_connected_drives"><a href="vfunc.VolumeMonitor.get_connected_drives.html">Gio.VolumeMonitorClass.get_connected_drives</a></h6>
+        <div class="docblock">
+          <p>Gets a list of drives connected to the&nbsp;system.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_mount_for_uuid"><a href="vfunc.VolumeMonitor.get_mount_for_uuid.html">Gio.VolumeMonitorClass.get_mount_for_uuid</a></h6>
+        <div class="docblock">
+          <p>Finds a <code>GMount</code> object by its <span class="caps">UUID</span> (see&nbsp;g_mount_get_uuid()).</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_mounts"><a href="vfunc.VolumeMonitor.get_mounts.html">Gio.VolumeMonitorClass.get_mounts</a></h6>
+        <div class="docblock">
+          <p>Gets a list of the mounts on the&nbsp;system.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_volume_for_uuid"><a href="vfunc.VolumeMonitor.get_volume_for_uuid.html">Gio.VolumeMonitorClass.get_volume_for_uuid</a></h6>
+        <div class="docblock">
+          <p>Finds a <code>GVolume</code> object by its <span class="caps">UUID</span> (see&nbsp;g_volume_get_uuid()).</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_volumes"><a href="vfunc.VolumeMonitor.get_volumes.html">Gio.VolumeMonitorClass.get_volumes</a></h6>
+        <div class="docblock">
+          <p>Gets a list of the volumes on the&nbsp;system.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-mount_added"><a href="vfunc.VolumeMonitor.mount_added.html">Gio.VolumeMonitorClass.mount_added</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-mount_changed"><a href="vfunc.VolumeMonitor.mount_changed.html">Gio.VolumeMonitorClass.mount_changed</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-mount_pre_unmount"><a href="vfunc.VolumeMonitor.mount_pre_unmount.html">Gio.VolumeMonitorClass.mount_pre_unmount</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-mount_removed"><a href="vfunc.VolumeMonitor.mount_removed.html">Gio.VolumeMonitorClass.mount_removed</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-volume_added"><a href="vfunc.VolumeMonitor.volume_added.html">Gio.VolumeMonitorClass.volume_added</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-volume_changed"><a href="vfunc.VolumeMonitor.volume_changed.html">Gio.VolumeMonitorClass.volume_changed</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-volume_removed"><a href="vfunc.VolumeMonitor.volume_removed.html">Gio.VolumeMonitorClass.volume_removed</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+      
+      <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
+      
+      
+      
+
+      
+<li class="toc-list-item"><a href="#type-functions"><span class="link-text">Functions</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/class.VolumeMonitor.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:58:17 GMT -->
+</html>

@@ -1,0 +1,514 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.FilterInputStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:47:09 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.FilterInputStream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.FilterInputStream">
+  <meta property="og:description" content="Reference for Gio.FilterInputStream">
+  <meta name="twitter:title" content="Gio.FilterInputStream">
+  <meta name="twitter:description" content="Reference for Gio.FilterInputStream">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>FilterInputStream</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gfilterinputstream.c#L29">[src]</a>
+          
+        </h4>
+
+        <pre><code>abstract class Gio.FilterInputStream : Gio.InputStream
+{
+  base_stream: GInputStream*
+}</code></pre>
+
+        <div class="docblock">
+          <p>Base class for input stream implementations that perform some
+kind of filtering operation on a base stream. Typical examples
+of filtering operations are character set conversion, compression
+and byte order&nbsp;flipping.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a href="class.InputStream.html" title="InputStream">GInputStream</a></li>
+          
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="descendants toggle-wrapper default-hide">
+      <h4 id="descendants">Descendants <a href="#descendants" class="anchor"></a></h4>
+      <div class="docblock">
+        <ul>
+          <li class="class"><a href="class.BufferedInputStream.html" title="BufferedInputStream">GBufferedInputStream</a></li>
+        
+          <li class="class"><a href="class.ConverterInputStream.html" title="ConverterInputStream">GConverterInputStream</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.FilterInputStream.get_base_stream.html">g_filter_input_stream_get_base_stream</a></h6>
+          <div class="docblock">
+            <p>Gets the base stream for the filter&nbsp;stream.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FilterInputStream.get_close_base_stream.html">g_filter_input_stream_get_close_base_stream</a></h6>
+          <div class="docblock">
+            <p>Returns whether the base stream will be closed when <code>stream</code> is&nbsp;closed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FilterInputStream.set_close_base_stream.html">g_filter_input_stream_set_close_base_stream</a></h6>
+          <div class="docblock">
+            <p>Sets whether the base stream will be closed when <code>stream</code> is&nbsp;closed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="class.InputStream.html">GInputStream</a> (19)</h5><div class="docblock">
+          
+            <h6><a href="method.InputStream.clear_pending.html">g_input_stream_clear_pending</a></h6><div class="docblock">
+              <p>Clears the pending flag on <code>stream</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.close.html">g_input_stream_close</a></h6><div class="docblock">
+              <p>Closes the stream, releasing resources related to&nbsp;it.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.close_async.html">g_input_stream_close_async</a></h6><div class="docblock">
+              <p>Requests an asynchronous closes of the stream, releasing resources related to it.
+When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_input_stream_close_finish()</code> to get the result of the&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.close_finish.html">g_input_stream_close_finish</a></h6><div class="docblock">
+              <p>Finishes closing a stream asynchronously, started from&nbsp;g_input_stream_close_async().</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.has_pending.html">g_input_stream_has_pending</a></h6><div class="docblock">
+              <p>Checks if an input stream has pending&nbsp;actions.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.is_closed.html">g_input_stream_is_closed</a></h6><div class="docblock">
+              <p>Checks if an input stream is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read.html">g_input_stream_read</a></h6><div class="docblock">
+              <p>Tries to read <code>count</code> bytes from the stream into the buffer starting at
+<code>buffer</code>. Will block during this&nbsp;read.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_all.html">g_input_stream_read_all</a></h6><div class="docblock">
+              <p>Tries to read <code>count</code> bytes from the stream into the buffer starting at
+<code>buffer</code>. Will block during this&nbsp;read.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_all_async.html">g_input_stream_read_all_async</a></h6><div class="docblock">
+              <p>Request an asynchronous read of <code>count</code> bytes from the stream into the
+buffer starting at <code>buffer</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.44</span></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_all_finish.html">g_input_stream_read_all_finish</a></h6><div class="docblock">
+              <p>Finishes an asynchronous stream read operation started with
+<code>g_input_stream_read_all_async()</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.44</span></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_async.html">g_input_stream_read_async</a></h6><div class="docblock">
+              <p>Request an asynchronous read of <code>count</code> bytes from the stream into the buffer
+starting at <code>buffer</code>. When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_input_stream_read_finish()</code> to get the result of the&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_bytes.html">g_input_stream_read_bytes</a></h6><div class="docblock">
+              <p>Like g_input_stream_read(), this tries to read <code>count</code> bytes from
+the stream in a blocking fashion. However, rather than reading into
+a user-supplied buffer, this will create a new <code>GBytes</code> containing
+the data that was read. This may be easier to use from language&nbsp;bindings.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.34</span></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_bytes_async.html">g_input_stream_read_bytes_async</a></h6><div class="docblock">
+              <p>Request an asynchronous read of <code>count</code> bytes from the stream into a
+new <code>GBytes</code>. When the operation is finished <code>callback</code> will be
+called. You can then call <code>g_input_stream_read_bytes_finish()</code> to get the
+result of the&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.34</span></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_bytes_finish.html">g_input_stream_read_bytes_finish</a></h6><div class="docblock">
+              <p>Finishes an asynchronous stream read-into-<code>GBytes</code> operation.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.34</span></p>
+            </div>
+            
+            <h6><a href="method.InputStream.read_finish.html">g_input_stream_read_finish</a></h6><div class="docblock">
+              <p>Finishes an asynchronous stream read&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.set_pending.html">g_input_stream_set_pending</a></h6><div class="docblock">
+              <p>Sets <code>stream</code> to have actions pending. If the pending flag is
+already set or <code>stream</code> is closed, it will return <code>FALSE</code> and set
+<code>error</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.skip.html">g_input_stream_skip</a></h6><div class="docblock">
+              <p>Tries to skip <code>count</code> bytes from the stream. Will block during the&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.skip_async.html">g_input_stream_skip_async</a></h6><div class="docblock">
+              <p>Request an asynchronous skip of <code>count</code> bytes from the stream.
+When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_input_stream_skip_finish()</code> to get the result
+of the&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.InputStream.skip_finish.html">g_input_stream_skip_finish</a></h6><div class="docblock">
+              <p>Finishes a stream skip&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.FilterInputStream.base-stream.html">Gio.FilterInputStream:base-stream</a></h6>
+          <div class="docblock">
+            <p>The underlying base stream on which the I/O ops will be&nbsp;done.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.FilterInputStream.close-base-stream.html">Gio.FilterInputStream:close-base-stream</a></h6>
+          <div class="docblock">
+            <p>Whether the base stream should be closed when the filter stream is&nbsp;closed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioFilterInputStreamClass {
+  GInputStreamClass parent_class;
+  void (* _g_reserved1) (
+void
+  );
+  void (* _g_reserved2) (
+void
+  );
+  void (* _g_reserved3) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GInputStreamClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved1: void (* _g_reserved1) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved2: void (* _g_reserved2) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved3: void (* _g_reserved3) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.FilterInputStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:47:09 GMT --></html>

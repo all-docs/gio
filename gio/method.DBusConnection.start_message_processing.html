@@ -1,0 +1,255 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/method.DBusConnection.start_message_processing.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.DBusConnection.start_message_processing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta priority="og:title" content="Gio.DBusConnection.start_message_processing"/>
+  <meta priority="og:description" content="Reference for Gio.DBusConnection.start_message_processing"/>
+  <meta name="twitter:title" content="Gio.DBusConnection.start_message_processing"/>
+  <meta name="twitter:description" content="Reference for Gio.DBusConnection.start_message_processing"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="class.DBusConnection.html">DBusConnection</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.DBusConnection.add_filter.html">add_filter</a>
+  
+    <a class="method" href="method.DBusConnection.call.html">call</a>
+  
+    <a class="method" href="method.DBusConnection.call_finish.html">call_finish</a>
+  
+    <a class="method" href="method.DBusConnection.call_sync.html">call_sync</a>
+  
+    <a class="method" href="method.DBusConnection.call_with_unix_fd_list.html">call_with_unix_fd_list</a>
+  
+    <a class="method" href="method.DBusConnection.call_with_unix_fd_list_finish.html">call_with_unix_fd_list_finish</a>
+  
+    <a class="method" href="method.DBusConnection.call_with_unix_fd_list_sync.html">call_with_unix_fd_list_sync</a>
+  
+    <a class="method" href="method.DBusConnection.close.html">close</a>
+  
+    <a class="method" href="method.DBusConnection.close_finish.html">close_finish</a>
+  
+    <a class="method" href="method.DBusConnection.close_sync.html">close_sync</a>
+  
+    <a class="method" href="method.DBusConnection.emit_signal.html">emit_signal</a>
+  
+    <a class="method" href="method.DBusConnection.export_action_group.html">export_action_group</a>
+  
+    <a class="method" href="method.DBusConnection.export_menu_model.html">export_menu_model</a>
+  
+    <a class="method" href="method.DBusConnection.flush.html">flush</a>
+  
+    <a class="method" href="method.DBusConnection.flush_finish.html">flush_finish</a>
+  
+    <a class="method" href="method.DBusConnection.flush_sync.html">flush_sync</a>
+  
+    <a class="method" href="method.DBusConnection.get_capabilities.html">get_capabilities</a>
+  
+    <a class="method" href="method.DBusConnection.get_exit_on_close.html">get_exit_on_close</a>
+  
+    <a class="method" href="method.DBusConnection.get_flags.html">get_flags</a>
+  
+    <a class="method" href="method.DBusConnection.get_guid.html">get_guid</a>
+  
+    <a class="method" href="method.DBusConnection.get_last_serial.html">get_last_serial</a>
+  
+    <a class="method" href="method.DBusConnection.get_peer_credentials.html">get_peer_credentials</a>
+  
+    <a class="method" href="method.DBusConnection.get_stream.html">get_stream</a>
+  
+    <a class="method" href="method.DBusConnection.get_unique_name.html">get_unique_name</a>
+  
+    <a class="method" href="method.DBusConnection.is_closed.html">is_closed</a>
+  
+    <a class="method" href="method.DBusConnection.register_object.html">register_object</a>
+  
+    <a class="method" href="method.DBusConnection.register_object_with_closures.html">register_object_with_closures</a>
+  
+    <a class="method" href="method.DBusConnection.register_subtree.html">register_subtree</a>
+  
+    <a class="method" href="method.DBusConnection.remove_filter.html">remove_filter</a>
+  
+    <a class="method" href="method.DBusConnection.send_message.html">send_message</a>
+  
+    <a class="method" href="method.DBusConnection.send_message_with_reply.html">send_message_with_reply</a>
+  
+    <a class="method" href="method.DBusConnection.send_message_with_reply_finish.html">send_message_with_reply_finish</a>
+  
+    <a class="method" href="method.DBusConnection.send_message_with_reply_sync.html">send_message_with_reply_sync</a>
+  
+    <a class="method" href="method.DBusConnection.set_exit_on_close.html">set_exit_on_close</a>
+  
+    <a class="method" href="method.DBusConnection.signal_subscribe.html">signal_subscribe</a>
+  
+    <a class="method" href="method.DBusConnection.signal_unsubscribe.html">signal_unsubscribe</a>
+  
+    <a class="method current" href="method.DBusConnection.start_message_processing.html">start_message_processing</a>
+  
+    <a class="method" href="method.DBusConnection.unexport_action_group.html">unexport_action_group</a>
+  
+    <a class="method" href="method.DBusConnection.unexport_menu_model.html">unexport_menu_model</a>
+  
+    <a class="method" href="method.DBusConnection.unregister_object.html">unregister_object</a>
+  
+    <a class="method" href="method.DBusConnection.unregister_subtree.html">unregister_subtree</a>
+  
+  </div>
+</div>
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Method</h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span><a href="class.DBusConnection.html">DBusConnection</a><span class="sep"></span>start_message_processing</h1>
+  </header>
+
+  <section>
+    <div class="docblock">
+      <p><span class="emblem available">since: 2.26</span></p>
+    </div>
+
+    <div class="declaration toggle-wrapper">
+      <h4 style="display:flex;" id="declaration">
+        Declaration
+        <a class="anchor" href="#declaration"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdbusconnection.h#L97">[src]</a>
+        
+      </h4>
+
+      <div class="docblock c-decl">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">g_dbus_connection_start_message_processing</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">GDBusConnection</span><span class="o">*</span><span class="w"> </span><span class="n">connection</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 style="display:flex;" id="description">
+        Description
+        <a class="anchor" href="#description"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdbusconnection.c#L1253">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>If <code>connection</code> was created with
+<code>G_DBUS_CONNECTION_FLAGS_DELAY_MESSAGE_PROCESSING</code>, this method
+starts processing messages. Does nothing on if <code>connection</code> wasn&#8217;t
+created with this flag or if the method has already been&nbsp;called.</p>
+      </div>
+
+      <div class="docblock">
+        
+        <p>Available since: 2.26</p>
+        
+        
+        
+        
+        
+      </div>
+
+      
+    </div>
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/method.DBusConnection.start_message_processing.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:24 GMT -->
+</html>

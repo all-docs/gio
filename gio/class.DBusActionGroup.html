@@ -1,0 +1,422 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.DBusActionGroup.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:41:46 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.DBusActionGroup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.DBusActionGroup">
+  <meta property="og:description" content="Reference for Gio.DBusActionGroup">
+  <meta name="twitter:title" content="Gio.DBusActionGroup">
+  <meta name="twitter:description" content="Reference for Gio.DBusActionGroup">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>DBusActionGroup</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdbusactiongroup.c#L31">[src]</a>
+          
+        </h4>
+
+        <pre><code>final class Gio.DBusActionGroup : GObject.Object
+  implements Gio.ActionGroup, Gio.RemoteActionGroup {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GDBusActionGroup</code> is an implementation of the <a href="iface.ActionGroup.html"><code>GActionGroup</code></a>&nbsp;interface.</p>
+<p><code>GDBusActionGroup</code> can be used as a proxy for an action group
+that is exported over D-Bus with <a href="method.DBusConnection.export_action_group.html"><code>g_dbus_connection_export_action_group()</code></a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.ActionGroup.html" title="ActionGroup">GActionGroup</a></li>
+          
+        
+          
+          <li class="interface"><a href="iface.RemoteActionGroup.html" title="RemoteActionGroup">GRemoteActionGroup</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.DBusActionGroup.get.html">g_dbus_action_group_get</a></h6>
+        <div class="docblock">
+          <p>Obtains a <code>GDBusActionGroup</code> for the action group which is exported at
+the given <code>bus_name</code> and <code>object_path</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.32</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.ActionGroup.html">GActionGroup</a> (14)</h5><div class="docblock">
+          
+            <h6><a href="method.ActionGroup.action_added.html">g_action_group_action_added</a></h6><div class="docblock">
+              <p>Emits the <code>GActionGroup::action-added</code> signal on <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.action_enabled_changed.html">g_action_group_action_enabled_changed</a></h6><div class="docblock">
+              <p>Emits the <code>GActionGroup::action-enabled-changed</code> signal on <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.action_removed.html">g_action_group_action_removed</a></h6><div class="docblock">
+              <p>Emits the <code>GActionGroup::action-removed</code> signal on <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.action_state_changed.html">g_action_group_action_state_changed</a></h6><div class="docblock">
+              <p>Emits the <code>GActionGroup::action-state-changed</code> signal on <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.activate_action.html">g_action_group_activate_action</a></h6><div class="docblock">
+              <p>Activate the named action within <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.change_action_state.html">g_action_group_change_action_state</a></h6><div class="docblock">
+              <p>Request for the state of the named action within <code>action_group</code> to be
+changed to <code>value</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.get_action_enabled.html">g_action_group_get_action_enabled</a></h6><div class="docblock">
+              <p>Checks if the named action within <code>action_group</code> is currently&nbsp;enabled.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.get_action_parameter_type.html">g_action_group_get_action_parameter_type</a></h6><div class="docblock">
+              <p>Queries the type of the parameter that must be given when activating
+the named action within <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.get_action_state.html">g_action_group_get_action_state</a></h6><div class="docblock">
+              <p>Queries the current state of the named action within <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.get_action_state_hint.html">g_action_group_get_action_state_hint</a></h6><div class="docblock">
+              <p>Requests a hint about the valid range of values for the state of the
+named action within <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.get_action_state_type.html">g_action_group_get_action_state_type</a></h6><div class="docblock">
+              <p>Queries the type of the state of the named action within
+<code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.has_action.html">g_action_group_has_action</a></h6><div class="docblock">
+              <p>Checks if the named action exists within <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.list_actions.html">g_action_group_list_actions</a></h6><div class="docblock">
+              <p>Lists the actions contained within <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="method.ActionGroup.query_action.html">g_action_group_query_action</a></h6><div class="docblock">
+              <p>Queries all aspects of the named action within an <code>action_group</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.32</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.RemoteActionGroup.html">GRemoteActionGroup</a> (2)</h5><div class="docblock">
+          
+            <h6><a href="method.RemoteActionGroup.activate_action_full.html">g_remote_action_group_activate_action_full</a></h6><div class="docblock">
+              <p>Activates the remote&nbsp;action.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.32</span></p>
+            </div>
+            
+            <h6><a href="method.RemoteActionGroup.change_action_state_full.html">g_remote_action_group_change_action_state_full</a></h6><div class="docblock">
+              <p>Changes the state of a remote&nbsp;action.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.32</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals">
+          <h5 style="display:block;">Signals inherited from <a href="iface.ActionGroup.html">GActionGroup</a> (4)</h5><div class="docblock">
+          
+            <h6><a href="signal.ActionGroup.action-added.html">GActionGroup::action-added</a></h6><div class="docblock">
+              <p>Signals that a new action was just added to the&nbsp;group.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="signal.ActionGroup.action-enabled-changed.html">GActionGroup::action-enabled-changed</a></h6><div class="docblock">
+              <p>Signals that the enabled status of the named action has&nbsp;changed.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="signal.ActionGroup.action-removed.html">GActionGroup::action-removed</a></h6><div class="docblock">
+              <p>Signals that an action is just about to be removed from the&nbsp;group.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+            <h6><a href="signal.ActionGroup.action-state-changed.html">GActionGroup::action-state-changed</a></h6><div class="docblock">
+              <p>Signals that the state of the named action has&nbsp;changed.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.DBusActionGroup.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:41:49 GMT --></html>

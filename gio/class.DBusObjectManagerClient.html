@@ -1,0 +1,801 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.DBusObjectManagerClient.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:43:36 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.DBusObjectManagerClient</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.DBusObjectManagerClient">
+  <meta property="og:description" content="Reference for Gio.DBusObjectManagerClient">
+  <meta name="twitter:title" content="Gio.DBusObjectManagerClient">
+  <meta name="twitter:description" content="Reference for Gio.DBusObjectManagerClient">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>DBusObjectManagerClient</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.30</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdbusobjectmanagerclient.c#L45">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.DBusObjectManagerClient : GObject.Object
+  implements Gio.AsyncInitable, Gio.DBusObjectManager, Gio.Initable {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GDBusObjectManagerClient</code> is used to create, monitor and delete object
+proxies for remote objects exported by a <a href="class.DBusObjectManagerServer.html"><code>GDBusObjectManagerServer</code></a>
+(or any code implementing the
+<a href="http://dbus.freedesktop.org/doc/dbus-specification.html#standard-interfaces-objectmanager">org.freedesktop.DBus.ObjectManager</a>&nbsp;interface).</p>
+<p>Once an instance of this type has been created, you can connect to
+the <a href="signal.DBusObjectManager.object-added.html"><code>GDBusObjectManager::object-added</code></a> and
+[signal@Gio.DBusObjectManager::object-removed signals] and inspect the
+<a href="class.DBusObjectProxy.html"><code>GDBusObjectProxy</code></a> objects returned by
+<a href="method.DBusObjectManager.get_objects.html"><code>g_dbus_object_manager_get_objects()</code></a>.</p>
+<p>If the name for a <code>GDBusObjectManagerClient</code> is not owned by anyone at
+object construction time, the default behavior is to request the
+message bus to launch an owner for the name. This behavior can be
+disabled using the <code>G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_DO_NOT_AUTO_START</code>
+flag. It’s also worth noting that this only works if the name of
+interest is activatable in the first place. E.g. in some cases it
+is not possible to launch an owner for the requested name. In this
+case, <code>GDBusObjectManagerClient</code> object construction still succeeds but
+there will be no object proxies
+(e.g. <a href="method.DBusObjectManager.get_objects.html"><code>g_dbus_object_manager_get_objects()</code></a> returns the empty list) and
+the <a href="property.DBusObjectManagerClient.name-owner.html"><code>GDBusObjectManagerClient:name-owner</code></a> property is <code>NULL</code>.</p>
+<p>The owner of the requested name can come and go (for example
+consider a system service being restarted) – <code>GDBusObjectManagerClient</code>
+handles this case too; simply connect to the <a href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html" class="external"><code>GObject::notify</code></a>
+signal to watch for changes on the
+<a href="property.DBusObjectManagerClient.name-owner.html"><code>GDBusObjectManagerClient:name-owner</code></a> property. When the name
+owner vanishes, the behavior is that
+<a href="property.DBusObjectManagerClient.name-owner.html"><code>GDBusObjectManagerClient:name-owner</code></a> is set to <code>NULL</code> (this
+includes emission of the <a href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html" class="external"><code>GObject::notify</code></a> signal) and then
+<a href="signal.DBusObjectManager.object-removed.html"><code>GDBusObjectManager::object-removed</code></a> signals are synthesized
+for all currently existing object proxies. Since
+<a href="property.DBusObjectManagerClient.name-owner.html"><code>GDBusObjectManagerClient:name-owner</code></a> is <code>NULL</code> when this
+happens, you can use this information to disambiguate a synthesized signal
+from a genuine signal caused by object removal on the remote
+<a href="iface.DBusObjectManager.html"><code>GDBusObjectManager</code></a>. Similarly, when a new name owner appears,
+<a href="signal.DBusObjectManager.object-added.html"><code>GDBusObjectManager::object-added</code></a> signals are synthesized
+while <a href="property.DBusObjectManagerClient.name-owner.html"><code>GDBusObjectManagerClient:name-owner</code></a> is still <code>NULL</code>. Only
+when all object proxies have been added, the
+<a href="property.DBusObjectManagerClient.name-owner.html"><code>GDBusObjectManagerClient:name-owner</code></a> is set to the new name
+owner (this includes emission of the <a href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html" class="external"><code>GObject::notify</code></a> signal).
+Furthermore, you are guaranteed that
+<a href="property.DBusObjectManagerClient.name-owner.html"><code>GDBusObjectManagerClient:name-owner</code></a> will alternate between a
+name owner (e.g. <code>:1.42</code>) and <code>NULL</code> even in the case where
+the name of interest is atomically&nbsp;replaced</p>
+<p>Ultimately, <code>GDBusObjectManagerClient</code> is used to obtain
+<a href="class.DBusProxy.html"><code>GDBusProxy</code></a> instances. All signals (including the
+<code>org.freedesktop.DBus.Properties::PropertiesChanged</code> signal)
+delivered to <a href="class.DBusProxy.html"><code>GDBusProxy</code></a> instances are guaranteed to originate
+from the name owner. This guarantee along with the behavior
+described above, means that certain race conditions including the
+“half the proxy is from the old owner and the other half is from
+the new owner” problem cannot&nbsp;happen.</p>
+<p>To avoid having the application connect to signals on the returned
+<a href="class.DBusObjectProxy.html"><code>GDBusObjectProxy</code></a> and <a href="class.DBusProxy.html"><code>GDBusProxy</code></a> objects, the
+<a href="signal.DBusObject.interface-added.html"><code>GDBusObject::interface-added</code></a>,
+<a href="signal.DBusObject.interface-removed.html"><code>GDBusObject::interface-removed</code></a>,
+<a href="signal.DBusProxy.g-properties-changed.html"><code>GDBusProxy::g-properties-changed</code></a> and
+<a href="signal.DBusProxy.g-signal.html"><code>GDBusProxy::g-signal</code></a> signals
+are also emitted on the <code>GDBusObjectManagerClient</code> instance managing these
+objects. The signals emitted are
+<a href="signal.DBusObjectManager.interface-added.html"><code>GDBusObjectManager::interface-added</code></a>,
+<a href="signal.DBusObjectManager.interface-removed.html"><code>GDBusObjectManager::interface-removed</code></a>,
+<a href="signal.DBusObjectManagerClient.interface-proxy-properties-changed.html"><code>GDBusObjectManagerClient::interface-proxy-properties-changed</code></a> and
+<a href="signal.DBusObjectManagerClient.interface-proxy-signal.html"><code>GDBusObjectManagerClient::interface-proxy-signal</code></a>.</p>
+<p>Note that all callbacks and signals are emitted in the
+thread-default main context (see
+<a href="javascript:void(0)" data-namespace="GLib" data-link="method.MainContext.push_thread_default.html" class="external"><code>g_main_context_push_thread_default()</code></a>) that the
+<code>GDBusObjectManagerClient</code> object was constructed in. Additionally, the
+<a href="class.DBusObjectProxy.html"><code>GDBusObjectProxy</code></a> and <a href="class.DBusProxy.html"><code>GDBusProxy</code></a> objects
+originating from the <code>GDBusObjectManagerClient</code> object will be created in
+the same context and, consequently, will deliver signals in the
+same main&nbsp;loop.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.30</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.AsyncInitable.html" title="AsyncInitable">GAsyncInitable</a></li>
+          
+        
+          
+          <li class="interface"><a href="iface.DBusObjectManager.html" title="DBusObjectManager">GDBusObjectManager</a></li>
+          
+        
+          
+          <li class="interface"><a href="iface.Initable.html" title="Initable">GInitable</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.DBusObjectManagerClient.new_finish.html">g_dbus_object_manager_client_new_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with&nbsp;g_dbus_object_manager_client_new().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DBusObjectManagerClient.new_for_bus_finish.html">g_dbus_object_manager_client_new_for_bus_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with&nbsp;g_dbus_object_manager_client_new_for_bus().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DBusObjectManagerClient.new_for_bus_sync.html">g_dbus_object_manager_client_new_for_bus_sync</a></h6>
+          <div class="docblock">
+            <p>Like <code>g_dbus_object_manager_client_new_sync()</code> but takes a <code>GBusType</code> instead
+of a <code>GDBusConnection</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DBusObjectManagerClient.new_sync.html">g_dbus_object_manager_client_new_sync</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GDBusObjectManagerClient</code> object.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.DBusObjectManagerClient.new.html">g_dbus_object_manager_client_new</a></h6>
+        <div class="docblock">
+          <p>Asynchronously creates a new <code>GDBusObjectManagerClient</code> object.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.DBusObjectManagerClient.new_for_bus.html">g_dbus_object_manager_client_new_for_bus</a></h6>
+        <div class="docblock">
+          <p>Like <code>g_dbus_object_manager_client_new()</code> but takes a <code>GBusType</code> instead of a
+<code>GDBusConnection</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.DBusObjectManagerClient.get_connection.html">g_dbus_object_manager_client_get_connection</a></h6>
+          <div class="docblock">
+            <p>Gets the <code>GDBusConnection</code> used by <code>manager</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusObjectManagerClient.get_flags.html">g_dbus_object_manager_client_get_flags</a></h6>
+          <div class="docblock">
+            <p>Gets the flags that <code>manager</code> was constructed&nbsp;with.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusObjectManagerClient.get_name.html">g_dbus_object_manager_client_get_name</a></h6>
+          <div class="docblock">
+            <p>Gets the name that <code>manager</code> is for, or <code>NULL</code> if not a message bus&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusObjectManagerClient.get_name_owner.html">g_dbus_object_manager_client_get_name_owner</a></h6>
+          <div class="docblock">
+            <p>The unique name that owns the name that <code>manager</code> is for or <code>NULL</code> if
+no-one currently owns that name. You can connect to the
+<code>GObject::notify</code> signal to track changes to the
+<code>GDBusObjectManagerClient:name-owner</code> property.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.AsyncInitable.html">GAsyncInitable</a> (3)</h5><div class="docblock">
+          
+            <h6><a href="method.AsyncInitable.init_async.html">g_async_initable_init_async</a></h6><div class="docblock">
+              <p>Starts asynchronous initialization of the object implementing the
+interface. This must be done before any real use of the object after
+initial construction. If the object also implements <code>GInitable</code> you can
+optionally call <code>g_initable_init()</code> instead.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.AsyncInitable.init_finish.html">g_async_initable_init_finish</a></h6><div class="docblock">
+              <p>Finishes asynchronous initialization and returns the result.
+See&nbsp;g_async_initable_init_async().</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.AsyncInitable.new_finish.html">g_async_initable_new_finish</a></h6><div class="docblock">
+              <p>Finishes the async construction for the various g_async_initable_new
+calls, returning the created object or <code>NULL</code> on&nbsp;error.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.DBusObjectManager.html">GDBusObjectManager</a> (4)</h5><div class="docblock">
+          
+            <h6><a href="method.DBusObjectManager.get_interface.html">g_dbus_object_manager_get_interface</a></h6><div class="docblock">
+              <p>Gets the interface proxy for <code>interface_name</code> at <code>object_path</code>, if&nbsp;any.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="method.DBusObjectManager.get_object.html">g_dbus_object_manager_get_object</a></h6><div class="docblock">
+              <p>Gets the <code>GDBusObject</code> at <code>object_path</code>, if&nbsp;any.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="method.DBusObjectManager.get_object_path.html">g_dbus_object_manager_get_object_path</a></h6><div class="docblock">
+              <p>Gets the object path that <code>manager</code> is&nbsp;for.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="method.DBusObjectManager.get_objects.html">g_dbus_object_manager_get_objects</a></h6><div class="docblock">
+              <p>Gets all <code>GDBusObject</code> objects known to <code>manager</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.Initable.html">GInitable</a> (1)</h5><div class="docblock">
+          
+            <h6><a href="method.Initable.init.html">g_initable_init</a></h6><div class="docblock">
+              <p>Initializes the object implementing the&nbsp;interface.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.DBusObjectManagerClient.bus-type.html">Gio.DBusObjectManagerClient:bus-type</a></h6>
+          <div class="docblock">
+            <p>If this property is not <code>G_BUS_TYPE_NONE</code>, then
+<code>GDBusObjectManagerClient:connection</code> must be <code>NULL</code> and will be set to the
+<code>GDBusConnection</code> obtained by calling <code>g_bus_get()</code> with the value
+of this&nbsp;property.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusObjectManagerClient.connection.html">Gio.DBusObjectManagerClient:connection</a></h6>
+          <div class="docblock">
+            <p>The <code>GDBusConnection</code> to&nbsp;use.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusObjectManagerClient.flags.html">Gio.DBusObjectManagerClient:flags</a></h6>
+          <div class="docblock">
+            <p>Flags from the <code>GDBusObjectManagerClientFlags</code> enumeration.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusObjectManagerClient.get-proxy-type-destroy-notify.html">Gio.DBusObjectManagerClient:get-proxy-type-destroy-notify</a></h6>
+          <div class="docblock">
+            <p>A <code>GDestroyNotify</code> for the #gpointer user_data in <code>GDBusObjectManagerClient:get-proxy-type-user-data</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusObjectManagerClient.get-proxy-type-func.html">Gio.DBusObjectManagerClient:get-proxy-type-func</a></h6>
+          <div class="docblock">
+            <p>The <code>GDBusProxyTypeFunc</code> to use when determining what <code>GType</code> to
+use for interface proxies or <code>NULL</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusObjectManagerClient.get-proxy-type-user-data.html">Gio.DBusObjectManagerClient:get-proxy-type-user-data</a></h6>
+          <div class="docblock">
+            <p>The #gpointer user_data to pass to <code>GDBusObjectManagerClient:get-proxy-type-func</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusObjectManagerClient.name.html">Gio.DBusObjectManagerClient:name</a></h6>
+          <div class="docblock">
+            <p>The well-known name or unique name that the manager is&nbsp;for.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusObjectManagerClient.name-owner.html">Gio.DBusObjectManagerClient:name-owner</a></h6>
+          <div class="docblock">
+            <p>The unique name that owns <code>GDBusObjectManagerClient:name</code> or <code>NULL</code> if
+no-one is currently owning the name. Connect to the
+<code>GObject::notify</code> signal to track changes to this&nbsp;property.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusObjectManagerClient.object-path.html">Gio.DBusObjectManagerClient:object-path</a></h6>
+          <div class="docblock">
+            <p>The object path the manager is&nbsp;for.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+        
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.DBusObjectManagerClient.interface-proxy-properties-changed.html">Gio.DBusObjectManagerClient::interface-proxy-properties-changed</a></h6>
+          <div class="docblock">
+            <p>Emitted when one or more D-Bus properties on proxy changes. The
+local cache has already been updated when this signal fires. Note
+that both <code>changed_properties</code> and <code>invalidated_properties</code> are
+guaranteed to never be <code>NULL</code> (either may be empty&nbsp;though).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.DBusObjectManagerClient.interface-proxy-signal.html">Gio.DBusObjectManagerClient::interface-proxy-signal</a></h6>
+          <div class="docblock">
+            <p>Emitted when a D-Bus signal is received on <code>interface_proxy</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals">
+          <h5 style="display:block;">Signals inherited from <a href="iface.DBusObjectManager.html">GDBusObjectManager</a> (4)</h5><div class="docblock">
+          
+            <h6><a href="signal.DBusObjectManager.interface-added.html">GDBusObjectManager::interface-added</a></h6><div class="docblock">
+              <p>Emitted when <code>interface</code> is added to <code>object</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="signal.DBusObjectManager.interface-removed.html">GDBusObjectManager::interface-removed</a></h6><div class="docblock">
+              <p>Emitted when <code>interface</code> has been removed from <code>object</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="signal.DBusObjectManager.object-added.html">GDBusObjectManager::object-added</a></h6><div class="docblock">
+              <p>Emitted when <code>object</code> is added to <code>manager</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="signal.DBusObjectManager.object-removed.html">GDBusObjectManager::object-removed</a></h6><div class="docblock">
+              <p>Emitted when <code>object</code> is removed from <code>manager</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioDBusObjectManagerClientClass {
+  GObjectClass parent_class;
+  void (* interface_proxy_signal) (
+    GDBusObjectManagerClient* manager,
+    GDBusObjectProxy* object_proxy,
+    GDBusProxy* interface_proxy,
+    const gchar* sender_name,
+    const gchar* signal_name,
+    GVariant* parameters
+  );
+  void (* interface_proxy_properties_changed) (
+    GDBusObjectManagerClient* manager,
+    GDBusObjectProxy* object_proxy,
+    GDBusProxy* interface_proxy,
+    GVariant* changed_properties,
+    const gchar* const* invalidated_properties
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>Class structure for <code>GDBusObjectManagerClient</code>.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>The parent&nbsp;class.</p></dd>
+        
+          <dt><code>interface_proxy_signal: void (* interface_proxy_signal) (
+    GDBusObjectManagerClient* manager,
+    GDBusObjectProxy* object_proxy,
+    GDBusProxy* interface_proxy,
+    const gchar* sender_name,
+    const gchar* signal_name,
+    GVariant* parameters
+  )</code></dt>
+          <dd><p>Signal class handler for the <code>GDBusObjectManagerClient::interface-proxy-signal</code> signal.</p></dd>
+        
+          <dt><code>interface_proxy_properties_changed: void (* interface_proxy_properties_changed) (
+    GDBusObjectManagerClient* manager,
+    GDBusObjectProxy* object_proxy,
+    GDBusProxy* interface_proxy,
+    GVariant* changed_properties,
+    const gchar* const* invalidated_properties
+  )</code></dt>
+          <dd><p>Signal class handler for the <code>GDBusObjectManagerClient::interface-proxy-properties-changed</code> signal.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-interface_proxy_properties_changed"><a href="vfunc.DBusObjectManagerClient.interface_proxy_properties_changed.html">Gio.DBusObjectManagerClientClass.interface_proxy_properties_changed</a></h6>
+        <div class="docblock">
+          <p>Signal class handler for the <code>GDBusObjectManagerClient::interface-proxy-properties-changed</code> signal.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-interface_proxy_signal"><a href="vfunc.DBusObjectManagerClient.interface_proxy_signal.html">Gio.DBusObjectManagerClientClass.interface_proxy_signal</a></h6>
+        <div class="docblock">
+          <p>Signal class handler for the <code>GDBusObjectManagerClient::interface-proxy-signal</code> signal.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.DBusObjectManagerClient.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:43:59 GMT --></html>

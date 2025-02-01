@@ -1,0 +1,1189 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/class.TlsConnection.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:56:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.TlsConnection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.TlsConnection"/>
+  <meta property="og:description" content="Reference for Gio.TlsConnection"/>
+  <meta name="twitter:title" content="Gio.TlsConnection"/>
+  <meta name="twitter:description" content="Reference for Gio.TlsConnection"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="class.TlsConnection.html#description">TlsConnection</a>
+  </div>
+</div>
+
+
+  
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.TlsConnection.emit_accept_certificate.html">emit_accept_certificate</a>
+  
+    <a class="method" href="method.TlsConnection.get_certificate.html">get_certificate</a>
+  
+    <a class="method" href="method.TlsConnection.get_channel_binding_data.html">get_channel_binding_data</a>
+  
+    <a class="method" href="method.TlsConnection.get_ciphersuite_name.html">get_ciphersuite_name</a>
+  
+    <a class="method" href="method.TlsConnection.get_database.html">get_database</a>
+  
+    <a class="method" href="method.TlsConnection.get_interaction.html">get_interaction</a>
+  
+    <a class="method" href="method.TlsConnection.get_negotiated_protocol.html">get_negotiated_protocol</a>
+  
+    <a class="method" href="method.TlsConnection.get_peer_certificate.html">get_peer_certificate</a>
+  
+    <a class="method" href="method.TlsConnection.get_peer_certificate_errors.html">get_peer_certificate_errors</a>
+  
+    <a class="method" href="method.TlsConnection.get_protocol_version.html">get_protocol_version</a>
+  
+    <a class="method" href="method.TlsConnection.get_rehandshake_mode.html">get_rehandshake_mode</a>
+  
+    <a class="method" href="method.TlsConnection.get_require_close_notify.html">get_require_close_notify</a>
+  
+    <a class="method" href="method.TlsConnection.get_use_system_certdb.html">get_use_system_certdb</a>
+  
+    <a class="method" href="method.TlsConnection.handshake.html">handshake</a>
+  
+    <a class="method" href="method.TlsConnection.handshake_async.html">handshake_async</a>
+  
+    <a class="method" href="method.TlsConnection.handshake_finish.html">handshake_finish</a>
+  
+    <a class="method" href="method.TlsConnection.set_advertised_protocols.html">set_advertised_protocols</a>
+  
+    <a class="method" href="method.TlsConnection.set_certificate.html">set_certificate</a>
+  
+    <a class="method" href="method.TlsConnection.set_database.html">set_database</a>
+  
+    <a class="method" href="method.TlsConnection.set_interaction.html">set_interaction</a>
+  
+    <a class="method" href="method.TlsConnection.set_rehandshake_mode.html">set_rehandshake_mode</a>
+  
+    <a class="method" href="method.TlsConnection.set_require_close_notify.html">set_require_close_notify</a>
+  
+    <a class="method" href="method.TlsConnection.set_use_system_certdb.html">set_use_system_certdb</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Properties</h5>
+  <div class="links">
+  
+    <a class="property" href="property.TlsConnection.advertised-protocols.html">advertised-protocols</a>
+  
+    <a class="property" href="property.TlsConnection.base-io-stream.html">base-io-stream</a>
+  
+    <a class="property" href="property.TlsConnection.certificate.html">certificate</a>
+  
+    <a class="property" href="property.TlsConnection.ciphersuite-name.html">ciphersuite-name</a>
+  
+    <a class="property" href="property.TlsConnection.database.html">database</a>
+  
+    <a class="property" href="property.TlsConnection.interaction.html">interaction</a>
+  
+    <a class="property" href="property.TlsConnection.negotiated-protocol.html">negotiated-protocol</a>
+  
+    <a class="property" href="property.TlsConnection.peer-certificate.html">peer-certificate</a>
+  
+    <a class="property" href="property.TlsConnection.peer-certificate-errors.html">peer-certificate-errors</a>
+  
+    <a class="property" href="property.TlsConnection.protocol-version.html">protocol-version</a>
+  
+    <a class="property" href="property.TlsConnection.rehandshake-mode.html">rehandshake-mode</a>
+  
+    <a class="property" href="property.TlsConnection.require-close-notify.html">require-close-notify</a>
+  
+    <a class="property" href="property.TlsConnection.use-system-certdb.html">use-system-certdb</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.TlsConnection.accept-certificate.html">accept-certificate</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.TlsConnection.accept_certificate.html">accept_certificate</a>
+  
+    <a class="method" href="vfunc.TlsConnection.get_binding_data.html">get_binding_data</a>
+  
+    <a class="method" href="vfunc.TlsConnection.get_negotiated_protocol.html">get_negotiated_protocol</a>
+  
+    <a class="method" href="vfunc.TlsConnection.handshake.html">handshake</a>
+  
+    <a class="method" href="vfunc.TlsConnection.handshake_async.html">handshake_async</a>
+  
+    <a class="method" href="vfunc.TlsConnection.handshake_finish.html">handshake_finish</a>
+  
+  </div>
+</div>
+
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>TlsConnection</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.28</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gtlsconnection.c#L36">[src]</a>
+          
+        </h4>
+
+        <pre><code>abstract class Gio.TlsConnection : Gio.IOStream
+{
+  priv: GTlsConnectionPrivate*
+}</pre></code>
+
+        <div class="docblock">
+          <p><code>GTlsConnection</code> is the base <span class="caps">TLS</span> connection class type, which wraps
+a <a href="class.IOStream.html"><code>GIOStream</code></a> and provides <span class="caps">TLS</span> encryption on top of it. Its
+subclasses, <a href="iface.TlsClientConnection.html"><code>GTlsClientConnection</code></a> and
+<a href="iface.TlsServerConnection.html"><code>GTlsServerConnection</code></a>, implement client-side and server-side <span class="caps">TLS</span>,&nbsp;respectively.</p>
+<p>For <span class="caps">DTLS</span> (Datagram <span class="caps">TLS</span>) support, see <a href="iface.DtlsConnection.html"><code>GDtlsConnection</code></a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.28</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a href="class.IOStream.html" title="IOStream">GIOStream</a></li>
+          
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.emit_accept_certificate.html">g_tls_connection_emit_accept_certificate</a></h6>
+          <div class="docblock">
+            <p>Used by <code>GTlsConnection</code> implementations to emit the
+<code>GTlsConnection::accept-certificate</code> signal.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.get_certificate.html">g_tls_connection_get_certificate</a></h6>
+          <div class="docblock">
+            <p>Gets <code>conn</code><span class="quo">&#8216;</span>s certificate, as set by&nbsp;g_tls_connection_set_certificate().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.get_channel_binding_data.html">g_tls_connection_get_channel_binding_data</a></h6>
+          <div class="docblock">
+            <p>Query the <span class="caps">TLS</span> backend for <span class="caps">TLS</span> channel binding data of <code>type</code> for <code>conn</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.66</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.get_ciphersuite_name.html">g_tls_connection_get_ciphersuite_name</a></h6>
+          <div class="docblock">
+            <p>Returns the name of the current <span class="caps">TLS</span> ciphersuite, or <code>NULL</code> if the
+connection has not handshaked or has been closed. Beware that the <span class="caps">TLS</span>
+backend may use any of multiple different naming conventions, because
+OpenSSL and GnuTLS have their own ciphersuite naming conventions that
+are different from each other and different from the standard, <span class="caps">IANA</span>-
+registered ciphersuite names. The ciphersuite name is intended to be
+displayed to the user for informative purposes only, and parsing it
+is not&nbsp;recommended.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.70</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.get_database.html">g_tls_connection_get_database</a></h6>
+          <div class="docblock">
+            <p>Gets the certificate database that <code>conn</code> uses to verify
+peer certificates. See&nbsp;g_tls_connection_set_database().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.get_interaction.html">g_tls_connection_get_interaction</a></h6>
+          <div class="docblock">
+            <p>Get the object that will be used to interact with the user. It will be used
+for things like prompting the user for passwords. If <code>NULL</code> is returned, then
+no user interaction will occur for this&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.get_negotiated_protocol.html">g_tls_connection_get_negotiated_protocol</a></h6>
+          <div class="docblock">
+            <p>Gets the name of the application-layer protocol negotiated during
+the&nbsp;handshake.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.get_peer_certificate.html">g_tls_connection_get_peer_certificate</a></h6>
+          <div class="docblock">
+            <p>Gets <code>conn</code><span class="quo">&#8216;</span>s peer&#8217;s certificate after the handshake has completed
+or failed. (It is not set during the emission of
+<code>GTlsConnection::accept-certificate</code>.).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.get_peer_certificate_errors.html">g_tls_connection_get_peer_certificate_errors</a></h6>
+          <div class="docblock">
+            <p>Gets the errors associated with validating <code>conn</code><span class="quo">&#8216;</span>s peer&#8217;s
+certificate, after the handshake has completed or failed. (It is
+not set during the emission of <code>GTlsConnection::accept-certificate</code>.).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.get_protocol_version.html">g_tls_connection_get_protocol_version</a></h6>
+          <div class="docblock">
+            <p>Returns the current <span class="caps">TLS</span> protocol version, which may be
+<code>G_TLS_PROTOCOL_VERSION_UNKNOWN</code> if the connection has not handshaked, or
+has been closed, or if the <span class="caps">TLS</span> backend has implemented a protocol version
+that is not a recognized <code>GTlsProtocolVersion</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.70</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.TlsConnection.get_rehandshake_mode.html">g_tls_connection_get_rehandshake_mode</a></h6>
+          <div class="docblock">
+            <p>Gets <code>conn</code> rehandshaking mode. See
+<code>g_tls_connection_set_rehandshake_mode()</code> for&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.60.</span>&nbsp;<span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.get_require_close_notify.html">g_tls_connection_get_require_close_notify</a></h6>
+          <div class="docblock">
+            <p>Tests whether or not <code>conn</code> expects a proper <span class="caps">TLS</span> close notification
+when the connection is closed. See
+<code>g_tls_connection_set_require_close_notify()</code> for&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.TlsConnection.get_use_system_certdb.html">g_tls_connection_get_use_system_certdb</a></h6>
+          <div class="docblock">
+            <p>Gets whether <code>conn</code> uses the system certificate database to verify
+peer certificates. See&nbsp;g_tls_connection_set_use_system_certdb().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.30</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.handshake.html">g_tls_connection_handshake</a></h6>
+          <div class="docblock">
+            <p>Attempts a <span class="caps">TLS</span> handshake on <code>conn</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.handshake_async.html">g_tls_connection_handshake_async</a></h6>
+          <div class="docblock">
+            <p>Asynchronously performs a <span class="caps">TLS</span> handshake on <code>conn</code>. See
+<code>g_tls_connection_handshake()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.handshake_finish.html">g_tls_connection_handshake_finish</a></h6>
+          <div class="docblock">
+            <p>Finish an asynchronous <span class="caps">TLS</span> handshake operation. See
+<code>g_tls_connection_handshake()</code> for more&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.set_advertised_protocols.html">g_tls_connection_set_advertised_protocols</a></h6>
+          <div class="docblock">
+            <p>Sets the list of application-layer protocols to advertise that the
+caller is willing to speak on this connection. The
+Application-Layer Protocol Negotiation (<span class="caps">ALPN</span>) extension will be
+used to negotiate a compatible protocol with the peer; use
+<code>g_tls_connection_get_negotiated_protocol()</code> to find the negotiated
+protocol after the handshake.  Specifying <code>NULL</code> for the the value
+of <code>protocols</code> will disable <span class="caps">ALPN</span>&nbsp;negotiation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.set_certificate.html">g_tls_connection_set_certificate</a></h6>
+          <div class="docblock">
+            <p>This sets the certificate that <code>conn</code> will present to its peer
+during the <span class="caps">TLS</span> handshake. For a <code>GTlsServerConnection</code>, it is
+mandatory to set this, and that will normally be done at construct&nbsp;time.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.set_database.html">g_tls_connection_set_database</a></h6>
+          <div class="docblock">
+            <p>Sets the certificate database that is used to verify peer certificates.
+This is set to the default database by default. See
+g_tls_backend_get_default_database(). If set to <code>NULL</code>, then
+peer certificate validation will always set the
+<code>G_TLS_CERTIFICATE_UNKNOWN_CA</code> error (meaning
+<code>GTlsConnection::accept-certificate</code> will always be emitted on
+client-side connections, unless that bit is not set in
+<code>GTlsClientConnection:validation-flags</code>).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.set_interaction.html">g_tls_connection_set_interaction</a></h6>
+          <div class="docblock">
+            <p>Set the object that will be used to interact with the user. It will be used
+for things like prompting the user for&nbsp;passwords.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.TlsConnection.set_rehandshake_mode.html">g_tls_connection_set_rehandshake_mode</a></h6>
+          <div class="docblock">
+            <p>Since GLib 2.64, changing the rehandshake mode is no longer supported
+and will have no effect. With <span class="caps">TLS</span> 1.3, rehandshaking has been removed from
+the <span class="caps">TLS</span> protocol, replaced by separate post-handshake authentication and
+rekey&nbsp;operations.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.60.</span>&nbsp;<span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.TlsConnection.set_require_close_notify.html">g_tls_connection_set_require_close_notify</a></h6>
+          <div class="docblock">
+            <p>Sets whether or not <code>conn</code> expects a proper <span class="caps">TLS</span> close notification
+before the connection is closed. If this is <code>TRUE</code> (the default),
+then <code>conn</code> will expect to receive a <span class="caps">TLS</span> close notification from its
+peer before the connection is closed, and will return a
+<code>G_TLS_ERROR_EOF</code> error if the connection is closed without proper
+notification (since this may indicate a network error, or
+man-in-the-middle&nbsp;attack).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.TlsConnection.set_use_system_certdb.html">g_tls_connection_set_use_system_certdb</a></h6>
+          <div class="docblock">
+            <p>Sets whether <code>conn</code> uses the system certificate database to verify
+peer certificates. This is <code>TRUE</code> by default. If set to <code>FALSE</code>, then
+peer certificate validation will always set the
+<code>G_TLS_CERTIFICATE_UNKNOWN_CA</code> error (meaning
+<code>GTlsConnection::accept-certificate</code> will always be emitted on
+client-side connections, unless that bit is not set in
+<code>GTlsClientConnection:validation-flags</code>).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.30</span>&nbsp;</p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="class.IOStream.html">GIOStream</a> (10)</h5><div class="docblock">
+          
+            <h6><a href="method.IOStream.clear_pending.html">g_io_stream_clear_pending</a></h6><div class="docblock">
+              <p>Clears the pending flag on <code>stream</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.close.html">g_io_stream_close</a></h6><div class="docblock">
+              <p>Closes the stream, releasing resources related to it. This will also
+close the individual input and output streams, if they are not already&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.close_async.html">g_io_stream_close_async</a></h6><div class="docblock">
+              <p>Requests an asynchronous close of the stream, releasing resources
+related to it. When the operation is finished <code>callback</code> will be
+called. You can then call <code>g_io_stream_close_finish()</code> to get
+the result of the&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.close_finish.html">g_io_stream_close_finish</a></h6><div class="docblock">
+              <p>Closes a&nbsp;stream.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.get_input_stream.html">g_io_stream_get_input_stream</a></h6><div class="docblock">
+              <p>Gets the input stream for this object. This is used
+for&nbsp;reading.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.get_output_stream.html">g_io_stream_get_output_stream</a></h6><div class="docblock">
+              <p>Gets the output stream for this object. This is used for&nbsp;writing.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.has_pending.html">g_io_stream_has_pending</a></h6><div class="docblock">
+              <p>Checks if a stream has pending&nbsp;actions.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.is_closed.html">g_io_stream_is_closed</a></h6><div class="docblock">
+              <p>Checks if a stream is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.set_pending.html">g_io_stream_set_pending</a></h6><div class="docblock">
+              <p>Sets <code>stream</code> to have actions pending. If the pending flag is
+already set or <code>stream</code> is closed, it will return <code>FALSE</code> and set
+<code>error</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.splice_async.html">g_io_stream_splice_async</a></h6><div class="docblock">
+              <p>Asynchronously splice the output stream of <code>stream1</code> to the input stream of
+<code>stream2</code>, and splice the output stream of <code>stream2</code> to the input stream of
+<code>stream1</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</em></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.TlsConnection.advertised-protocols.html">Gio.TlsConnection:advertised-protocols</a></h6>
+          <div class="docblock">
+            <p>The list of application-layer protocols that the connection
+advertises that it is willing to speak. See&nbsp;g_tls_connection_set_advertised_protocols().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.TlsConnection.base-io-stream.html">Gio.TlsConnection:base-io-stream</a></h6>
+          <div class="docblock">
+            <p>The <code>GIOStream</code> that the connection wraps. The connection holds a reference
+to this stream, and may run operations on the stream from other threads
+throughout its lifetime. Consequently, after the <code>GIOStream</code> has been
+constructed, application code may only run its own operations on this
+stream when no <code>GIOStream</code> operations are&nbsp;running.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.TlsConnection.certificate.html">Gio.TlsConnection:certificate</a></h6>
+          <div class="docblock">
+            <p>The connection&#8217;s certificate; see&nbsp;g_tls_connection_set_certificate().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.TlsConnection.ciphersuite-name.html">Gio.TlsConnection:ciphersuite-name</a></h6>
+          <div class="docblock">
+            <p>The name of the <span class="caps">TLS</span> ciphersuite in use. See&nbsp;g_tls_connection_get_ciphersuite_name().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.70</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.TlsConnection.database.html">Gio.TlsConnection:database</a></h6>
+          <div class="docblock">
+            <p>The certificate database to use when verifying this <span class="caps">TLS</span> connection.
+If no certificate database is set, then the default database will be
+used. See&nbsp;g_tls_backend_get_default_database().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.TlsConnection.interaction.html">Gio.TlsConnection:interaction</a></h6>
+          <div class="docblock">
+            <p>A <code>GTlsInteraction</code> object to be used when the connection or certificate
+database need to interact with the user. This will be used to prompt the
+user for passwords where&nbsp;necessary.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.TlsConnection.negotiated-protocol.html">Gio.TlsConnection:negotiated-protocol</a></h6>
+          <div class="docblock">
+            <p>The application-layer protocol negotiated during the <span class="caps">TLS</span>
+handshake. See&nbsp;g_tls_connection_get_negotiated_protocol().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.TlsConnection.peer-certificate.html">Gio.TlsConnection:peer-certificate</a></h6>
+          <div class="docblock">
+            <p>The connection&#8217;s peer&#8217;s certificate, after the <span class="caps">TLS</span> handshake has
+completed or failed. Note in particular that this is not yet set
+during the emission of <code>GTlsConnection::accept-certificate</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.TlsConnection.peer-certificate-errors.html">Gio.TlsConnection:peer-certificate-errors</a></h6>
+          <div class="docblock">
+            <p>The errors noticed while verifying
+<code>GTlsConnection:peer-certificate</code>. Normally this should be 0, but
+it may not be if <code>GTlsClientConnection:validation-flags</code> is not
+<code>G_TLS_CERTIFICATE_VALIDATE_ALL</code>, or if
+<code>GTlsConnection::accept-certificate</code> overrode the default&nbsp;behavior.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.TlsConnection.protocol-version.html">Gio.TlsConnection:protocol-version</a></h6>
+          <div class="docblock">
+            <p>The <span class="caps">TLS</span> protocol version in use. See&nbsp;g_tls_connection_get_protocol_version().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.70</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="property.TlsConnection.rehandshake-mode.html">Gio.TlsConnection:rehandshake-mode</a></h6>
+          <div class="docblock">
+            <p>The rehandshaking mode. See&nbsp;g_tls_connection_set_rehandshake_mode().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.60</span>&nbsp;<span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.TlsConnection.require-close-notify.html">Gio.TlsConnection:require-close-notify</a></h6>
+          <div class="docblock">
+            <p>Whether or not proper <span class="caps">TLS</span> close notification is required.
+See&nbsp;g_tls_connection_set_require_close_notify().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="property.TlsConnection.use-system-certdb.html">Gio.TlsConnection:use-system-certdb</a></h6>
+          <div class="docblock">
+            <p>Whether or not the system certificate database will be used to
+verify peer certificates. See&nbsp;g_tls_connection_set_use_system_certdb().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.30</span>&nbsp;</p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-properties">
+          <h5 style="display:block;">Properties inherited from <a href="class.IOStream.html">GIOStream</a> (3)</h5><div class="docblock">
+          
+            <h6><a href="property.IOStream.closed.html">Gio.IOStream:closed</a></h6><div class="docblock">
+              <p>Whether the stream is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="property.IOStream.input-stream.html">Gio.IOStream:input-stream</a></h6><div class="docblock">
+              <p>The <code>GInputStream</code> to read&nbsp;from.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="property.IOStream.output-stream.html">Gio.IOStream:output-stream</a></h6><div class="docblock">
+              <p>The <code>GOutputStream</code> to write&nbsp;to.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.TlsConnection.accept-certificate.html">Gio.TlsConnection::accept-certificate</a></h6>
+          <div class="docblock">
+            <p>Emitted during the <span class="caps">TLS</span> handshake after the peer certificate has
+been received. You can examine <code>peer_cert</code><span class="quo">&#8216;</span>s certification path by
+calling <code>g_tls_certificate_get_issuer()</code> on&nbsp;it.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioTlsConnectionClass {
+  GIOStreamClass parent_class;
+  gboolean (* accept_certificate) (
+    GTlsConnection* connection,
+    GTlsCertificate* peer_cert,
+    GTlsCertificateFlags errors
+  );
+  gboolean (* handshake) (
+    GTlsConnection* conn,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* handshake_async) (
+    GTlsConnection* conn,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* handshake_finish) (
+    GTlsConnection* conn,
+    GAsyncResult* result,
+    GError** error
+  );
+  gboolean (* get_binding_data) (
+    GTlsConnection* conn,
+    GTlsChannelBindingType type,
+    GByteArray* data,
+    GError** error
+  );
+  const gchar* (* get_negotiated_protocol) (
+    GTlsConnection* conn
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>The class structure for the <code>GTlsConnection</code> type.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GIOStreamClass</code></dt>
+          <dd><p>The parent&nbsp;class.</p></dd>
+        
+          <dt><code>accept_certificate: gboolean (* accept_certificate) (
+    GTlsConnection* connection,
+    GTlsCertificate* peer_cert,
+    GTlsCertificateFlags errors
+  )</code></dt>
+          <dd><p>Check whether to accept a&nbsp;certificate.</p></dd>
+        
+          <dt><code>handshake: gboolean (* handshake) (
+    GTlsConnection* conn,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>Perform a handshake&nbsp;operation.</p></dd>
+        
+          <dt><code>handshake_async: void (* handshake_async) (
+    GTlsConnection* conn,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>Start an asynchronous handshake&nbsp;operation.</p></dd>
+        
+          <dt><code>handshake_finish: gboolean (* handshake_finish) (
+    GTlsConnection* conn,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>Finish an asynchronous handshake&nbsp;operation.</p></dd>
+        
+          <dt><code>get_binding_data: gboolean (* get_binding_data) (
+    GTlsConnection* conn,
+    GTlsChannelBindingType type,
+    GByteArray* data,
+    GError** error
+  )</code></dt>
+          <dd><p>Retrieve <span class="caps">TLS</span> channel binding data (Since:&nbsp;2.66).</p></dd>
+        
+          <dt><code>get_negotiated_protocol: const gchar* (* get_negotiated_protocol) (
+    GTlsConnection* conn
+  )</code></dt>
+          <dd><p>Get <span class="caps">ALPN</span>-negotiated protocol (Since:&nbsp;2.70).</p></dd>
+        
+        </dd>
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-accept_certificate"><a href="vfunc.TlsConnection.accept_certificate.html">Gio.TlsConnectionClass.accept_certificate</a></h6>
+        <div class="docblock">
+          <p>Check whether to accept a&nbsp;certificate.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_binding_data"><a href="vfunc.TlsConnection.get_binding_data.html">Gio.TlsConnectionClass.get_binding_data</a></h6>
+        <div class="docblock">
+          <p>Retrieve <span class="caps">TLS</span> channel binding data (Since:&nbsp;2.66).</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_negotiated_protocol"><a href="vfunc.TlsConnection.get_negotiated_protocol.html">Gio.TlsConnectionClass.get_negotiated_protocol</a></h6>
+        <div class="docblock">
+          <p>Gets the name of the application-layer protocol negotiated during
+the&nbsp;handshake.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.60</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-handshake"><a href="vfunc.TlsConnection.handshake.html">Gio.TlsConnectionClass.handshake</a></h6>
+        <div class="docblock">
+          <p>Attempts a <span class="caps">TLS</span> handshake on <code>conn</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.28</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-handshake_async"><a href="vfunc.TlsConnection.handshake_async.html">Gio.TlsConnectionClass.handshake_async</a></h6>
+        <div class="docblock">
+          <p>Asynchronously performs a <span class="caps">TLS</span> handshake on <code>conn</code>. See
+<code>g_tls_connection_handshake()</code> for more&nbsp;information.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.28</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-handshake_finish"><a href="vfunc.TlsConnection.handshake_finish.html">Gio.TlsConnectionClass.handshake_finish</a></h6>
+        <div class="docblock">
+          <p>Finish an asynchronous <span class="caps">TLS</span> handshake operation. See
+<code>g_tls_connection_handshake()</code> for more&nbsp;information.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.28</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+      
+      <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
+      
+      
+      
+
+      
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/class.TlsConnection.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:57:15 GMT -->
+</html>

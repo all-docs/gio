@@ -1,0 +1,1602 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/iface.Drive.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:59:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.Drive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.Drive"/>
+  <meta property="og:description" content="Reference for Gio.Drive"/>
+  <meta name="twitter:title" content="Gio.Drive"/>
+  <meta name="twitter:description" content="Reference for Gio.Drive"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="iface.Drive.html#description">Drive</a>
+  </div>
+</div>
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.Drive.can_eject.html">can_eject</a>
+  
+    <a class="method" href="method.Drive.can_poll_for_media.html">can_poll_for_media</a>
+  
+    <a class="method" href="method.Drive.can_start.html">can_start</a>
+  
+    <a class="method" href="method.Drive.can_start_degraded.html">can_start_degraded</a>
+  
+    <a class="method" href="method.Drive.can_stop.html">can_stop</a>
+  
+    <a class="method" href="method.Drive.eject.html">eject</a>
+  
+    <a class="method" href="method.Drive.eject_finish.html">eject_finish</a>
+  
+    <a class="method" href="method.Drive.eject_with_operation.html">eject_with_operation</a>
+  
+    <a class="method" href="method.Drive.eject_with_operation_finish.html">eject_with_operation_finish</a>
+  
+    <a class="method" href="method.Drive.enumerate_identifiers.html">enumerate_identifiers</a>
+  
+    <a class="method" href="method.Drive.get_icon.html">get_icon</a>
+  
+    <a class="method" href="method.Drive.get_identifier.html">get_identifier</a>
+  
+    <a class="method" href="method.Drive.get_name.html">get_name</a>
+  
+    <a class="method" href="method.Drive.get_sort_key.html">get_sort_key</a>
+  
+    <a class="method" href="method.Drive.get_start_stop_type.html">get_start_stop_type</a>
+  
+    <a class="method" href="method.Drive.get_symbolic_icon.html">get_symbolic_icon</a>
+  
+    <a class="method" href="method.Drive.get_volumes.html">get_volumes</a>
+  
+    <a class="method" href="method.Drive.has_media.html">has_media</a>
+  
+    <a class="method" href="method.Drive.has_volumes.html">has_volumes</a>
+  
+    <a class="method" href="method.Drive.is_media_check_automatic.html">is_media_check_automatic</a>
+  
+    <a class="method" href="method.Drive.is_media_removable.html">is_media_removable</a>
+  
+    <a class="method" href="method.Drive.is_removable.html">is_removable</a>
+  
+    <a class="method" href="method.Drive.poll_for_media.html">poll_for_media</a>
+  
+    <a class="method" href="method.Drive.poll_for_media_finish.html">poll_for_media_finish</a>
+  
+    <a class="method" href="method.Drive.start.html">start</a>
+  
+    <a class="method" href="method.Drive.start_finish.html">start_finish</a>
+  
+    <a class="method" href="method.Drive.stop.html">stop</a>
+  
+    <a class="method" href="method.Drive.stop_finish.html">stop_finish</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.Drive.changed.html">changed</a>
+  
+    <a class="signal" href="signal.Drive.disconnected.html">disconnected</a>
+  
+    <a class="signal" href="signal.Drive.eject-button.html">eject-button</a>
+  
+    <a class="signal" href="signal.Drive.stop-button.html">stop-button</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.Drive.can_eject.html">can_eject</a>
+  
+    <a class="method" href="vfunc.Drive.can_poll_for_media.html">can_poll_for_media</a>
+  
+    <a class="method" href="vfunc.Drive.can_start.html">can_start</a>
+  
+    <a class="method" href="vfunc.Drive.can_start_degraded.html">can_start_degraded</a>
+  
+    <a class="method" href="vfunc.Drive.can_stop.html">can_stop</a>
+  
+    <a class="method" href="vfunc.Drive.changed.html">changed</a>
+  
+    <a class="method" href="vfunc.Drive.disconnected.html">disconnected</a>
+  
+    <a class="method" href="vfunc.Drive.eject.html">eject</a>
+  
+    <a class="method" href="vfunc.Drive.eject_button.html">eject_button</a>
+  
+    <a class="method" href="vfunc.Drive.eject_finish.html">eject_finish</a>
+  
+    <a class="method" href="vfunc.Drive.eject_with_operation.html">eject_with_operation</a>
+  
+    <a class="method" href="vfunc.Drive.eject_with_operation_finish.html">eject_with_operation_finish</a>
+  
+    <a class="method" href="vfunc.Drive.enumerate_identifiers.html">enumerate_identifiers</a>
+  
+    <a class="method" href="vfunc.Drive.get_icon.html">get_icon</a>
+  
+    <a class="method" href="vfunc.Drive.get_identifier.html">get_identifier</a>
+  
+    <a class="method" href="vfunc.Drive.get_name.html">get_name</a>
+  
+    <a class="method" href="vfunc.Drive.get_sort_key.html">get_sort_key</a>
+  
+    <a class="method" href="vfunc.Drive.get_start_stop_type.html">get_start_stop_type</a>
+  
+    <a class="method" href="vfunc.Drive.get_symbolic_icon.html">get_symbolic_icon</a>
+  
+    <a class="method" href="vfunc.Drive.get_volumes.html">get_volumes</a>
+  
+    <a class="method" href="vfunc.Drive.has_media.html">has_media</a>
+  
+    <a class="method" href="vfunc.Drive.has_volumes.html">has_volumes</a>
+  
+    <a class="method" href="vfunc.Drive.is_media_check_automatic.html">is_media_check_automatic</a>
+  
+    <a class="method" href="vfunc.Drive.is_media_removable.html">is_media_removable</a>
+  
+    <a class="method" href="vfunc.Drive.is_removable.html">is_removable</a>
+  
+    <a class="method" href="vfunc.Drive.poll_for_media.html">poll_for_media</a>
+  
+    <a class="method" href="vfunc.Drive.poll_for_media_finish.html">poll_for_media_finish</a>
+  
+    <a class="method" href="vfunc.Drive.start.html">start</a>
+  
+    <a class="method" href="vfunc.Drive.start_finish.html">start_finish</a>
+  
+    <a class="method" href="vfunc.Drive.stop.html">stop</a>
+  
+    <a class="method" href="vfunc.Drive.stop_button.html">stop_button</a>
+  
+    <a class="method" href="vfunc.Drive.stop_finish.html">stop_finish</a>
+  
+  </div>
+</div>
+
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Interface</h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span>Drive</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdrive.c#L33">[src]</a>
+          
+        </h4>
+
+        <pre><code>interface Gio.Drive : GObject.Object</code></pre>
+
+        <div class="docblock">
+          <p><code>GDrive</code> represents a piece of hardware connected to the machine.
+It’s generally only created for removable hardware or hardware with
+removable media. For example, an optical disc drive, or a <span class="caps">USB</span> flash&nbsp;drive.</p>
+<p><code>GDrive</code> is a container class for <a href="iface.Volume.html"><code>GVolume</code></a> objects that stem from
+the same piece of media. As such, <code>GDrive</code> abstracts a drive with
+(or without) removable media and provides operations for querying
+whether media is available, determining whether media change is
+automatically detected and ejecting the&nbsp;media.</p>
+<p>If the <code>GDrive</code> reports that media isn’t automatically detected, one
+can poll for media; typically one should not do this periodically
+as a poll for media operation is potentially expensive and may
+spin up the drive creating&nbsp;noise.</p>
+<p><code>GDrive</code> supports starting and stopping drives with authentication
+support for the former. This can be used to support a diverse set
+of use cases including connecting/disconnecting iSCSI devices,
+powering down external disk enclosures and starting/stopping
+multi-disk devices such as <span class="caps">RAID</span> devices. Note that the actual
+semantics and side-effects of starting/stopping a <code>GDrive</code> may vary
+according to implementation. To choose the correct verbs in e.g. a
+file manager, use <a href="method.Drive.get_start_stop_type.html"><code>g_drive_get_start_stop_type()</code></a>.</p>
+<p>For <a href="migrating-gnome-vfs.html">porting from GnomeVFS</a> note that there is no
+equivalent of <code>GDrive</code> in that <span class="caps">API</span>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    <div class="toggle-wrapper prerequisite">
+      <h4 id="prerequisite">
+        Prerequisite
+        <a href="#prerequisite" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <p>In order to implement Drive, your type must inherit from<a data-namespace="GObject" data-link="class.Object.html" href="javascript:void(0)" class="external"><code>GObject</code></a>.</p>
+      </div>
+    </div>
+
+    
+
+    
+
+    
+    <div class="methods toggle-wrapper">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.Drive.can_eject.html">g_drive_can_eject</a></h6>
+          <div class="docblock">
+            <p>Checks if a drive can be&nbsp;ejected.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.can_poll_for_media.html">g_drive_can_poll_for_media</a></h6>
+          <div class="docblock">
+            <p>Checks if a drive can be polled for media&nbsp;changes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.can_start.html">g_drive_can_start</a></h6>
+          <div class="docblock">
+            <p>Checks if a drive can be&nbsp;started.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.can_start_degraded.html">g_drive_can_start_degraded</a></h6>
+          <div class="docblock">
+            <p>Checks if a drive can be started&nbsp;degraded.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.can_stop.html">g_drive_can_stop</a></h6>
+          <div class="docblock">
+            <p>Checks if a drive can be&nbsp;stopped.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.Drive.eject.html">g_drive_eject</a></h6>
+          <div class="docblock">
+            <p>Asynchronously ejects a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.Drive.eject_finish.html">g_drive_eject_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes ejecting a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.eject_with_operation.html">g_drive_eject_with_operation</a></h6>
+          <div class="docblock">
+            <p>Ejects a drive. This is an asynchronous operation, and is
+finished by calling <code>g_drive_eject_with_operation_finish()</code> with the <code>drive</code>
+and <code>GAsyncResult</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.eject_with_operation_finish.html">g_drive_eject_with_operation_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes ejecting a drive. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.enumerate_identifiers.html">g_drive_enumerate_identifiers</a></h6>
+          <div class="docblock">
+            <p>Gets the kinds of identifiers that <code>drive</code> has.
+Use <code>g_drive_get_identifier()</code> to obtain the identifiers&nbsp;themselves.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.get_icon.html">g_drive_get_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the icon for <code>drive</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.get_identifier.html">g_drive_get_identifier</a></h6>
+          <div class="docblock">
+            <p>Gets the identifier of the given kind for <code>drive</code>. The only
+identifier currently available is
+<code>G_DRIVE_IDENTIFIER_KIND_UNIX_DEVICE</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.get_name.html">g_drive_get_name</a></h6>
+          <div class="docblock">
+            <p>Gets the name of <code>drive</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.get_sort_key.html">g_drive_get_sort_key</a></h6>
+          <div class="docblock">
+            <p>Gets the sort key for <code>drive</code>, if&nbsp;any.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.get_start_stop_type.html">g_drive_get_start_stop_type</a></h6>
+          <div class="docblock">
+            <p>Gets a hint about how a drive can be&nbsp;started/stopped.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.get_symbolic_icon.html">g_drive_get_symbolic_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the icon for <code>drive</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.get_volumes.html">g_drive_get_volumes</a></h6>
+          <div class="docblock">
+            <p>Get a list of mountable volumes for <code>drive</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.has_media.html">g_drive_has_media</a></h6>
+          <div class="docblock">
+            <p>Checks if the <code>drive</code> has media. Note that the <span class="caps">OS</span> may not be polling
+the drive for media changes; see <code>g_drive_is_media_check_automatic()</code>
+for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.has_volumes.html">g_drive_has_volumes</a></h6>
+          <div class="docblock">
+            <p>Check if <code>drive</code> has any mountable&nbsp;volumes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.is_media_check_automatic.html">g_drive_is_media_check_automatic</a></h6>
+          <div class="docblock">
+            <p>Checks if <code>drive</code> is capable of automatically detecting media&nbsp;changes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.is_media_removable.html">g_drive_is_media_removable</a></h6>
+          <div class="docblock">
+            <p>Checks if the <code>drive</code> supports removable&nbsp;media.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.is_removable.html">g_drive_is_removable</a></h6>
+          <div class="docblock">
+            <p>Checks if the <code>GDrive</code> and/or its media is considered removable by the user.
+See&nbsp;g_drive_is_media_removable().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.50</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.poll_for_media.html">g_drive_poll_for_media</a></h6>
+          <div class="docblock">
+            <p>Asynchronously polls <code>drive</code> to see if media has been inserted or&nbsp;removed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.poll_for_media_finish.html">g_drive_poll_for_media_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with <code>g_drive_poll_for_media()</code> on a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.start.html">g_drive_start</a></h6>
+          <div class="docblock">
+            <p>Asynchronously starts a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.start_finish.html">g_drive_start_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes starting a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.stop.html">g_drive_stop</a></h6>
+          <div class="docblock">
+            <p>Asynchronously stops a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Drive.stop_finish.html">g_drive_stop_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes stopping a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+    </div>
+    
+
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.Drive.changed.html">Gio.Drive::changed</a></h6>
+          <div class="docblock">
+            <p>Emitted when the drive&#8217;s state has&nbsp;changed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Drive.disconnected.html">Gio.Drive::disconnected</a></h6>
+          <div class="docblock">
+            <p>This signal is emitted when the <code>GDrive</code> have been
+disconnected. If the recipient is holding references to the
+object they should release them so the object can be&nbsp;finalized.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Drive.eject-button.html">Gio.Drive::eject-button</a></h6>
+          <div class="docblock">
+            <p>Emitted when the physical eject button (if any) of a drive has
+been&nbsp;pressed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.Drive.stop-button.html">Gio.Drive::stop-button</a></h6>
+          <div class="docblock">
+            <p>Emitted when the physical stop button (if any) of a drive has
+been&nbsp;pressed.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="interface toggle-wrapper default-hide">
+      <h4 style="display:flex;" id="interface-struct">
+        Interface structure
+        <a href="#interface-struct" class="anchor"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioDriveIface {
+  GTypeInterface g_iface;
+  void (* changed) (
+    GDrive* drive
+  );
+  void (* disconnected) (
+    GDrive* drive
+  );
+  void (* eject_button) (
+    GDrive* drive
+  );
+  char* (* get_name) (
+    GDrive* drive
+  );
+  GIcon* (* get_icon) (
+    GDrive* drive
+  );
+  gboolean (* has_volumes) (
+    GDrive* drive
+  );
+  GList* (* get_volumes) (
+    GDrive* drive
+  );
+  gboolean (* is_media_removable) (
+    GDrive* drive
+  );
+  gboolean (* has_media) (
+    GDrive* drive
+  );
+  gboolean (* is_media_check_automatic) (
+    GDrive* drive
+  );
+  gboolean (* can_eject) (
+    GDrive* drive
+  );
+  gboolean (* can_poll_for_media) (
+    GDrive* drive
+  );
+  void (* eject) (
+    GDrive* drive,
+    GMountUnmountFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* eject_finish) (
+    GDrive* drive,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* poll_for_media) (
+    GDrive* drive,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* poll_for_media_finish) (
+    GDrive* drive,
+    GAsyncResult* result,
+    GError** error
+  );
+  char* (* get_identifier) (
+    GDrive* drive,
+    const char* kind
+  );
+  char** (* enumerate_identifiers) (
+    GDrive* drive
+  );
+  GDriveStartStopType (* get_start_stop_type) (
+    GDrive* drive
+  );
+  gboolean (* can_start) (
+    GDrive* drive
+  );
+  gboolean (* can_start_degraded) (
+    GDrive* drive
+  );
+  void (* start) (
+    GDrive* drive,
+    GDriveStartFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* start_finish) (
+    GDrive* drive,
+    GAsyncResult* result,
+    GError** error
+  );
+  gboolean (* can_stop) (
+    GDrive* drive
+  );
+  void (* stop) (
+    GDrive* drive,
+    GMountUnmountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* stop_finish) (
+    GDrive* drive,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* stop_button) (
+    GDrive* drive
+  );
+  void (* eject_with_operation) (
+    GDrive* drive,
+    GMountUnmountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* eject_with_operation_finish) (
+    GDrive* drive,
+    GAsyncResult* result,
+    GError** error
+  );
+  const gchar* (* get_sort_key) (
+    GDrive* drive
+  );
+  GIcon* (* get_symbolic_icon) (
+    GDrive* drive
+  );
+  gboolean (* is_removable) (
+    GDrive* drive
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>Interface for creating <code>GDrive</code> implementations.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Interface members</h6>
+
+        <table>
+        
+        <tr>
+          <td style="vertical-align:top"><code>g_iface</code></td>
+          <td style="vertical-align:top"><pre><code>GTypeInterface</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The parent&nbsp;interface.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>changed</code></td>
+          <td style="vertical-align:top"><pre><code>void (* changed) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Signal emitted when the drive is&nbsp;changed.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>disconnected</code></td>
+          <td style="vertical-align:top"><pre><code>void (* disconnected) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The removed signal that is emitted when the <code>GDrive</code> have been disconnected. If the recipient is holding references to the object they should release them so the object can be&nbsp;finalized.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject_button</code></td>
+          <td style="vertical-align:top"><pre><code>void (* eject_button) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Signal emitted when the physical eject button (if any) of a drive have been&nbsp;pressed.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_name</code></td>
+          <td style="vertical-align:top"><pre><code>char* (* get_name) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns the name for the given <code>GDrive</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_icon</code></td>
+          <td style="vertical-align:top"><pre><code>GIcon* (* get_icon) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns a <code>GIcon</code> for the given <code>GDrive</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>has_volumes</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* has_volumes) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns <code>TRUE</code> if the <code>GDrive</code> has mountable&nbsp;volumes.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_volumes</code></td>
+          <td style="vertical-align:top"><pre><code>GList* (* get_volumes) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns a list <code>GList</code> of <code>GVolume</code> for the <code>GDrive</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>is_media_removable</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* is_media_removable) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns <code>TRUE</code> if the <code>GDrive</code> supports removal and insertion of&nbsp;media.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>has_media</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* has_media) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns <code>TRUE</code> if the <code>GDrive</code> has media&nbsp;inserted.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>is_media_check_automatic</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* is_media_check_automatic) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns <code>TRUE</code> if the <code>GDrive</code> is capable of automatically detecting media&nbsp;changes.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>can_eject</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* can_eject) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns <code>TRUE</code> if the <code>GDrive</code> can eject&nbsp;media.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>can_poll_for_media</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* can_poll_for_media) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns <code>TRUE</code> if the <code>GDrive</code> is capable of manually polling for media&nbsp;change.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject</code></td>
+          <td style="vertical-align:top"><pre><code>void (* eject) (
+    GDrive* drive,
+    GMountUnmountFlags flags,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Ejects a <code>GDrive</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* eject_finish) (
+    GDrive* drive,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes an eject&nbsp;operation.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>poll_for_media</code></td>
+          <td style="vertical-align:top"><pre><code>void (* poll_for_media) (
+    GDrive* drive,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Poll for media insertion/removal on a <code>GDrive</code>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>poll_for_media_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* poll_for_media_finish) (
+    GDrive* drive,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes a media poll&nbsp;operation.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_identifier</code></td>
+          <td style="vertical-align:top"><pre><code>char* (* get_identifier) (
+    GDrive* drive,
+    const char* kind
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns the identifier of the given kind, or <code>NULL</code> if
+   the <code>GDrive</code> doesn&#8217;t have&nbsp;one.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>enumerate_identifiers</code></td>
+          <td style="vertical-align:top"><pre><code>char** (* enumerate_identifiers) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns an array strings listing the kinds
+   of identifiers which the <code>GDrive</code> has.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_start_stop_type</code></td>
+          <td style="vertical-align:top"><pre><code>GDriveStartStopType (* get_start_stop_type) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a <code>GDriveStartStopType</code> with details about starting/stopping the drive. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>can_start</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* can_start) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns <code>TRUE</code> if a <code>GDrive</code> can be started. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>can_start_degraded</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* can_start_degraded) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns <code>TRUE</code> if a <code>GDrive</code> can be started degraded. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>start</code></td>
+          <td style="vertical-align:top"><pre><code>void (* start) (
+    GDrive* drive,
+    GDriveStartFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Starts a <code>GDrive</code>. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>start_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* start_finish) (
+    GDrive* drive,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes a start operation. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>can_stop</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* can_stop) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns <code>TRUE</code> if a <code>GDrive</code> can be stopped. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>stop</code></td>
+          <td style="vertical-align:top"><pre><code>void (* stop) (
+    GDrive* drive,
+    GMountUnmountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Stops a <code>GDrive</code>. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>stop_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* stop_finish) (
+    GDrive* drive,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes a stop operation. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>stop_button</code></td>
+          <td style="vertical-align:top"><pre><code>void (* stop_button) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Signal emitted when the physical stop button (if any) of a drive have been pressed. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject_with_operation</code></td>
+          <td style="vertical-align:top"><pre><code>void (* eject_with_operation) (
+    GDrive* drive,
+    GMountUnmountFlags flags,
+    GMountOperation* mount_operation,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Starts ejecting a <code>GDrive</code> using a <code>GMountOperation</code>. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>eject_with_operation_finish</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* eject_with_operation_finish) (
+    GDrive* drive,
+    GAsyncResult* result,
+    GError** error
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Finishes an eject operation using a <code>GMountOperation</code>. Since&nbsp;2.22.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_sort_key</code></td>
+          <td style="vertical-align:top"><pre><code>const gchar* (* get_sort_key) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Gets a key used for sorting <code>GDrive</code> instances or <code>NULL</code> if no such key exists. Since&nbsp;2.32.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_symbolic_icon</code></td>
+          <td style="vertical-align:top"><pre><code>GIcon* (* get_symbolic_icon) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns a symbolic <code>GIcon</code> for the given <code>GDrive</code>. Since&nbsp;2.34.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>is_removable</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* is_removable) (
+    GDrive* drive
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>Returns <code>TRUE</code> if the <code>GDrive</code> and/or its media is considered removable by the user. Since&nbsp;2.50.</p></td>
+        </tr>
+        
+        </table>
+      </div>
+      
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6 id="vfunc-can_eject"><a href="vfunc.Drive.can_eject.html">Gio.Drive.can_eject</a></h6>
+          <div class="docblock">
+            <p>Checks if a drive can be&nbsp;ejected.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-can_poll_for_media"><a href="vfunc.Drive.can_poll_for_media.html">Gio.Drive.can_poll_for_media</a></h6>
+          <div class="docblock">
+            <p>Checks if a drive can be polled for media&nbsp;changes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-can_start"><a href="vfunc.Drive.can_start.html">Gio.Drive.can_start</a></h6>
+          <div class="docblock">
+            <p>Checks if a drive can be&nbsp;started.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-can_start_degraded"><a href="vfunc.Drive.can_start_degraded.html">Gio.Drive.can_start_degraded</a></h6>
+          <div class="docblock">
+            <p>Checks if a drive can be started&nbsp;degraded.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-can_stop"><a href="vfunc.Drive.can_stop.html">Gio.Drive.can_stop</a></h6>
+          <div class="docblock">
+            <p>Checks if a drive can be&nbsp;stopped.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-changed"><a href="vfunc.Drive.changed.html">Gio.Drive.changed</a></h6>
+          <div class="docblock">
+            <p>Signal emitted when the drive is&nbsp;changed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-disconnected"><a href="vfunc.Drive.disconnected.html">Gio.Drive.disconnected</a></h6>
+          <div class="docblock">
+            <p>The removed signal that is emitted when the <code>GDrive</code> have been disconnected. If the recipient is holding references to the object they should release them so the object can be&nbsp;finalized.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6 id="vfunc-eject"><a href="vfunc.Drive.eject.html">Gio.Drive.eject</a></h6>
+          <div class="docblock">
+            <p>Asynchronously ejects a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-eject_button"><a href="vfunc.Drive.eject_button.html">Gio.Drive.eject_button</a></h6>
+          <div class="docblock">
+            <p>Signal emitted when the physical eject button (if any) of a drive have been&nbsp;pressed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6 id="vfunc-eject_finish"><a href="vfunc.Drive.eject_finish.html">Gio.Drive.eject_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes ejecting a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.22</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-eject_with_operation"><a href="vfunc.Drive.eject_with_operation.html">Gio.Drive.eject_with_operation</a></h6>
+          <div class="docblock">
+            <p>Ejects a drive. This is an asynchronous operation, and is
+finished by calling <code>g_drive_eject_with_operation_finish()</code> with the <code>drive</code>
+and <code>GAsyncResult</code> data returned in the <code>callback</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-eject_with_operation_finish"><a href="vfunc.Drive.eject_with_operation_finish.html">Gio.Drive.eject_with_operation_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes ejecting a drive. If any errors occurred during the operation,
+<code>error</code> will be set to contain the errors and <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-enumerate_identifiers"><a href="vfunc.Drive.enumerate_identifiers.html">Gio.Drive.enumerate_identifiers</a></h6>
+          <div class="docblock">
+            <p>Gets the kinds of identifiers that <code>drive</code> has.
+Use <code>g_drive_get_identifier()</code> to obtain the identifiers&nbsp;themselves.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_icon"><a href="vfunc.Drive.get_icon.html">Gio.Drive.get_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the icon for <code>drive</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_identifier"><a href="vfunc.Drive.get_identifier.html">Gio.Drive.get_identifier</a></h6>
+          <div class="docblock">
+            <p>Gets the identifier of the given kind for <code>drive</code>. The only
+identifier currently available is
+<code>G_DRIVE_IDENTIFIER_KIND_UNIX_DEVICE</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_name"><a href="vfunc.Drive.get_name.html">Gio.Drive.get_name</a></h6>
+          <div class="docblock">
+            <p>Gets the name of <code>drive</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_sort_key"><a href="vfunc.Drive.get_sort_key.html">Gio.Drive.get_sort_key</a></h6>
+          <div class="docblock">
+            <p>Gets the sort key for <code>drive</code>, if&nbsp;any.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_start_stop_type"><a href="vfunc.Drive.get_start_stop_type.html">Gio.Drive.get_start_stop_type</a></h6>
+          <div class="docblock">
+            <p>Gets a hint about how a drive can be&nbsp;started/stopped.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_symbolic_icon"><a href="vfunc.Drive.get_symbolic_icon.html">Gio.Drive.get_symbolic_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the icon for <code>drive</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_volumes"><a href="vfunc.Drive.get_volumes.html">Gio.Drive.get_volumes</a></h6>
+          <div class="docblock">
+            <p>Get a list of mountable volumes for <code>drive</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-has_media"><a href="vfunc.Drive.has_media.html">Gio.Drive.has_media</a></h6>
+          <div class="docblock">
+            <p>Checks if the <code>drive</code> has media. Note that the <span class="caps">OS</span> may not be polling
+the drive for media changes; see <code>g_drive_is_media_check_automatic()</code>
+for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-has_volumes"><a href="vfunc.Drive.has_volumes.html">Gio.Drive.has_volumes</a></h6>
+          <div class="docblock">
+            <p>Check if <code>drive</code> has any mountable&nbsp;volumes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-is_media_check_automatic"><a href="vfunc.Drive.is_media_check_automatic.html">Gio.Drive.is_media_check_automatic</a></h6>
+          <div class="docblock">
+            <p>Checks if <code>drive</code> is capable of automatically detecting media&nbsp;changes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-is_media_removable"><a href="vfunc.Drive.is_media_removable.html">Gio.Drive.is_media_removable</a></h6>
+          <div class="docblock">
+            <p>Checks if the <code>drive</code> supports removable&nbsp;media.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-is_removable"><a href="vfunc.Drive.is_removable.html">Gio.Drive.is_removable</a></h6>
+          <div class="docblock">
+            <p>Checks if the <code>GDrive</code> and/or its media is considered removable by the user.
+See&nbsp;g_drive_is_media_removable().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.50</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-poll_for_media"><a href="vfunc.Drive.poll_for_media.html">Gio.Drive.poll_for_media</a></h6>
+          <div class="docblock">
+            <p>Asynchronously polls <code>drive</code> to see if media has been inserted or&nbsp;removed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-poll_for_media_finish"><a href="vfunc.Drive.poll_for_media_finish.html">Gio.Drive.poll_for_media_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an operation started with <code>g_drive_poll_for_media()</code> on a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-start"><a href="vfunc.Drive.start.html">Gio.Drive.start</a></h6>
+          <div class="docblock">
+            <p>Asynchronously starts a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-start_finish"><a href="vfunc.Drive.start_finish.html">Gio.Drive.start_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes starting a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-stop"><a href="vfunc.Drive.stop.html">Gio.Drive.stop</a></h6>
+          <div class="docblock">
+            <p>Asynchronously stops a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-stop_button"><a href="vfunc.Drive.stop_button.html">Gio.Drive.stop_button</a></h6>
+          <div class="docblock">
+            <p>Signal emitted when the physical stop button (if any) of a drive have been pressed. Since&nbsp;2.22.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-stop_finish"><a href="vfunc.Drive.stop_finish.html">Gio.Drive.stop_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes stopping a&nbsp;drive.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/iface.Drive.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:00:27 GMT -->
+</html>

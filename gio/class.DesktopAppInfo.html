@@ -1,0 +1,590 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.DesktopAppInfo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:44:54 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.DesktopAppInfo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.DesktopAppInfo">
+  <meta property="og:description" content="Reference for Gio.DesktopAppInfo">
+  <meta name="twitter:title" content="Gio.DesktopAppInfo">
+  <meta name="twitter:description" content="Reference for Gio.DesktopAppInfo">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>DesktopAppInfo</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdesktopappinfo.c#L65">[src]</a>
+          
+        </h4>
+
+        <pre><code>final class Gio.DesktopAppInfo : GObject.Object
+  implements Gio.AppInfo {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GDesktopAppInfo</code> is an implementation of <a href="iface.AppInfo.html"><code>GAppInfo</code></a> based on
+desktop&nbsp;files.</p>
+<p>Note that <code>&lt;gio/gdesktopappinfo.h&gt;</code> belongs to the <span class="caps">UNIX</span>-specific
+<span class="caps">GIO</span> interfaces, thus you have to use the <code>gio-unix-2.0.pc</code> pkg-config
+file or the <code>GioUnix-2.0</code> <span class="caps">GIR</span> namespace when using&nbsp;it.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.AppInfo.html" title="AppInfo">GAppInfo</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.DesktopAppInfo.new.html">g_desktop_app_info_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GDesktopAppInfo</code> based on a desktop file <span class="caps">ID</span>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DesktopAppInfo.new_from_filename.html">g_desktop_app_info_new_from_filename</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GDesktopAppInfo</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.DesktopAppInfo.new_from_keyfile.html">g_desktop_app_info_new_from_keyfile</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GDesktopAppInfo</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.18</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="type-functions">
+        Functions
+        <a href="#type-functions" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6><a href="type_func.DesktopAppInfo.get_implementations.html">g_desktop_app_info_get_implementations</a></h6>
+        <div class="docblock">
+          <p>Gets all applications that implement <code>interface</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.42</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6><a href="type_func.DesktopAppInfo.search.html">g_desktop_app_info_search</a></h6>
+        <div class="docblock">
+          <p>Searches desktop files for ones that match <code>search_string</code>.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="deprecated">
+        <h6><a href="type_func.DesktopAppInfo.set_desktop_env.html">g_desktop_app_info_set_desktop_env</a></h6>
+        <div class="docblock">
+          <p>Sets the name of the desktop that the application is running&nbsp;in.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem deprecated">deprecated: 2.42</span>&nbsp;</p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_action_name.html">g_desktop_app_info_get_action_name</a></h6>
+          <div class="docblock">
+            <p>Gets the user-visible display name of the
+<a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s11.html">‘additional application actions’</a>
+specified by <code>action_name</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.38</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_boolean.html">g_desktop_app_info_get_boolean</a></h6>
+          <div class="docblock">
+            <p>Looks up a boolean value in the keyfile backing <code>info</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_categories.html">g_desktop_app_info_get_categories</a></h6>
+          <div class="docblock">
+            <p>Gets the categories from the desktop&nbsp;file.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_filename.html">g_desktop_app_info_get_filename</a></h6>
+          <div class="docblock">
+            <p>When <code>info</code> was created from a known filename, return it.  In some
+situations such as a <code>GDesktopAppInfo</code> returned from
+<code>g_desktop_app_info_new_from_keyfile()</code>, this function will return <code>NULL</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_generic_name.html">g_desktop_app_info_get_generic_name</a></h6>
+          <div class="docblock">
+            <p>Gets the generic name from the desktop&nbsp;file.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_is_hidden.html">g_desktop_app_info_get_is_hidden</a></h6>
+          <div class="docblock">
+            <p>A desktop file is hidden if the
+<a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html#key-hidden"><code>Hidden</code> key</a>
+in it is set to <code>True</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_keywords.html">g_desktop_app_info_get_keywords</a></h6>
+          <div class="docblock">
+            <p>Gets the keywords from the desktop&nbsp;file.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_locale_string.html">g_desktop_app_info_get_locale_string</a></h6>
+          <div class="docblock">
+            <p>Looks up a localized string value in the keyfile backing <code>info</code>
+translated to the current&nbsp;locale.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.56</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_nodisplay.html">g_desktop_app_info_get_nodisplay</a></h6>
+          <div class="docblock">
+            <p>Gets the value of the
+<a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html#key-nodisplay"><code>NoDisplay</code> key</a>
+ which helps determine if the application info should be shown in menus. See
+<code>G_KEY_FILE_DESKTOP_KEY_NO_DISPLAY</code> and <code>g_app_info_should_show()</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_show_in.html">g_desktop_app_info_get_show_in</a></h6>
+          <div class="docblock">
+            <p>Checks if the application info should be shown in menus that list available
+applications for a specific name of the desktop, based on the
+<a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html#key-onlyshowin"><code>OnlyShowIn</code></a>
+and <a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html#key-notshowin"><code>NotShowIn</code></a>&nbsp;keys.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_startup_wm_class.html">g_desktop_app_info_get_startup_wm_class</a></h6>
+          <div class="docblock">
+            <p>Retrieves the <code>StartupWMClass</code> field from <code>info</code>. This represents the
+<code>WM_CLASS</code> property of the main window of the application, if launched
+through <code>info</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_string.html">g_desktop_app_info_get_string</a></h6>
+          <div class="docblock">
+            <p>Looks up a string value in the keyfile backing <code>info</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.get_string_list.html">g_desktop_app_info_get_string_list</a></h6>
+          <div class="docblock">
+            <p>Looks up a string list value in the keyfile backing <code>info</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.has_key.html">g_desktop_app_info_has_key</a></h6>
+          <div class="docblock">
+            <p>Returns whether <code>key</code> exists in the <code>Desktop Entry</code> group
+of the keyfile backing <code>info</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.launch_action.html">g_desktop_app_info_launch_action</a></h6>
+          <div class="docblock">
+            <p>Activates the named application&nbsp;action.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.38</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.launch_uris_as_manager.html">g_desktop_app_info_launch_uris_as_manager</a></h6>
+          <div class="docblock">
+            <p>This function performs the equivalent of <code>g_app_info_launch_uris()</code>,
+but is intended primarily for operating system components that
+launch applications.  Ordinary applications should use
+<code>g_app_info_launch_uris()</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.launch_uris_as_manager_with_fds.html">g_desktop_app_info_launch_uris_as_manager_with_fds</a></h6>
+          <div class="docblock">
+            <p>Equivalent to <code>g_desktop_app_info_launch_uris_as_manager()</code> but allows
+you to pass in file descriptors for the stdin, stdout and stderr streams
+of the launched&nbsp;process.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.58</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DesktopAppInfo.list_actions.html">g_desktop_app_info_list_actions</a></h6>
+          <div class="docblock">
+            <p>Returns the list of
+<a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s11.html">‘additional application actions’</a>
+supported on the desktop file, as per the desktop file&nbsp;specification.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.38</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.AppInfo.html">GAppInfo</a> (25)</h5><div class="docblock">
+          
+            <div class="docblock">
+              <p><em>Please see&nbsp;<a href="iface.AppInfo.html#methods">GAppInfo</a>&nbsp;for a full list of methods.</em></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.DesktopAppInfo.filename.html">Gio.DesktopAppInfo:filename</a></h6>
+          <div class="docblock">
+            <p>The origin filename of this <code>GDesktopAppInfo</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioDesktopAppInfoClass {
+  GObjectClass parent_class;
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.DesktopAppInfo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:45:10 GMT --></html>

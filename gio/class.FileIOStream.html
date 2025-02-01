@@ -1,0 +1,764 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.FileIOStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:46:31 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.FileIOStream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.FileIOStream">
+  <meta property="og:description" content="Reference for Gio.FileIOStream">
+  <meta name="twitter:title" content="Gio.FileIOStream">
+  <meta name="twitter:description" content="Reference for Gio.FileIOStream">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>FileIOStream</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.22</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gfileiostream.c#L36">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.FileIOStream : Gio.IOStream
+  implements Gio.Seekable {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GFileIOStream</code> provides I/O streams that both read and write to the same
+file&nbsp;handle.</p>
+<p><code>GFileIOStream</code> implements <a href="iface.Seekable.html"><code>GSeekable</code></a>, which allows the I/O
+stream to jump to arbitrary positions in the file and to truncate
+the file, provided the filesystem of the file supports these&nbsp;operations.</p>
+<p>To find the position of a file I/O stream, use <a href="method.Seekable.tell.html"><code>g_seekable_tell()</code></a>.</p>
+<p>To find out if a file I/O stream supports seeking, use
+<a href="method.Seekable.can_seek.html"><code>g_seekable_can_seek()</code></a>. To position a file I/O stream, use
+<a href="method.Seekable.seek.html"><code>g_seekable_seek()</code></a>. To find out if a file I/O stream supports
+truncating, use <a href="method.Seekable.can_truncate.html"><code>g_seekable_can_truncate()</code></a>. To truncate a file I/O
+stream, use <a href="method.Seekable.truncate.html"><code>g_seekable_truncate()</code></a>.</p>
+<p>The default implementation of all the <code>GFileIOStream</code> operations
+and the implementation of <a href="iface.Seekable.html"><code>GSeekable</code></a> just call into the same
+operations on the output&nbsp;stream.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.22</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a href="class.IOStream.html" title="IOStream">GIOStream</a></li>
+          
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.Seekable.html" title="Seekable">GSeekable</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.FileIOStream.get_etag.html">g_file_io_stream_get_etag</a></h6>
+          <div class="docblock">
+            <p>Gets the entity tag for the file when it has been written.
+This must be called after the stream has been written
+and closed, as the etag can change while&nbsp;writing.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileIOStream.query_info.html">g_file_io_stream_query_info</a></h6>
+          <div class="docblock">
+            <p>Queries a file io stream for the given <code>attributes</code>.
+This function blocks while querying the stream. For the asynchronous
+version of this function, see g_file_io_stream_query_info_async().
+While the stream is blocked, the stream will set the pending flag
+internally, and any other operations on the stream will fail with
+<code>G_IO_ERROR_PENDING</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileIOStream.query_info_async.html">g_file_io_stream_query_info_async</a></h6>
+          <div class="docblock">
+            <p>Asynchronously queries the <code>stream</code> for a <code>GFileInfo</code>. When completed,
+<code>callback</code> will be called with a <code>GAsyncResult</code> which can be used to
+finish the operation with&nbsp;g_file_io_stream_query_info_finish().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileIOStream.query_info_finish.html">g_file_io_stream_query_info_finish</a></h6>
+          <div class="docblock">
+            <p>Finalizes the asynchronous query started
+by&nbsp;g_file_io_stream_query_info_async().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="class.IOStream.html">GIOStream</a> (10)</h5><div class="docblock">
+          
+            <h6><a href="method.IOStream.clear_pending.html">g_io_stream_clear_pending</a></h6><div class="docblock">
+              <p>Clears the pending flag on <code>stream</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.close.html">g_io_stream_close</a></h6><div class="docblock">
+              <p>Closes the stream, releasing resources related to it. This will also
+close the individual input and output streams, if they are not already&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.close_async.html">g_io_stream_close_async</a></h6><div class="docblock">
+              <p>Requests an asynchronous close of the stream, releasing resources
+related to it. When the operation is finished <code>callback</code> will be
+called. You can then call <code>g_io_stream_close_finish()</code> to get
+the result of the&nbsp;operation.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.close_finish.html">g_io_stream_close_finish</a></h6><div class="docblock">
+              <p>Closes a&nbsp;stream.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.get_input_stream.html">g_io_stream_get_input_stream</a></h6><div class="docblock">
+              <p>Gets the input stream for this object. This is used
+for&nbsp;reading.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.get_output_stream.html">g_io_stream_get_output_stream</a></h6><div class="docblock">
+              <p>Gets the output stream for this object. This is used for&nbsp;writing.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.has_pending.html">g_io_stream_has_pending</a></h6><div class="docblock">
+              <p>Checks if a stream has pending&nbsp;actions.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.is_closed.html">g_io_stream_is_closed</a></h6><div class="docblock">
+              <p>Checks if a stream is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.set_pending.html">g_io_stream_set_pending</a></h6><div class="docblock">
+              <p>Sets <code>stream</code> to have actions pending. If the pending flag is
+already set or <code>stream</code> is closed, it will return <code>FALSE</code> and set
+<code>error</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="method.IOStream.splice_async.html">g_io_stream_splice_async</a></h6><div class="docblock">
+              <p>Asynchronously splice the output stream of <code>stream1</code> to the input stream of
+<code>stream2</code>, and splice the output stream of <code>stream2</code> to the input stream of
+<code>stream1</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.28</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.Seekable.html">GSeekable</a> (5)</h5><div class="docblock">
+          
+            <h6><a href="method.Seekable.can_seek.html">g_seekable_can_seek</a></h6><div class="docblock">
+              <p>Tests if the stream supports the <code>GSeekableIface</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.can_truncate.html">g_seekable_can_truncate</a></h6><div class="docblock">
+              <p>Tests if the length of the stream can be adjusted with&nbsp;g_seekable_truncate().</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.seek.html">g_seekable_seek</a></h6><div class="docblock">
+              <p>Seeks in the stream by the given <code>offset</code>, modified by <code>type</code>.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.tell.html">g_seekable_tell</a></h6><div class="docblock">
+              <p>Tells the current position within the&nbsp;stream.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+            <h6><a href="method.Seekable.truncate.html">g_seekable_truncate</a></h6><div class="docblock">
+              <p>Sets the length of the stream to <code>offset</code>. If the stream was previously
+larger than <code>offset</code>, the extra data is discarded. If the stream was
+previously shorter than <code>offset</code>, it is extended with <span class="caps">NUL</span> (‘\0’)&nbsp;bytes.</p>
+            </div>
+            <div class="docblock">
+              <p></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-properties">
+          <h5 style="display:block;">Properties inherited from <a href="class.IOStream.html">GIOStream</a> (3)</h5><div class="docblock">
+          
+            <h6><a href="property.IOStream.closed.html">Gio.IOStream:closed</a></h6><div class="docblock">
+              <p>Whether the stream is&nbsp;closed.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="property.IOStream.input-stream.html">Gio.IOStream:input-stream</a></h6><div class="docblock">
+              <p>The <code>GInputStream</code> to read&nbsp;from.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+            <h6><a href="property.IOStream.output-stream.html">Gio.IOStream:output-stream</a></h6><div class="docblock">
+              <p>The <code>GOutputStream</code> to write&nbsp;to.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioFileIOStreamClass {
+  GIOStreamClass parent_class;
+  goffset (* tell) (
+    GFileIOStream* stream
+  );
+  gboolean (* can_seek) (
+    GFileIOStream* stream
+  );
+  gboolean (* seek) (
+    GFileIOStream* stream,
+    goffset offset,
+    GSeekType type,
+    GCancellable* cancellable,
+    GError** error
+  );
+  gboolean (* can_truncate) (
+    GFileIOStream* stream
+  );
+  gboolean (* truncate_fn) (
+    GFileIOStream* stream,
+    goffset size,
+    GCancellable* cancellable,
+    GError** error
+  );
+  GFileInfo* (* query_info) (
+    GFileIOStream* stream,
+    const char* attributes,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* query_info_async) (
+    GFileIOStream* stream,
+    const char* attributes,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  GFileInfo* (* query_info_finish) (
+    GFileIOStream* stream,
+    GAsyncResult* result,
+    GError** error
+  );
+  char* (* get_etag) (
+    GFileIOStream* stream
+  );
+  void (* _g_reserved1) (
+void
+  );
+  void (* _g_reserved2) (
+void
+  );
+  void (* _g_reserved3) (
+void
+  );
+  void (* _g_reserved4) (
+void
+  );
+  void (* _g_reserved5) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GIOStreamClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>tell: goffset (* tell) (
+    GFileIOStream* stream
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>can_seek: gboolean (* can_seek) (
+    GFileIOStream* stream
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>seek: gboolean (* seek) (
+    GFileIOStream* stream,
+    goffset offset,
+    GSeekType type,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>can_truncate: gboolean (* can_truncate) (
+    GFileIOStream* stream
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>truncate_fn: gboolean (* truncate_fn) (
+    GFileIOStream* stream,
+    goffset size,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>query_info: GFileInfo* (* query_info) (
+    GFileIOStream* stream,
+    const char* attributes,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>query_info_async: void (* query_info_async) (
+    GFileIOStream* stream,
+    const char* attributes,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>query_info_finish: GFileInfo* (* query_info_finish) (
+    GFileIOStream* stream,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>get_etag: char* (* get_etag) (
+    GFileIOStream* stream
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved1: void (* _g_reserved1) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved2: void (* _g_reserved2) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved3: void (* _g_reserved3) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved4: void (* _g_reserved4) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved5: void (* _g_reserved5) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-can_seek"><a href="vfunc.FileIOStream.can_seek.html">Gio.FileIOStreamClass.can_seek</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-can_truncate"><a href="vfunc.FileIOStream.can_truncate.html">Gio.FileIOStreamClass.can_truncate</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_etag"><a href="vfunc.FileIOStream.get_etag.html">Gio.FileIOStreamClass.get_etag</a></h6>
+        <div class="docblock">
+          <p>Gets the entity tag for the file when it has been written.
+This must be called after the stream has been written
+and closed, as the etag can change while&nbsp;writing.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-query_info"><a href="vfunc.FileIOStream.query_info.html">Gio.FileIOStreamClass.query_info</a></h6>
+        <div class="docblock">
+          <p>Queries a file io stream for the given <code>attributes</code>.
+This function blocks while querying the stream. For the asynchronous
+version of this function, see g_file_io_stream_query_info_async().
+While the stream is blocked, the stream will set the pending flag
+internally, and any other operations on the stream will fail with
+<code>G_IO_ERROR_PENDING</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-query_info_async"><a href="vfunc.FileIOStream.query_info_async.html">Gio.FileIOStreamClass.query_info_async</a></h6>
+        <div class="docblock">
+          <p>Asynchronously queries the <code>stream</code> for a <code>GFileInfo</code>. When completed,
+<code>callback</code> will be called with a <code>GAsyncResult</code> which can be used to
+finish the operation with&nbsp;g_file_io_stream_query_info_finish().</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-query_info_finish"><a href="vfunc.FileIOStream.query_info_finish.html">Gio.FileIOStreamClass.query_info_finish</a></h6>
+        <div class="docblock">
+          <p>Finalizes the asynchronous query started
+by&nbsp;g_file_io_stream_query_info_async().</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.22</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-seek"><a href="vfunc.FileIOStream.seek.html">Gio.FileIOStreamClass.seek</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-tell"><a href="vfunc.FileIOStream.tell.html">Gio.FileIOStreamClass.tell</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-truncate_fn"><a href="vfunc.FileIOStream.truncate_fn.html">Gio.FileIOStreamClass.truncate_fn</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.FileIOStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:46:48 GMT --></html>

@@ -1,0 +1,585 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.DBusInterfaceSkeleton.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:42:29 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.DBusInterfaceSkeleton</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.DBusInterfaceSkeleton">
+  <meta property="og:description" content="Reference for Gio.DBusInterfaceSkeleton">
+  <meta name="twitter:title" content="Gio.DBusInterfaceSkeleton">
+  <meta name="twitter:description" content="Reference for Gio.DBusInterfaceSkeleton">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>DBusInterfaceSkeleton</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.30</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdbusinterfaceskeleton.c#L38">[src]</a>
+          
+        </h4>
+
+        <pre><code>abstract class Gio.DBusInterfaceSkeleton : GObject.Object
+  implements Gio.DBusInterface {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p>Abstract base class for D-Bus interfaces on the service&nbsp;side.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.30</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.DBusInterface.html" title="DBusInterface">GDBusInterface</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.export.html">g_dbus_interface_skeleton_export</a></h6>
+          <div class="docblock">
+            <p>Exports <code>interface_</code> at <code>object_path</code> on <code>connection</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.flush.html">g_dbus_interface_skeleton_flush</a></h6>
+          <div class="docblock">
+            <p>If <code>interface_</code> has outstanding changes, request for these changes to be
+emitted&nbsp;immediately.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.get_connection.html">g_dbus_interface_skeleton_get_connection</a></h6>
+          <div class="docblock">
+            <p>Gets the first connection that <code>interface_</code> is exported on, if&nbsp;any.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.get_connections.html">g_dbus_interface_skeleton_get_connections</a></h6>
+          <div class="docblock">
+            <p>Gets a list of the connections that <code>interface_</code> is exported&nbsp;on.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.get_flags.html">g_dbus_interface_skeleton_get_flags</a></h6>
+          <div class="docblock">
+            <p>Gets the <code>GDBusInterfaceSkeletonFlags</code> that describes what the behavior
+of <code>interface_</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.get_info.html">g_dbus_interface_skeleton_get_info</a></h6>
+          <div class="docblock">
+            <p>Gets D-Bus introspection information for the D-Bus interface
+implemented by <code>interface_</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.get_object_path.html">g_dbus_interface_skeleton_get_object_path</a></h6>
+          <div class="docblock">
+            <p>Gets the object path that <code>interface_</code> is exported on, if&nbsp;any.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.get_properties.html">g_dbus_interface_skeleton_get_properties</a></h6>
+          <div class="docblock">
+            <p>Gets all D-Bus properties for <code>interface_</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.get_vtable.html">g_dbus_interface_skeleton_get_vtable</a></h6>
+          <div class="docblock">
+            <p>Gets the interface vtable for the D-Bus interface implemented by
+<code>interface_</code>. The returned function pointers should expect <code>interface_</code>
+itself to be passed as <code>user_data</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.has_connection.html">g_dbus_interface_skeleton_has_connection</a></h6>
+          <div class="docblock">
+            <p>Checks if <code>interface_</code> is exported on <code>connection</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.set_flags.html">g_dbus_interface_skeleton_set_flags</a></h6>
+          <div class="docblock">
+            <p>Sets flags describing what the behavior of <code>skeleton</code> should&nbsp;be.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.unexport.html">g_dbus_interface_skeleton_unexport</a></h6>
+          <div class="docblock">
+            <p>Stops exporting <code>interface_</code> on all connections it is exported&nbsp;on.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusInterfaceSkeleton.unexport_from_connection.html">g_dbus_interface_skeleton_unexport_from_connection</a></h6>
+          <div class="docblock">
+            <p>Stops exporting <code>interface_</code> on <code>connection</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.DBusInterface.html">GDBusInterface</a> (4)</h5><div class="docblock">
+          
+            <h6><a href="method.DBusInterface.dup_object.html">g_dbus_interface_dup_object</a></h6><div class="docblock">
+              <p>Gets the <code>GDBusObject</code> that <code>interface_</code> belongs to, if&nbsp;any.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.32</span></p>
+            </div>
+            
+            <h6><a href="method.DBusInterface.get_info.html">g_dbus_interface_get_info</a></h6><div class="docblock">
+              <p>Gets D-Bus introspection information for the D-Bus interface
+implemented by <code>interface_</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="method.DBusInterface.get_object.html">g_dbus_interface_get_object</a></h6><div class="docblock">
+              <p>Gets the <code>GDBusObject</code> that <code>interface_</code> belongs to, if&nbsp;any.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="method.DBusInterface.set_object.html">g_dbus_interface_set_object</a></h6><div class="docblock">
+              <p>Sets the <code>GDBusObject</code> for <code>interface_</code> to <code>object</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.DBusInterfaceSkeleton.g-flags.html">Gio.DBusInterfaceSkeleton:g-flags</a></h6>
+          <div class="docblock">
+            <p>Flags from the <code>GDBusInterfaceSkeletonFlags</code> enumeration.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.DBusInterfaceSkeleton.g-authorize-method.html">Gio.DBusInterfaceSkeleton::g-authorize-method</a></h6>
+          <div class="docblock">
+            <p>Emitted when a method is invoked by a remote caller and used to
+determine if the method call is&nbsp;authorized.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioDBusInterfaceSkeletonClass {
+  GObjectClass parent_class;
+  GDBusInterfaceInfo* (* get_info) (
+    GDBusInterfaceSkeleton* interface_
+  );
+  GDBusInterfaceVTable* (* get_vtable) (
+    GDBusInterfaceSkeleton* interface_
+  );
+  GVariant* (* get_properties) (
+    GDBusInterfaceSkeleton* interface_
+  );
+  void (* flush) (
+    GDBusInterfaceSkeleton* interface_
+  );
+  gboolean (* g_authorize_method) (
+    GDBusInterfaceSkeleton* interface_,
+    GDBusMethodInvocation* invocation
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>Class structure for <code>GDBusInterfaceSkeleton</code>.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>The parent&nbsp;class.</p></dd>
+        
+          <dt><code>get_info: GDBusInterfaceInfo* (* get_info) (
+    GDBusInterfaceSkeleton* interface_
+  )</code></dt>
+          <dd><p>Returns a <code>GDBusInterfaceInfo</code>. See <code>g_dbus_interface_skeleton_get_info()</code> for&nbsp;details.</p></dd>
+        
+          <dt><code>get_vtable: GDBusInterfaceVTable* (* get_vtable) (
+    GDBusInterfaceSkeleton* interface_
+  )</code></dt>
+          <dd><p>Returns a <code>GDBusInterfaceVTable</code>. See <code>g_dbus_interface_skeleton_get_vtable()</code> for&nbsp;details.</p></dd>
+        
+          <dt><code>get_properties: GVariant* (* get_properties) (
+    GDBusInterfaceSkeleton* interface_
+  )</code></dt>
+          <dd><p>Returns a <code>GVariant</code> with all properties. See&nbsp;g_dbus_interface_skeleton_get_properties().</p></dd>
+        
+          <dt><code>flush: void (* flush) (
+    GDBusInterfaceSkeleton* interface_
+  )</code></dt>
+          <dd><p>Emits outstanding changes, if any. See&nbsp;g_dbus_interface_skeleton_flush().</p></dd>
+        
+          <dt><code>g_authorize_method: gboolean (* g_authorize_method) (
+    GDBusInterfaceSkeleton* interface_,
+    GDBusMethodInvocation* invocation
+  )</code></dt>
+          <dd><p>Signal class handler for the <code>GDBusInterfaceSkeleton::g-authorize-method</code> signal.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-flush"><a href="vfunc.DBusInterfaceSkeleton.flush.html">Gio.DBusInterfaceSkeletonClass.flush</a></h6>
+        <div class="docblock">
+          <p>If <code>interface_</code> has outstanding changes, request for these changes to be
+emitted&nbsp;immediately.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-g_authorize_method"><a href="vfunc.DBusInterfaceSkeleton.g_authorize_method.html">Gio.DBusInterfaceSkeletonClass.g_authorize_method</a></h6>
+        <div class="docblock">
+          <p>Signal class handler for the <code>GDBusInterfaceSkeleton::g-authorize-method</code> signal.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_info"><a href="vfunc.DBusInterfaceSkeleton.get_info.html">Gio.DBusInterfaceSkeletonClass.get_info</a></h6>
+        <div class="docblock">
+          <p>Gets D-Bus introspection information for the D-Bus interface
+implemented by <code>interface_</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_properties"><a href="vfunc.DBusInterfaceSkeleton.get_properties.html">Gio.DBusInterfaceSkeletonClass.get_properties</a></h6>
+        <div class="docblock">
+          <p>Gets all D-Bus properties for <code>interface_</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-get_vtable"><a href="vfunc.DBusInterfaceSkeleton.get_vtable.html">Gio.DBusInterfaceSkeletonClass.get_vtable</a></h6>
+        <div class="docblock">
+          <p>Gets the interface vtable for the D-Bus interface implemented by
+<code>interface_</code>. The returned function pointers should expect <code>interface_</code>
+itself to be passed as <code>user_data</code>.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.30</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.DBusInterfaceSkeleton.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:42:45 GMT --></html>

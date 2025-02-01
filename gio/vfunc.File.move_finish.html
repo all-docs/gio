@@ -1,0 +1,436 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/vfunc.File.move_finish.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:08:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.File.move_finish</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.File.move_finish"/>
+  <meta property="og:description" content="Reference for Gio.File.move_finish"/>
+  <meta name="twitter:title" content="Gio.File.move_finish"/>
+  <meta name="twitter:description" content="Reference for Gio.File.move_finish"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="iface.File.html">File</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.File.append_to.html">append_to</a>
+  
+    <a class="method" href="vfunc.File.append_to_async.html">append_to_async</a>
+  
+    <a class="method" href="vfunc.File.append_to_finish.html">append_to_finish</a>
+  
+    <a class="method" href="vfunc.File.copy.html">copy</a>
+  
+    <a class="method" href="vfunc.File.copy_async.html">copy_async</a>
+  
+    <a class="method" href="vfunc.File.copy_finish.html">copy_finish</a>
+  
+    <a class="method" href="vfunc.File.create.html">create</a>
+  
+    <a class="method" href="vfunc.File.create_async.html">create_async</a>
+  
+    <a class="method" href="vfunc.File.create_finish.html">create_finish</a>
+  
+    <a class="method" href="vfunc.File.create_readwrite.html">create_readwrite</a>
+  
+    <a class="method" href="vfunc.File.create_readwrite_async.html">create_readwrite_async</a>
+  
+    <a class="method" href="vfunc.File.create_readwrite_finish.html">create_readwrite_finish</a>
+  
+    <a class="method" href="vfunc.File.delete_file.html">delete_file</a>
+  
+    <a class="method" href="vfunc.File.delete_file_async.html">delete_file_async</a>
+  
+    <a class="method" href="vfunc.File.delete_file_finish.html">delete_file_finish</a>
+  
+    <a class="method" href="vfunc.File.dup.html">dup</a>
+  
+    <a class="method" href="vfunc.File.eject_mountable.html">eject_mountable</a>
+  
+    <a class="method" href="vfunc.File.eject_mountable_finish.html">eject_mountable_finish</a>
+  
+    <a class="method" href="vfunc.File.eject_mountable_with_operation.html">eject_mountable_with_operation</a>
+  
+    <a class="method" href="vfunc.File.eject_mountable_with_operation_finish.html">eject_mountable_with_operation_finish</a>
+  
+    <a class="method" href="vfunc.File.enumerate_children.html">enumerate_children</a>
+  
+    <a class="method" href="vfunc.File.enumerate_children_async.html">enumerate_children_async</a>
+  
+    <a class="method" href="vfunc.File.enumerate_children_finish.html">enumerate_children_finish</a>
+  
+    <a class="method" href="vfunc.File.equal.html">equal</a>
+  
+    <a class="method" href="vfunc.File.find_enclosing_mount.html">find_enclosing_mount</a>
+  
+    <a class="method" href="vfunc.File.find_enclosing_mount_async.html">find_enclosing_mount_async</a>
+  
+    <a class="method" href="vfunc.File.find_enclosing_mount_finish.html">find_enclosing_mount_finish</a>
+  
+    <a class="method" href="vfunc.File.get_basename.html">get_basename</a>
+  
+    <a class="method" href="vfunc.File.get_child_for_display_name.html">get_child_for_display_name</a>
+  
+    <a class="method" href="vfunc.File.get_parent.html">get_parent</a>
+  
+    <a class="method" href="vfunc.File.get_parse_name.html">get_parse_name</a>
+  
+    <a class="method" href="vfunc.File.get_path.html">get_path</a>
+  
+    <a class="method" href="vfunc.File.get_relative_path.html">get_relative_path</a>
+  
+    <a class="method" href="vfunc.File.get_uri.html">get_uri</a>
+  
+    <a class="method" href="vfunc.File.get_uri_scheme.html">get_uri_scheme</a>
+  
+    <a class="method" href="vfunc.File.has_uri_scheme.html">has_uri_scheme</a>
+  
+    <a class="method" href="vfunc.File.hash.html">hash</a>
+  
+    <a class="method" href="vfunc.File.is_native.html">is_native</a>
+  
+    <a class="method" href="vfunc.File.make_directory.html">make_directory</a>
+  
+    <a class="method" href="vfunc.File.make_directory_async.html">make_directory_async</a>
+  
+    <a class="method" href="vfunc.File.make_directory_finish.html">make_directory_finish</a>
+  
+    <a class="method" href="vfunc.File.make_symbolic_link.html">make_symbolic_link</a>
+  
+    <a class="method" href="vfunc.File.make_symbolic_link_async.html">make_symbolic_link_async</a>
+  
+    <a class="method" href="vfunc.File.make_symbolic_link_finish.html">make_symbolic_link_finish</a>
+  
+    <a class="method" href="vfunc.File.measure_disk_usage.html">measure_disk_usage</a>
+  
+    <a class="method" href="vfunc.File.measure_disk_usage_async.html">measure_disk_usage_async</a>
+  
+    <a class="method" href="vfunc.File.measure_disk_usage_finish.html">measure_disk_usage_finish</a>
+  
+    <a class="method" href="vfunc.File.monitor_dir.html">monitor_dir</a>
+  
+    <a class="method" href="vfunc.File.monitor_file.html">monitor_file</a>
+  
+    <a class="method" href="vfunc.File.mount_enclosing_volume.html">mount_enclosing_volume</a>
+  
+    <a class="method" href="vfunc.File.mount_enclosing_volume_finish.html">mount_enclosing_volume_finish</a>
+  
+    <a class="method" href="vfunc.File.mount_mountable.html">mount_mountable</a>
+  
+    <a class="method" href="vfunc.File.mount_mountable_finish.html">mount_mountable_finish</a>
+  
+    <a class="method" href="vfunc.File.move.html">move</a>
+  
+    <a class="method" href="vfunc.File.move_async.html">move_async</a>
+  
+    <a class="method current" href="vfunc.File.move_finish.html">move_finish</a>
+  
+    <a class="method" href="vfunc.File.open_readwrite.html">open_readwrite</a>
+  
+    <a class="method" href="vfunc.File.open_readwrite_async.html">open_readwrite_async</a>
+  
+    <a class="method" href="vfunc.File.open_readwrite_finish.html">open_readwrite_finish</a>
+  
+    <a class="method" href="vfunc.File.poll_mountable.html">poll_mountable</a>
+  
+    <a class="method" href="vfunc.File.poll_mountable_finish.html">poll_mountable_finish</a>
+  
+    <a class="method" href="vfunc.File.prefix_matches.html">prefix_matches</a>
+  
+    <a class="method" href="vfunc.File.query_exists.html">query_exists</a>
+  
+    <a class="method" href="vfunc.File.query_filesystem_info.html">query_filesystem_info</a>
+  
+    <a class="method" href="vfunc.File.query_filesystem_info_async.html">query_filesystem_info_async</a>
+  
+    <a class="method" href="vfunc.File.query_filesystem_info_finish.html">query_filesystem_info_finish</a>
+  
+    <a class="method" href="vfunc.File.query_info.html">query_info</a>
+  
+    <a class="method" href="vfunc.File.query_info_async.html">query_info_async</a>
+  
+    <a class="method" href="vfunc.File.query_info_finish.html">query_info_finish</a>
+  
+    <a class="method" href="vfunc.File.query_settable_attributes.html">query_settable_attributes</a>
+  
+    <a class="method" href="vfunc.File.query_writable_namespaces.html">query_writable_namespaces</a>
+  
+    <a class="method" href="vfunc.File.read_async.html">read_async</a>
+  
+    <a class="method" href="vfunc.File.read_finish.html">read_finish</a>
+  
+    <a class="method" href="vfunc.File.read_fn.html">read_fn</a>
+  
+    <a class="method" href="vfunc.File.replace.html">replace</a>
+  
+    <a class="method" href="vfunc.File.replace_async.html">replace_async</a>
+  
+    <a class="method" href="vfunc.File.replace_finish.html">replace_finish</a>
+  
+    <a class="method" href="vfunc.File.replace_readwrite.html">replace_readwrite</a>
+  
+    <a class="method" href="vfunc.File.replace_readwrite_async.html">replace_readwrite_async</a>
+  
+    <a class="method" href="vfunc.File.replace_readwrite_finish.html">replace_readwrite_finish</a>
+  
+    <a class="method" href="vfunc.File.resolve_relative_path.html">resolve_relative_path</a>
+  
+    <a class="method" href="vfunc.File.set_attribute.html">set_attribute</a>
+  
+    <a class="method" href="vfunc.File.set_attributes_async.html">set_attributes_async</a>
+  
+    <a class="method" href="vfunc.File.set_attributes_finish.html">set_attributes_finish</a>
+  
+    <a class="method" href="vfunc.File.set_attributes_from_info.html">set_attributes_from_info</a>
+  
+    <a class="method" href="vfunc.File.set_display_name.html">set_display_name</a>
+  
+    <a class="method" href="vfunc.File.set_display_name_async.html">set_display_name_async</a>
+  
+    <a class="method" href="vfunc.File.set_display_name_finish.html">set_display_name_finish</a>
+  
+    <a class="method" href="vfunc.File.start_mountable.html">start_mountable</a>
+  
+    <a class="method" href="vfunc.File.start_mountable_finish.html">start_mountable_finish</a>
+  
+    <a class="method" href="vfunc.File.stop_mountable.html">stop_mountable</a>
+  
+    <a class="method" href="vfunc.File.stop_mountable_finish.html">stop_mountable_finish</a>
+  
+    <a class="method" href="vfunc.File.trash.html">trash</a>
+  
+    <a class="method" href="vfunc.File.trash_async.html">trash_async</a>
+  
+    <a class="method" href="vfunc.File.trash_finish.html">trash_finish</a>
+  
+    <a class="method" href="vfunc.File.unmount_mountable.html">unmount_mountable</a>
+  
+    <a class="method" href="vfunc.File.unmount_mountable_finish.html">unmount_mountable_finish</a>
+  
+    <a class="method" href="vfunc.File.unmount_mountable_with_operation.html">unmount_mountable_with_operation</a>
+  
+    <a class="method" href="vfunc.File.unmount_mountable_with_operation_finish.html">unmount_mountable_with_operation_finish</a>
+  
+  </div>
+</div>
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Virtual Method</h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span><a href="iface.File.html">File</a><span class="sep"></span>move_finish</h1>
+  </header>
+
+  <section>
+    <div class="docblock">
+      <p><span class="emblem available">since: 2.72</span></p>
+    </div>
+
+    <div class="declaration toggle-wrapper">
+      <h4 id="declaration">
+        Declaration
+        <a href="#declaration" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gfile.h#L436">[src]</a>
+        
+      </h4>
+
+      <div class="docblock c-decl">
+        <pre><code><div class="highlight"><pre><span></span><span class="n">gboolean</span>
+<span class="n">move_finish</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">GFile</span><span class="o">*</span><span class="w"> </span><span class="n">file</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GAsyncResult</span><span class="o">*</span><span class="w"> </span><span class="n">result</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 id="description">
+        Description
+        <a href="#description" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gfile.c#L4200">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>Finishes an asynchronous file movement, started with&nbsp;g_file_move_async().</p>
+      </div>
+
+      <div class="docblock">
+        
+        <p>Available since: 2.72</p>
+        
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>result</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="iface.AsyncResult.html"><code>GAsyncResult</code></a></p>
+            <p>A <code>GAsyncResult</code>.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            
+            </table>
+          </dd>
+          
+
+          
+          <dt class="arg-name"><code>error</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Error.html" class="external"><code>GError **</code></a></p>
+            <p>The return location for <a href="https://docs.gtk.org/glib/error-reporting.html#rules-for-use-of-gerror">a recoverable error</a>.</p>
+            <table>
+              <tr><td>The argument can be <code>NULL</code>.</td></tr>
+              <tr><td>If the return location is not <code>NULL</code>, then you must initialize it to a <code>NULL</code> <code>GError*</code>.</td></tr>
+              <tr><td>The argument will be left initialized to <code>NULL</code> by the virtual function if there are no errors.</td></tr>
+              <tr><td>In case of error, the argument will be set to a newly allocated <code>GError</code>; the caller will take ownership of the data, and be responsible for freeing it.</td></tr>
+            </table>
+          </dd>
+          
+        </dl>
+      </div>
+    </div>
+    
+
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <div class="returns">
+          <div>
+            <p><em>Type:</em>&nbsp;<code>gboolean</code></p>
+            <p><code>TRUE</code> on successful file move, <code>FALSE</code> otherwise.</p>
+          </div>
+          <div>
+            <table>
+            
+            
+            
+            
+            
+            
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/vfunc.File.move_finish.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:08:00 GMT -->
+</html>

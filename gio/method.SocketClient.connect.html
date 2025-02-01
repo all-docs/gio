@@ -1,0 +1,334 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/method.SocketClient.connect.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.SocketClient.connect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta priority="og:title" content="Gio.SocketClient.connect"/>
+  <meta priority="og:description" content="Reference for Gio.SocketClient.connect"/>
+  <meta name="twitter:title" content="Gio.SocketClient.connect"/>
+  <meta name="twitter:description" content="Reference for Gio.SocketClient.connect"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="class.SocketClient.html">SocketClient</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.SocketClient.add_application_proxy.html">add_application_proxy</a>
+  
+    <a class="method current" href="method.SocketClient.connect.html">connect</a>
+  
+    <a class="method" href="method.SocketClient.connect_async.html">connect_async</a>
+  
+    <a class="method" href="method.SocketClient.connect_finish.html">connect_finish</a>
+  
+    <a class="method" href="method.SocketClient.connect_to_host.html">connect_to_host</a>
+  
+    <a class="method" href="method.SocketClient.connect_to_host_async.html">connect_to_host_async</a>
+  
+    <a class="method" href="method.SocketClient.connect_to_host_finish.html">connect_to_host_finish</a>
+  
+    <a class="method" href="method.SocketClient.connect_to_service.html">connect_to_service</a>
+  
+    <a class="method" href="method.SocketClient.connect_to_service_async.html">connect_to_service_async</a>
+  
+    <a class="method" href="method.SocketClient.connect_to_service_finish.html">connect_to_service_finish</a>
+  
+    <a class="method" href="method.SocketClient.connect_to_uri.html">connect_to_uri</a>
+  
+    <a class="method" href="method.SocketClient.connect_to_uri_async.html">connect_to_uri_async</a>
+  
+    <a class="method" href="method.SocketClient.connect_to_uri_finish.html">connect_to_uri_finish</a>
+  
+    <a class="method" href="method.SocketClient.get_enable_proxy.html">get_enable_proxy</a>
+  
+    <a class="method" href="method.SocketClient.get_family.html">get_family</a>
+  
+    <a class="method" href="method.SocketClient.get_local_address.html">get_local_address</a>
+  
+    <a class="method" href="method.SocketClient.get_protocol.html">get_protocol</a>
+  
+    <a class="method" href="method.SocketClient.get_proxy_resolver.html">get_proxy_resolver</a>
+  
+    <a class="method" href="method.SocketClient.get_socket_type.html">get_socket_type</a>
+  
+    <a class="method" href="method.SocketClient.get_timeout.html">get_timeout</a>
+  
+    <a class="method" href="method.SocketClient.get_tls.html">get_tls</a>
+  
+    <a class="method" href="method.SocketClient.get_tls_validation_flags.html">get_tls_validation_flags</a>
+  
+    <a class="method" href="method.SocketClient.set_enable_proxy.html">set_enable_proxy</a>
+  
+    <a class="method" href="method.SocketClient.set_family.html">set_family</a>
+  
+    <a class="method" href="method.SocketClient.set_local_address.html">set_local_address</a>
+  
+    <a class="method" href="method.SocketClient.set_protocol.html">set_protocol</a>
+  
+    <a class="method" href="method.SocketClient.set_proxy_resolver.html">set_proxy_resolver</a>
+  
+    <a class="method" href="method.SocketClient.set_socket_type.html">set_socket_type</a>
+  
+    <a class="method" href="method.SocketClient.set_timeout.html">set_timeout</a>
+  
+    <a class="method" href="method.SocketClient.set_tls.html">set_tls</a>
+  
+    <a class="method" href="method.SocketClient.set_tls_validation_flags.html">set_tls_validation_flags</a>
+  
+  </div>
+</div>
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Method</h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span><a href="class.SocketClient.html">SocketClient</a><span class="sep"></span>connect</h1>
+  </header>
+
+  <section>
+    <div class="docblock">
+      <p><span class="emblem available">since: 2.22</span></p>
+    </div>
+
+    <div class="declaration toggle-wrapper">
+      <h4 style="display:flex;" id="declaration">
+        Declaration
+        <a class="anchor" href="#declaration"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gsocketclient.h#L127">[src]</a>
+        
+      </h4>
+
+      <div class="docblock c-decl">
+        <pre><code><div class="highlight"><pre><span></span><span class="n">GSocketConnection</span><span class="o">*</span>
+<span class="n">g_socket_client_connect</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">GSocketClient</span><span class="o">*</span><span class="w"> </span><span class="n">client</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GSocketConnectable</span><span class="o">*</span><span class="w"> </span><span class="n">connectable</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GCancellable</span><span class="o">*</span><span class="w"> </span><span class="n">cancellable</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 style="display:flex;" id="description">
+        Description
+        <a class="anchor" href="#description"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gsocketclient.c#L1094">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>Tries to resolve the <code>connectable</code> and make a network connection to&nbsp;it.</p>
+<p>Upon a successful connection, a new <code>GSocketConnection</code> is constructed
+and returned.  The caller owns this new object and must drop their
+reference to it when finished with&nbsp;it.</p>
+<p>The type of the <code>GSocketConnection</code> object returned depends on the type of
+the underlying socket that is used. For instance, for a <span class="caps">TCP</span>/<span class="caps">IP</span> connection
+it will be a <code>GTcpConnection</code>.</p>
+<p>The socket created will be the same family as the address that the
+<code>connectable</code> resolves to, unless family is set with <code>g_socket_client_set_family()</code>
+or indirectly via g_socket_client_set_local_address(). The socket type
+defaults to <code>G_SOCKET_TYPE_STREAM</code> but can be set with&nbsp;g_socket_client_set_socket_type().</p>
+<p>If a local address is specified with <code>g_socket_client_set_local_address()</code> the
+socket will be bound to this address before&nbsp;connecting.</p>
+      </div>
+
+      <div class="docblock">
+        
+        <p>Available since: 2.22</p>
+        
+        
+        
+        
+        
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>connectable</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="iface.SocketConnectable.html"><code>GSocketConnectable</code></a></p>
+            <p>A <code>GSocketConnectable</code> specifying the remote&nbsp;address.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>cancellable</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.Cancellable.html"><code>GCancellable</code></a></p>
+            <p>Optional <code>GCancellable</code> object, <code>NULL</code> to&nbsp;ignore.</p>
+            <table>
+            
+            <tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            
+            </table>
+          </dd>
+          
+
+          
+          <dt class="arg-name"><code>error</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Error.html" class="external"><code>GError **</code></a></p>
+            <p>The return location for <a href="https://docs.gtk.org/glib/error-reporting.html#rules-for-use-of-gerror">a recoverable error</a>.</p>
+            <table>
+              <tr><td>The argument can be <code>NULL</code>.</td></tr>
+              <tr><td>If the return location is not <code>NULL</code>, then you must initialize it to a <code>NULL</code> <code>GError*</code>.</td></tr>
+              <tr><td>The argument will be left initialized to <code>NULL</code> by the method if there are no errors.</td></tr>
+              <tr><td>In case of error, the argument will be set to a newly allocated <code>GError</code>; the caller will take ownership of the data, and be responsible for freeing it.</td></tr>
+            </table>
+          </dd>
+          
+        </dl>
+      </div>
+    </div>
+    
+
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <div class="returns">
+          <div class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.SocketConnection.html"><code>GSocketConnection</code></a></p>
+            <p>A <code>GSocketConnection</code> on success, <code>NULL</code> on&nbsp;error.</p>
+          </div>
+          <div>
+            <table>
+            
+            
+            
+            <tr><td title="transfer: full">The caller of the method takes ownership of the returned data, and is responsible for freeing it.</td></tr>
+            
+            
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/method.SocketClient.connect.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:46 GMT -->
+</html>

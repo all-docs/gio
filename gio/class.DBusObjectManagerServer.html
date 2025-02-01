@@ -1,0 +1,473 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.DBusObjectManagerServer.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:43:59 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.DBusObjectManagerServer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.DBusObjectManagerServer">
+  <meta property="og:description" content="Reference for Gio.DBusObjectManagerServer">
+  <meta name="twitter:title" content="Gio.DBusObjectManagerServer">
+  <meta name="twitter:description" content="Reference for Gio.DBusObjectManagerServer">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>DBusObjectManagerServer</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.30</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdbusobjectmanagerserver.c#L41">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.DBusObjectManagerServer : GObject.Object
+  implements Gio.DBusObjectManager {
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GDBusObjectManagerServer</code> is used to export <a href="iface.DBusObject.html"><code>GDBusObject</code></a> instances
+using the standardized
+<a href="http://dbus.freedesktop.org/doc/dbus-specification.html#standard-interfaces-objectmanager"><code>org.freedesktop.DBus.ObjectManager</code></a>
+interface. For example, remote D-Bus clients can get all objects
+and properties in a single call. Additionally, any change in the
+object hierarchy is broadcast using signals. This means that D-Bus
+clients can keep caches up to date by only listening to D-Bus&nbsp;signals.</p>
+<p>The recommended path to export an object manager at is the path form of the
+well-known name of a D-Bus service, or below. For example, if a D-Bus service
+is available at the well-known name <code>net.example.ExampleService1</code>, the object
+manager should typically be exported at <code>/net/example/ExampleService1</code>, or
+below (to allow for multiple object managers in a&nbsp;service).</p>
+<p>It is supported, but not recommended, to export an object manager at the root
+path, <code>/</code>.</p>
+<p>See <a href="class.DBusObjectManagerClient.html"><code>GDBusObjectManagerClient</code></a> for the client-side code that is
+intended to be used with <code>GDBusObjectManagerServer</code> or any D-Bus
+object implementing the <code>org.freedesktop.DBus.ObjectManager</code> interface.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.30</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.DBusObjectManager.html" title="DBusObjectManager">GDBusObjectManager</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.DBusObjectManagerServer.new.html">g_dbus_object_manager_server_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GDBusObjectManagerServer</code> object.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.DBusObjectManagerServer.export.html">g_dbus_object_manager_server_export</a></h6>
+          <div class="docblock">
+            <p>Exports <code>object</code> on <code>manager</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusObjectManagerServer.export_uniquely.html">g_dbus_object_manager_server_export_uniquely</a></h6>
+          <div class="docblock">
+            <p>Like <code>g_dbus_object_manager_server_export()</code> but appends a string of
+the form _N (with N being a natural number) to <code>object</code><span class="quo">‘</span>s object path
+if an object with the given path already exists. As such, the
+<code>GDBusObjectProxy:g-object-path</code> property of <code>object</code> may be&nbsp;modified.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusObjectManagerServer.get_connection.html">g_dbus_object_manager_server_get_connection</a></h6>
+          <div class="docblock">
+            <p>Gets the <code>GDBusConnection</code> used by <code>manager</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusObjectManagerServer.is_exported.html">g_dbus_object_manager_server_is_exported</a></h6>
+          <div class="docblock">
+            <p>Returns whether <code>object</code> is currently exported on <code>manager</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusObjectManagerServer.set_connection.html">g_dbus_object_manager_server_set_connection</a></h6>
+          <div class="docblock">
+            <p>Exports all objects managed by <code>manager</code> on <code>connection</code>. If
+<code>connection</code> is <code>NULL</code>, stops exporting&nbsp;objects.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.DBusObjectManagerServer.unexport.html">g_dbus_object_manager_server_unexport</a></h6>
+          <div class="docblock">
+            <p>If <code>manager</code> has an object at <code>path</code>, removes the object. Otherwise
+does&nbsp;nothing.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.DBusObjectManager.html">GDBusObjectManager</a> (4)</h5><div class="docblock">
+          
+            <h6><a href="method.DBusObjectManager.get_interface.html">g_dbus_object_manager_get_interface</a></h6><div class="docblock">
+              <p>Gets the interface proxy for <code>interface_name</code> at <code>object_path</code>, if&nbsp;any.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="method.DBusObjectManager.get_object.html">g_dbus_object_manager_get_object</a></h6><div class="docblock">
+              <p>Gets the <code>GDBusObject</code> at <code>object_path</code>, if&nbsp;any.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="method.DBusObjectManager.get_object_path.html">g_dbus_object_manager_get_object_path</a></h6><div class="docblock">
+              <p>Gets the object path that <code>manager</code> is&nbsp;for.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="method.DBusObjectManager.get_objects.html">g_dbus_object_manager_get_objects</a></h6><div class="docblock">
+              <p>Gets all <code>GDBusObject</code> objects known to <code>manager</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.DBusObjectManagerServer.connection.html">Gio.DBusObjectManagerServer:connection</a></h6>
+          <div class="docblock">
+            <p>The <code>GDBusConnection</code> to export objects&nbsp;on.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.DBusObjectManagerServer.object-path.html">Gio.DBusObjectManagerServer:object-path</a></h6>
+          <div class="docblock">
+            <p>The object path to register the manager object&nbsp;at.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.30</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals">
+          <h5 style="display:block;">Signals inherited from <a href="iface.DBusObjectManager.html">GDBusObjectManager</a> (4)</h5><div class="docblock">
+          
+            <h6><a href="signal.DBusObjectManager.interface-added.html">GDBusObjectManager::interface-added</a></h6><div class="docblock">
+              <p>Emitted when <code>interface</code> is added to <code>object</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="signal.DBusObjectManager.interface-removed.html">GDBusObjectManager::interface-removed</a></h6><div class="docblock">
+              <p>Emitted when <code>interface</code> has been removed from <code>object</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="signal.DBusObjectManager.object-added.html">GDBusObjectManager::object-added</a></h6><div class="docblock">
+              <p>Emitted when <code>object</code> is added to <code>manager</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+            <h6><a href="signal.DBusObjectManager.object-removed.html">GDBusObjectManager::object-removed</a></h6><div class="docblock">
+              <p>Emitted when <code>object</code> is removed from <code>manager</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.30</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioDBusObjectManagerServerClass {
+  GObjectClass parent_class;
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>Class structure for <code>GDBusObjectManagerServer</code>.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>The parent&nbsp;class.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.DBusObjectManagerServer.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:44:05 GMT --></html>

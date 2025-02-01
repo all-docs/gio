@@ -1,0 +1,1592 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/class.Socket.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:53:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.Socket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.Socket"/>
+  <meta property="og:description" content="Reference for Gio.Socket"/>
+  <meta name="twitter:title" content="Gio.Socket"/>
+  <meta name="twitter:description" content="Reference for Gio.Socket"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="class.Socket.html#description">Socket</a>
+  </div>
+</div>
+
+
+  
+<div class="section">
+  <h5>Constructors</h5>
+  <div class="links">
+  
+    <a class="ctor" href="ctor.Socket.new.html">new</a>
+  
+    <a class="ctor" href="ctor.Socket.new_from_fd.html">new_from_fd</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.Socket.accept.html">accept</a>
+  
+    <a class="method" href="method.Socket.bind.html">bind</a>
+  
+    <a class="method" href="method.Socket.check_connect_result.html">check_connect_result</a>
+  
+    <a class="method" href="method.Socket.close.html">close</a>
+  
+    <a class="method" href="method.Socket.condition_check.html">condition_check</a>
+  
+    <a class="method" href="method.Socket.condition_timed_wait.html">condition_timed_wait</a>
+  
+    <a class="method" href="method.Socket.condition_wait.html">condition_wait</a>
+  
+    <a class="method" href="method.Socket.connect.html">connect</a>
+  
+    <a class="method" href="method.Socket.connection_factory_create_connection.html">connection_factory_create_connection</a>
+  
+    <a class="method" href="method.Socket.create_source.html">create_source</a>
+  
+    <a class="method" href="method.Socket.get_available_bytes.html">get_available_bytes</a>
+  
+    <a class="method" href="method.Socket.get_blocking.html">get_blocking</a>
+  
+    <a class="method" href="method.Socket.get_broadcast.html">get_broadcast</a>
+  
+    <a class="method" href="method.Socket.get_credentials.html">get_credentials</a>
+  
+    <a class="method" href="method.Socket.get_family.html">get_family</a>
+  
+    <a class="method" href="method.Socket.get_fd.html">get_fd</a>
+  
+    <a class="method" href="method.Socket.get_keepalive.html">get_keepalive</a>
+  
+    <a class="method" href="method.Socket.get_listen_backlog.html">get_listen_backlog</a>
+  
+    <a class="method" href="method.Socket.get_local_address.html">get_local_address</a>
+  
+    <a class="method" href="method.Socket.get_multicast_loopback.html">get_multicast_loopback</a>
+  
+    <a class="method" href="method.Socket.get_multicast_ttl.html">get_multicast_ttl</a>
+  
+    <a class="method" href="method.Socket.get_option.html">get_option</a>
+  
+    <a class="method" href="method.Socket.get_protocol.html">get_protocol</a>
+  
+    <a class="method" href="method.Socket.get_remote_address.html">get_remote_address</a>
+  
+    <a class="method" href="method.Socket.get_socket_type.html">get_socket_type</a>
+  
+    <a class="method" href="method.Socket.get_timeout.html">get_timeout</a>
+  
+    <a class="method" href="method.Socket.get_ttl.html">get_ttl</a>
+  
+    <a class="method" href="method.Socket.is_closed.html">is_closed</a>
+  
+    <a class="method" href="method.Socket.is_connected.html">is_connected</a>
+  
+    <a class="method" href="method.Socket.join_multicast_group.html">join_multicast_group</a>
+  
+    <a class="method" href="method.Socket.join_multicast_group_ssm.html">join_multicast_group_ssm</a>
+  
+    <a class="method" href="method.Socket.leave_multicast_group.html">leave_multicast_group</a>
+  
+    <a class="method" href="method.Socket.leave_multicast_group_ssm.html">leave_multicast_group_ssm</a>
+  
+    <a class="method" href="method.Socket.listen.html">listen</a>
+  
+    <a class="method" href="method.Socket.receive.html">receive</a>
+  
+    <a class="method" href="method.Socket.receive_bytes.html">receive_bytes</a>
+  
+    <a class="method" href="method.Socket.receive_bytes_from.html">receive_bytes_from</a>
+  
+    <a class="method" href="method.Socket.receive_from.html">receive_from</a>
+  
+    <a class="method" href="method.Socket.receive_message.html">receive_message</a>
+  
+    <a class="method" href="method.Socket.receive_messages.html">receive_messages</a>
+  
+    <a class="method" href="method.Socket.receive_with_blocking.html">receive_with_blocking</a>
+  
+    <a class="method" href="method.Socket.send.html">send</a>
+  
+    <a class="method" href="method.Socket.send_message.html">send_message</a>
+  
+    <a class="method" href="method.Socket.send_message_with_timeout.html">send_message_with_timeout</a>
+  
+    <a class="method" href="method.Socket.send_messages.html">send_messages</a>
+  
+    <a class="method" href="method.Socket.send_to.html">send_to</a>
+  
+    <a class="method" href="method.Socket.send_with_blocking.html">send_with_blocking</a>
+  
+    <a class="method" href="method.Socket.set_blocking.html">set_blocking</a>
+  
+    <a class="method" href="method.Socket.set_broadcast.html">set_broadcast</a>
+  
+    <a class="method" href="method.Socket.set_keepalive.html">set_keepalive</a>
+  
+    <a class="method" href="method.Socket.set_listen_backlog.html">set_listen_backlog</a>
+  
+    <a class="method" href="method.Socket.set_multicast_loopback.html">set_multicast_loopback</a>
+  
+    <a class="method" href="method.Socket.set_multicast_ttl.html">set_multicast_ttl</a>
+  
+    <a class="method" href="method.Socket.set_option.html">set_option</a>
+  
+    <a class="method" href="method.Socket.set_timeout.html">set_timeout</a>
+  
+    <a class="method" href="method.Socket.set_ttl.html">set_ttl</a>
+  
+    <a class="method" href="method.Socket.shutdown.html">shutdown</a>
+  
+    <a class="method" href="method.Socket.speaks_ipv4.html">speaks_ipv4</a>
+  
+  </div>
+</div>
+
+
+
+  
+<div class="section">
+  <h5>Properties</h5>
+  <div class="links">
+  
+    <a class="property" href="property.Socket.blocking.html">blocking</a>
+  
+    <a class="property" href="property.Socket.broadcast.html">broadcast</a>
+  
+    <a class="property" href="property.Socket.family.html">family</a>
+  
+    <a class="property" href="property.Socket.fd.html">fd</a>
+  
+    <a class="property" href="property.Socket.keepalive.html">keepalive</a>
+  
+    <a class="property" href="property.Socket.listen-backlog.html">listen-backlog</a>
+  
+    <a class="property" href="property.Socket.local-address.html">local-address</a>
+  
+    <a class="property" href="property.Socket.multicast-loopback.html">multicast-loopback</a>
+  
+    <a class="property" href="property.Socket.multicast-ttl.html">multicast-ttl</a>
+  
+    <a class="property" href="property.Socket.protocol.html">protocol</a>
+  
+    <a class="property" href="property.Socket.remote-address.html">remote-address</a>
+  
+    <a class="property" href="property.Socket.timeout.html">timeout</a>
+  
+    <a class="property" href="property.Socket.ttl.html">ttl</a>
+  
+    <a class="property" href="property.Socket.type.html">type</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>Socket</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p><span class="emblem available">since: 2.22</span></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gsocket.c#L85">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.Socket : GObject.Object
+  implements Gio.DatagramBased, Gio.Initable {
+  priv: GSocketPrivate*
+}</pre></code>
+
+        <div class="docblock">
+          <p>A <code>GSocket</code> is a low-level networking primitive. It is a more or less
+direct mapping of the <span class="caps">BSD</span> socket <span class="caps">API</span> in a portable GObject based <span class="caps">API</span>.
+It supports both the <span class="caps">UNIX</span> socket implementations and winsock2 on&nbsp;Windows.</p>
+<p><code>GSocket</code> is the platform independent base upon which the higher level
+network primitives are based. Applications are not typically meant to
+use it directly, but rather through classes like <a href="class.SocketClient.html"><code>GSocketClient</code></a>,
+<a href="class.SocketService.html"><code>GSocketService</code></a> and <a href="class.SocketConnection.html"><code>GSocketConnection</code></a>. However there may
+be cases where direct use of <code>GSocket</code> is&nbsp;useful.</p>
+<p><code>GSocket</code> implements the <a href="iface.Initable.html"><code>GInitable</code></a> interface, so if it is manually
+constructed by e.g. <a href="javascript:void(0)" data-namespace="GObject" data-link="ctor.Object.new.html" class="external"><code>g_object_new()</code></a> you must call
+<a href="method.Initable.init.html"><code>g_initable_init()</code></a> and check the results before using the object.
+This is done automatically in <a href="ctor.Socket.new.html"><code>g_socket_new()</code></a> and
+<a href="ctor.Socket.new_from_fd.html"><code>g_socket_new_from_fd()</code></a>, so these functions can return <code>NULL</code>.</p>
+<p>Sockets operate in two general modes, blocking or non-blocking. When
+in blocking mode all operations (which don’t take an explicit blocking
+parameter) block until the requested operation
+is finished or there is an error. In non-blocking mode all calls that
+would block return immediately with a <code>G_IO_ERROR_WOULD_BLOCK</code> error.
+To know when a call would successfully run you can call
+<a href="method.Socket.condition_check.html"><code>g_socket_condition_check()</code></a>, or <a href="method.Socket.condition_wait.html"><code>g_socket_condition_wait()</code></a>.
+You can also use <a href="method.Socket.create_source.html"><code>g_socket_create_source()</code></a> and attach it to a
+<a href="javascript:void(0)" data-namespace="GLib" data-link="struct.MainContext.html" class="external"><code>GMainContext</code></a> to get callbacks when I/O is possible.
+Note that all sockets are always set to non blocking mode in the system, and
+blocking mode is emulated in <code>GSocket</code>.</p>
+<p>When working in non-blocking mode applications should always be able to
+handle getting a <code>G_IO_ERROR_WOULD_BLOCK</code> error even when some other
+function said that I/O was possible. This can easily happen in case
+of a race condition in the application, but it can also happen for other
+reasons. For instance, on Windows a socket is always seen as writable
+until a write returns <code>G_IO_ERROR_WOULD_BLOCK</code>.</p>
+<p><code>GSocket</code>s can be either connection oriented or datagram based.
+For connection oriented types you must first establish a connection by
+either connecting to an address or accepting a connection from another
+address. For connectionless socket types the target/source address is
+specified or received in each I/O&nbsp;operation.</p>
+<p>All socket file descriptors are set to be&nbsp;close-on-exec.</p>
+<p>Note that creating a <code>GSocket</code> causes the signal <code>SIGPIPE</code> to be
+ignored for the remainder of the program. If you are writing a
+command-line utility that uses <code>GSocket</code>, you may need to take into
+account the fact that your program will not automatically be killed
+if it tries to write to <code>stdout</code> after it has been&nbsp;closed.</p>
+<p>Like most other APIs in GLib, <code>GSocket</code> is not inherently thread safe. To use
+a <code>GSocket</code> concurrently from multiple threads, you must implement your own&nbsp;locking.</p>
+<h2 id="nagles-algorithm">Nagle’s algorithm<a class="md-anchor" href="#nagles-algorithm" title="Permanent link"></a></h2>
+<p>Since GLib 2.80, <code>GSocket</code> will automatically set the <code>TCP_NODELAY</code> option on
+all <code>G_SOCKET_TYPE_STREAM</code> sockets. This disables
+<a href="https://en.wikipedia.org/wiki/Nagle%27s_algorithm">Nagle’s algorithm</a> as it
+typically does more harm than good on modern&nbsp;networks.</p>
+<p>If your application needs Nagle’s algorithm enabled, call
+<a href="method.Socket.set_option.html"><code>g_socket_set_option()</code></a> after constructing a <code>GSocket</code> to enable&nbsp;it:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_socket_new</span><span class="w"> </span><span class="p">(</span><span class="err">…</span><span class="p">,</span><span class="w"> </span><span class="n">G_SOCKET_TYPE_STREAM</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">socket</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">g_socket_set_option</span><span class="w"> </span><span class="p">(</span><span class="n">socket</span><span class="p">,</span><span class="w"> </span><span class="n">IPPROTO_TCP</span><span class="p">,</span><span class="w"> </span><span class="n">TCP_NODELAY</span><span class="p">,</span><span class="w"> </span><span class="n">FALSE</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">local_error</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// handle error if needed</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+        </div>
+
+        <div class="docblock">
+          
+          
+          <p>Available since: 2.22</p>
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.DatagramBased.html" title="DatagramBased">GDatagramBased</a></li>
+          
+        
+          
+          <li class="interface"><a href="iface.Initable.html" title="Initable">GInitable</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.Socket.new.html">g_socket_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GSocket</code> with the defined family, type and protocol.
+If <code>protocol</code> is 0 (<code>G_SOCKET_PROTOCOL_DEFAULT</code>) the default protocol type
+for the family and type is&nbsp;used.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="ctor.Socket.new_from_fd.html">g_socket_new_from_fd</a></h6>
+          <div class="docblock">
+            <p>Creates a new <code>GSocket</code> from a native file descriptor
+or winsock <span class="caps">SOCKET</span>&nbsp;handle.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.Socket.accept.html">g_socket_accept</a></h6>
+          <div class="docblock">
+            <p>Accept incoming connections on a connection-based socket. This removes
+the first outstanding connection request from the listening socket and
+creates a <code>GSocket</code> object for&nbsp;it.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.bind.html">g_socket_bind</a></h6>
+          <div class="docblock">
+            <p>When a socket is created it is attached to an address family, but it
+doesn&#8217;t have an address in this family. <code>g_socket_bind()</code> assigns the
+address (sometimes called name) of the&nbsp;socket.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.check_connect_result.html">g_socket_check_connect_result</a></h6>
+          <div class="docblock">
+            <p>Checks and resets the pending connect error for the socket.
+This is used to check for errors when <code>g_socket_connect()</code> is
+used in non-blocking&nbsp;mode.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.close.html">g_socket_close</a></h6>
+          <div class="docblock">
+            <p>Closes the socket, shutting down any active&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.condition_check.html">g_socket_condition_check</a></h6>
+          <div class="docblock">
+            <p>Checks on the readiness of <code>socket</code> to perform operations.
+The operations specified in <code>condition</code> are checked for and masked
+against the currently-satisfied conditions on <code>socket</code>. The result
+is&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.condition_timed_wait.html">g_socket_condition_timed_wait</a></h6>
+          <div class="docblock">
+            <p>Waits for up to <code>timeout_us</code> microseconds for <code>condition</code> to become true
+on <code>socket</code>. If the condition is met, <code>TRUE</code> is&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.condition_wait.html">g_socket_condition_wait</a></h6>
+          <div class="docblock">
+            <p>Waits for <code>condition</code> to become true on <code>socket</code>. When the condition
+is met, <code>TRUE</code> is&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.connect.html">g_socket_connect</a></h6>
+          <div class="docblock">
+            <p>Connect the socket to the specified remote&nbsp;address.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.connection_factory_create_connection.html">g_socket_connection_factory_create_connection</a></h6>
+          <div class="docblock">
+            <p>Creates a <code>GSocketConnection</code> subclass of the right type for
+<code>socket</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.create_source.html">g_socket_create_source</a></h6>
+          <div class="docblock">
+            <p>Creates a <code>GSource</code> that can be attached to a %GMainContext to monitor
+for the availability of the specified <code>condition</code> on the socket. The <code>GSource</code>
+keeps a reference to the <code>socket</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_available_bytes.html">g_socket_get_available_bytes</a></h6>
+          <div class="docblock">
+            <p>Get the amount of data pending in the <span class="caps">OS</span> input buffer, without&nbsp;blocking.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_blocking.html">g_socket_get_blocking</a></h6>
+          <div class="docblock">
+            <p>Gets the blocking mode of the socket. For details on blocking I/O,
+see&nbsp;g_socket_set_blocking().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_broadcast.html">g_socket_get_broadcast</a></h6>
+          <div class="docblock">
+            <p>Gets the broadcast setting on <code>socket</code>; if <code>TRUE</code>,
+it is possible to send packets to broadcast&nbsp;addresses.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_credentials.html">g_socket_get_credentials</a></h6>
+          <div class="docblock">
+            <p>Returns the credentials of the foreign process connected to this
+socket, if any (e.g. it is only supported for <code>G_SOCKET_FAMILY_UNIX</code>
+sockets).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_family.html">g_socket_get_family</a></h6>
+          <div class="docblock">
+            <p>Gets the socket family of the&nbsp;socket.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_fd.html">g_socket_get_fd</a></h6>
+          <div class="docblock">
+            <p>Returns the underlying <span class="caps">OS</span> socket object. On unix this
+is a socket file descriptor, and on Windows this is
+a Winsock2 <span class="caps">SOCKET</span> handle. This may be useful for
+doing platform specific or otherwise unusual operations
+on the&nbsp;socket.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_keepalive.html">g_socket_get_keepalive</a></h6>
+          <div class="docblock">
+            <p>Gets the keepalive mode of the socket. For details on this,
+see&nbsp;g_socket_set_keepalive().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_listen_backlog.html">g_socket_get_listen_backlog</a></h6>
+          <div class="docblock">
+            <p>Gets the listen backlog setting of the socket. For details on this,
+see&nbsp;g_socket_set_listen_backlog().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_local_address.html">g_socket_get_local_address</a></h6>
+          <div class="docblock">
+            <p>Try to get the local address of a bound socket. This is only
+useful if the socket has been bound to a local address,
+either explicitly or implicitly when&nbsp;connecting.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_multicast_loopback.html">g_socket_get_multicast_loopback</a></h6>
+          <div class="docblock">
+            <p>Gets the multicast loopback setting on <code>socket</code>; if <code>TRUE</code> (the
+default), outgoing multicast packets will be looped back to
+multicast listeners on the same&nbsp;host.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_multicast_ttl.html">g_socket_get_multicast_ttl</a></h6>
+          <div class="docblock">
+            <p>Gets the multicast time-to-live setting on <code>socket</code>; see
+<code>g_socket_set_multicast_ttl()</code> for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_option.html">g_socket_get_option</a></h6>
+          <div class="docblock">
+            <p>Gets the value of an integer-valued option on <code>socket</code>, as with
+getsockopt(). (If you need to fetch a  non-integer-valued option,
+you will need to call <code>getsockopt()</code> directly.).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_protocol.html">g_socket_get_protocol</a></h6>
+          <div class="docblock">
+            <p>Gets the socket protocol id the socket was created with.
+In case the protocol is unknown, -1 is&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_remote_address.html">g_socket_get_remote_address</a></h6>
+          <div class="docblock">
+            <p>Try to get the remote address of a connected socket. This is only
+useful for connection oriented sockets that have been&nbsp;connected.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_socket_type.html">g_socket_get_socket_type</a></h6>
+          <div class="docblock">
+            <p>Gets the socket type of the&nbsp;socket.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_timeout.html">g_socket_get_timeout</a></h6>
+          <div class="docblock">
+            <p>Gets the timeout setting of the socket. For details on this, see&nbsp;g_socket_set_timeout().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.get_ttl.html">g_socket_get_ttl</a></h6>
+          <div class="docblock">
+            <p>Gets the unicast time-to-live setting on <code>socket</code>; see
+<code>g_socket_set_ttl()</code> for more&nbsp;details.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.is_closed.html">g_socket_is_closed</a></h6>
+          <div class="docblock">
+            <p>Checks whether a socket is&nbsp;closed.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.is_connected.html">g_socket_is_connected</a></h6>
+          <div class="docblock">
+            <p>Check whether the socket is connected. This is only useful for
+connection-oriented&nbsp;sockets.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.join_multicast_group.html">g_socket_join_multicast_group</a></h6>
+          <div class="docblock">
+            <p>Registers <code>socket</code> to receive multicast messages sent to <code>group</code>.
+<code>socket</code> must be a <code>G_SOCKET_TYPE_DATAGRAM</code> socket, and must have
+been bound to an appropriate interface and port with&nbsp;g_socket_bind().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.join_multicast_group_ssm.html">g_socket_join_multicast_group_ssm</a></h6>
+          <div class="docblock">
+            <p>Registers <code>socket</code> to receive multicast messages sent to <code>group</code>.
+<code>socket</code> must be a <code>G_SOCKET_TYPE_DATAGRAM</code> socket, and must have
+been bound to an appropriate interface and port with&nbsp;g_socket_bind().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.56</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.leave_multicast_group.html">g_socket_leave_multicast_group</a></h6>
+          <div class="docblock">
+            <p>Removes <code>socket</code> from the multicast group defined by <code>group</code>, <code>iface</code>,
+and <code>source_specific</code> (which must all have the same values they had
+when you joined the&nbsp;group).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.leave_multicast_group_ssm.html">g_socket_leave_multicast_group_ssm</a></h6>
+          <div class="docblock">
+            <p>Removes <code>socket</code> from the multicast group defined by <code>group</code>, <code>iface</code>,
+and <code>source_specific</code> (which must all have the same values they had
+when you joined the&nbsp;group).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.56</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.listen.html">g_socket_listen</a></h6>
+          <div class="docblock">
+            <p>Marks the socket as a server socket, i.e. a socket that is used
+to accept incoming requests using&nbsp;g_socket_accept().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.receive.html">g_socket_receive</a></h6>
+          <div class="docblock">
+            <p>Receive data (up to <code>size</code> bytes) from a socket. This is mainly used by
+connection-oriented sockets; it is identical to <code>g_socket_receive_from()</code>
+with <code>address</code> set to <code>NULL</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.receive_bytes.html">g_socket_receive_bytes</a></h6>
+          <div class="docblock">
+            <p>Receives data (up to <code>size</code> bytes) from a&nbsp;socket.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.80</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.receive_bytes_from.html">g_socket_receive_bytes_from</a></h6>
+          <div class="docblock">
+            <p>Receive data (up to <code>size</code> bytes) from a&nbsp;socket.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.80</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.receive_from.html">g_socket_receive_from</a></h6>
+          <div class="docblock">
+            <p>Receive data (up to <code>size</code> bytes) from a&nbsp;socket.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.receive_message.html">g_socket_receive_message</a></h6>
+          <div class="docblock">
+            <p>Receive data from a socket.  For receiving multiple messages, see
+g_socket_receive_messages(); for easier use, see
+<code>g_socket_receive()</code> and&nbsp;g_socket_receive_from().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.receive_messages.html">g_socket_receive_messages</a></h6>
+          <div class="docblock">
+            <p>Receive multiple data messages from <code>socket</code> in one go.  This is the most
+complicated and fully-featured version of this call. For easier use, see
+g_socket_receive(), g_socket_receive_from(), and&nbsp;g_socket_receive_message().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.48</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.receive_with_blocking.html">g_socket_receive_with_blocking</a></h6>
+          <div class="docblock">
+            <p>This behaves exactly the same as g_socket_receive(), except that
+the choice of blocking or non-blocking behavior is determined by
+the <code>blocking</code> argument rather than by <code>socket</code><span class="quo">&#8216;</span>s&nbsp;properties.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.send.html">g_socket_send</a></h6>
+          <div class="docblock">
+            <p>Tries to send <code>size</code> bytes from <code>buffer</code> on the socket. This is
+mainly used by connection-oriented sockets; it is identical to
+<code>g_socket_send_to()</code> with <code>address</code> set to <code>NULL</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.send_message.html">g_socket_send_message</a></h6>
+          <div class="docblock">
+            <p>Send data to <code>address</code> on <code>socket</code>.  For sending multiple messages see
+g_socket_send_messages(); for easier use, see
+<code>g_socket_send()</code> and&nbsp;g_socket_send_to().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.send_message_with_timeout.html">g_socket_send_message_with_timeout</a></h6>
+          <div class="docblock">
+            <p>This behaves exactly the same as g_socket_send_message(), except that
+the choice of timeout behavior is determined by the <code>timeout_us</code> argument
+rather than by <code>socket</code><span class="quo">&#8216;</span>s&nbsp;properties.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.send_messages.html">g_socket_send_messages</a></h6>
+          <div class="docblock">
+            <p>Send multiple data messages from <code>socket</code> in one go.  This is the most
+complicated and fully-featured version of this call. For easier use, see
+g_socket_send(), g_socket_send_to(), and&nbsp;g_socket_send_message().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.44</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.send_to.html">g_socket_send_to</a></h6>
+          <div class="docblock">
+            <p>Tries to send <code>size</code> bytes from <code>buffer</code> to <code>address</code>. If <code>address</code> is
+<code>NULL</code> then the message is sent to the default receiver (set by&nbsp;g_socket_connect()).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.send_with_blocking.html">g_socket_send_with_blocking</a></h6>
+          <div class="docblock">
+            <p>This behaves exactly the same as g_socket_send(), except that
+the choice of blocking or non-blocking behavior is determined by
+the <code>blocking</code> argument rather than by <code>socket</code><span class="quo">&#8216;</span>s&nbsp;properties.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.set_blocking.html">g_socket_set_blocking</a></h6>
+          <div class="docblock">
+            <p>Sets the blocking mode of the socket. In blocking mode
+all operations (which don’t take an explicit blocking parameter) block until
+they succeed or there is an error. In
+non-blocking mode all functions return results immediately or
+with a <code>G_IO_ERROR_WOULD_BLOCK</code> error.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.set_broadcast.html">g_socket_set_broadcast</a></h6>
+          <div class="docblock">
+            <p>Sets whether <code>socket</code> should allow sending to broadcast addresses.
+This is <code>FALSE</code> by&nbsp;default.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.set_keepalive.html">g_socket_set_keepalive</a></h6>
+          <div class="docblock">
+            <p>Sets or unsets the <code>SO_KEEPALIVE</code> flag on the underlying socket. When
+this flag is set on a socket, the system will attempt to verify that the
+remote socket endpoint is still present if a sufficiently long period of
+time passes with no data being exchanged. If the system is unable to
+verify the presence of the remote endpoint, it will automatically close
+the&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.set_listen_backlog.html">g_socket_set_listen_backlog</a></h6>
+          <div class="docblock">
+            <p>Sets the maximum number of outstanding connections allowed
+when listening on this socket. If more clients than this are
+connecting to the socket and the application is not handling them
+on time then the new connections will be&nbsp;refused.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.set_multicast_loopback.html">g_socket_set_multicast_loopback</a></h6>
+          <div class="docblock">
+            <p>Sets whether outgoing multicast packets will be received by sockets
+listening on that multicast address on the same host. This is <code>TRUE</code>
+by&nbsp;default.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.set_multicast_ttl.html">g_socket_set_multicast_ttl</a></h6>
+          <div class="docblock">
+            <p>Sets the time-to-live for outgoing multicast datagrams on <code>socket</code>.
+By default, this is 1, meaning that multicast packets will not leave
+the local&nbsp;network.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.set_option.html">g_socket_set_option</a></h6>
+          <div class="docblock">
+            <p>Sets the value of an integer-valued option on <code>socket</code>, as with
+setsockopt(). (If you need to set a non-integer-valued option,
+you will need to call <code>setsockopt()</code> directly.).</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.set_timeout.html">g_socket_set_timeout</a></h6>
+          <div class="docblock">
+            <p>Sets the time in seconds after which I/O operations on <code>socket</code> will
+time out if they have not yet&nbsp;completed.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.set_ttl.html">g_socket_set_ttl</a></h6>
+          <div class="docblock">
+            <p>Sets the time-to-live for outgoing unicast packets on <code>socket</code>.
+By default the platform-specific default value is&nbsp;used.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.shutdown.html">g_socket_shutdown</a></h6>
+          <div class="docblock">
+            <p>Shut down part or all of a full-duplex&nbsp;connection.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.Socket.speaks_ipv4.html">g_socket_speaks_ipv4</a></h6>
+          <div class="docblock">
+            <p>Checks if a socket is capable of speaking&nbsp;IPv4.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</em></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.DatagramBased.html">GDatagramBased</a> (5)</h5><div class="docblock">
+          
+            <h6><a href="method.DatagramBased.condition_check.html">g_datagram_based_condition_check</a></h6><div class="docblock">
+              <p>Checks on the readiness of <code>datagram_based</code> to perform operations. The
+operations specified in <code>condition</code> are checked for and masked against the
+currently-satisfied conditions on <code>datagram_based</code>. The result is&nbsp;returned.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.48</span></p>
+            </div>
+            
+            <h6><a href="method.DatagramBased.condition_wait.html">g_datagram_based_condition_wait</a></h6><div class="docblock">
+              <p>Waits for up to <code>timeout</code> microseconds for condition to become true on
+<code>datagram_based</code>. If the condition is met, <code>TRUE</code> is&nbsp;returned.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.48</span></p>
+            </div>
+            
+            <h6><a href="method.DatagramBased.create_source.html">g_datagram_based_create_source</a></h6><div class="docblock">
+              <p>Creates a <code>GSource</code> that can be attached to a <code>GMainContext</code> to monitor for
+the availability of the specified <code>condition</code> on the <code>GDatagramBased</code>. The
+<code>GSource</code> keeps a reference to the <code>datagram_based</code>.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.48</span></p>
+            </div>
+            
+            <h6><a href="method.DatagramBased.receive_messages.html">g_datagram_based_receive_messages</a></h6><div class="docblock">
+              <p>Receive one or more data messages from <code>datagram_based</code> in one&nbsp;go.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.48</span></p>
+            </div>
+            
+            <h6><a href="method.DatagramBased.send_messages.html">g_datagram_based_send_messages</a></h6><div class="docblock">
+              <p>Send one or more data messages from <code>datagram_based</code> in one&nbsp;go.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.48</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.Initable.html">GInitable</a> (1)</h5><div class="docblock">
+          
+            <h6><a href="method.Initable.init.html">g_initable_init</a></h6><div class="docblock">
+              <p>Initializes the object implementing the&nbsp;interface.</p>
+            </div>
+            <div class="docblock">
+              <p><span class="emblem available">since: 2.22</span></p>
+            </div>
+            
+          </div>
+        </div>
+        
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.Socket.blocking.html">Gio.Socket:blocking</a></h6>
+          <div class="docblock">
+            <p>Whether I/O on this socket is&nbsp;blocking.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.broadcast.html">Gio.Socket:broadcast</a></h6>
+          <div class="docblock">
+            <p>Whether the socket should allow sending to broadcast&nbsp;addresses.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.family.html">Gio.Socket:family</a></h6>
+          <div class="docblock">
+            <p>The socket’s address&nbsp;family.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.fd.html">Gio.Socket:fd</a></h6>
+          <div class="docblock">
+            <p>The socket’s file&nbsp;descriptor.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.keepalive.html">Gio.Socket:keepalive</a></h6>
+          <div class="docblock">
+            <p>Whether to keep the connection alive by sending periodic&nbsp;pings.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.listen-backlog.html">Gio.Socket:listen-backlog</a></h6>
+          <div class="docblock">
+            <p>The number of outstanding connections in the listen&nbsp;queue.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.local-address.html">Gio.Socket:local-address</a></h6>
+          <div class="docblock">
+            <p>The local address the socket is bound&nbsp;to.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.multicast-loopback.html">Gio.Socket:multicast-loopback</a></h6>
+          <div class="docblock">
+            <p>Whether outgoing multicast packets loop back to the local&nbsp;host.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.multicast-ttl.html">Gio.Socket:multicast-ttl</a></h6>
+          <div class="docblock">
+            <p>Time-to-live out outgoing multicast&nbsp;packets.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.protocol.html">Gio.Socket:protocol</a></h6>
+          <div class="docblock">
+            <p>The <span class="caps">ID</span> of the protocol to use, or <code>-1</code> for&nbsp;unknown.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.remote-address.html">Gio.Socket:remote-address</a></h6>
+          <div class="docblock">
+            <p>The remote address the socket is connected&nbsp;to.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.timeout.html">Gio.Socket:timeout</a></h6>
+          <div class="docblock">
+            <p>The timeout in seconds on socket&nbsp;I/O.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.26</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.ttl.html">Gio.Socket:ttl</a></h6>
+          <div class="docblock">
+            <p>Time-to-live for outgoing unicast&nbsp;packets.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="property.Socket.type.html">Gio.Socket:type</a></h6>
+          <div class="docblock">
+            <p>The socket’s&nbsp;type.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+        
+      
+        
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioSocketClass {
+  GObjectClass parent_class;
+  void (* _g_reserved1) (
+void
+  );
+  void (* _g_reserved2) (
+void
+  );
+  void (* _g_reserved3) (
+void
+  );
+  void (* _g_reserved4) (
+void
+  );
+  void (* _g_reserved5) (
+void
+  );
+  void (* _g_reserved6) (
+void
+  );
+  void (* _g_reserved7) (
+void
+  );
+  void (* _g_reserved8) (
+void
+  );
+  void (* _g_reserved9) (
+void
+  );
+  void (* _g_reserved10) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved1: void (* _g_reserved1) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved2: void (* _g_reserved2) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved3: void (* _g_reserved3) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved4: void (* _g_reserved4) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved5: void (* _g_reserved5) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved6: void (* _g_reserved6) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved7: void (* _g_reserved7) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved8: void (* _g_reserved8) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved9: void (* _g_reserved9) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved10: void (* _g_reserved10) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        </dd>
+      </div>
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      <ul class="toc-list">
+      
+      
+      
+      </ul>
+      
+      
+      
+      <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
+      
+      
+      <li class="toc-list-item"><a href="#implements"><span class="link-text">Implements</span></a></li>
+      
+      
+<li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
+
+
+      
+
+      
+
+      
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/class.Socket.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:54:09 GMT -->
+</html>

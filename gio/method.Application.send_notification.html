@@ -1,0 +1,313 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/method.Application.send_notification.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.Application.send_notification</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta priority="og:title" content="Gio.Application.send_notification"/>
+  <meta priority="og:description" content="Reference for Gio.Application.send_notification"/>
+  <meta name="twitter:title" content="Gio.Application.send_notification"/>
+  <meta name="twitter:description" content="Reference for Gio.Application.send_notification"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="class.Application.html">Application</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.Application.activate.html">activate</a>
+  
+    <a class="method" href="method.Application.add_main_option.html">add_main_option</a>
+  
+    <a class="method" href="method.Application.add_main_option_entries.html">add_main_option_entries</a>
+  
+    <a class="method" href="method.Application.add_option_group.html">add_option_group</a>
+  
+    <a class="method" href="method.Application.bind_busy_property.html">bind_busy_property</a>
+  
+    <a class="method" href="method.Application.get_application_id.html">get_application_id</a>
+  
+    <a class="method" href="method.Application.get_dbus_connection.html">get_dbus_connection</a>
+  
+    <a class="method" href="method.Application.get_dbus_object_path.html">get_dbus_object_path</a>
+  
+    <a class="method" href="method.Application.get_flags.html">get_flags</a>
+  
+    <a class="method" href="method.Application.get_inactivity_timeout.html">get_inactivity_timeout</a>
+  
+    <a class="method" href="method.Application.get_is_busy.html">get_is_busy</a>
+  
+    <a class="method" href="method.Application.get_is_registered.html">get_is_registered</a>
+  
+    <a class="method" href="method.Application.get_is_remote.html">get_is_remote</a>
+  
+    <a class="method" href="method.Application.get_resource_base_path.html">get_resource_base_path</a>
+  
+    <a class="method" href="method.Application.get_version.html">get_version</a>
+  
+    <a class="method" href="method.Application.hold.html">hold</a>
+  
+    <a class="method" href="method.Application.mark_busy.html">mark_busy</a>
+  
+    <a class="method" href="method.Application.open.html">open</a>
+  
+    <a class="method" href="method.Application.quit.html">quit</a>
+  
+    <a class="method" href="method.Application.register.html">register</a>
+  
+    <a class="method" href="method.Application.release.html">release</a>
+  
+    <a class="method" href="method.Application.run.html">run</a>
+  
+    <a class="method current" href="method.Application.send_notification.html">send_notification</a>
+  
+    <a class="method" href="method.Application.set_action_group.html">set_action_group</a>
+  
+    <a class="method" href="method.Application.set_application_id.html">set_application_id</a>
+  
+    <a class="method" href="method.Application.set_default.html">set_default</a>
+  
+    <a class="method" href="method.Application.set_flags.html">set_flags</a>
+  
+    <a class="method" href="method.Application.set_inactivity_timeout.html">set_inactivity_timeout</a>
+  
+    <a class="method" href="method.Application.set_option_context_description.html">set_option_context_description</a>
+  
+    <a class="method" href="method.Application.set_option_context_parameter_string.html">set_option_context_parameter_string</a>
+  
+    <a class="method" href="method.Application.set_option_context_summary.html">set_option_context_summary</a>
+  
+    <a class="method" href="method.Application.set_resource_base_path.html">set_resource_base_path</a>
+  
+    <a class="method" href="method.Application.set_version.html">set_version</a>
+  
+    <a class="method" href="method.Application.unbind_busy_property.html">unbind_busy_property</a>
+  
+    <a class="method" href="method.Application.unmark_busy.html">unmark_busy</a>
+  
+    <a class="method" href="method.Application.withdraw_notification.html">withdraw_notification</a>
+  
+  </div>
+</div>
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Method</h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span><a href="class.Application.html">Application</a><span class="sep"></span>send_notification</h1>
+  </header>
+
+  <section>
+    <div class="docblock">
+      <p><span class="emblem available">since: 2.40</span></p>
+    </div>
+
+    <div class="declaration toggle-wrapper">
+      <h4 style="display:flex;" id="declaration">
+        Declaration
+        <a class="anchor" href="#declaration"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gapplication.h#L244">[src]</a>
+        
+      </h4>
+
+      <div class="docblock c-decl">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">g_application_send_notification</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">GApplication</span><span class="o">*</span><span class="w"> </span><span class="n">application</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">id</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GNotification</span><span class="o">*</span><span class="w"> </span><span class="n">notification</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 style="display:flex;" id="description">
+        Description
+        <a class="anchor" href="#description"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gapplication.c#L3053">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>Sends a notification on behalf of <code>application</code> to the desktop shell.
+There is no guarantee that the notification is displayed immediately,
+or even at&nbsp;all.</p>
+<p>Notifications may persist after the application exits. It will be
+D-Bus-activated when the notification or one of its actions is&nbsp;activated.</p>
+<p>Modifying <code>notification</code> after this call has no effect. However, the
+object can be reused for a later call to this&nbsp;function.</p>
+<p><code>id</code> may be any string that uniquely identifies the event for the
+application. It does not need to be in any special format. For
+example, &#8220;new-message&#8221; might be appropriate for a notification about
+new&nbsp;messages.</p>
+<p>If a previous notification was sent with the same <code>id</code>, it will be
+replaced with <code>notification</code> and shown again as if it was a new
+notification. This works even for notifications sent from a previous
+execution of the application, as long as <code>id</code> is the same&nbsp;string.</p>
+<p><code>id</code> may be <code>NULL</code>, but it is impossible to replace or withdraw
+notifications without an&nbsp;id.</p>
+<p>If <code>notification</code> is no longer relevant, it can be withdrawn with
+<a href="method.Application.withdraw_notification.html"><code>g_application_withdraw_notification()</code></a>.</p>
+<p>It is an error to call this function if <code>application</code> has no
+application <span class="caps">ID</span>.</p>
+      </div>
+
+      <div class="docblock">
+        
+        <p>Available since: 2.40</p>
+        
+        
+        
+        
+        
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>id</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>const gchar*</code></p>
+            <p>Id of the notification, or <code>NULL</code>.</p>
+            <table>
+            
+            <tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            <tr><td>The value is a NUL terminated UTF-8 string.</td></tr>
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>notification</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.Notification.html"><code>GNotification</code></a></p>
+            <p>The <code>GNotification</code> to&nbsp;send.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the method.</td></tr>
+            
+            </table>
+          </dd>
+          
+
+          
+        </dl>
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/method.Application.send_notification.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:17 GMT -->
+</html>

@@ -1,0 +1,973 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/iface.ActionGroup.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:58:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.ActionGroup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.ActionGroup"/>
+  <meta property="og:description" content="Reference for Gio.ActionGroup"/>
+  <meta name="twitter:title" content="Gio.ActionGroup"/>
+  <meta name="twitter:description" content="Reference for Gio.ActionGroup"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="iface.ActionGroup.html#description">ActionGroup</a>
+  </div>
+</div>
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.ActionGroup.action_added.html">action_added</a>
+  
+    <a class="method" href="method.ActionGroup.action_enabled_changed.html">action_enabled_changed</a>
+  
+    <a class="method" href="method.ActionGroup.action_removed.html">action_removed</a>
+  
+    <a class="method" href="method.ActionGroup.action_state_changed.html">action_state_changed</a>
+  
+    <a class="method" href="method.ActionGroup.activate_action.html">activate_action</a>
+  
+    <a class="method" href="method.ActionGroup.change_action_state.html">change_action_state</a>
+  
+    <a class="method" href="method.ActionGroup.get_action_enabled.html">get_action_enabled</a>
+  
+    <a class="method" href="method.ActionGroup.get_action_parameter_type.html">get_action_parameter_type</a>
+  
+    <a class="method" href="method.ActionGroup.get_action_state.html">get_action_state</a>
+  
+    <a class="method" href="method.ActionGroup.get_action_state_hint.html">get_action_state_hint</a>
+  
+    <a class="method" href="method.ActionGroup.get_action_state_type.html">get_action_state_type</a>
+  
+    <a class="method" href="method.ActionGroup.has_action.html">has_action</a>
+  
+    <a class="method" href="method.ActionGroup.list_actions.html">list_actions</a>
+  
+    <a class="method" href="method.ActionGroup.query_action.html">query_action</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.ActionGroup.action-added.html">action-added</a>
+  
+    <a class="signal" href="signal.ActionGroup.action-enabled-changed.html">action-enabled-changed</a>
+  
+    <a class="signal" href="signal.ActionGroup.action-removed.html">action-removed</a>
+  
+    <a class="signal" href="signal.ActionGroup.action-state-changed.html">action-state-changed</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.ActionGroup.action_added.html">action_added</a>
+  
+    <a class="method" href="vfunc.ActionGroup.action_enabled_changed.html">action_enabled_changed</a>
+  
+    <a class="method" href="vfunc.ActionGroup.action_removed.html">action_removed</a>
+  
+    <a class="method" href="vfunc.ActionGroup.action_state_changed.html">action_state_changed</a>
+  
+    <a class="method" href="vfunc.ActionGroup.activate_action.html">activate_action</a>
+  
+    <a class="method" href="vfunc.ActionGroup.change_action_state.html">change_action_state</a>
+  
+    <a class="method" href="vfunc.ActionGroup.get_action_enabled.html">get_action_enabled</a>
+  
+    <a class="method" href="vfunc.ActionGroup.get_action_parameter_type.html">get_action_parameter_type</a>
+  
+    <a class="method" href="vfunc.ActionGroup.get_action_state.html">get_action_state</a>
+  
+    <a class="method" href="vfunc.ActionGroup.get_action_state_hint.html">get_action_state_hint</a>
+  
+    <a class="method" href="vfunc.ActionGroup.get_action_state_type.html">get_action_state_type</a>
+  
+    <a class="method" href="vfunc.ActionGroup.has_action.html">has_action</a>
+  
+    <a class="method" href="vfunc.ActionGroup.list_actions.html">list_actions</a>
+  
+    <a class="method" href="vfunc.ActionGroup.query_action.html">query_action</a>
+  
+  </div>
+</div>
+
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Interface</h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span>ActionGroup</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gactiongroup.c#L28">[src]</a>
+          
+        </h4>
+
+        <pre><code>interface Gio.ActionGroup : GObject.Object</code></pre>
+
+        <div class="docblock">
+          <p><code>GActionGroup</code> represents a group of&nbsp;actions.</p>
+<p>Actions can be used to expose functionality in a structured way, either
+from one part of a program to another, or to the outside world. Action
+groups are often used together with a <a href="class.MenuModel.html"><code>GMenuModel</code></a> that provides additional
+representation data for displaying the actions to the user, e.g. in a&nbsp;menu.</p>
+<p>The main way to interact with the actions in a <code>GActionGroup</code> is to
+activate them with <a href="method.ActionGroup.activate_action.html"><code>g_action_group_activate_action()</code></a>. Activating an
+action may require a <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Variant.html" class="external"><code>GVariant</code></a> parameter. The required type of the
+parameter can be inquired with <a href="method.ActionGroup.get_action_parameter_type.html"><code>g_action_group_get_action_parameter_type()</code></a>.
+Actions may be disabled, see <a href="method.ActionGroup.get_action_enabled.html"><code>g_action_group_get_action_enabled()</code></a>.
+Activating a disabled action has no&nbsp;effect.</p>
+<p>Actions may optionally have a state in the form of a <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Variant.html" class="external"><code>GVariant</code></a>. The current
+state of an action can be inquired with <a href="method.ActionGroup.get_action_state.html"><code>g_action_group_get_action_state()</code></a>.
+Activating a stateful action may change its state, but it is also possible to
+set the state by calling <a href="method.ActionGroup.change_action_state.html"><code>g_action_group_change_action_state()</code></a>.</p>
+<p>As typical example, consider a text editing application which has an
+option to change the current font to ‘bold’. A good way to represent
+this would be a stateful action, with a boolean state. Activating the
+action would toggle the&nbsp;state.</p>
+<p>Each action in the group has a unique name (which is a string).  All
+method calls, except <a href="method.ActionGroup.list_actions.html"><code>g_action_group_list_actions()</code></a> take the name of
+an action as an&nbsp;argument.</p>
+<p>The <code>GActionGroup</code> <span class="caps">API</span> is meant to be the ‘public’ <span class="caps">API</span> to the action
+group. The calls here are exactly the interaction that ‘external
+forces’ (eg: <span class="caps">UI</span>, incoming D-Bus messages, etc.) are supposed to have
+with actions. ‘Internal’ APIs (ie: ones meant only to be accessed by
+the action group implementation) are found on subclasses. This is
+why you will find – for example – <a href="method.ActionGroup.get_action_enabled.html"><code>g_action_group_get_action_enabled()</code></a>
+but not an equivalent <code>set_action_enabled()</code> method.</p>
+<p>Signals are emitted on the action group in response to state changes
+on individual&nbsp;actions.</p>
+<p>Implementations of <code>GActionGroup</code> should provide implementations for
+the virtual functions <a href="method.ActionGroup.list_actions.html"><code>g_action_group_list_actions()</code></a> and
+<a href="method.ActionGroup.query_action.html"><code>g_action_group_query_action()</code></a>. The other virtual functions should
+not be implemented — their ‘wrappers’ are actually implemented with
+calls to <a href="method.ActionGroup.query_action.html"><code>g_action_group_query_action()</code></a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    <div class="toggle-wrapper prerequisite">
+      <h4 id="prerequisite">
+        Prerequisite
+        <a href="#prerequisite" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <p>In order to implement ActionGroup, your type must inherit from<a data-namespace="GObject" data-link="class.Object.html" href="javascript:void(0)" class="external"><code>GObject</code></a>.</p>
+      </div>
+    </div>
+
+    
+    <div class="implementations toggle-wrapper default-hide">
+      <h4 id="implementations">Implementations<a href="#implementations" class="anchor"></a></h4>
+      <div class="docblock">
+        <ul>
+          <li><a href="class.Application.html">GApplication</a></li>
+        
+          <li><a href="class.DBusActionGroup.html">GDBusActionGroup</a></li>
+        
+          <li><a href="class.SimpleActionGroup.html">GSimpleActionGroup</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="methods toggle-wrapper">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.action_added.html">g_action_group_action_added</a></h6>
+          <div class="docblock">
+            <p>Emits the <code>GActionGroup::action-added</code> signal on <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.action_enabled_changed.html">g_action_group_action_enabled_changed</a></h6>
+          <div class="docblock">
+            <p>Emits the <code>GActionGroup::action-enabled-changed</code> signal on <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.action_removed.html">g_action_group_action_removed</a></h6>
+          <div class="docblock">
+            <p>Emits the <code>GActionGroup::action-removed</code> signal on <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.action_state_changed.html">g_action_group_action_state_changed</a></h6>
+          <div class="docblock">
+            <p>Emits the <code>GActionGroup::action-state-changed</code> signal on <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.activate_action.html">g_action_group_activate_action</a></h6>
+          <div class="docblock">
+            <p>Activate the named action within <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.change_action_state.html">g_action_group_change_action_state</a></h6>
+          <div class="docblock">
+            <p>Request for the state of the named action within <code>action_group</code> to be
+changed to <code>value</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.get_action_enabled.html">g_action_group_get_action_enabled</a></h6>
+          <div class="docblock">
+            <p>Checks if the named action within <code>action_group</code> is currently&nbsp;enabled.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.get_action_parameter_type.html">g_action_group_get_action_parameter_type</a></h6>
+          <div class="docblock">
+            <p>Queries the type of the parameter that must be given when activating
+the named action within <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.get_action_state.html">g_action_group_get_action_state</a></h6>
+          <div class="docblock">
+            <p>Queries the current state of the named action within <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.get_action_state_hint.html">g_action_group_get_action_state_hint</a></h6>
+          <div class="docblock">
+            <p>Requests a hint about the valid range of values for the state of the
+named action within <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.get_action_state_type.html">g_action_group_get_action_state_type</a></h6>
+          <div class="docblock">
+            <p>Queries the type of the state of the named action within
+<code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.has_action.html">g_action_group_has_action</a></h6>
+          <div class="docblock">
+            <p>Checks if the named action exists within <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.list_actions.html">g_action_group_list_actions</a></h6>
+          <div class="docblock">
+            <p>Lists the actions contained within <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.ActionGroup.query_action.html">g_action_group_query_action</a></h6>
+          <div class="docblock">
+            <p>Queries all aspects of the named action within an <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+    </div>
+    
+
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="signal.ActionGroup.action-added.html">Gio.ActionGroup::action-added</a></h6>
+          <div class="docblock">
+            <p>Signals that a new action was just added to the&nbsp;group.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.ActionGroup.action-enabled-changed.html">Gio.ActionGroup::action-enabled-changed</a></h6>
+          <div class="docblock">
+            <p>Signals that the enabled status of the named action has&nbsp;changed.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.ActionGroup.action-removed.html">Gio.ActionGroup::action-removed</a></h6>
+          <div class="docblock">
+            <p>Signals that an action is just about to be removed from the&nbsp;group.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="signal.ActionGroup.action-state-changed.html">Gio.ActionGroup::action-state-changed</a></h6>
+          <div class="docblock">
+            <p>Signals that the state of the named action has&nbsp;changed.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+    <div class="interface toggle-wrapper default-hide">
+      <h4 style="display:flex;" id="interface-struct">
+        Interface structure
+        <a href="#interface-struct" class="anchor"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioActionGroupInterface {
+  GTypeInterface g_iface;
+  gboolean (* has_action) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  );
+  gchar** (* list_actions) (
+    GActionGroup* action_group
+  );
+  gboolean (* get_action_enabled) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  );
+  const GVariantType* (* get_action_parameter_type) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  );
+  const GVariantType* (* get_action_state_type) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  );
+  GVariant* (* get_action_state_hint) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  );
+  GVariant* (* get_action_state) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  );
+  void (* change_action_state) (
+    GActionGroup* action_group,
+    const gchar* action_name,
+    GVariant* value
+  );
+  void (* activate_action) (
+    GActionGroup* action_group,
+    const gchar* action_name,
+    GVariant* parameter
+  );
+  void (* action_added) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  );
+  void (* action_removed) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  );
+  void (* action_enabled_changed) (
+    GActionGroup* action_group,
+    const gchar* action_name,
+    gboolean enabled
+  );
+  void (* action_state_changed) (
+    GActionGroup* action_group,
+    const gchar* action_name,
+    GVariant* state
+  );
+  gboolean (* query_action) (
+    GActionGroup* action_group,
+    const gchar* action_name,
+    gboolean* enabled,
+    const GVariantType** parameter_type,
+    const GVariantType** state_type,
+    GVariant** state_hint,
+    GVariant** state
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>The virtual function table for <a href="iface.ActionGroup.html"><code>GActionGroup</code></a>.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Interface members</h6>
+
+        <table>
+        
+        <tr>
+          <td style="vertical-align:top"><code>g_iface</code></td>
+          <td style="vertical-align:top"><pre><code>GTypeInterface</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>No description available.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>has_action</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* has_action) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The virtual function pointer for <a href="method.ActionGroup.has_action.html"><code>g_action_group_has_action()</code></a>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>list_actions</code></td>
+          <td style="vertical-align:top"><pre><code>gchar** (* list_actions) (
+    GActionGroup* action_group
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The virtual function pointer for <a href="method.ActionGroup.list_actions.html"><code>g_action_group_list_actions()</code></a>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_action_enabled</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* get_action_enabled) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The virtual function pointer for <a href="method.ActionGroup.get_action_enabled.html"><code>g_action_group_get_action_enabled()</code></a>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_action_parameter_type</code></td>
+          <td style="vertical-align:top"><pre><code>const GVariantType* (* get_action_parameter_type) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The virtual function pointer for <a href="method.ActionGroup.get_action_parameter_type.html"><code>g_action_group_get_action_parameter_type()</code></a>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_action_state_type</code></td>
+          <td style="vertical-align:top"><pre><code>const GVariantType* (* get_action_state_type) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The virtual function pointer for <a href="method.ActionGroup.get_action_state_type.html"><code>g_action_group_get_action_state_type()</code></a>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_action_state_hint</code></td>
+          <td style="vertical-align:top"><pre><code>GVariant* (* get_action_state_hint) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The virtual function pointer for <a href="method.ActionGroup.get_action_state_hint.html"><code>g_action_group_get_action_state_hint()</code></a>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>get_action_state</code></td>
+          <td style="vertical-align:top"><pre><code>GVariant* (* get_action_state) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The virtual function pointer for <a href="method.ActionGroup.get_action_state.html"><code>g_action_group_get_action_state()</code></a>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>change_action_state</code></td>
+          <td style="vertical-align:top"><pre><code>void (* change_action_state) (
+    GActionGroup* action_group,
+    const gchar* action_name,
+    GVariant* value
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The virtual function pointer for <a href="method.ActionGroup.change_action_state.html"><code>g_action_group_change_action_state()</code></a>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>activate_action</code></td>
+          <td style="vertical-align:top"><pre><code>void (* activate_action) (
+    GActionGroup* action_group,
+    const gchar* action_name,
+    GVariant* parameter
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The virtual function pointer for <a href="method.ActionGroup.activate_action.html"><code>g_action_group_activate_action()</code></a>.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>action_added</code></td>
+          <td style="vertical-align:top"><pre><code>void (* action_added) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The class closure for the <a href="signal.ActionGroup.action-added.html"><code>GActionGroup::action-added</code></a>&nbsp;signal.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>action_removed</code></td>
+          <td style="vertical-align:top"><pre><code>void (* action_removed) (
+    GActionGroup* action_group,
+    const gchar* action_name
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The class closure for the <a href="signal.ActionGroup.action-removed.html"><code>GActionGroup::action-removed</code></a>&nbsp;signal.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>action_enabled_changed</code></td>
+          <td style="vertical-align:top"><pre><code>void (* action_enabled_changed) (
+    GActionGroup* action_group,
+    const gchar* action_name,
+    gboolean enabled
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The class closure for the <a href="signal.ActionGroup.action-enabled-changed.html"><code>GActionGroup::action-enabled-changed</code></a>&nbsp;signal.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>action_state_changed</code></td>
+          <td style="vertical-align:top"><pre><code>void (* action_state_changed) (
+    GActionGroup* action_group,
+    const gchar* action_name,
+    GVariant* state
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The class closure for the <a href="signal.ActionGroup.action-enabled-changed.html"><code>GActionGroup::action-enabled-changed</code></a>&nbsp;signal.</p></td>
+        </tr>
+        
+        <tr>
+          <td style="vertical-align:top"><code>query_action</code></td>
+          <td style="vertical-align:top"><pre><code>gboolean (* query_action) (
+    GActionGroup* action_group,
+    const gchar* action_name,
+    gboolean* enabled,
+    const GVariantType** parameter_type,
+    const GVariantType** state_type,
+    GVariant** state_hint,
+    GVariant** state
+  )</code></pre></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td><td style="vertical-align:top"><p>The virtual function pointer for <a href="method.ActionGroup.query_action.html"><code>g_action_group_query_action()</code></a>.</p></td>
+        </tr>
+        
+        </table>
+      </div>
+      
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6 id="vfunc-action_added"><a href="vfunc.ActionGroup.action_added.html">Gio.ActionGroup.action_added</a></h6>
+          <div class="docblock">
+            <p>Emits the <code>GActionGroup::action-added</code> signal on <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-action_enabled_changed"><a href="vfunc.ActionGroup.action_enabled_changed.html">Gio.ActionGroup.action_enabled_changed</a></h6>
+          <div class="docblock">
+            <p>Emits the <code>GActionGroup::action-enabled-changed</code> signal on <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-action_removed"><a href="vfunc.ActionGroup.action_removed.html">Gio.ActionGroup.action_removed</a></h6>
+          <div class="docblock">
+            <p>Emits the <code>GActionGroup::action-removed</code> signal on <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-action_state_changed"><a href="vfunc.ActionGroup.action_state_changed.html">Gio.ActionGroup.action_state_changed</a></h6>
+          <div class="docblock">
+            <p>Emits the <code>GActionGroup::action-state-changed</code> signal on <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-activate_action"><a href="vfunc.ActionGroup.activate_action.html">Gio.ActionGroup.activate_action</a></h6>
+          <div class="docblock">
+            <p>Activate the named action within <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-change_action_state"><a href="vfunc.ActionGroup.change_action_state.html">Gio.ActionGroup.change_action_state</a></h6>
+          <div class="docblock">
+            <p>Request for the state of the named action within <code>action_group</code> to be
+changed to <code>value</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_action_enabled"><a href="vfunc.ActionGroup.get_action_enabled.html">Gio.ActionGroup.get_action_enabled</a></h6>
+          <div class="docblock">
+            <p>Checks if the named action within <code>action_group</code> is currently&nbsp;enabled.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_action_parameter_type"><a href="vfunc.ActionGroup.get_action_parameter_type.html">Gio.ActionGroup.get_action_parameter_type</a></h6>
+          <div class="docblock">
+            <p>Queries the type of the parameter that must be given when activating
+the named action within <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_action_state"><a href="vfunc.ActionGroup.get_action_state.html">Gio.ActionGroup.get_action_state</a></h6>
+          <div class="docblock">
+            <p>Queries the current state of the named action within <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_action_state_hint"><a href="vfunc.ActionGroup.get_action_state_hint.html">Gio.ActionGroup.get_action_state_hint</a></h6>
+          <div class="docblock">
+            <p>Requests a hint about the valid range of values for the state of the
+named action within <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-get_action_state_type"><a href="vfunc.ActionGroup.get_action_state_type.html">Gio.ActionGroup.get_action_state_type</a></h6>
+          <div class="docblock">
+            <p>Queries the type of the state of the named action within
+<code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-has_action"><a href="vfunc.ActionGroup.has_action.html">Gio.ActionGroup.has_action</a></h6>
+          <div class="docblock">
+            <p>Checks if the named action exists within <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-list_actions"><a href="vfunc.ActionGroup.list_actions.html">Gio.ActionGroup.list_actions</a></h6>
+          <div class="docblock">
+            <p>Lists the actions contained within <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.28</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6 id="vfunc-query_action"><a href="vfunc.ActionGroup.query_action.html">Gio.ActionGroup.query_action</a></h6>
+          <div class="docblock">
+            <p>Queries all aspects of the named action within an <code>action_group</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.32</span></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#signals"><span class="link-text">Signals</span></a></li>
+
+
+      
+
+      
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/iface.ActionGroup.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:58:40 GMT -->
+</html>

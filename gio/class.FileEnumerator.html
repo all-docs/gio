@@ -1,0 +1,634 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.FileEnumerator.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:45:18 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.FileEnumerator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.FileEnumerator">
+  <meta property="og:description" content="Reference for Gio.FileEnumerator">
+  <meta name="twitter:title" content="Gio.FileEnumerator">
+  <meta name="twitter:description" content="Reference for Gio.FileEnumerator">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>FileEnumerator</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gfileenumerator.c#L41">[src]</a>
+          
+        </h4>
+
+        <pre><code>class Gio.FileEnumerator : GObject.Object
+{
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p><code>GFileEnumerator</code> allows you to operate on a set of <a href="iface.File.html"><code>GFile</code></a> objects,
+returning a <a href="class.FileInfo.html"><code>GFileInfo</code></a> structure for each file enumerated (e.g.
+<a href="method.File.enumerate_children.html"><code>g_file_enumerate_children()</code></a> will return a <code>GFileEnumerator</code> for each
+of the children within a&nbsp;directory).</p>
+<p>To get the next file’s information from a <code>GFileEnumerator</code>, use
+<a href="method.FileEnumerator.next_file.html"><code>g_file_enumerator_next_file()</code></a> or its asynchronous version,
+<a href="method.FileEnumerator.next_files_async.html"><code>g_file_enumerator_next_files_async()</code></a>. Note that the asynchronous
+version will return a list of <a href="class.FileInfo.html"><code>GFileInfo</code></a> objects, whereas the
+synchronous will only return the next file in the&nbsp;enumerator.</p>
+<p>The ordering of returned files is unspecified for non-Unix
+platforms; for more information, see <a href="javascript:void(0)" data-namespace="GLib" data-link="method.Dir.read_name.html" class="external"><code>g_dir_read_name()</code></a>.  On Unix,
+when operating on local files, returned files will be sorted by
+inode number.  Effectively you can assume that the ordering of
+returned files will be stable between successive calls (and
+applications) assuming the directory is&nbsp;unchanged.</p>
+<p>If your application needs a specific ordering, such as by name or
+modification time, you will have to implement that in your
+application&nbsp;code.</p>
+<p>To close a <code>GFileEnumerator</code>, use <a href="method.FileEnumerator.close.html"><code>g_file_enumerator_close()</code></a>, or
+its asynchronous version, <a href="method.FileEnumerator.close_async.html"><code>g_file_enumerator_close_async()</code></a>. Once
+a <code>GFileEnumerator</code> is closed, no further actions may be performed
+on it, and it should be freed with <a href="javascript:void(0)" data-namespace="GObject" data-link="method.Object.unref.html" class="external"><code>g_object_unref()</code></a>.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.FileEnumerator.close.html">g_file_enumerator_close</a></h6>
+          <div class="docblock">
+            <p>Releases all resources used by this enumerator, making the
+enumerator return <code>G_IO_ERROR_CLOSED</code> on all&nbsp;calls.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileEnumerator.close_async.html">g_file_enumerator_close_async</a></h6>
+          <div class="docblock">
+            <p>Asynchronously closes the file&nbsp;enumerator.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileEnumerator.close_finish.html">g_file_enumerator_close_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes closing a file enumerator, started from&nbsp;g_file_enumerator_close_async().</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileEnumerator.get_child.html">g_file_enumerator_get_child</a></h6>
+          <div class="docblock">
+            <p>Return a new <code>GFile</code> which refers to the file named by <code>info</code> in the source
+directory of <code>enumerator</code>.  This function is primarily intended to be used
+inside loops with&nbsp;g_file_enumerator_next_file().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileEnumerator.get_container.html">g_file_enumerator_get_container</a></h6>
+          <div class="docblock">
+            <p>Get the <code>GFile</code> container which is being&nbsp;enumerated.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.18</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileEnumerator.has_pending.html">g_file_enumerator_has_pending</a></h6>
+          <div class="docblock">
+            <p>Checks if the file enumerator has pending&nbsp;operations.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileEnumerator.is_closed.html">g_file_enumerator_is_closed</a></h6>
+          <div class="docblock">
+            <p>Checks if the file enumerator has been&nbsp;closed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileEnumerator.iterate.html">g_file_enumerator_iterate</a></h6>
+          <div class="docblock">
+            <p>This is a version of <code>g_file_enumerator_next_file()</code> that’s easier to
+use correctly from C programs.  With g_file_enumerator_next_file(),
+the gboolean return value signifies “end of iteration or error”, which
+requires allocation of a temporary <code>GError</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.44</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileEnumerator.next_file.html">g_file_enumerator_next_file</a></h6>
+          <div class="docblock">
+            <p>Returns information for the next file in the enumerated object.
+Will block until the information is available. The <code>GFileInfo</code>
+returned from this function will contain attributes that match the
+attribute string that was passed when the <code>GFileEnumerator</code> was&nbsp;created.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileEnumerator.next_files_async.html">g_file_enumerator_next_files_async</a></h6>
+          <div class="docblock">
+            <p>Request information for a number of files from the enumerator asynchronously.
+When all I/O for the operation is finished the <code>callback</code> will be called with
+the requested&nbsp;information.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileEnumerator.next_files_finish.html">g_file_enumerator_next_files_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes the asynchronous operation started with&nbsp;g_file_enumerator_next_files_async().</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileEnumerator.set_pending.html">g_file_enumerator_set_pending</a></h6>
+          <div class="docblock">
+            <p>Sets the file enumerator as having pending&nbsp;operations.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper properties">
+      <h4 id="properties">
+        Properties
+        <a href="#properties" class="anchor"></a>
+      </h4>
+
+      
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="property.FileEnumerator.container.html">Gio.FileEnumerator:container</a></h6>
+          <div class="docblock">
+            <p>The container that is being&nbsp;enumerated.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+      
+
+      
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioFileEnumeratorClass {
+  GObjectClass parent_class;
+  GFileInfo* (* next_file) (
+    GFileEnumerator* enumerator,
+    GCancellable* cancellable,
+    GError** error
+  );
+  gboolean (* close_fn) (
+    GFileEnumerator* enumerator,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* next_files_async) (
+    GFileEnumerator* enumerator,
+    int num_files,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  GList* (* next_files_finish) (
+    GFileEnumerator* enumerator,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* close_async) (
+    GFileEnumerator* enumerator,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* close_finish) (
+    GFileEnumerator* enumerator,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* _g_reserved1) (
+void
+  );
+  void (* _g_reserved2) (
+void
+  );
+  void (* _g_reserved3) (
+void
+  );
+  void (* _g_reserved4) (
+void
+  );
+  void (* _g_reserved5) (
+void
+  );
+  void (* _g_reserved6) (
+void
+  );
+  void (* _g_reserved7) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>next_file: GFileInfo* (* next_file) (
+    GFileEnumerator* enumerator,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>close_fn: gboolean (* close_fn) (
+    GFileEnumerator* enumerator,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>next_files_async: void (* next_files_async) (
+    GFileEnumerator* enumerator,
+    int num_files,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>next_files_finish: GList* (* next_files_finish) (
+    GFileEnumerator* enumerator,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>close_async: void (* close_async) (
+    GFileEnumerator* enumerator,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>close_finish: gboolean (* close_finish) (
+    GFileEnumerator* enumerator,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved1: void (* _g_reserved1) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved2: void (* _g_reserved2) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved3: void (* _g_reserved3) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved4: void (* _g_reserved4) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved5: void (* _g_reserved5) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved6: void (* _g_reserved6) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved7: void (* _g_reserved7) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        
+      </dl></div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-close_async"><a href="vfunc.FileEnumerator.close_async.html">Gio.FileEnumeratorClass.close_async</a></h6>
+        <div class="docblock">
+          <p>Asynchronously closes the file&nbsp;enumerator.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-close_finish"><a href="vfunc.FileEnumerator.close_finish.html">Gio.FileEnumeratorClass.close_finish</a></h6>
+        <div class="docblock">
+          <p>Finishes closing a file enumerator, started from&nbsp;g_file_enumerator_close_async().</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-close_fn"><a href="vfunc.FileEnumerator.close_fn.html">Gio.FileEnumeratorClass.close_fn</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-next_file"><a href="vfunc.FileEnumerator.next_file.html">Gio.FileEnumeratorClass.next_file</a></h6>
+        <div class="docblock">
+          <p>Returns information for the next file in the enumerated object.
+Will block until the information is available. The <code>GFileInfo</code>
+returned from this function will contain attributes that match the
+attribute string that was passed when the <code>GFileEnumerator</code> was&nbsp;created.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-next_files_async"><a href="vfunc.FileEnumerator.next_files_async.html">Gio.FileEnumeratorClass.next_files_async</a></h6>
+        <div class="docblock">
+          <p>Request information for a number of files from the enumerator asynchronously.
+When all I/O for the operation is finished the <code>callback</code> will be called with
+the requested&nbsp;information.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-next_files_finish"><a href="vfunc.FileEnumerator.next_files_finish.html">Gio.FileEnumeratorClass.next_files_finish</a></h6>
+        <div class="docblock">
+          <p>Finishes the asynchronous operation started with&nbsp;g_file_enumerator_next_files_async().</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.FileEnumerator.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:45:31 GMT --></html>

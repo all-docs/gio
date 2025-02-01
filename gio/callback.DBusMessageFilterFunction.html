@@ -1,0 +1,299 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/callback.DBusMessageFilterFunction.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:08 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.DBusMessageFilterFunction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.DBusMessageFilterFunction">
+  <meta property="og:description" content="Reference for Gio.DBusMessageFilterFunction">
+  <meta name="twitter:title" content="Gio.DBusMessageFilterFunction">
+  <meta name="twitter:description" content="Reference for Gio.DBusMessageFilterFunction">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Function </h3>
+    <h1><a href="index-2.html">Gio</a><span class="sep"></span>DBusMessageFilterFunction</h1>
+  </header>
+
+  <section>
+    <div class="docblock">
+      <p><span class="emblem available">since: 2.26</span></p>
+    </div>
+    <div class="declaration toggle-wrapper">
+      <h4 id="declaration" style="display:flex;">
+        Declaration
+        <a href="#declaration" class="anchor"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code><div class="highlight"><pre><span></span><span class="n">GDBusMessage</span><span class="o">*</span>
+<span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">GDBusMessageFilterFunction</span><span class="p">)</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">GDBusConnection</span><span class="o">*</span><span class="w"> </span><span class="n">connection</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GDBusMessage</span><span class="o">*</span><span class="w"> </span><span class="n">message</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gboolean</span><span class="w"> </span><span class="n">incoming</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">user_data</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 id="description" style="display:flex;">
+        Description
+        <a href="#description" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gdbusconnection.h#L608">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>Signature for function used in&nbsp;g_dbus_connection_add_filter().</p>
+<p>A filter function is passed a <code>GDBusMessage</code> and expected to return
+a <code>GDBusMessage</code> too. Passive filter functions that don’t modify the
+message can simply return the <code>message</code> object:</p>
+<div class="codehilite"><pre><span></span><code>static GDBusMessage *
+passive_filter (GDBusConnection *connection
+                GDBusMessage    *message,
+                gboolean         incoming,
+                gpointer         user_data)
+{
+  // inspect @message
+  return message;
+}
+</code></pre></div>
+
+<p>Filter functions that wants to drop a message can simply return <code>NULL</code>:</p>
+<div class="codehilite"><pre><span></span><code>static GDBusMessage *
+drop_filter (GDBusConnection *connection
+             GDBusMessage    *message,
+             gboolean         incoming,
+             gpointer         user_data)
+{
+  if (should_drop_message)
+    {
+      g_object_unref (message);
+      message = NULL;
+    }
+  return message;
+}
+</code></pre></div>
+
+<p>Finally, a filter function may modify a message by copying&nbsp;it:</p>
+<div class="codehilite"><pre><span></span><code>static GDBusMessage *
+modifying_filter (GDBusConnection *connection
+                  GDBusMessage    *message,
+                  gboolean         incoming,
+                  gpointer         user_data)
+{
+  GDBusMessage *copy;
+  GError *error;
+
+  error = NULL;
+  copy = g_dbus_message_copy (message, &amp;error);
+  // handle @error being set
+  g_object_unref (message);
+
+  // modify @copy
+
+  return copy;
+}
+</code></pre></div>
+
+<p>If the returned <code>GDBusMessage</code> is different from <code>message</code> and cannot
+be sent on <code>connection</code> (it could use features, such as file
+descriptors, not compatible with <code>connection</code>), then a warning is
+logged to standard error. Applications can
+check this ahead of time using <code>g_dbus_message_to_blob()</code> passing a
+<code>GDBusCapabilityFlags</code> value obtained from <code>connection</code>.</p>
+      </div>
+
+      <div class="docblock">
+        
+        <p>Available since: 2.26</p>
+        
+        
+        
+        
+        
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <dl class="arguments">
+          
+          <dt class="arg-name"><code>connection</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.DBusConnection.html"><code>GDBusConnection</code></a></p>
+            <p>A <code>GDBusConnection</code>.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tbody><tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>message</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.DBusMessage.html"><code>GDBusMessage</code></a></p>
+            <p>A locked <code>GDBusMessage</code> that the filter function takes ownership&nbsp;of.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            <tbody><tr><td title="transfer: full">The called function takes ownership of the data, and is responsible for freeing it.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+          <dt class="arg-name"><code>incoming</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>gboolean</code></p>
+            <p><code>TRUE</code> if it is a message received from the other peer, <code>FALSE</code> if it is
+a message to be sent to the other&nbsp;peer.</p>
+            <table>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </table>
+          </dd>
+          
+          <dt class="arg-name"><code>user_data</code></dt>
+          <dd class="arg-description">
+            <p><em>Type:</em>&nbsp;<code>gpointer</code></p>
+            <p>User data passed when adding the&nbsp;filter.</p>
+            <table>
+            
+            <tbody><tr><td>The argument can be <code>NULL</code>.</td></tr>
+            
+            
+            
+            
+            
+            <tr><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+            
+            </tbody></table>
+          </dd>
+          
+
+          
+        </dl>
+      </div>
+    </div>
+    
+
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <div class="returns">
+          <div class="arg-description">
+            <p><em>Type:</em>&nbsp;<a href="class.DBusMessage.html"><code>GDBusMessage</code></a></p>
+            <p>A <code>GDBusMessage</code> that will be freed with
+<code>g_object_unref()</code> or <code>NULL</code> to drop the message. Passive filter
+functions can simply return the passed <code>message</code> object.</p>
+          </div>
+          <div>
+            <table>
+            
+            
+            
+            <tbody><tr><td title="transfer: full">The caller of the function takes ownership of the data, and is responsible for freeing it.</td></tr>
+            <tr><td>The return value can be <code>NULL</code>.</td></tr>
+            
+            </tbody></table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/callback.DBusMessageFilterFunction.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 09:07:08 GMT --></html>

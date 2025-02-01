@@ -1,0 +1,1248 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from docs.gtk.org/gio/class.OutputStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:50:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Gio.OutputStream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Gio.OutputStream"/>
+  <meta property="og:description" content="Reference for Gio.OutputStream"/>
+  <meta name="twitter:title" content="Gio.OutputStream"/>
+  <meta name="twitter:description" content="Reference for Gio.OutputStream"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index-2.html">Gio</a></h3>
+        <p>API Version: 2.0</p>
+        
+        <p>Library Version: 2.83.3</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="class.OutputStream.html#description">OutputStream</a>
+  </div>
+</div>
+
+
+  
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.OutputStream.clear_pending.html">clear_pending</a>
+  
+    <a class="method" href="method.OutputStream.close.html">close</a>
+  
+    <a class="method" href="method.OutputStream.close_async.html">close_async</a>
+  
+    <a class="method" href="method.OutputStream.close_finish.html">close_finish</a>
+  
+    <a class="method" href="method.OutputStream.flush.html">flush</a>
+  
+    <a class="method" href="method.OutputStream.flush_async.html">flush_async</a>
+  
+    <a class="method" href="method.OutputStream.flush_finish.html">flush_finish</a>
+  
+    <a class="method" href="method.OutputStream.has_pending.html">has_pending</a>
+  
+    <a class="method" href="method.OutputStream.is_closed.html">is_closed</a>
+  
+    <a class="method" href="method.OutputStream.is_closing.html">is_closing</a>
+  
+    <a class="method" href="method.OutputStream.printf.html">printf</a>
+  
+    <a class="method" href="method.OutputStream.set_pending.html">set_pending</a>
+  
+    <a class="method" href="method.OutputStream.splice.html">splice</a>
+  
+    <a class="method" href="method.OutputStream.splice_async.html">splice_async</a>
+  
+    <a class="method" href="method.OutputStream.splice_finish.html">splice_finish</a>
+  
+    <a class="method" href="method.OutputStream.vprintf.html">vprintf</a>
+  
+    <a class="method" href="method.OutputStream.write.html">write</a>
+  
+    <a class="method" href="method.OutputStream.write_all.html">write_all</a>
+  
+    <a class="method" href="method.OutputStream.write_all_async.html">write_all_async</a>
+  
+    <a class="method" href="method.OutputStream.write_all_finish.html">write_all_finish</a>
+  
+    <a class="method" href="method.OutputStream.write_async.html">write_async</a>
+  
+    <a class="method" href="method.OutputStream.write_bytes.html">write_bytes</a>
+  
+    <a class="method" href="method.OutputStream.write_bytes_async.html">write_bytes_async</a>
+  
+    <a class="method" href="method.OutputStream.write_bytes_finish.html">write_bytes_finish</a>
+  
+    <a class="method" href="method.OutputStream.write_finish.html">write_finish</a>
+  
+    <a class="method" href="method.OutputStream.writev.html">writev</a>
+  
+    <a class="method" href="method.OutputStream.writev_all.html">writev_all</a>
+  
+    <a class="method" href="method.OutputStream.writev_all_async.html">writev_all_async</a>
+  
+    <a class="method" href="method.OutputStream.writev_all_finish.html">writev_all_finish</a>
+  
+    <a class="method" href="method.OutputStream.writev_async.html">writev_async</a>
+  
+    <a class="method" href="method.OutputStream.writev_finish.html">writev_finish</a>
+  
+  </div>
+</div>
+
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+<div class="section">
+  <h5>Virtual methods</h5>
+  <div class="links">
+  
+    <a class="method" href="vfunc.OutputStream.close_async.html">close_async</a>
+  
+    <a class="method" href="vfunc.OutputStream.close_finish.html">close_finish</a>
+  
+    <a class="method" href="vfunc.OutputStream.close_fn.html">close_fn</a>
+  
+    <a class="method" href="vfunc.OutputStream.flush.html">flush</a>
+  
+    <a class="method" href="vfunc.OutputStream.flush_async.html">flush_async</a>
+  
+    <a class="method" href="vfunc.OutputStream.flush_finish.html">flush_finish</a>
+  
+    <a class="method" href="vfunc.OutputStream.splice.html">splice</a>
+  
+    <a class="method" href="vfunc.OutputStream.splice_async.html">splice_async</a>
+  
+    <a class="method" href="vfunc.OutputStream.splice_finish.html">splice_finish</a>
+  
+    <a class="method" href="vfunc.OutputStream.write_async.html">write_async</a>
+  
+    <a class="method" href="vfunc.OutputStream.write_finish.html">write_finish</a>
+  
+    <a class="method" href="vfunc.OutputStream.write_fn.html">write_fn</a>
+  
+    <a class="method" href="vfunc.OutputStream.writev_async.html">writev_async</a>
+  
+    <a class="method" href="vfunc.OutputStream.writev_finish.html">writev_finish</a>
+  
+    <a class="method" href="vfunc.OutputStream.writev_fn.html">writev_fn</a>
+  
+  </div>
+</div>
+
+
+
+
+      <div class="section generator">
+        <p>Generated by <a href="https://gitlab.gnome.org/GNOME/gi-docgen">gi-docgen</a> 2024.1</p>
+      </div>
+    </nav>
+
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>OutputStream</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/goutputstream.c#L35">[src]</a>
+          
+        </h4>
+
+        <pre><code>abstract class Gio.OutputStream : GObject.Object
+{
+  /* No available fields */
+}</pre></code>
+
+        <div class="docblock">
+          <p><code>GOutputStream</code> is a base class for implementing streaming&nbsp;output.</p>
+<p>It has functions to write to a stream (<a href="method.OutputStream.write.html"><code>g_output_stream_write()</code></a>),
+to close a stream (<a href="method.OutputStream.close.html"><code>g_output_stream_close()</code></a>) and to flush pending
+writes (<a href="method.OutputStream.flush.html"><code>g_output_stream_flush()</code></a>).</p>
+<p>To copy the content of an input stream to an output stream without
+manually handling the reads and writes, use <a href="method.OutputStream.splice.html"><code>g_output_stream_splice()</code></a>.</p>
+<p>See the documentation for <a href="class.IOStream.html"><code>GIOStream</code></a> for details of thread safety
+of streaming&nbsp;APIs.</p>
+<p>All of these functions have async variants&nbsp;too.</p>
+<p>All classes derived from <code>GOutputStream</code> <em>should</em> implement synchronous
+writing, splicing, flushing and closing streams, but <em>may</em> implement
+asynchronous&nbsp;versions.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+    <div class="descendants toggle-wrapper default-hide">
+      <h4 id="descendants">Descendants <a href="#descendants" class="anchor"></a></h4>
+      <div class="docblock">
+        <ul>
+          <li class="class"><a href="class.FileOutputStream.html" title="FileOutputStream">GFileOutputStream</a></li>
+        
+          <li class="class"><a href="class.FilterOutputStream.html" title="FilterOutputStream">GFilterOutputStream</a></li>
+        
+          <li class="class"><a href="class.MemoryOutputStream.html" title="MemoryOutputStream">GMemoryOutputStream</a></li>
+        
+          <li class="class"><a href="class.UnixOutputStream.html" title="UnixOutputStream">GUnixOutputStream</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.OutputStream.clear_pending.html">g_output_stream_clear_pending</a></h6>
+          <div class="docblock">
+            <p>Clears the pending flag on <code>stream</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.close.html">g_output_stream_close</a></h6>
+          <div class="docblock">
+            <p>Closes the stream, releasing resources related to&nbsp;it.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.close_async.html">g_output_stream_close_async</a></h6>
+          <div class="docblock">
+            <p>Requests an asynchronous close of the stream, releasing resources
+related to it. When the operation is finished <code>callback</code> will be
+called. You can then call <code>g_output_stream_close_finish()</code> to get
+the result of the&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.close_finish.html">g_output_stream_close_finish</a></h6>
+          <div class="docblock">
+            <p>Closes an output&nbsp;stream.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.flush.html">g_output_stream_flush</a></h6>
+          <div class="docblock">
+            <p>Forces a write of all user-space buffered data for the given
+<code>stream</code>. Will block during the operation. Closing the stream will
+implicitly cause a&nbsp;flush.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.flush_async.html">g_output_stream_flush_async</a></h6>
+          <div class="docblock">
+            <p>Forces an asynchronous write of all user-space buffered data for
+the given <code>stream</code>.
+For behaviour details see&nbsp;g_output_stream_flush().</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.flush_finish.html">g_output_stream_flush_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes flushing an output&nbsp;stream.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.has_pending.html">g_output_stream_has_pending</a></h6>
+          <div class="docblock">
+            <p>Checks if an output stream has pending&nbsp;actions.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.is_closed.html">g_output_stream_is_closed</a></h6>
+          <div class="docblock">
+            <p>Checks if an output stream has already been&nbsp;closed.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.is_closing.html">g_output_stream_is_closing</a></h6>
+          <div class="docblock">
+            <p>Checks if an output stream is being closed. This can be
+used inside e.g. a flush implementation to see if the
+flush (or other i/o operation) is called from within
+the closing&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.24</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.printf.html">g_output_stream_printf</a></h6>
+          <div class="docblock">
+            <p>This is a utility function around g_output_stream_write_all(). It
+uses <code>g_strdup_vprintf()</code> to turn <code>format</code> and @&#8230; into a string that
+is then written to <code>stream</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.40</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.set_pending.html">g_output_stream_set_pending</a></h6>
+          <div class="docblock">
+            <p>Sets <code>stream</code> to have actions pending. If the pending flag is
+already set or <code>stream</code> is closed, it will return <code>FALSE</code> and set
+<code>error</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.splice.html">g_output_stream_splice</a></h6>
+          <div class="docblock">
+            <p>Splices an input stream into an output&nbsp;stream.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.splice_async.html">g_output_stream_splice_async</a></h6>
+          <div class="docblock">
+            <p>Splices a stream asynchronously.
+When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_output_stream_splice_finish()</code> to get the
+result of the&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.splice_finish.html">g_output_stream_splice_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an asynchronous stream splice&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.vprintf.html">g_output_stream_vprintf</a></h6>
+          <div class="docblock">
+            <p>This is a utility function around g_output_stream_write_all(). It
+uses <code>g_strdup_vprintf()</code> to turn <code>format</code> and <code>args</code> into a string that
+is then written to <code>stream</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.40</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.write.html">g_output_stream_write</a></h6>
+          <div class="docblock">
+            <p>Tries to write <code>count</code> bytes from <code>buffer</code> into the stream. Will block
+during the&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.write_all.html">g_output_stream_write_all</a></h6>
+          <div class="docblock">
+            <p>Tries to write <code>count</code> bytes from <code>buffer</code> into the stream. Will block
+during the&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.write_all_async.html">g_output_stream_write_all_async</a></h6>
+          <div class="docblock">
+            <p>Request an asynchronous write of <code>count</code> bytes from <code>buffer</code> into
+the stream. When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_output_stream_write_all_finish()</code> to get the result of the&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.44</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.write_all_finish.html">g_output_stream_write_all_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an asynchronous stream write operation started with&nbsp;g_output_stream_write_all_async().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.44</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.write_async.html">g_output_stream_write_async</a></h6>
+          <div class="docblock">
+            <p>Request an asynchronous write of <code>count</code> bytes from <code>buffer</code> into
+the stream. When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_output_stream_write_finish()</code> to get the result of the&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.write_bytes.html">g_output_stream_write_bytes</a></h6>
+          <div class="docblock">
+            <p>A wrapper function for <code>g_output_stream_write()</code> which takes a
+<code>GBytes</code> as input.  This can be more convenient for use by language
+bindings or in other cases where the refcounted nature of <code>GBytes</code>
+is helpful over a bare pointer&nbsp;interface.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.write_bytes_async.html">g_output_stream_write_bytes_async</a></h6>
+          <div class="docblock">
+            <p>This function is similar to g_output_stream_write_async(), but
+takes a <code>GBytes</code> as input.  Due to the refcounted nature of <code>GBytes</code>,
+this allows the stream to avoid taking a copy of the&nbsp;data.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.write_bytes_finish.html">g_output_stream_write_bytes_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes a stream write-from-<code>GBytes</code> operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.write_finish.html">g_output_stream_write_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes a stream write&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.writev.html">g_output_stream_writev</a></h6>
+          <div class="docblock">
+            <p>Tries to write the bytes contained in the <code>n_vectors</code> <code>vectors</code> into the
+stream. Will block during the&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.writev_all.html">g_output_stream_writev_all</a></h6>
+          <div class="docblock">
+            <p>Tries to write the bytes contained in the <code>n_vectors</code> <code>vectors</code> into the
+stream. Will block during the&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.writev_all_async.html">g_output_stream_writev_all_async</a></h6>
+          <div class="docblock">
+            <p>Request an asynchronous write of the bytes contained in the <code>n_vectors</code> <code>vectors</code> into
+the stream. When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_output_stream_writev_all_finish()</code> to get the result of the&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.writev_all_finish.html">g_output_stream_writev_all_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes an asynchronous stream write operation started with&nbsp;g_output_stream_writev_all_async().</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.writev_async.html">g_output_stream_writev_async</a></h6>
+          <div class="docblock">
+            <p>Request an asynchronous write of the bytes contained in <code>n_vectors</code> <code>vectors</code> into
+the stream. When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_output_stream_writev_finish()</code> to get the result of the&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.OutputStream.writev_finish.html">g_output_stream_writev_finish</a></h6>
+          <div class="docblock">
+            <p>Finishes a stream writev&nbsp;operation.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.60</span></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</em></p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioOutputStreamClass {
+  GObjectClass parent_class;
+  gssize (* write_fn) (
+    GOutputStream* stream,
+    void* buffer,
+    gsize count,
+    GCancellable* cancellable,
+    GError** error
+  );
+  gssize (* splice) (
+    GOutputStream* stream,
+    GInputStream* source,
+    GOutputStreamSpliceFlags flags,
+    GCancellable* cancellable,
+    GError** error
+  );
+  gboolean (* flush) (
+    GOutputStream* stream,
+    GCancellable* cancellable,
+    GError** error
+  );
+  gboolean (* close_fn) (
+    GOutputStream* stream,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* write_async) (
+    GOutputStream* stream,
+    void* buffer,
+    gsize count,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gssize (* write_finish) (
+    GOutputStream* stream,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* splice_async) (
+    GOutputStream* stream,
+    GInputStream* source,
+    GOutputStreamSpliceFlags flags,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gssize (* splice_finish) (
+    GOutputStream* stream,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* flush_async) (
+    GOutputStream* stream,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* flush_finish) (
+    GOutputStream* stream,
+    GAsyncResult* result,
+    GError** error
+  );
+  void (* close_async) (
+    GOutputStream* stream,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* close_finish) (
+    GOutputStream* stream,
+    GAsyncResult* result,
+    GError** error
+  );
+  gboolean (* writev_fn) (
+    GOutputStream* stream,
+    const GOutputVector* vectors,
+    gsize n_vectors,
+    gsize* bytes_written,
+    GCancellable* cancellable,
+    GError** error
+  );
+  void (* writev_async) (
+    GOutputStream* stream,
+    const GOutputVector* vectors,
+    gsize n_vectors,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  );
+  gboolean (* writev_finish) (
+    GOutputStream* stream,
+    GAsyncResult* result,
+    gsize* bytes_written,
+    GError** error
+  );
+  void (* _g_reserved4) (
+void
+  );
+  void (* _g_reserved5) (
+void
+  );
+  void (* _g_reserved6) (
+void
+  );
+  void (* _g_reserved7) (
+void
+  );
+  void (* _g_reserved8) (
+void
+  );
+  
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+      <div class="docblock">
+        <h6>Class members</h6>
+
+        <dl class="members">
+        
+          <dt><code>parent_class: GObjectClass</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>write_fn: gssize (* write_fn) (
+    GOutputStream* stream,
+    void* buffer,
+    gsize count,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>splice: gssize (* splice) (
+    GOutputStream* stream,
+    GInputStream* source,
+    GOutputStreamSpliceFlags flags,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>flush: gboolean (* flush) (
+    GOutputStream* stream,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>close_fn: gboolean (* close_fn) (
+    GOutputStream* stream,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>write_async: void (* write_async) (
+    GOutputStream* stream,
+    void* buffer,
+    gsize count,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>write_finish: gssize (* write_finish) (
+    GOutputStream* stream,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>splice_async: void (* splice_async) (
+    GOutputStream* stream,
+    GInputStream* source,
+    GOutputStreamSpliceFlags flags,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>splice_finish: gssize (* splice_finish) (
+    GOutputStream* stream,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>flush_async: void (* flush_async) (
+    GOutputStream* stream,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>flush_finish: gboolean (* flush_finish) (
+    GOutputStream* stream,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>close_async: void (* close_async) (
+    GOutputStream* stream,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>close_finish: gboolean (* close_finish) (
+    GOutputStream* stream,
+    GAsyncResult* result,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>writev_fn: gboolean (* writev_fn) (
+    GOutputStream* stream,
+    const GOutputVector* vectors,
+    gsize n_vectors,
+    gsize* bytes_written,
+    GCancellable* cancellable,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>writev_async: void (* writev_async) (
+    GOutputStream* stream,
+    const GOutputVector* vectors,
+    gsize n_vectors,
+    int io_priority,
+    GCancellable* cancellable,
+    GAsyncReadyCallback callback,
+    gpointer user_data
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>writev_finish: gboolean (* writev_finish) (
+    GOutputStream* stream,
+    GAsyncResult* result,
+    gsize* bytes_written,
+    GError** error
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved4: void (* _g_reserved4) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved5: void (* _g_reserved5) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved6: void (* _g_reserved6) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved7: void (* _g_reserved7) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+          <dt><code>_g_reserved8: void (* _g_reserved8) (
+void
+  )</code></dt>
+          <dd><p>No description available.</p></dd>
+        
+        </dd>
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="virtual-methods">
+        Virtual methods
+        <a href="#virtual-methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+      <div class="">
+        <h6 id="vfunc-close_async"><a href="vfunc.OutputStream.close_async.html">Gio.OutputStreamClass.close_async</a></h6>
+        <div class="docblock">
+          <p>Requests an asynchronous close of the stream, releasing resources
+related to it. When the operation is finished <code>callback</code> will be
+called. You can then call <code>g_output_stream_close_finish()</code> to get
+the result of the&nbsp;operation.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-close_finish"><a href="vfunc.OutputStream.close_finish.html">Gio.OutputStreamClass.close_finish</a></h6>
+        <div class="docblock">
+          <p>Closes an output&nbsp;stream.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-close_fn"><a href="vfunc.OutputStream.close_fn.html">Gio.OutputStreamClass.close_fn</a></h6>
+        <div class="docblock">
+          No description available.
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-flush"><a href="vfunc.OutputStream.flush.html">Gio.OutputStreamClass.flush</a></h6>
+        <div class="docblock">
+          <p>Forces a write of all user-space buffered data for the given
+<code>stream</code>. Will block during the operation. Closing the stream will
+implicitly cause a&nbsp;flush.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-flush_async"><a href="vfunc.OutputStream.flush_async.html">Gio.OutputStreamClass.flush_async</a></h6>
+        <div class="docblock">
+          <p>Forces an asynchronous write of all user-space buffered data for
+the given <code>stream</code>.
+For behaviour details see&nbsp;g_output_stream_flush().</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-flush_finish"><a href="vfunc.OutputStream.flush_finish.html">Gio.OutputStreamClass.flush_finish</a></h6>
+        <div class="docblock">
+          <p>Finishes flushing an output&nbsp;stream.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-splice"><a href="vfunc.OutputStream.splice.html">Gio.OutputStreamClass.splice</a></h6>
+        <div class="docblock">
+          <p>Splices an input stream into an output&nbsp;stream.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-splice_async"><a href="vfunc.OutputStream.splice_async.html">Gio.OutputStreamClass.splice_async</a></h6>
+        <div class="docblock">
+          <p>Splices a stream asynchronously.
+When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_output_stream_splice_finish()</code> to get the
+result of the&nbsp;operation.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-splice_finish"><a href="vfunc.OutputStream.splice_finish.html">Gio.OutputStreamClass.splice_finish</a></h6>
+        <div class="docblock">
+          <p>Finishes an asynchronous stream splice&nbsp;operation.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-write_async"><a href="vfunc.OutputStream.write_async.html">Gio.OutputStreamClass.write_async</a></h6>
+        <div class="docblock">
+          <p>Request an asynchronous write of <code>count</code> bytes from <code>buffer</code> into
+the stream. When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_output_stream_write_finish()</code> to get the result of the&nbsp;operation.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-write_finish"><a href="vfunc.OutputStream.write_finish.html">Gio.OutputStreamClass.write_finish</a></h6>
+        <div class="docblock">
+          <p>Finishes a stream write&nbsp;operation.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-write_fn"><a href="vfunc.OutputStream.write_fn.html">Gio.OutputStreamClass.write_fn</a></h6>
+        <div class="docblock">
+          <p>Tries to write <code>count</code> bytes from <code>buffer</code> into the stream. Will block
+during the&nbsp;operation.</p>
+        </div>
+        <div class="docblock">
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-writev_async"><a href="vfunc.OutputStream.writev_async.html">Gio.OutputStreamClass.writev_async</a></h6>
+        <div class="docblock">
+          <p>Request an asynchronous write of the bytes contained in <code>n_vectors</code> <code>vectors</code> into
+the stream. When the operation is finished <code>callback</code> will be called.
+You can then call <code>g_output_stream_writev_finish()</code> to get the result of the&nbsp;operation.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.60</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-writev_finish"><a href="vfunc.OutputStream.writev_finish.html">Gio.OutputStreamClass.writev_finish</a></h6>
+        <div class="docblock">
+          <p>Finishes a stream writev&nbsp;operation.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.60</span></p>
+        </div>
+      </div>
+      
+      <div class="">
+        <h6 id="vfunc-writev_fn"><a href="vfunc.OutputStream.writev_fn.html">Gio.OutputStreamClass.writev_fn</a></h6>
+        <div class="docblock">
+          <p>Tries to write the bytes contained in the <code>n_vectors</code> <code>vectors</code> into the
+stream. Will block during the&nbsp;operation.</p>
+        </div>
+        <div class="docblock">
+          <p><span class="emblem available">since: 2.60</span></p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+      
+      <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
+      
+      
+      
+
+      
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+      
+
+      
+
+      
+
+      
+<li class="toc-list-item"><a href="#virtual-methods"><span class="link-text">Virtual methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+
+<!-- Mirrored from docs.gtk.org/gio/class.OutputStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:50:43 GMT -->
+</html>

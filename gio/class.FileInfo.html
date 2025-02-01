@@ -1,0 +1,1036 @@
+<!--
+SPDX-FileCopyrightText: GLib Development Team
+
+SPDX-License-Identifier: LGPL-2.1-or-later
+--><!DOCTYPE html><html lang="en"><!-- Mirrored from docs.gtk.org/gio/class.FileInfo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:45:33 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <title>Gio.FileInfo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+
+  
+  <meta property="og:type" content="website">
+
+  
+
+  
+  <meta property="og:title" content="Gio.FileInfo">
+  <meta property="og:description" content="Reference for Gio.FileInfo">
+  <meta name="twitter:title" content="Gio.FileInfo">
+  <meta name="twitter:description" content="Reference for Gio.FileInfo">
+
+
+  
+  <meta name="twitter:card" content="summary">
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+
+  
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    
+
+    
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Class</h3>
+    <h1 aria-label="Name"><a href="index-2.html">Gio</a><span class="sep" role="presentation"></span>FileInfo</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="docblock">
+        <p></p>
+      </div>
+
+      <div class="toggle-wrapper">
+        <h4 id="description" style="display:flex;">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://gitlab.gnome.org/GNOME/glib/-/blob/main/gio/gfileinfo.c#L23">[src]</a>
+          
+        </h4>
+
+        <pre><code>final class Gio.FileInfo : GObject.Object
+{
+  /* No available fields */
+}</code></pre>
+
+        <div class="docblock">
+          <p>Stores information about a file system object referenced by a <a href="iface.File.html"><code>GFile</code></a>.</p>
+<p>Functionality for manipulating basic metadata for files. <code>GFileInfo</code>
+implements methods for getting information that all files should
+contain, and allows for manipulation of extended&nbsp;attributes.</p>
+<p>See the <a href="file-attributes.html">file attributes</a> document for more
+information on how <span class="caps">GIO</span> handles file&nbsp;attributes.</p>
+<p>To obtain a <code>GFileInfo</code> for a <a href="iface.File.html"><code>GFile</code></a>, use
+<a href="method.File.query_info.html"><code>g_file_query_info()</code></a> (or its async variant). To obtain a <code>GFileInfo</code>
+for a file input or output stream, use <a href="method.FileInputStream.query_info.html"><code>g_file_input_stream_query_info()</code></a>
+or <a href="method.FileOutputStream.query_info.html"><code>g_file_output_stream_query_info()</code></a> (or their async&nbsp;variants).</p>
+<p>To change the actual attributes of a file, you should then set the
+attribute in the <code>GFileInfo</code> and call <a href="method.File.set_attributes_from_info.html"><code>g_file_set_attributes_from_info()</code></a>
+or <a href="method.File.set_attributes_async.html"><code>g_file_set_attributes_async()</code></a> on a <code>GFile</code>.</p>
+<p>However, not all attributes can be changed in the file. For instance,
+the actual size of a file cannot be changed via <a href="method.FileInfo.set_size.html"><code>g_file_info_set_size()</code></a>.
+You may call <a href="method.File.query_settable_attributes.html"><code>g_file_query_settable_attributes()</code></a> and
+<a href="method.File.query_writable_namespaces.html"><code>g_file_query_writable_namespaces()</code></a> to discover the settable attributes
+of a particular file at&nbsp;runtime.</p>
+<p>The direct accessors, such as <a href="method.FileInfo.get_name.html"><code>g_file_info_get_name()</code></a>, are slightly more
+optimized than the generic attribute accessors, such as
+<a href="method.FileInfo.get_attribute_byte_string.html"><code>g_file_info_get_attribute_byte_string()</code></a>.This optimization will matter
+only if calling the <span class="caps">API</span> in a tight&nbsp;loop.</p>
+<p>It is an error to call these accessors without specifying their required file
+attributes when creating the <code>GFileInfo</code>. Use
+<a href="method.FileInfo.has_attribute.html"><code>g_file_info_has_attribute()</code></a> or <a href="method.FileInfo.list_attributes.html"><code>g_file_info_list_attributes()</code></a>
+to check what attributes are specified for a <code>GFileInfo</code>.</p>
+<p><a href="struct.FileAttributeMatcher.html"><code>GFileAttributeMatcher</code></a> allows for searching through a <code>GFileInfo</code>
+for&nbsp;attributes.</p>
+        </div>
+
+        <div class="docblock">
+          
+          
+          
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+    <div class="toggle-wrapper ancestors">
+      <h4 id="ancestors">
+        Ancestors
+        <a href="#ancestors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
+    
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper constructors">
+      <h4 id="constructors">
+        Constructors
+        <a href="#constructors" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="ctor.FileInfo.new.html">g_file_info_new</a></h6>
+          <div class="docblock">
+            <p>Creates a new file info&nbsp;structure.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="">
+          <h6><a href="method.FileInfo.clear_status.html">g_file_info_clear_status</a></h6>
+          <div class="docblock">
+            <p>Clears the status information from <code>info</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.copy_into.html">g_file_info_copy_into</a></h6>
+          <div class="docblock">
+            <p>First clears all of the [GFileAttribute][gio-GFileAttribute] of <code>dest_info</code>,
+and then copies all of the file attributes from <code>src_info</code> to <code>dest_info</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.dup.html">g_file_info_dup</a></h6>
+          <div class="docblock">
+            <p>Duplicates a file info&nbsp;structure.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_access_date_time.html">g_file_info_get_access_date_time</a></h6>
+          <div class="docblock">
+            <p>Gets the access time of the current <code>info</code> and returns it as a
+<code>GDateTime</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.70</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_as_string.html">g_file_info_get_attribute_as_string</a></h6>
+          <div class="docblock">
+            <p>Gets the value of an attribute, formatted as a string.
+This escapes things as needed to make the string valid
+<span class="caps">UTF</span>-8.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_boolean.html">g_file_info_get_attribute_boolean</a></h6>
+          <div class="docblock">
+            <p>Gets the value of a boolean attribute. If the attribute does not
+contain a boolean value, <code>FALSE</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_byte_string.html">g_file_info_get_attribute_byte_string</a></h6>
+          <div class="docblock">
+            <p>Gets the value of a byte string attribute. If the attribute does
+not contain a byte string, <code>NULL</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_data.html">g_file_info_get_attribute_data</a></h6>
+          <div class="docblock">
+            <p>Gets the attribute type, value and status for an attribute&nbsp;key.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_file_path.html">g_file_info_get_attribute_file_path</a></h6>
+          <div class="docblock">
+            <p>Gets the value of a byte string attribute as a file&nbsp;path.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.78</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_int32.html">g_file_info_get_attribute_int32</a></h6>
+          <div class="docblock">
+            <p>Gets a signed 32-bit integer contained within the attribute. If the
+attribute does not contain a signed 32-bit integer, or is invalid,
+0 will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_int64.html">g_file_info_get_attribute_int64</a></h6>
+          <div class="docblock">
+            <p>Gets a signed 64-bit integer contained within the attribute. If the
+attribute does not contain a signed 64-bit integer, or is invalid,
+0 will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_object.html">g_file_info_get_attribute_object</a></h6>
+          <div class="docblock">
+            <p>Gets the value of a <code>GObject</code> attribute. If the attribute does
+not contain a <code>GObject</code>, <code>NULL</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_status.html">g_file_info_get_attribute_status</a></h6>
+          <div class="docblock">
+            <p>Gets the attribute status for an attribute&nbsp;key.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_string.html">g_file_info_get_attribute_string</a></h6>
+          <div class="docblock">
+            <p>Gets the value of a string attribute. If the attribute does
+not contain a string, <code>NULL</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_stringv.html">g_file_info_get_attribute_stringv</a></h6>
+          <div class="docblock">
+            <p>Gets the value of a stringv attribute. If the attribute does
+not contain a stringv, <code>NULL</code> will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_type.html">g_file_info_get_attribute_type</a></h6>
+          <div class="docblock">
+            <p>Gets the attribute type for an attribute&nbsp;key.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_uint32.html">g_file_info_get_attribute_uint32</a></h6>
+          <div class="docblock">
+            <p>Gets an unsigned 32-bit integer contained within the attribute. If the
+attribute does not contain an unsigned 32-bit integer, or is invalid,
+0 will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_attribute_uint64.html">g_file_info_get_attribute_uint64</a></h6>
+          <div class="docblock">
+            <p>Gets a unsigned 64-bit integer contained within the attribute. If the
+attribute does not contain an unsigned 64-bit integer, or is invalid,
+0 will be&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_content_type.html">g_file_info_get_content_type</a></h6>
+          <div class="docblock">
+            <p>Gets the file’s content&nbsp;type.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_creation_date_time.html">g_file_info_get_creation_date_time</a></h6>
+          <div class="docblock">
+            <p>Gets the creation time of the current <code>info</code> and returns it as a
+<code>GDateTime</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.70</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_deletion_date.html">g_file_info_get_deletion_date</a></h6>
+          <div class="docblock">
+            <p>Returns the <code>GDateTime</code> representing the deletion date of the file, as
+available in <code>G_FILE_ATTRIBUTE_TRASH_DELETION_DATE</code>. If the
+<code>G_FILE_ATTRIBUTE_TRASH_DELETION_DATE</code> attribute is unset, <code>NULL</code> is&nbsp;returned.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.36</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_display_name.html">g_file_info_get_display_name</a></h6>
+          <div class="docblock">
+            <p>Gets a display name for a file. This is guaranteed to always be&nbsp;set.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_edit_name.html">g_file_info_get_edit_name</a></h6>
+          <div class="docblock">
+            <p>Gets the edit name for a&nbsp;file.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_etag.html">g_file_info_get_etag</a></h6>
+          <div class="docblock">
+            <p>Gets the <a href="iface.File.html#entity-tags">entity tag</a> for a given
+<code>GFileInfo</code>. See <code>G_FILE_ATTRIBUTE_ETAG_VALUE</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_file_type.html">g_file_info_get_file_type</a></h6>
+          <div class="docblock">
+            <p>Gets a file’s type (whether it is a regular file, symlink, etc).
+This is different from the file’s content type, see&nbsp;g_file_info_get_content_type().</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_icon.html">g_file_info_get_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the icon for a&nbsp;file.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_is_backup.html">g_file_info_get_is_backup</a></h6>
+          <div class="docblock">
+            <p>Checks if a file is a backup&nbsp;file.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_is_hidden.html">g_file_info_get_is_hidden</a></h6>
+          <div class="docblock">
+            <p>Checks if a file is&nbsp;hidden.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_is_symlink.html">g_file_info_get_is_symlink</a></h6>
+          <div class="docblock">
+            <p>Checks if a file is a&nbsp;symlink.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_modification_date_time.html">g_file_info_get_modification_date_time</a></h6>
+          <div class="docblock">
+            <p>Gets the modification time of the current <code>info</code> and returns it as a
+<code>GDateTime</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.62</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.FileInfo.get_modification_time.html">g_file_info_get_modification_time</a></h6>
+          <div class="docblock">
+            <p>Gets the modification time of the current <code>info</code> and sets it
+in <code>result</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.62</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_name.html">g_file_info_get_name</a></h6>
+          <div class="docblock">
+            <p>Gets the name for a file. This is guaranteed to always be&nbsp;set.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_size.html">g_file_info_get_size</a></h6>
+          <div class="docblock">
+            <p>Gets the file’s size (in bytes). The size is retrieved through the value of
+the <code>G_FILE_ATTRIBUTE_STANDARD_SIZE</code> attribute and is converted
+from #guint64 to #goffset before returning the&nbsp;result.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_sort_order.html">g_file_info_get_sort_order</a></h6>
+          <div class="docblock">
+            <p>Gets the value of the sort_order attribute from the <code>GFileInfo</code>.
+See <code>G_FILE_ATTRIBUTE_STANDARD_SORT_ORDER</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_symbolic_icon.html">g_file_info_get_symbolic_icon</a></h6>
+          <div class="docblock">
+            <p>Gets the symbolic icon for a&nbsp;file.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.get_symlink_target.html">g_file_info_get_symlink_target</a></h6>
+          <div class="docblock">
+            <p>Gets the symlink target for a given <code>GFileInfo</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.has_attribute.html">g_file_info_has_attribute</a></h6>
+          <div class="docblock">
+            <p>Checks if a file info structure has an attribute named <code>attribute</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.has_namespace.html">g_file_info_has_namespace</a></h6>
+          <div class="docblock">
+            <p>Checks if a file info structure has an attribute in the
+specified <code>name_space</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.list_attributes.html">g_file_info_list_attributes</a></h6>
+          <div class="docblock">
+            <p>Lists the file info structure’s&nbsp;attributes.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.remove_attribute.html">g_file_info_remove_attribute</a></h6>
+          <div class="docblock">
+            <p>Removes all cases of <code>attribute</code> from <code>info</code> if it&nbsp;exists.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_access_date_time.html">g_file_info_set_access_date_time</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>G_FILE_ATTRIBUTE_TIME_ACCESS</code> and
+<code>G_FILE_ATTRIBUTE_TIME_ACCESS_USEC</code> attributes in the file info to the
+given date/time&nbsp;value.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.70</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute.html">g_file_info_set_attribute</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>attribute</code> to contain the given value, if possible. To unset the
+attribute, use <code>G_FILE_ATTRIBUTE_TYPE_INVALID</code> for <code>type</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute_boolean.html">g_file_info_set_attribute_boolean</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>attribute</code> to contain the given <code>attr_value</code>,
+if&nbsp;possible.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute_byte_string.html">g_file_info_set_attribute_byte_string</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>attribute</code> to contain the given <code>attr_value</code>,
+if&nbsp;possible.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute_file_path.html">g_file_info_set_attribute_file_path</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>attribute</code> to contain the given <code>attr_value</code>,
+if&nbsp;possible.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.78</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute_int32.html">g_file_info_set_attribute_int32</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>attribute</code> to contain the given <code>attr_value</code>,
+if&nbsp;possible.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute_int64.html">g_file_info_set_attribute_int64</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>attribute</code> to contain the given <code>attr_value</code>,
+if&nbsp;possible.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute_mask.html">g_file_info_set_attribute_mask</a></h6>
+          <div class="docblock">
+            <p>Sets <code>mask</code> on <code>info</code> to match specific attribute&nbsp;types.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute_object.html">g_file_info_set_attribute_object</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>attribute</code> to contain the given <code>attr_value</code>,
+if&nbsp;possible.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute_status.html">g_file_info_set_attribute_status</a></h6>
+          <div class="docblock">
+            <p>Sets the attribute status for an attribute key. This is only
+needed by external code that implement <code>g_file_set_attributes_from_info()</code>
+or similar&nbsp;functions.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.22</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute_string.html">g_file_info_set_attribute_string</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>attribute</code> to contain the given <code>attr_value</code>,
+if&nbsp;possible.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute_stringv.html">g_file_info_set_attribute_stringv</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>attribute</code> to contain the given <code>attr_value</code>,
+if&nbsp;possible.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute_uint32.html">g_file_info_set_attribute_uint32</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>attribute</code> to contain the given <code>attr_value</code>,
+if&nbsp;possible.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_attribute_uint64.html">g_file_info_set_attribute_uint64</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>attribute</code> to contain the given <code>attr_value</code>,
+if&nbsp;possible.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_content_type.html">g_file_info_set_content_type</a></h6>
+          <div class="docblock">
+            <p>Sets the content type attribute for a given <code>GFileInfo</code>.
+See <code>G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_creation_date_time.html">g_file_info_set_creation_date_time</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>G_FILE_ATTRIBUTE_TIME_CREATED</code> and
+<code>G_FILE_ATTRIBUTE_TIME_CREATED_USEC</code> attributes in the file info to the
+given date/time&nbsp;value.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.70</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_display_name.html">g_file_info_set_display_name</a></h6>
+          <div class="docblock">
+            <p>Sets the display name for the current <code>GFileInfo</code>.
+See <code>G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_edit_name.html">g_file_info_set_edit_name</a></h6>
+          <div class="docblock">
+            <p>Sets the edit name for the current file.
+See <code>G_FILE_ATTRIBUTE_STANDARD_EDIT_NAME</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_file_type.html">g_file_info_set_file_type</a></h6>
+          <div class="docblock">
+            <p>Sets the file type in a <code>GFileInfo</code> to <code>type</code>.
+See <code>G_FILE_ATTRIBUTE_STANDARD_TYPE</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_icon.html">g_file_info_set_icon</a></h6>
+          <div class="docblock">
+            <p>Sets the icon for a given <code>GFileInfo</code>.
+See <code>G_FILE_ATTRIBUTE_STANDARD_ICON</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_is_hidden.html">g_file_info_set_is_hidden</a></h6>
+          <div class="docblock">
+            <p>Sets the “is_hidden” attribute in a <code>GFileInfo</code> according to <code>is_hidden</code>.
+See <code>G_FILE_ATTRIBUTE_STANDARD_IS_HIDDEN</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_is_symlink.html">g_file_info_set_is_symlink</a></h6>
+          <div class="docblock">
+            <p>Sets the “is_symlink” attribute in a <code>GFileInfo</code> according to <code>is_symlink</code>.
+See <code>G_FILE_ATTRIBUTE_STANDARD_IS_SYMLINK</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_modification_date_time.html">g_file_info_set_modification_date_time</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>G_FILE_ATTRIBUTE_TIME_MODIFIED</code> and
+<code>G_FILE_ATTRIBUTE_TIME_MODIFIED_USEC</code> attributes in the file info to the
+given date/time&nbsp;value.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.62</span></p>
+          </div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.FileInfo.set_modification_time.html">g_file_info_set_modification_time</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>G_FILE_ATTRIBUTE_TIME_MODIFIED</code> and
+<code>G_FILE_ATTRIBUTE_TIME_MODIFIED_USEC</code> attributes in the file info to the
+given time&nbsp;value.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem deprecated">deprecated: 2.62</span>&nbsp;</p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_name.html">g_file_info_set_name</a></h6>
+          <div class="docblock">
+            <p>Sets the name attribute for the current <code>GFileInfo</code>.
+See <code>G_FILE_ATTRIBUTE_STANDARD_NAME</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_size.html">g_file_info_set_size</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>G_FILE_ATTRIBUTE_STANDARD_SIZE</code> attribute in the file info
+to the given&nbsp;size.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_sort_order.html">g_file_info_set_sort_order</a></h6>
+          <div class="docblock">
+            <p>Sets the sort order attribute in the file info structure. See
+<code>G_FILE_ATTRIBUTE_STANDARD_SORT_ORDER</code>.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_symbolic_icon.html">g_file_info_set_symbolic_icon</a></h6>
+          <div class="docblock">
+            <p>Sets the symbolic icon for a given <code>GFileInfo</code>.
+See <code>G_FILE_ATTRIBUTE_STANDARD_SYMBOLIC_ICON</code>.</p>
+          </div>
+          <div class="docblock">
+            <p><span class="emblem available">since: 2.34</span></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.set_symlink_target.html">g_file_info_set_symlink_target</a></h6>
+          <div class="docblock">
+            <p>Sets the <code>G_FILE_ATTRIBUTE_STANDARD_SYMLINK_TARGET</code> attribute in the file info
+to the given symlink&nbsp;target.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.FileInfo.unset_attribute_mask.html">g_file_info_unset_attribute_mask</a></h6>
+          <div class="docblock">
+            <p>Unsets a mask set by g_file_info_set_attribute_mask(), if one
+is&nbsp;set.</p>
+          </div>
+          <div class="docblock">
+            <p></p>
+          </div>
+        </div>
+      
+      </div>
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
+          <div class="docblock">
+          
+            <div class="docblock">
+              <p>Please see&nbsp;<a class="external" href="javascript:void(0)" data-link="class.Object.html#methods" data-namespace="GObject">GObject</a>&nbsp;for a full list of methods.</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      
+
+      
+    </div>
+    
+
+    
+
+    
+    <div class="signals toggle-wrapper">
+      <h4 id="signals">
+        Signals
+        <a href="#signals" class="anchor"></a>
+      </h4>
+
+      
+
+      
+        
+        <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
+          <div class="docblock">
+          <h6><a class="external" href="javascript:void(0)" data-namespace="GObject" data-link="signal.Object.notify.html">GObject::notify</a></h6>
+            <div class="docblock">
+              <p>The notify signal is emitted on an object when one of its properties has
+its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+      
+
+    </div>
+    
+
+    
+    <div class="class toggle-wrapper default-hide">
+      <h4 id="class-struct">
+        Class structure
+        <a href="#class-struct" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code>struct GioFileInfoClass {
+  /* no available fields */
+}</code></pre>
+      </div>
+
+      <div class="docblock">
+        <p>No description available.</p>
+      </div>
+
+      
+    </div>
+    
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+
+
+
+</body><!-- Mirrored from docs.gtk.org/gio/class.FileInfo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2025 08:46:25 GMT --></html>
